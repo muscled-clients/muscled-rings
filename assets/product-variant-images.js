@@ -55,11 +55,7 @@ function removeSlide(flkty, conditionClass) {
 function ShowProductImages() {
  productImages.forEach(image=> {
    let imageAttr = image.getAttribute('d4-img-alt');
-   let count = 0;
-   if(imageAttr) {
-     count++;
-     console.log(count);
-   }
+   console.log(imageAttr);
    const match = imageAttr.match(/\$(.*?)\$/);
    // console.log(match);
      const finalValue = match[1];
