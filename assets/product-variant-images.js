@@ -6,6 +6,9 @@ function ShowProductImages() {
  productImages.forEach(image=> {
    const imageAttr = image.getAttribute('data-title');
   const match = imageAttr.match(/\$(.*?)\$/);
+   if(match) {
+     console.log(match[1]);
+   }
   console.log(image.getAttribute('data-title'));
    
 }) 
