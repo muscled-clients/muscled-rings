@@ -53,32 +53,52 @@ function removeSlide(flkty, conditionClass) {
 // checkAndModifyFlickity('.product-gallery__main', 'd4-remove-slide');
 
 function ShowProductImages() {
- productImages.forEach(image=> {
-   const imageAttr = image.getAttribute('d4-img-alt');
-   const match = imageAttr.match(/\$(.*?)\$/);
+    // Get the selected swatch
+    const selectedSwatch = Array.from(swatchOptions).find(option => option.checked);
 
-     const finalValue = match[1];
-     
-     swatchOptions.forEach(option=> {
-       if(option.checked) {
-         if(finalValue.includes(option.value)) {
-           image.classList.add('d4-display-image');
-           if(image.classList.contains('d4-remove-slide')) {
-             image.classList.remove('d4-remove-slide');
-           }
-         } else {
-           image.classList.add('d4-remove-slide');
-           console.log(image);
-           if(image.classList.contains('d4-display-image')) {
-             image.classList.remove('d4-display-image');
-           }
-         }
-       }
-     })
-  
-   
-}) 
+    if (!selectedSwatch) {
+        console.log("⚠️ No swatch selected. Resetting all images...");
+        productImages.forEach(image => {
+            image.classList.remove('d4-display-image', 'd4-remove-slide'); // Reset all images
+        });
+        return; // Exit function if no swatch is selected
+    }
+
+    const selectedValue = selectedSwatch.value;
+    let hasMatchingImage = false; // Track if we find a matching image
+
+    productImages.forEach(image => {
+        const imageAttr = image.getAttribute('d4-img-alt');
+        const match = imageAttr ? imageAttr.match(/\$(.*?)\$/) : null;
+
+        if (match) {
+            const finalValue = match[1]; // Extract value from $...$
+
+            if (finalValue.includes(selectedValue)) {
+                // ✅ Show matching image
+                image.classList.add('d4-display-image');
+                image.classList.remove('d4-remove-slide');
+                hasMatchingImage = true;
+            } else {
+                // ❌ Hide non-matching images
+                image.classList.add('d4-remove-slide');
+                image.classList.remove('d4-display-image');
+            }
+        } else {
+            console.log(`⚠️ No matching value found for image: ${image.src}`);
+        }
+    });
+
+    // If no images match the selected swatch, hide all images
+    if (!hasMatchingImage) {
+        console.log("❌ No matching images found. Hiding all images.");
+        productImages.forEach(image => {
+            image.classList.add('d4-remove-slide');
+            image.classList.remove('d4-display-image');
+        });
+    }
 }
+
 
 ShowProductImages();
 
