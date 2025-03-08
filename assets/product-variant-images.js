@@ -29,6 +29,7 @@ function ShowProductImages() {
 }
 
 ShowProductImages();
+
 productForm.addEventListener("change", function(event) {
   if(event.target.checked){
     ShowProductImages();
