@@ -4,9 +4,21 @@ const swatchOptions = document.querySelectorAll('.swatch__option input');
 const sliderMain = document.querySelector('.flickity-slider');
 // let flkty = window.Flickity.data;
 document.addEventListener("DOMContentLoaded", function () {
-  var flkty = window.Flickity.data(sliderMain);
-console.log("Flikety: ", flkty);
-  console.log(document.querySelector("[data-gallery-wrapper]"));
+
+if (sliderMain) {
+    var flkty = window.Flickity.data(sliderMain); // Retrieve existing instance
+
+    if (!flkty) { // If Flickity is NOT initialized, create a new one
+        flkty = new Flickity(sliderMain, {
+            cellAlign: 'left',
+            contain: true
+        });
+        console.log("Flickity Initialized:", flkty);
+    } else {
+        console.log("Flickity already exists:", flkty);
+    }
+}
+
 });
 
 swatchOptions[0].checked = true;
