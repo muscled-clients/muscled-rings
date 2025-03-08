@@ -62,5 +62,6 @@ ShowProductImages();
 productForm.addEventListener("change", function(event) {
   if(event.target.checked){
     ShowProductImages();
+    removeSlide("d4-remove-slide");
   }
     });
