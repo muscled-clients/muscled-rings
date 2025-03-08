@@ -1,5 +1,4 @@
 const productImages = document.querySelectorAll('.d4-product .product-gallery__image');
-const productThumbnails = document.querySelector('.product-gallery__thumbnail');
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
 swatchOptions[0].checked = true;
@@ -68,7 +67,7 @@ function ShowProductImages() {
     const selectedValue = selectedSwatch.value;
     let hasMatchingImage = false; // Track if at least one image matches
 
-    productImages.forEach((image, index) => {
+    productImages.forEach(image => {
         let imageAttr = image.getAttribute('d4-img-alt');
         console.log("🔍 Checking Image Alt:", imageAttr);
 
@@ -92,15 +91,11 @@ function ShowProductImages() {
             // ✅ Show matching image
             image.classList.add('d4-display-image');
             image.classList.remove('d4-remove-slide');
-          productThumbnails[index].add('d4-display-image');
-          productThumbnails[index].remove('d4-remove-slide');
             hasMatchingImage = true;
         } else {
             // ❌ Hide non-matching images
             image.classList.add('d4-remove-slide');
-          productThumbnails[index].add('d4-remove-slide');
             image.classList.remove('d4-display-image');
-          productThumbnails[index].remove('d4-display-image')
         }
     });
 
@@ -109,8 +104,6 @@ function ShowProductImages() {
         console.log("❌ No matching images found. Hiding all images.");
         productImages.forEach(image => {
             image.classList.add('d4-remove-slide');
-         productThumbnails[index].add('d4-remove-slide');
-          productThumbnails[index].remove('d4-display-image')
             image.classList.remove('d4-display-image');
         });
     }
