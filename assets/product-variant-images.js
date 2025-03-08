@@ -15,6 +15,8 @@ function ShowProductImages() {
        if(option.checked == true) {
          if(option.value == finalValue) {
            console.log(image);
+         } else {
+           console.log("extra images: ", image);
          }
        }
      })
