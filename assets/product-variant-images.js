@@ -50,7 +50,7 @@ function removeSlide(flkty, conditionClass) {
 }
 
 // **Usage: Call the function**
-checkAndModifyFlickity('.product-gallery__main', 'd4-remove-slide');
+// checkAndModifyFlickity('.product-gallery__main', 'd4-remove-slide');
 
 function ShowProductImages() {
  productImages.forEach(image=> {
