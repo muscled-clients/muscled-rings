@@ -32,7 +32,7 @@ window.PXUTheme.jsGallery = {
     const $nextButton = $section.find('.gallery__nav--next');
     const $gallerySlider = $section.find('[data-gallery-wrapper]');
 
-    window.$flickitySlider = $gallerySlider.flickity({
+    const $flickitySlider = $gallerySlider.flickity({
       initialIndex: 0,
       prevNextButtons: false,
       wrapAround: true,
