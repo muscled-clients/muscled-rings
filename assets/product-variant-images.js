@@ -5,7 +5,7 @@ swatchOptions[0].checked = true;
 
 function ShowProductImages() {
  productImages.forEach(image=> {
-   const imageAttr = image.getAttribute('data-title');
+   const imageAttr = image.getAttribute('d4-img-alt');
   const match = imageAttr.match(/\$(.*?)\$/);
    
    if(match) {
@@ -15,8 +15,6 @@ function ShowProductImages() {
        if(option.checked == true) {
          if(option.value == finalValue) {
            console.log(image);
-         } else {
-           console.log("extra images: ", image);
          }
        }
      })
