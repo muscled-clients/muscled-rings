@@ -4,7 +4,7 @@ const swatchOptions = document.querySelectorAll('.swatch__option input');
 const sliderMain = document.querySelector('.flickity-slider');
 // let flkty = window.Flickity.data;
 document.addEventListener("DOMContentLoaded", function () {
-  console.log(sliderMain);
+  console.log("Main slider: ", sliderMain);
 
 if (sliderMain) {
     var flkty = window.Flickity.data(sliderMain); // Retrieve existing instance
