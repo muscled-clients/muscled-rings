@@ -1,12 +1,30 @@
 const productImages = document.querySelectorAll('.d4-product .product-gallery__image');
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
-document.addEventListener("DOMContentLoaded", function () {
-    const fliktyMain = document.querySelector('.product-gallery__main');
-    let flkty = Flickity.data(fliktyMain);
 
-    console.log("Flickity Data: ", flkty);
-});
+
+const intervalCheck = setInterval(() => {
+    const fliktyMain = document.querySelector('.product-gallery__main');
+    
+    if (fliktyMain) {
+        let flkty = Flickity.data(fliktyMain);
+        console.log("Flickity Data: ", flkty);
+
+        if (flkty) {
+            console.log("✅ Flickity is initialized!");
+            clearInterval(intervalCheck); // Stop checking once Flickity is found
+        }
+    } else {
+        console.log("❌ Flickity container not found.");
+    }
+}, 2000); // Run every 2 seconds
+
+// Stop checking after 15 seconds
+setTimeout(() => {
+    clearInterval(intervalCheck);
+    console.log("⏳ Stopped checking after 15 seconds.");
+}, 15000);
+
 
 
 swatchOptions[0].checked = true;
