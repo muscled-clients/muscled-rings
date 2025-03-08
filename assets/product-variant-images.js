@@ -14,9 +14,7 @@ function ShowProductImages() {
      swatchOptions.forEach(option=> {
        if(option.checked == true) {
          if(option.value == finalValue) {
-           image.style.display = 'block'
-         } else {
-           image.style.display = 'none';
+           image.classList.add('d4-display-image');
          }
        }
      })
