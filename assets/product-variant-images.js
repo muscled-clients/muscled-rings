@@ -7,8 +7,10 @@ function ShowProductImages() {
  productImages.forEach(image=> {
    const imageAttr = image.getAttribute('data-title');
   const match = imageAttr.match(/\$(.*?)\$/);
+   
    if(match) {
      const finalValue = match[1];
+     
      swatchOptions.forEach(option=> {
        if(option.checked == true) {
          if(option.value == finalValue) {
@@ -16,6 +18,7 @@ function ShowProductImages() {
          }
        }
      })
+  
    }
    
 }) 
