@@ -57,7 +57,7 @@ function ShowProductImages() {
  productImages.forEach(image=> {
    const imageAttr = image.getAttribute('d4-img-alt');
    const match = imageAttr.match(/\$(.*?)\$/);
-
+   console.log(match);
      const finalValue = match[1];
      
      swatchOptions.forEach(option=> {
