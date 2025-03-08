@@ -6,7 +6,7 @@ swatchOptions[0].checked = true;
 function ShowProductImages() {
  productImages.forEach(image=> {
    const imageAttr = image.getAttribute('d4-img-alt');
-  const match = imageAttr.match(/\$(.*?)\$/);
+   const match = imageAttr.match(/\$(.*?)\$/);
    
    if(match) {
      const finalValue = match[1];
@@ -35,4 +35,3 @@ productForm.addEventListener("change", function(event) {
     ShowProductImages();
   }
     });
-// console.log('Swatch Options', swatchOptions);
