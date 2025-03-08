@@ -66,13 +66,13 @@ function ShowProductImages() {
            if(image.classList.contains('d4-remove-slide')) {
              image.classList.remove('d4-remove-slide');
            }
-         }
-       } else {
-         image.classList.add('d4-remove-slide');
+         } else {
+           image.classList.add('d4-remove-slide');
            console.log(image);
            if(image.classList.contains('d4-display-image')) {
              image.classList.remove('d4-display-image');
            }
+         }
        }
      })
   
