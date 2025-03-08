@@ -18,7 +18,7 @@ function ShowProductImages() {
 
 ShowProductImages();
 productForm.addEventListener("change", function(event) {
-  if(event.target.checked = true){
+  if(event.target.checked == true){
         console.log("Input changed:", event.target.value);
   }
     });
