@@ -4,7 +4,9 @@ const swatchOptions = document.querySelectorAll('.swatch__option input');
 swatchOptions[0].checked = true;
 function ShowProductImages() {
  productImages.forEach(image=> {
+   const imageAttr = image.getAttribute('data-title');
   console.log(image.getAttribute('data-title'));
+   
 }) 
 }
 productForm.addEventListener("change", function(event) {
