@@ -13,7 +13,7 @@ function ShowProductImages() {
      
      swatchOptions.forEach(option=> {
        if(option.checked) {
-         if(finalValue.includes(option.value) {
+         if(finalValue.includes(option.value)) {
            image.classList.add('d4-display-image');
          } else {
            if(image.classList.contains('d4-display-image')) {
