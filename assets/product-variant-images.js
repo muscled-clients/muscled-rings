@@ -1,32 +1,6 @@
 const productImages = document.querySelectorAll('.d4-product .product-gallery__image');
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
-// let flkty = window.Flickity.data;
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(()=> {
-    const sliderMain = document.querySelector('.flickity-slider');
-  console.log("Main slider: ", sliderMain);
-    if (sliderMain) {
-    var flkty = window.Flickity.data(sliderMain); // Retrieve existing instance
-
-    if (!flkty) { // If Flickity is NOT initialized, create a new one
-        flkty = new Flickity(sliderMain, {
-            cellAlign: 'left',
-            contain: true
-        });
-        console.log("Flickity Initialized:", flkty);
-      if (flkty) {
-    var slides = flkty.cells.map(cell => cell.element); // Get all slide elements
-    console.log("Slides inside Flickity:", slides);
-}
-
-    } else {
-        console.log("Flickity already exists:", flkty);
-    }
-}
-  }, 10000);
-
-});
 
 swatchOptions[0].checked = true;
 
