@@ -92,11 +92,15 @@ function ShowProductImages() {
             // ✅ Show matching image
             image.classList.add('d4-display-image');
             image.classList.remove('d4-remove-slide');
+          productThumbnails[index].add('d4-display-image');
+          productThumbnails[index].remove('d4-remove-slide');
             hasMatchingImage = true;
         } else {
             // ❌ Hide non-matching images
             image.classList.add('d4-remove-slide');
+          productThumbnails[index].add('d4-remove-slide');
             image.classList.remove('d4-display-image');
+          productThumbnails[index].remove('d4-display-image')
         }
     });
 
@@ -105,6 +109,8 @@ function ShowProductImages() {
         console.log("❌ No matching images found. Hiding all images.");
         productImages.forEach(image => {
             image.classList.add('d4-remove-slide');
+         productThumbnails[index].add('d4-remove-slide');
+          productThumbnails[index].remove('d4-display-image')
             image.classList.remove('d4-display-image');
         });
     }
