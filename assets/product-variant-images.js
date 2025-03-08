@@ -1,7 +1,7 @@
 const productImages = document.querySelectorAll('.d4-product .product-gallery__image');
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
-
+swatchOptions[0].checked = true;
 
 function removeSlide(conditionClass) {
     const fliktyMain = document.querySelector('.product-gallery__main'); // Select Flickity container
@@ -27,11 +27,6 @@ function removeSlide(conditionClass) {
 
 // Example Usage: Remove slides that have class 'hide-slide'
 removeSlide("d4-remove-slide");
-
-
-
-
-swatchOptions[0].checked = true;
 
 function ShowProductImages() {
  productImages.forEach(image=> {
