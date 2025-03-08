@@ -4,7 +4,7 @@ const swatchOptions = document.querySelectorAll('.swatch__option input');
 const sliderMain = document.querySelector('.flickity-slider');
 // let flkty = window.Flickity.data;
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Flickity on window after DOM loaded:", window.Flickity);
+    console.log("Flickity on window after DOM loaded:", window.Flickity.data(sliderMain));
 });
 
 swatchOptions[0].checked = true;
