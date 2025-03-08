@@ -68,7 +68,7 @@ function ShowProductImages() {
     const selectedValue = selectedSwatch.value;
     let hasMatchingImage = false; // Track if at least one image matches
 
-    productImages.forEach(image => {
+    productImages.forEach((image, index) => {
         let imageAttr = image.getAttribute('d4-img-alt');
         console.log("🔍 Checking Image Alt:", imageAttr);
 
