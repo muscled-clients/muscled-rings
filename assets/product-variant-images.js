@@ -5,3 +5,4 @@ const swatchOptions = document.querySelectorAll('.swatch__option input');
 //         console.log("Input changed:", event.target.name, event.target.value);
 //     });
 // console.log('Swatch Options', swatchOptions);
+console.log("This is a product form", productForm);
