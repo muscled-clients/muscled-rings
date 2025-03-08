@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
             contain: true
         });
         console.log("Flickity Initialized:", flkty);
+      if (flkty) {
+    var slides = flkty.cells.map(cell => cell.element); // Get all slide elements
+    console.log("Slides inside Flickity:", slides);
+}
+
     } else {
         console.log("Flickity already exists:", flkty);
     }
