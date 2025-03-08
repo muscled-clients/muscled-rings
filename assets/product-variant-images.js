@@ -9,9 +9,14 @@ function ShowProductImages() {
   const match = imageAttr.match(/\$(.*?)\$/);
    if(match) {
      const finalValue = match[1];
-     console.log("split string: ", match[1]);
+     swatchOptions.forEach(option=> {
+       if(option.checked == true) {
+         if(option.value == finalValue) {
+           console.log(image);
+         }
+       }
+     })
    }
-  console.log(image.getAttribute('data-title'));
    
 }) 
 }
