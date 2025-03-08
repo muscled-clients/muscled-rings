@@ -5,7 +5,7 @@ swatchOptions[0].checked = true;
 function ShowProductImages() {
  productImages.forEach(image=> {
    const imageAttr = image.getAttribute('data-title');
-   const finalAttr = imageAttr.split("");
+  const match = imageAttr.match(/\$(.*?)\$/);
   console.log(image.getAttribute('data-title'));
    
 }) 
