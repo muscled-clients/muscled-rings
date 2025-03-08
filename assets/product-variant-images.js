@@ -54,7 +54,6 @@ function removeSlide(flkty, conditionClass) {
 
 function ShowProductImages() {
  productImages.forEach(image=> {
-   image.classList.add('d4-remove-slide');
    let imageAttr = image.getAttribute('d4-img-alt');
    console.log(imageAttr);
    const match = imageAttr.match(/\$(.*?)\$/);
@@ -68,7 +67,12 @@ function ShowProductImages() {
            if(image.classList.contains('d4-remove-slide')) {
              image.classList.remove('d4-remove-slide');
            }
-         } 
+         } else {
+           image.classList.add('d4-remove-slide');
+           if(image.classList.contains('d4-display-image')) {
+             image.classList.remove('d4-display-image');
+           }
+         }
        }
      })
   
