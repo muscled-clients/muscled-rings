@@ -12,7 +12,7 @@ function ShowProductImages() {
      const finalValue = match[1];
      
      swatchOptions.forEach(option=> {
-       if(option.checked == true) {
+       if(option.checked) {
          if(option.value == finalValue) {
            image.classList.add('d4-display-image');
          } else {
@@ -30,7 +30,7 @@ function ShowProductImages() {
 
 ShowProductImages();
 productForm.addEventListener("change", function(event) {
-  if(event.target.checked == true){
+  if(event.target.checked){
     ShowProductImages();
   }
     });
