@@ -3,8 +3,10 @@ const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
 // let flkty = window.Flickity.data;
 document.addEventListener("DOMContentLoaded", function () {
-const sliderMain = document.querySelector('.flickity-slider');
+  setTimeout(()=> {
+    const sliderMain = document.querySelector('.flickity-slider');
   console.log("Main slider: ", sliderMain);
+  }, 5000);
 
 if (sliderMain) {
     var flkty = window.Flickity.data(sliderMain); // Retrieve existing instance
