@@ -1,0 +1,21 @@
+{
+  "parent": "header-group-centered.json",
+  "context": {
+    "market": "international"
+  },
+  "sections": {
+    "announcement_bar": {
+      "settings": {
+        "text": "<p>New Year's Offer: Get a 1 Carat Diamond Solitaire Ring for $1499 USD<\/p>",
+        "mobile_text": "<p>1 Carat Diamond Solitaire Ring for $1499 USD<\/p>"
+      },
+      "blocks": {}
+    },
+    "header_top_bar": {
+      "settings": {
+        "text": "<p><strong>Your dream ring, our mission. Contact us to source it today!  💎<\/strong><a href=\"\/pages\/contact-us\" title=\"Contact Us\"><strong>Get in Touch<\/strong><\/a><strong>💎<\/strong><\/p>"
+      },
+      "blocks": {}
+    }
+  }
+}

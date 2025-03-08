@@ -1,0 +1,123 @@
+{
+  "sections": {
+    "image_with_text_overlay": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "link": "",
+        "image": "shopify:\/\/shop_images\/luxe__page--about-iwto-01.jpg",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "richtext": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "The long and winding road",
+        "heading_font": "monotype_bodoni_n4",
+        "heading_color": "rgba(0,0,0,0)",
+        "heading_alignment": "center",
+        "heading_size": 40,
+        "text": "<p>As long as we can remember, we've always been drawn to simplicity, beautiful designs and creating things. Our collections always draw inspiration from this, and the natural beauty in this world. We both come from a design-focused background; jewelry and accessories were always just a hobby. Once we knew that this is what we were passionate about, we realized that this is what we would dedicate our lives to – and we wanted to share it with the world. After several years of hard-work, our dream became a reality and we were able to finally put ourselves and our company out there. Our pieces are meant to be unique and timeless, something that you'll never want to take off and that you can wear your whole life. <\/p>",
+        "text_font": "optima_nova_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "center",
+        "text_size": 20,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_alignment": "center",
+        "button_style": "button--primary",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 40,
+        "padding_bottom": 15,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "fadeIn",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1637955881bd737276": {
+      "type": "index__featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "earrings",
+        "products_per": 5,
+        "mobile_products_per_row": "1",
+        "products_limit": 10,
+        "align_height": false,
+        "collection_height": 200,
+        "collection_style": "slider",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "fadeIn",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "blog": {
+      "type": "index__blog-posts",
+      "settings": {
+        "title": "",
+        "blog_widget_select": "news",
+        "home_page_articles": 3,
+        "blog_show_tags": true,
+        "blog_author": false,
+        "read_time": true,
+        "blog_date": false,
+        "blog_comment_count": false,
+        "blog_show_excerpt": true,
+        "show-border": true,
+        "button_label": "",
+        "button_type": "button--primary",
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "animation": "fadeIn",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay",
+    "richtext",
+    "1637955881bd737276",
+    "blog"
+  ]
+}

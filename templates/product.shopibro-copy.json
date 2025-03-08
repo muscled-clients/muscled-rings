@@ -1,0 +1,493 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product__breadcrumb",
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "product__sidebar",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "product__main",
+      "blocks": {
+        "rating_NUWmPR": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": false
+          }
+        },
+        "text_JBiWwN": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Appraised Value: $4,950. Regular Price: $2699. Sale's Price: <\/em><em><strong>$1999 CAD<\/strong><\/em><em><br\/>You Save: $700<\/em><\/p>"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient_form": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "product_accordions_qc9zNf": {
+          "type": "product_accordions",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "rating_NUWmPR",
+        "title",
+        "price",
+        "text_JBiWwN",
+        "form",
+        "description",
+        "product_accordions_qc9zNf"
+      ],
+      "settings": {
+        "product_images_position": "left",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "gallery_arrows": true,
+        "enable_zoom": true,
+        "enable_product_lightbox": true,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "display_thumbnails": true,
+        "thumbnail_position": "bottom-thumbnails",
+        "enable_thumbnail_slider": true,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_icon_with_text_column_tfmeiW": {
+      "type": "index__icon-with-text-column",
+      "blocks": {
+        "logo_image_9BDGCc": {
+          "type": "logo_image",
+          "settings": {
+            "icon_label": "truck",
+            "title": "Free Shipping",
+            "text": "",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "logo_image_wJ7UiH": {
+          "type": "logo_image",
+          "settings": {
+            "icon_label": "calendar",
+            "title": "30 Day Return",
+            "text": "",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "logo_image_6r3xmB": {
+          "type": "logo_image",
+          "settings": {
+            "icon_label": "lock",
+            "title": "Secure Payment",
+            "text": "",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "logo_image_HVpQML": {
+          "type": "logo_image",
+          "settings": {
+            "icon_label": "gem",
+            "title": "Ethically Created",
+            "text": "",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_9BDGCc",
+        "logo_image_wJ7UiH",
+        "logo_image_6r3xmB",
+        "logo_image_HVpQML"
+      ],
+      "settings": {
+        "icons_per_row": 4,
+        "align_text": "center",
+        "icon_size": "medium",
+        "button_style": "button--primary",
+        "icon_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "#e4e2d3",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_alignment": "none",
+        "mobile_icon_size": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "heading_image_FxyJ7P": {
+      "type": "heading-image",
+      "custom_css": [
+        "@media (max-width: 900px) {.heading_image_container img {width: 100% !important; }}"
+      ],
+      "settings": {
+        "heading": "What You’ll Receive:",
+        "subheading": "",
+        "image_1": "shopify:\/\/shop_images\/IMG_1174.png",
+        "text_1": "IGI Certificate",
+        "image_2": "shopify:\/\/shop_images\/IMG_1146.png",
+        "text_2": "Leather Bag",
+        "image_3": "shopify:\/\/shop_images\/IMG_1149.png",
+        "text_3": "Jewelry Cleaning Kit",
+        "image_4": "shopify:\/\/shop_images\/IMG_1162.png",
+        "text_4": "Gold Pouch & Ring Box",
+        "top_spacing_desktop": 50,
+        "bottom_spacing_desktop": 50,
+        "top_spacing_mobile": 50,
+        "bottom_spacing_mobile": 50
+      }
+    },
+    "index_heading_gHzVTd": {
+      "type": "index__heading",
+      "settings": {
+        "preheading": "",
+        "title": "Product Feedback",
+        "subheading": "",
+        "heading_alignment": "center",
+        "vertical_spacing": "medium",
+        "preheading_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "subheading_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1738087170553972e0": {
+      "type": "apps",
+      "blocks": {
+        "easyvideo_shoppable_videos_easyvideo_section_product_hzQkWV": {
+          "type": "shopify:\/\/apps\/easyvideo-shoppable-videos\/blocks\/easyvideo-section-product\/b3d32790-c8f7-4d70-aeda-acf9291f91ae",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "easyvideo_shoppable_videos_easyvideo_section_product_hzQkWV"
+      ],
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_testimonial_Vqb3n9": {
+      "type": "index__testimonial",
+      "blocks": {
+        "image_kBWci4": {
+          "type": "image",
+          "settings": {
+            "quote": "<p><em>\"The ring is absolutely beautiful and just what I had wanted. The setting is simple and elegant and the diamond is the perfect size at one carat, so it's not too big or ostentatious on my finger. <br\/><br\/>The customer service you provided has been very impressive! You called me to confirm the validity of my order, then followed up several times by email to let me know the status.<br\/><br\/>As a consumer, that goes a long way to assure confidence that the seller is legitimate, given the amount of scams that are out there.\" <\/em><\/p>",
+            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-b6a3b776-c4b4-4f79-a4b8-43ff2f738285.jpg",
+            "text": "<h2>Cynthia P.<\/h2><p><\/p>",
+            "info_text": "rgba(0,0,0,0)",
+            "info_background": "rgba(0,0,0,0)"
+          }
+        },
+        "image_kq87hj": {
+          "type": "image",
+          "settings": {
+            "quote": "<p><em>\"The ring is very beautiful and the diamond is so shiny and sparkly.  The band is a little bit thinner than I had expected but I love it.  I’m really happy with my purchase.\"<\/em><\/p>",
+            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-0c0038c3-8dfb-47bc-9252-e768276879cf.jpg",
+            "text": "<h2>Wendy N.<\/h2>",
+            "info_text": "rgba(0,0,0,0)",
+            "info_background": "rgba(0,0,0,0)"
+          }
+        },
+        "image_myrUqN": {
+          "type": "image",
+          "settings": {
+            "quote": "<p>\"The white gold is stunning beautiful all on its own but not gaudy!!\"<\/p>",
+            "image": "shopify:\/\/shop_images\/14AC9808-D3AE-4079-BB01-D5239E7C403D.heic",
+            "text": "<h2>Mary E.<\/h2>",
+            "info_text": "rgba(0,0,0,0)",
+            "info_background": "rgba(0,0,0,0)"
+          }
+        },
+        "image_UGT3gb": {
+          "type": "image",
+          "settings": {
+            "quote": "<p>\"This ring is so beautiful.\"<\/p>",
+            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-bae6236e-94a9-488a-8052-c4218438b8f8.png",
+            "text": "<h2>Jennifer M.<\/h2>",
+            "info_text": "rgba(0,0,0,0)",
+            "info_background": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "image_kBWci4",
+        "image_kq87hj",
+        "image_myrUqN",
+        "image_UGT3gb"
+      ],
+      "settings": {
+        "show_border": true,
+        "enable_images": true,
+        "crop_shape": "circle",
+        "card_alignment": "center",
+        "card_text": "rgba(0,0,0,0)",
+        "card_background": "rgba(0,0,0,0)",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animation": "none",
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "fifty_fifty_text_image_enMDgW": {
+      "type": "fifty-fifty-text-image",
+      "blocks": {
+        "logo_text_MjqW36": {
+          "type": "logo_text",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "text": "Some logo text"
+          }
+        },
+        "logo_text_V9XkFC": {
+          "type": "logo_text",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "text": "Some logo text"
+          }
+        },
+        "logo_text_jFkmA4": {
+          "type": "logo_text",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "text": "Some logo text"
+          }
+        }
+      },
+      "block_order": [
+        "logo_text_MjqW36",
+        "logo_text_V9XkFC",
+        "logo_text_jFkmA4"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Lorem Ipsum is",
+        "subheading": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
+        "text_color": "#ffffff",
+        "background_image": "shopify:\/\/shop_images\/gempages_542333615069987699-fc48444d-b5eb-4c98-8c28-34df261aff3a.jpg",
+        "use_overlay": true,
+        "top_spacing_desktop": 50,
+        "bottom_spacing_desktop": 50,
+        "top_spacing_mobile": 0,
+        "bottom_spacing_mobile": 50
+      }
+    },
+    "index_faq_HqXX36": {
+      "type": "index__faq",
+      "blocks": {
+        "heading_Fyifgf": {
+          "type": "heading",
+          "settings": {
+            "title": "Shipping\/Returns"
+          }
+        },
+        "content_ebXz79": {
+          "type": "content",
+          "settings": {
+            "title": "What is your shipping policy?",
+            "answer": "<p>We offer FREE SHIPPING within USA and Canada. You'll receive a tracking number as soon as your ring ships to keep track of your package every step of the way.  <\/p>"
+          }
+        },
+        "content_apYcKk": {
+          "type": "content",
+          "settings": {
+            "title": "What is your return policy?",
+            "answer": "<p>Your satisfaction is 100% guaranteed. Take 30 days to examine your ring, try it on, or even have it independently appraised. If you're not completely satisfied, simply return your diamond ring in its original condition using our secure shipping kit, and we'll refund your entire purchase – including your membership fee. No restocking fees, no questions asked.<\/p>"
+          }
+        },
+        "content_Ubhtwx": {
+          "type": "content",
+          "settings": {
+            "title": "How do I track my order?",
+            "answer": "<p>Once your order has shipped, you will receive an email with tracking information. You can use this link to monitor your order's progress. If you have any issues with tracking, please contact our customer service team.<\/p>"
+          }
+        },
+        "heading_ktHj6q": {
+          "type": "heading",
+          "settings": {
+            "title": "Product Information"
+          }
+        },
+        "content_JctHzX": {
+          "type": "content",
+          "settings": {
+            "title": "Where are your products made?",
+            "answer": "<p>Our rings are custom-designed and crafted using high-quality precious metals, diamonds, and gemstones, with a focus on ethical sourcing and exceptional craftsmanship. Our production process is managed through a carefully selected network of trusted suppliers, ensuring that each piece meets our high standards for quality and integrity. We collaborate with both local and international artisans to bring you rings that are made with care and precision. <\/p>"
+          }
+        },
+        "content_cpnTw9": {
+          "type": "content",
+          "settings": {
+            "title": "Are your gems and materials sourced responsibly?",
+            "answer": "<p>Yes, we prioritize ethical sourcing for all our gems and materials. We carefully vet our suppliers to ensure they adhere to strict standards of integrity, social responsibility, and conflict-free sourcing. Our commitment to transparency means that we continually work to maintain a trustworthy supply chain, so you can feel confident in the origins, quality, and craftsmanship of every ring we create.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fyifgf",
+        "content_ebXz79",
+        "content_apYcKk",
+        "content_Ubhtwx",
+        "heading_ktHj6q",
+        "content_JctHzX",
+        "content_cpnTw9"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "width": "standard",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "animation": "none",
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "slider_text_image_tmhzLW": {
+      "type": "slider-text-image",
+      "blocks": {
+        "slide_dTaTW9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-a8faf9c0-6d7e-4170-a174-fc472fab73be.jpg",
+            "text": "<h2>Cynthia P<\/h2><p><br\/><em>\"The ring is absolutely beautiful and just what I had wanted. The setting is simple and elegant and the diamond is the perfect size at one carat, so it's not too big or ostentatious on my finger. <br\/><br\/>The customer service you provided has been very impressive! You called me to confirm the validity of my order, then followed up several times by email to let me know the status.<br\/><br\/>As a consumer, that goes a long way to assure confidence that the seller is legitimate, given the amount of scams that are out there.\" <\/em><\/p>"
+          }
+        },
+        "slide_w9e4Aa": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-8a146a25-e827-48d9-b154-4380cc2e73cc.png",
+            "text": "<h2>Wendy N<\/h2><p><br\/><em>\"The ring is very beautiful and the diamond is so shiny and sparkly.  The band is a little bit thinner than I had expected but I love it.  I’m really happy with my purchase.\"<\/em><\/p>"
+          }
+        },
+        "slide_XpJ9Kx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-0c0038c3-8dfb-47bc-9252-e768276879cf.jpg",
+            "text": "<h2>Mary E.<\/h2><p><br\/>\"The white gold is stunning beautiful all on its own but not gaudy!!\"<\/p>"
+          }
+        },
+        "slide_KPepjX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-729c581b-7c04-4db9-8d91-64548b8c7dd0.png",
+            "text": "<h2>Jennifer M.<\/h2><p><br\/>\"This ring is so beautiful.\"<\/p>"
+          }
+        },
+        "slide_BqiAkd": {
+          "type": "slide",
+          "settings": {
+            "text": ""
+          }
+        },
+        "slide_eVbrPH": {
+          "type": "slide",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_dTaTW9",
+        "slide_w9e4Aa",
+        "slide_XpJ9Kx",
+        "slide_KPepjX",
+        "slide_BqiAkd",
+        "slide_eVbrPH"
+      ],
+      "disabled": true,
+      "settings": {
+        "top_spacing_desktop": 50,
+        "bottom_spacing_desktop": 50,
+        "top_spacing_mobile": 50,
+        "bottom_spacing_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "sidebar",
+    "main",
+    "index_icon_with_text_column_tfmeiW",
+    "heading_image_FxyJ7P",
+    "index_heading_gHzVTd",
+    "1738087170553972e0",
+    "index_testimonial_Vqb3n9",
+    "fifty_fifty_text_image_enMDgW",
+    "index_faq_HqXX36",
+    "slider_text_image_tmhzLW"
+  ]
+}

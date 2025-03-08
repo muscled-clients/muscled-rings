@@ -1,0 +1,16 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "international"
+  },
+  "sections": {
+    "index_image_with_text_overlay_XkJEx3": {
+      "settings": {
+        "subtitle": "<p>Write Yours In 2025<\/p>",
+        "button_1": "Create Your Dream Ring",
+        "button_1_link": "https:\/\/rings.com\/apps\/ring-creator\/rb-get-started"
+      },
+      "blocks": {}
+    }
+  }
+}

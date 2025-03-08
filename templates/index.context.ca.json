@@ -1,0 +1,17 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "ca"
+  },
+  "sections": {
+    "index_image_with_text_overlay_XkJEx3": {
+      "settings": {
+        "title": "Every Rings Tells A Story",
+        "subtitle": "<p>Write Yours in 2025<\/p>",
+        "button_1": "Create Your Dream Ring",
+        "button_1_link": "https:\/\/rings.com\/apps\/ring-creator\/rb-get-started"
+      },
+      "blocks": {}
+    }
+  }
+}

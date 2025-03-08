@@ -1,0 +1,7 @@
+{
+  "parent": "footer-group-classic.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {}
+}

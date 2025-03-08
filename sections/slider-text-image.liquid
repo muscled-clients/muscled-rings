@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+    #shopify-section-{{ section.id }} {
+        margin-top: {{ section.settings.top_spacing_desktop | append: 'px' }};
+        margin-bottom: {{ section.settings.bottom_spacing_desktop | append: 'px' }};
+    }
+
+    .section_slide_single {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 0 60px;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        color: #553365;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #553365;
+    }
+    #shopify-section-{{ section.id }} .swiper-pagination {
+        position: relative;
+        padding: 0 60px;
+        max-width: 600px;
+        margin: 20px auto 0;
+        z-index: 4;
+    }
+    #shopify-section-{{ section.id }} .swiper-pagination .swiper-pagination-bullet {
+        border-radius: 25px;
+        width: calc(100% / {{ section.blocks.size }} - 10px);
+        height: 5px;
+    }
+
+    .image_text_swiper .swiper-slide {
+        height: auto;
+    }
+
+    .section_slide_single {
+        height: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .section {
+        position: relative;
+    }
+
+    .custom-pagination {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        z-index: 4;
+    }
+
+    .custom-pagination > * {
+        color: #553365;
+    }
+
+    .section_slide_text {
+        max-width: 400px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #shopify-section-{{ section.id }} {
+            margin-top: {{ section.settings.top_spacing_mobile | append: 'px' }};
+            margin-bottom: {{ section.settings.bottom_spacing_mobile | append: 'px' }};
+        }
+
+        .section_slide_single {
+            flex-direction: column;
+            padding: 0 20px;
+        }
+        #shopify-section-{{ section.id }} .swiper-pagination {
+            padding: 0 20px;
+        }
+
+        .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+            font-size: 25px;
+        }
+
+        .swiper-button-next, .swiper-rtl .swiper-button-prev {
+            right: var(--swiper-navigation-sides-offset,-9px);
+        }
+
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            left: var(--swiper-navigation-sides-offset,-9px);
+        }
+
+        .custom-pagination {
+            top: -30px;
+            left: 20px;
+        }
+    }
+</style>
+
+<div class="section">
+    <div class="swiper image_text_swiper">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                <div class="swiper-slide">
+                    <div class="section_slide_single">
+                        <div class="section_slide_text">{{ block.settings.text }}</div>
+                        <div class="section_slide_image"><img src="{{ block.settings.image | img_url: 'master' }}" alt=""></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <div class="custom-pagination">
+        <span class="current-slide">1</span> / <span class="total-slides">4</span>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    (function (){
+        new Swiper(".image_text_swiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            // Listen for slide changes
+            on: {
+                init: function () {
+                    updateSlideNumber(this);
+                },
+                slideChange: function () {
+                    updateSlideNumber(this);
+                },
+            },
+        });
+    })()
+
+    // Function to update the custom slide number
+    function updateSlideNumber(swiper) {
+        const currentSlide = swiper.realIndex + 1; // Real index accounts for loop mode
+        const totalSlides = swiper.slides.length - swiper.loopedSlides * 2 || swiper.slides.length; // Exclude duplicated slides in loop mode
+
+        // Update the DOM elements
+        document.querySelector('.current-slide').textContent = currentSlide;
+        document.querySelector('.total-slides').textContent = totalSlides;
+    }
+</script>
+
+
+{% schema %}
+{
+    "name": "Slider text image",
+    "settings": [
+        {
+            "type": "range",
+            "id": "top_spacing_desktop",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Top spacing desktop",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "bottom_spacing_desktop",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Bottom spacing desktop",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "top_spacing_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Top spacing mobile",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "bottom_spacing_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Bottom spacing mobile",
+            "default": 50
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Slide",
+            "type": "slide",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Text"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Slider text image"
+        }
+    ]
+}
+{% endschema %}

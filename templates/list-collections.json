@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections__main",
+      "settings": {
+        "collections_per_row": 3,
+        "pagination_limit": 48,
+        "pagination_type": "basic_pagination",
+        "align_height": false,
+        "collection_height": 400,
+        "enable_zoom": true,
+        "button_style": "button--secondary",
+        "overlay_background": "#939393",
+        "overlay_background_opacity": 70,
+        "overlay_text": "#FFFFFF",
+        "collection_title_below_image": false,
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_image_with_text_Gn4btp": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "image_ABbntR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/design_your_own_ring_1024x768_025a5a28-6870-4938-b0f3-96ecab9051ed.png",
+            "image_link": ""
+          }
+        },
+        "text_7JH6kg": {
+          "type": "text",
+          "settings": {
+            "title": "Create Your Perfect Moment",
+            "heading_size": "regular",
+            "text": "<p>From classic solitaires to stunning halos, design an engagement ring that tells your unique love story. Choose your style, diamond, and setting to create the ring of your dreams.<\/p>",
+            "alignment": "left",
+            "vertical_position": "center",
+            "button_label": "Design a Ring",
+            "link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-list?jewelry_type=ring&view_type=grid&metal_type=White%20Gold%7C14K",
+            "button_style": "button--primary",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "mobile_title": "",
+            "mobile_heading_size": "same_as_desktop",
+            "mobile_text": "",
+            "mobile_alignment": "same_as_desktop"
+          }
+        }
+      },
+      "block_order": [
+        "image_ABbntR",
+        "text_7JH6kg"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_text_position": "same_as_desktop",
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "index_image_with_text_Gn4btp"
+  ]
+}

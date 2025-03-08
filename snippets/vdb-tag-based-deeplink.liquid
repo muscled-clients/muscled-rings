@@ -1,0 +1,51 @@
+{% assign variant_stock_string = "" %}
+{% for tag in product.tags %}
+  {% assign tag_arr = tag | split: "@"%}
+  {% if tag_arr[0] == "VDBRC" and tag_arr[1] != "" and tag_arr[2] != "" %}
+    {% assign variant_stock_string = variant_stock_string | append: "," | append: tag_arr[1] | append: "|" | append:tag_arr[2] %}
+  {% endif %}
+{% endfor %}
+
+<!-- <button type="button" onclick="gofor_choose_stone()" class="btn product-form__cart-submit">
+	<span data-add-to-cart-text> Choose Stone </span>
+</button> -->
+
+<script>
+	(function () {
+		console.log('gofor1')
+		$settingVarStock = [];
+		var variant_stock_string = '{{variant_stock_string}}';//41499021344925|ghj2,41499021377693|ghj1
+		if (variant_stock_string != "") {
+			var variant_stock_arr = variant_stock_string.split(',');//["41499021344925|ghj2","41499021377693|ghj1"]
+			if (variant_stock_arr.length > 0) {
+				for (let i = 0; i < variant_stock_arr.length; i++) {
+					if (variant_stock_arr[i].includes('|')) {//41499021344925|ghj2
+						var vs_arr = variant_stock_arr[i].split('|');
+						$settingVarStock[vs_arr[0]] = vs_arr[1];
+					}
+				}
+			}
+		}
+
+	})();
+	function gofor_choose_stone() {
+		console.log('gofor2')
+
+		let choosedVariantId = '';
+		if (document.getElementsByName("id")[0].tagName == "SELECT") {
+			let se = document.getElementsByName("id")[0];
+			choosedVariantId = se.options[se.selectedIndex].value;
+		} else {
+			choosedVariantId = document.getElementsByName("id")[0].value;
+		}
+
+		let ring_stock_num = $settingVarStock[choosedVariantId];
+      
+		if (ring_stock_num != undefined && ring_stock_num != "") {
+			//location.href = "/apps/ring-creator/rb-setting-details?ring_stock_num=" + ring_stock_num + "&ring_var_id=" + choosedVariantId;
+            location.href = "/apps/ring-creator/rb-stone-list?ring_stock_num=" + ring_stock_num + "&ring_var_id=" + choosedVariantId;
+		} else {
+			alert('Stock num is invalid');
+		}
+	}
+</script>

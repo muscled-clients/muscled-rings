@@ -1,0 +1,217 @@
+{
+  "sections": {
+    "1658248740ae99d598": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "link": "",
+        "image": "shopify:\/\/shop_images\/fresh__page--our-story-banner-01.jpg",
+        "pretext": "",
+        "title": "Our story",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "background_color": "#FFFFFF",
+        "background_opacity": 0,
+        "border_color": "#FFFFFF",
+        "border_width": 0,
+        "text_width": 40,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_text_below_image": false,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658248831364c960f": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "Our values",
+        "heading_font": "helvetica_n7",
+        "heading_color": "rgba(0,0,0,0)",
+        "heading_alignment": "center",
+        "heading_size": 30,
+        "text": "<p>Our top priority is the environment. As a company that manufactures and produces products, and as consumers ourselves, we really need to focus on making the least amount of impact we have on the earth. <\/p><p>We have been pushing our sustainability efforts forward as we focus on ethical production practices and introducing 100% compostable packaging. Our products and shipping packaging is already recyclable, but we're looking forward to see how we can improve our methods and eventake care of our planet!<\/p>",
+        "text_font": "helvetica_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "left",
+        "text_size": 14,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_alignment": "center",
+        "button_style": "button--primary",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 180,
+        "width": "half",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "fadeInDown",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16582489331f94fcaf": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "Our products",
+        "heading_font": "helvetica_n7",
+        "heading_color": "rgba(0,0,0,0)",
+        "heading_alignment": "center",
+        "heading_size": 30,
+        "text": "<p>Our products are freshly made with natural and ethically sourced ingredients – <em>always<\/em>. This is of the utmost importance to us. Our products are handmade by our team locally and always go through quality testing before getting shipped out to you!<\/p><p><\/p><p>We love our loyal customers and are always open to discuss natural products and ingredients with anyone looking to make the switch for their bath + beauty products! Please reach out and <a href=\"\/pages\/contact-us\" title=\"Contact Us\">get in touch<\/a> with us if you'd like to chat or have any questions about our values + products.<\/p>",
+        "text_font": "helvetica_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "left",
+        "text_size": 14,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_alignment": "center",
+        "button_style": "button--primary",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 180,
+        "width": "half",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658249033f25346bd": {
+      "type": "index__featured-collection",
+      "settings": {
+        "title": "Most loved",
+        "collection": "shampoos",
+        "products_per": 6,
+        "mobile_products_per_row": "1",
+        "products_limit": 5,
+        "align_height": false,
+        "collection_height": 200,
+        "collection_style": "slider",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "fadeInDown",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1658249084704e5c0f": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "link": "",
+        "image": "shopify:\/\/shop_images\/fresh__page--our-story-01.jpg",
+        "pretext": "",
+        "title": "Connect with our community",
+        "subtitle": "<p>Tons of resources and tips!<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#ffffff",
+        "subheading_color": "#ffffff",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "background_color": "#FFFFFF",
+        "background_opacity": 0,
+        "border_color": "#FFFFFF",
+        "border_width": 0,
+        "text_width": 50,
+        "button_1": "Visit the blog",
+        "button_1_link": "shopify:\/\/blogs\/news",
+        "button_1_style": "button--primary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "#000000",
+        "subheading_color_mobile": "#000000",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16582492089a0e8546": {
+      "type": "index__contact-form",
+      "blocks": {
+        "1658249208aa06138d-0": {
+          "type": "textfield",
+          "settings": {
+            "label": "Name",
+            "required": true
+          }
+        },
+        "1658249208aa06138d-1": {
+          "type": "email",
+          "settings": {
+            "label": "Email"
+          }
+        },
+        "1658249208aa06138d-2": {
+          "type": "textarea",
+          "settings": {
+            "label": "Message",
+            "required": false
+          }
+        }
+      },
+      "block_order": [
+        "1658249208aa06138d-0",
+        "1658249208aa06138d-1",
+        "1658249208aa06138d-2"
+      ],
+      "settings": {
+        "title": "Looking to get in touch?",
+        "content_text": "<p>We're always happy to chat and help answer any questions you may have!<br\/><br\/>Please note, we try our best to respond to all inquiries within 48 hours, Monday - Friday. <\/p>",
+        "social_enable": true,
+        "text_alignment": "left",
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "form_position": "right",
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "animation": "fadeIn",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "1658248740ae99d598",
+    "1658248831364c960f",
+    "16582489331f94fcaf",
+    "1658249033f25346bd",
+    "1658249084704e5c0f",
+    "16582492089a0e8546"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "image_darken": false,
+        "subtitle": "",
+        "width": "wide",
+        "banner_height": "medium",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "cart__main",
+      "settings": {
+        "display_product_quantity_cart": true,
+        "display_savings": true,
+        "cart_message": "",
+        "continue_shopping_link": "",
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1637957392785bb2fc": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "Return Policy",
+        "heading_font": "monotype_bodoni_n4",
+        "heading_alignment": "center",
+        "heading_size": 40,
+        "text": "<p> We offer a 30-day return window for eligible items. Custom and engraved items are non-returnable, except in cases of defects. We offer free return shipping within the USA and Canada for up to three returns per customer. International customers are responsible for their own return shipping costs, as well as any applicable customs fees.<\/p>",
+        "text_font": "optima_nova_n4",
+        "text_alignment": "center",
+        "text_size": 18,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--primary",
+        "button_alignment": "center",
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "#eeeeee",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 180,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 60,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_title": "",
+        "mobile_text": "",
+        "mobile_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main",
+    "1637957392785bb2fc"
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product__breadcrumb",
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "product__sidebar",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "product__main",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient_form": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "form"
+      ],
+      "settings": {
+        "product_images_position": "left",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "gallery_arrows": true,
+        "enable_zoom": true,
+        "enable_product_lightbox": true,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "display_thumbnails": true,
+        "thumbnail_position": "bottom-thumbnails",
+        "enable_thumbnail_slider": true,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_icon_with_text_column_tfmeiW": {
+      "type": "index__icon-with-text-column",
+      "blocks": {
+        "logo_image_9BDGCc": {
+          "type": "logo_image",
+          "settings": {
+            "icon_label": "truck",
+            "title": "Free Shipping",
+            "text": "<p>Free delivery within USA and Canada<\/p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "logo_image_wJ7UiH": {
+          "type": "logo_image",
+          "settings": {
+            "icon_label": "calendar",
+            "title": "30 Day Return",
+            "text": "<p>Free returns within 30 days of item delivery<\/p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "logo_image_6r3xmB": {
+          "type": "logo_image",
+          "settings": {
+            "icon_label": "lock",
+            "title": "Secure Payment",
+            "text": "<p>Secure checkout and payment<\/p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "logo_image_HVpQML": {
+          "type": "logo_image",
+          "settings": {
+            "icon_label": "gem",
+            "title": "Ethically Created",
+            "text": "<p>100% conflict-free diamonds<\/p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_9BDGCc",
+        "logo_image_wJ7UiH",
+        "logo_image_6r3xmB",
+        "logo_image_HVpQML"
+      ],
+      "settings": {
+        "icons_per_row": 4,
+        "align_text": "center",
+        "icon_size": "medium",
+        "button_style": "button--primary",
+        "icon_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "#CCCCCC",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_alignment": "none",
+        "mobile_icon_size": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_faq_HqXX36": {
+      "type": "index__faq",
+      "blocks": {
+        "heading_Fyifgf": {
+          "type": "heading",
+          "settings": {
+            "title": "Shipping\/Returns"
+          }
+        },
+        "content_ebXz79": {
+          "type": "content",
+          "settings": {
+            "title": "What is your shipping policy?",
+            "answer": "<p>We offer FREE SHIPPING within USA and Canada. You'll receive a tracking number as soon as your ring ships to keep track of your package every step of the way.  <\/p>"
+          }
+        },
+        "content_apYcKk": {
+          "type": "content",
+          "settings": {
+            "title": "What is your return policy?",
+            "answer": "<p>Your satisfaction is 100% guaranteed. Take 30 days to examine your ring, try it on, or even have it independently appraised. If you're not completely satisfied, simply return your diamond ring in its original condition using our secure shipping kit, and we'll refund your entire purchase – including your membership fee. No restocking fees, no questions asked.<\/p>"
+          }
+        },
+        "content_Ubhtwx": {
+          "type": "content",
+          "settings": {
+            "title": "How do I track my order?",
+            "answer": "<p>Once your order has shipped, you will receive an email with tracking information. You can use this link to monitor your order's progress. If you have any issues with tracking, please contact our customer service team.<\/p>"
+          }
+        },
+        "heading_ktHj6q": {
+          "type": "heading",
+          "settings": {
+            "title": "Product Information"
+          }
+        },
+        "content_JctHzX": {
+          "type": "content",
+          "settings": {
+            "title": "Where are your products made?",
+            "answer": "<p>Our rings are custom-designed and crafted using high-quality precious metals, diamonds, and gemstones, with a focus on ethical sourcing and exceptional craftsmanship. Our production process is managed through a carefully selected network of trusted suppliers, ensuring that each piece meets our high standards for quality and integrity. We collaborate with both local and international artisans to bring you rings that are made with care and precision. <\/p>"
+          }
+        },
+        "content_cpnTw9": {
+          "type": "content",
+          "settings": {
+            "title": "Are your gems and materials sourced responsibly?",
+            "answer": "<p>Yes, we prioritize ethical sourcing for all our gems and materials. We carefully vet our suppliers to ensure they adhere to strict standards of integrity, social responsibility, and conflict-free sourcing. Our commitment to transparency means that we continually work to maintain a trustworthy supply chain, so you can feel confident in the origins, quality, and craftsmanship of every ring we create.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fyifgf",
+        "content_ebXz79",
+        "content_apYcKk",
+        "content_Ubhtwx",
+        "heading_ktHj6q",
+        "content_JctHzX",
+        "content_cpnTw9"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "width": "standard",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "animation": "none",
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "sidebar",
+    "main",
+    "index_icon_with_text_column_tfmeiW",
+    "index_faq_HqXX36"
+  ]
+}

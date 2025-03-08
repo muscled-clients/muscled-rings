@@ -1,0 +1,101 @@
+{% liquid
+    assign accordions = product.metafields.content.dropdowns.value
+%}
+{% if accordions.size > 0 %}
+    <style>
+        /* Core styles/functionality */
+        .tab {
+            position: relative;
+        }
+        .tab input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+        .tab__content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.35s;
+        }
+        .tab input:checked ~ .tab__content {
+            max-height: 100rem;
+        }
+
+        /* Visual styles */
+        .accordion {
+            color: #000000;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            background: #e4e2d3;
+            margin-bottom: 20px;
+        }
+        .tab__label {
+            display: flex;
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Helvetica Neue,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+            font-weight: 400;
+            color: #553365;
+            font-size: 18px;
+            /*background: #cac8af;*/
+            cursor: pointer;
+        }
+        .tab__label {
+            justify-content: space-between;
+            padding: 1rem;
+            align-items: center;
+            position: relative;
+        }
+        .tab__label .icon {
+            transition: transform 0.35s;
+            height: 1rem;
+            width: 1rem;
+        }
+        .tab input:checked + .tab__label::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -1px;
+            width: calc(100% - 2rem);
+            height: 1px;
+            background: #553365;
+        }
+        .tab input:checked + .tab__label .icon {
+            transform: rotate(-180deg);
+        }
+        .tab__content {
+            margin: 0;
+            padding: 0 1rem;
+        }
+        .tab input:checked ~ .tab__content {
+            padding: 1rem;
+        }
+    </style>
+    <div class="product__description content">
+    {% for accordion in accordions %}
+        {% assign title = accordion | split: '] ' | first | remove: '[' %}
+        {% assign text = accordion | split: '] ' | last %}
+        <section class="accordion">
+            <div class="tab">
+                <input type="radio" name="accordion-{{ section.id }}" id="cb{{ forloop.index }}"{% if forloop.first %} checked{% endif %}>
+                <label for="cb{{ forloop.index }}" class="tab__label" onclick="
+                    (function (label) {
+                        const input = document.querySelector(`#${label.htmlFor}`);
+                        const currentState = input.checked;
+                        setTimeout(() => {
+                            const changedState = input.checked;
+                            if(currentState === changedState){input.checked = false}
+                        }, 100);
+                    })(this)
+                ">
+                    <strong>{{ title }}</strong>
+                    <span class="icon icon--rotate" data-icon="down-caret"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><polygon points="50 77.1 2.15 28.51 7.85 22.9 50 65.7 92.15 22.9 97.85 28.51 50 77.1"></polygon></g></svg></span>
+                </label>
+                <div class="tab__content">
+                    {{ text }}
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    </div>
+{% endif %}

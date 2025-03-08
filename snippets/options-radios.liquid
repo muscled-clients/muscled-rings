@@ -1,0 +1,478 @@
+{% comment %}
+  Display variant options for a product
+
+  @param selected_variant
+{% endcomment %}
+
+{% assign swatch_trigger = settings.swatch_trigger | strip | downcase %}
+{% assign file_extension = 'png' %}
+
+{% assign loop_index = option_index | plus: 1 %}
+{%- assign swatch_option_key = 'option' | append: loop_index -%}
+
+<fieldset class="swatch is-flex is-flex-wrap" data-option-index="{{ option_index }}">
+  <legend class="option-title label">
+    <span
+      class="options-selection__option-name"
+      data-variant-option-name="{{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value | escape }}"
+      data-variant-option-choose-name="{{ 'product.variants.choose_option' | t: option: option.name }}"
+    >
+      {% if selected_variant %}
+        {{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value }}
+      {% else %}
+        {{ 'product.variants.choose_option' | t: option: option.name }}
+      {% endif %}
+    </span>
+    <style>
+        .swatch .option-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .size_chart_content {
+            opacity: 0;
+            transition: 200ms all ease-in;
+            position: fixed;
+            padding: 20px;
+            overflow-y: scroll;
+            background: #fff;
+            height: 60%;
+            width: 75%;
+            max-width: 900px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 100%);
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+       .button--add-to-cart.disabled {
+            cursor: pointer;
+        }
+        .red_border {
+            border-color: red !important;
+        }
+        .atc_button_overlay {
+            display: block;
+            width: 100%;
+            height: 44px;
+            background-color: transparent;
+            position: absolute;
+            z-index: 1;
+        }
+        .atc_button_overlay_disabled {
+            z-index: -10;
+        }
+        .atc_no_selection {
+            text-align: center;
+            color: red;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: 200ms all ease-in;
+        }
+        .atc_no_selection_visible {
+            max-height: 20px;
+            opacity: 1;
+        }
+
+        .size_chart_container .size_chart_label {
+            font-size: 16px !important;
+            padding: 0 !important;
+            line-height: 1.5 !important;
+            text-transform: none !important;
+        }
+
+        .background_drop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100% !important;
+            width: 100%;
+            background-color: rgba(0,0,0,0.2);
+            backdrop-filter: blur(2px);
+            opacity: 0;
+            /* transition: 200ms all ease-in; */
+            z-index: -1;
+            max-height: 0;
+            overflow: hidden;
+            padding: 0!important;
+        }
+
+        .option-title.label {
+          z-index: 10000;
+        }
+
+        #size_chart:checked ~ .size_chart_content {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            z-index: 10;
+        }
+
+        #size_chart:checked ~ .background_drop {
+            z-index: 9;
+            opacity: 1;
+            max-height: 100%;
+            overflow: visible;
+         }
+
+        .close_icon_popup {
+            border: 1px solid black;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px;
+        }
+
+        .close_icon_popup svg {
+            max-width: 20px;
+            width: 100%;
+        }
+
+        .size_chart_heading {
+            display: flex ;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .size_chart_image {
+            display: flex ;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .size_chart_heading label {
+            padding: 0 !important;
+        }
+
+        .size_chart_heading_real {
+            margin-top: -10px;
+        }
+
+        .header-section {
+            position: relative;
+            z-index: 5;
+        }
+
+        .top-bar {
+            position: relative;
+            z-index: 5;
+        }
+
+        .html_hidden {
+            overflow: hidden;
+        }
+
+      @media only screen and (max-width: 480px) {
+        .size_chart_content {
+          width: 92%;
+          height: 92%;
+          padding: 12px;
+        }
+      }
+    </style>
+      <div class="size_chart_container">
+          <input type="checkbox" id="size_chart" name="size chart">
+          <label for="size_chart" class="size_chart_label">Size chart</label>
+          <label for="size_chart" class="background_drop"></label>
+              <div class="size_chart_content">
+                  <div class="size_chart_heading"><span class="size_chart_heading_real">Size chart</span><label for="size_chart"><span class="close_icon_popup">{% render 'close-icon' %}</span></label></div>
+                  <style type="text/css">
+                      .size_chart_container table {
+                          width: 100%;
+                      }
+                      .size_chart_container td {
+                          border: 1px solid #d3b17d; /* Soft gold border color */
+                          padding: 8px 12px;
+                          text-align: center;
+                      }
+
+                      .size_chart_container tr:first-child {
+                          background-color: #f9f5f0; /* Light beige header background */
+                          font-weight: bold;
+                      }
+
+                      .size_chart_container tr:nth-child(even) {
+                          background-color: #fcfaf7; /* Very subtle alternating row color */
+                      }
+
+                      .size_chart_heading {
+                          font-size: 1.2em;
+                          margin-bottom: 15px;
+                          color: #5a4a3f; /* Dark brown heading color */
+                      }
+
+                  </style>
+                  <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" data-sheets-root="1" data-sheets-baot="1">
+                      <colgroup>
+                          <col width="201">
+                          <col width="203">
+                          <col width="200">
+                      </colgroup>
+                      <tbody>
+                      <tr>
+                          <td>Diameter <br>(MM)</td>
+                          <td>US/Canada <br>Ring Size</td>
+                          <td>Europe <br>Ring Size</td>
+                      </tr>
+                      <tr>
+                          <td>14.1</td>
+                          <td>3</td>
+                          <td>44</td>
+                      </tr>
+                      <tr>
+                          <td>14.5</td>
+                          <td>3.5</td>
+                          <td>45</td>
+                      </tr>
+                      <tr>
+                          <td>14.9</td>
+                          <td>4</td>
+                          <td>46</td>
+                      </tr>
+                      <tr>
+                          <td>15.3</td>
+                          <td>4.5</td>
+                          <td>47</td>
+                      </tr>
+                      <tr>
+                          <td>15.7</td>
+                          <td>5</td>
+                          <td>49</td>
+                      </tr>
+                      <tr>
+                          <td>16.1</td>
+                          <td>5.5</td>
+                          <td>50</td>
+                      </tr>
+                      <tr>
+                          <td>16.5</td>
+                          <td>6</td>
+                          <td>51</td>
+                      </tr>
+                      <tr>
+                          <td>16.9</td>
+                          <td>6.5</td>
+                          <td>52</td>
+                      </tr>
+                      <tr>
+                          <td>17.3</td>
+                          <td>7</td>
+                          <td>54</td>
+                      </tr>
+                      <tr>
+                          <td>17.7</td>
+                          <td>7.5</td>
+                          <td>55</td>
+                      </tr>
+                      <tr>
+                          <td>18.1</td>
+                          <td>8</td>
+                          <td>57</td>
+                      </tr>
+                      <tr>
+                          <td>18.5</td>
+                          <td>8.5</td>
+                          <td>58</td>
+                      </tr>
+                      <tr>
+                          <td>19</td>
+                          <td>9</td>
+                          <td>59</td>
+                      </tr>
+                      <tr>
+                          <td>19.4</td>
+                          <td>9.5</td>
+                          <td>61</td>
+                      </tr>
+                      <tr>
+                          <td>19.8</td>
+                          <td>10</td>
+                          <td>62</td>
+                      </tr>
+                      <tr>
+                          <td>20.2</td>
+                          <td>10.5</td>
+                          <td>63</td>
+                      </tr>
+                      <tr>
+                          <td>20.6</td>
+                          <td>11</td>
+                          <td>65</td>
+                      </tr>
+                      <tr>
+                          <td>21</td>
+                          <td>11.5</td>
+                          <td>66</td>
+                      </tr>
+                      <tr>
+                          <td>21.4</td>
+                          <td>12</td>
+                          <td>67</td>
+                      </tr>
+                      <tr>
+                          <td>21.8</td>
+                          <td>12.5</td>
+                          <td>69</td>
+                      </tr>
+                      <tr>
+                          <td>22.2</td>
+                          <td>13</td>
+                          <td>70</td>
+                      </tr>
+                      <tr>
+                          <td>22.6</td>
+                          <td>13.5</td>
+                          <td>71</td>
+                      </tr>
+                      <tr>
+                          <td>23</td>
+                          <td>14</td>
+                          <td>73</td>
+                      </tr>
+                      </tbody>
+                  </table>
+
+              </div>
+      </div>
+
+  </legend>
+  <div
+    class="swatch__options"
+    data-variant-option
+    data-variant-option-index="{{ option_index }}"
+    data-variant-option-chosen-value="{% if selected_variant %}{{ option.selected_value }}{% else %}false{% endif %}"
+  >
+    {% for value in option.values %}
+      {% assign option_name = option.name | downcase %}
+
+      {% if show_swatches and option_name == swatch_trigger %}
+        {% assign is_color = true %}
+      {% endif %}
+
+      {% if option_name == swatch_trigger %}
+        {% assign swatch_search_color = value | downcase %}
+        {% for variant in product.variants %}
+          {% assign option_value_downcased = variant[swatch_option_key] | downcase %}
+          {% if option_value_downcased == swatch_search_color %}
+            {% assign swatch_file_url = variant.image | img_url: 'small' %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      <div class="swatch__option" data-variant-option-value-wrapper>
+        <input
+          class="swatch--{{ value | handle }}"
+          type="radio"
+          aria-label="{{ value | escape }}"
+          tabindex="0"
+          name="option-{{ option_index }}"
+          value="{{ value | escape }}"
+          {% comment %}{% if selected_variant and option.selected_value == value %}checked{% endif %}{% endcomment %}
+          data-variant-option-value
+          data-variant-option-value-index="{{ option_index }}"
+        />
+        <div
+          aria-label="{{ value | escape }}"
+          tabindex="0"
+          data-value="{{ value | escape }}"
+          data-value-handle="{{ value | handle }}"
+          class="swatch-element {% if is_color %}color {% endif %}{{ value | handle }}-swatch"
+        >
+          {% if is_color %}
+            <div class="tooltip">{{ value }}</div>
+          {% endif %}
+          {% if is_color %}
+            <label
+              style="
+                {% if settings.swatches_option_style == 'variant_image' and product.variants[forloop.index0].image != blank %}
+                  background-image: url({{ swatch_file_url }});
+                {% else %}
+                  background-color: {{ value | split: ' ' | last | handle }};
+                {% endif %}
+              "
+              data-variant-option-value-label
+              data-variant-image="{% if settings.swatches_option_style == 'variant_image' and product.variants[forloop.index0].image != blank %}true{% endif %}"
+            >
+
+              {% if product.variants[forloop.index0].image == blank or settings.swatches_option_style != 'variant_image' %}
+                {% assign image_name = value | handle | append: '.' | append: file_extension %}
+                {% assign swatch = images[image_name] %}
+              {% endif %}
+
+              <img class="swatch__image {% if swatch == empty %}swatch__image--empty{% endif %}" src="{{ swatch | img_url: '50x' }}" alt="">
+
+              <span class="crossed-out" aria-label="{{ 'products.product.sold_out' | t }}" alt="{{ 'products.product.sold_out' | t }}"></span>
+            </label>
+          {% else %}
+            <label
+              data-variant-option-value-label
+            {% if template contains 'shopibro' %}
+                {% if option.name contains 'Metal Type' %}
+                onclick="const metal = document.querySelector('[data-metal]');if(metal){metal.textContent = '{{ value }}';}"
+                {% endif %}
+            {% endif %}
+            >
+              {{ value }}
+              <span class="crossed-out" aria-label="{{ 'products.product.sold_out' | t }}" alt="{{ 'products.product.sold_out' | t }}"></span>
+            </label>
+          {% endif %}
+          <script class="id-script">
+            (function() {
+              const idScriptEl = document.querySelector('.id-script:not(.id-script--processed)');
+              const idScriptsProcessed = document.querySelectorAll('.id-script.id-script--processed').length;
+              const variantOptionValueWrapper = idScriptEl.closest('[data-variant-option-value-wrapper]');
+              const variantOptionValue = variantOptionValueWrapper.querySelector('[data-variant-option-value]');
+              const variantOptionValueLabel = variantOptionValueWrapper.querySelector('[data-variant-option-value-label]');
+              variantOptionValue.id = `{{ product.id }}-${idScriptsProcessed}`;
+              variantOptionValueLabel.setAttribute('for', `{{ product.id }}-${idScriptsProcessed}`);
+              idScriptEl.classList.add('id-script--processed');
+            })();
+          </script>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</fieldset>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        const mainHtml = document.querySelector('html');
+        document.querySelectorAll(".size_chart_container label").forEach(function(label) {
+            label.addEventListener("click", function() {
+                let input = document.getElementById("size_chart");
+                if (input.checked) {
+                    mainHtml.classList.remove('html_hidden');
+                } else {
+                    mainHtml.classList.add('html_hidden');
+                }
+            });
+        });
+        {% if template contains 'shopibro' %}
+        const AtcButton = document.querySelector('.atc_button_overlay');
+        const colorSwatched = document.querySelectorAll('.swatch-element');
+        const AtcText = document.querySelector('.atc_no_selection');
+        colorSwatched.forEach((swatch)=> {
+            swatch.addEventListener('click', ()=> {
+                document.querySelectorAll(".swatch-element.red_border").forEach((el) => {
+                    el.classList.remove("red_border");
+                });
+                AtcButton.classList.add('atc_button_overlay_disabled');
+                AtcText.classList.remove('atc_no_selection_visible');
+            })
+        })
+        AtcButton.addEventListener('click', ()=> {
+            colorSwatched.forEach((swatch)=> {
+                swatch.classList.add('red_border');
+            })
+            AtcText.classList.add('atc_no_selection_visible');
+        })
+        {% endif %}
+
+    });
+
+</script>

@@ -1,0 +1,368 @@
+{
+  "sections": {
+    "16379500769efb03f7": {
+      "type": "index__slideshow-classic",
+      "settings": {
+        "image_slideshow_speed": 0,
+        "image_transition": "fade",
+        "show_arrows": true,
+        "show_nav_buttons": true,
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animation": "fadeIn",
+        "mobile_text_below_image": true,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_image_with_text_overlay_XkJEx3": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/perfect_engagement_ring_header_1800x900_22adbef1-bd2f-4bbb-ac6b-37f5c26c98d5.png",
+        "link": "",
+        "pretext": "",
+        "title": "The Perfect Engagement Ring",
+        "subtitle": "<p>Explore the Solitaire Collection<\/p>",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "left",
+        "text_vertical_position": "middle",
+        "text_width": 48,
+        "background_color": "#FFFFFF",
+        "background_opacity": 0,
+        "border_color": "#FFFFFF",
+        "border_width": 0,
+        "button_1": "shop rings",
+        "button_1_link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-list?jewelry_type=ring&view_type=grid&metal_type=White%20Gold%7C14K",
+        "button_1_style": "button--secondary",
+        "button_2": "shop diamonds",
+        "button_2_link": "https:\/\/rings.com\/apps\/vdb-app\/search-filters?structure=new&diamondSearchType=Lab_grown_Diamond",
+        "button_2_style": "button--secondary",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_heading_6nJbUd": {
+      "type": "index__heading",
+      "settings": {
+        "preheading": "",
+        "title": "Shop Diamond Solitaires",
+        "subheading": "",
+        "heading_alignment": "start",
+        "vertical_spacing": "small",
+        "preheading_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "subheading_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_gallery_8X3QDL": {
+      "type": "index__gallery",
+      "blocks": {
+        "image_jK3XXk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/119221694.webp",
+            "mobile_image": "shopify:\/\/shop_images\/119221694.webp",
+            "link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-details?ring_stock_num=166625757P"
+          }
+        },
+        "image_zFjRqP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/119217630.webp",
+            "link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-details?ring_stock_num=6276134P56"
+          }
+        },
+        "image_UNpdAT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/119228961_019edb57-8115-4e74-87f7-51202a634dc8.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/119228961_019edb57-8115-4e74-87f7-51202a634dc8.jpg",
+            "link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-details?ring_stock_num=57P9610624"
+          }
+        },
+        "image_J98yKa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/118263535_75ea1be9-3a1e-4b6b-bb0a-cbe89afdafdd.jpg",
+            "link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-details?ring_stock_num=615P465162"
+          }
+        }
+      },
+      "block_order": [
+        "image_jK3XXk",
+        "image_zFjRqP",
+        "image_UNpdAT",
+        "image_J98yKa"
+      ],
+      "settings": {
+        "gallery_type": "classic",
+        "images_per_row": 4,
+        "crop_images": false,
+        "enable_lightbox": false,
+        "overlay_color": "#4a4a4a",
+        "link_color": "#ffffff",
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16379533452681c905": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "Discover Our Exclusive Engagement Ring Collection",
+        "heading_font": "tenor_sans_n4",
+        "heading_alignment": "center",
+        "heading_size": 44,
+        "text": "<p>Explore our exclusive, limited-edition engagement rings crafted for a lifetime of love.<\/p>",
+        "text_font": "tenor_sans_n4",
+        "text_alignment": "center",
+        "text_size": 20,
+        "columns": 1,
+        "button_label": "Shop Engagement Rings",
+        "button_link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-list?jewelry_type=ring&view_type=grid&metal_type=White%20Gold%7C14K",
+        "button_style": "button--primary",
+        "button_alignment": "center",
+        "heading_color": "#897358",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 50,
+        "width": "standard",
+        "padding_top": 15,
+        "padding_bottom": 40,
+        "padding_left": 20,
+        "padding_right": 20,
+        "animation": "none",
+        "mobile_title": "Engagement Rings Collection",
+        "mobile_text": "<p>Explore our limited-edition engagement rings crafted for love.<\/p>",
+        "mobile_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_image_with_text_R76P4T": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "image_7xqmRE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/design_your_own_ring_1024x768_025a5a28-6870-4938-b0f3-96ecab9051ed.png",
+            "image_link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-list?jewelry_type=ring&view_type=grid&metal_type=White%20Gold%7C14K"
+          }
+        },
+        "text_WJbEpi": {
+          "type": "text",
+          "settings": {
+            "title": "Create Your Perfect Moment",
+            "heading_size": "regular",
+            "text": "<p>From classic solitaires to stunning halos, design an engagement ring that tells your unique love story. Choose your style, diamond, and setting to create the ring of your dreams.<\/p>",
+            "alignment": "left",
+            "vertical_position": "center",
+            "button_label": "Design a Ring",
+            "link": "https:\/\/rings.com\/apps\/ring-creator\/rb-setting-list?jewelry_type=ring&view_type=grid&metal_type=White%20Gold%7C14K",
+            "button_style": "button--primary",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "mobile_title": "",
+            "mobile_heading_size": "same_as_desktop",
+            "mobile_text": "",
+            "mobile_alignment": "same_as_desktop"
+          }
+        }
+      },
+      "block_order": [
+        "image_7xqmRE",
+        "text_WJbEpi"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_text_position": "same_as_desktop",
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_heading_Xr76zP": {
+      "type": "index__heading",
+      "settings": {
+        "preheading": "",
+        "title": "#Engaged",
+        "subheading": "<p>Share your love story with Rings.com<\/p>",
+        "heading_alignment": "start",
+        "vertical_spacing": "medium",
+        "preheading_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "subheading_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_gallery_AjTPy4": {
+      "type": "index__gallery",
+      "blocks": {
+        "image_7ti3H4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/proposal_at_restaurant_e319df3c-b4a4-482b-bf62-533696cc39ca.png",
+            "link": ""
+          }
+        },
+        "image_qeJtNA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/urban_rooftop_engagement.jpg",
+            "link": ""
+          }
+        },
+        "image_HGeq83": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/surprise_proposal_at_work.jpg",
+            "link": ""
+          }
+        },
+        "image_mxeP7U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/engagement_proposal.jpg",
+            "link": ""
+          }
+        },
+        "image_6UiGgW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/engaged_couple_at_sunset_on_beach.jpg",
+            "link": ""
+          }
+        },
+        "image_VtxwGG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bob_and_tinas_engagement_party.jpg",
+            "link": ""
+          }
+        },
+        "image_9NDHcG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/engagment_photo_brownstone.jpg",
+            "link": ""
+          }
+        },
+        "image_tRRGeb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/proposal_on_one_knee.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_7ti3H4",
+        "image_qeJtNA",
+        "image_HGeq83",
+        "image_mxeP7U",
+        "image_6UiGgW",
+        "image_VtxwGG",
+        "image_9NDHcG",
+        "image_tRRGeb"
+      ],
+      "settings": {
+        "gallery_type": "classic",
+        "images_per_row": 4,
+        "crop_images": false,
+        "enable_lightbox": false,
+        "overlay_color": "#000000",
+        "link_color": "#ffffff",
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "16379500769efb03f7",
+    "index_image_with_text_overlay_XkJEx3",
+    "index_heading_6nJbUd",
+    "index_gallery_8X3QDL",
+    "16379533452681c905",
+    "index_image_with_text_R76P4T",
+    "index_heading_Xr76zP",
+    "index_gallery_AjTPy4"
+  ]
+}

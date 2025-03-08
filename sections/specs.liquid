@@ -1,0 +1,335 @@
+{% comment %}
+  Product Specifications Section
+  - Displays product specifications in a tabbed layout
+  - Pulls data from product metafields
+{% endcomment %}
+
+<style>
+    .specs-tabs {
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 30px;
+    }
+
+    .specs-tab-list {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .specs-tab {
+        padding: 15px 0;
+        cursor: pointer;
+        color: #666;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .specs-tab.active {
+        color: #8b5d9a;
+        font-weight: 500;
+    }
+
+    .specs-tab.active:after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #8b5d9a;
+    }
+
+    .specs-content {
+        display: none;
+    }
+
+    .specs-content.active {
+        display: block;
+    }
+
+    .specs-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .specs-section {
+        margin-bottom: 40px;
+    }
+
+    .specs-section-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .specs-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 12px 0;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .specs-label {
+        color: #666;
+    }
+
+    .specs-value {
+        color: #333;
+    }
+
+    .companion-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .companion-table tr {
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .companion-table td {
+        padding: 15px 0;
+        color: #333;
+    }
+
+    .companion-table td:last-child {
+        text-align: right;
+        color: #666;
+    }
+
+    @media screen and (max-width: 768px) {
+        .specs-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .specs-tab-list {
+            gap: 20px;
+        }
+
+        .specs-tab {
+            font-size: 14px;
+        }
+    }
+</style>
+
+<section class="section product-specifications-section"
+         style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="{% if section.settings.section_width == 'container' %}page-width{% endif %}">
+
+        <div class="specs-tabs">
+            <ul class="specs-tab-list">
+                <li class="specs-tab active" data-tab="specs">{{ section.settings.specs_tab_label }}</li>
+                <li class="specs-tab" data-tab="companion">{{ section.settings.companion_tab_label }}</li>
+            </ul>
+        </div>
+
+        <div class="specs-content active" data-content="specs">
+            <div class="specs-grid">
+                <div class="specs-section">
+                    <h3 class="specs-section-title">PRODUCT DETAILS</h3>
+                    <div class="specs-row">
+                        <div class="specs-label">Metal Type</div>
+                        <div class="specs-value" data-metal>{% if product.metafields.specifications.metal_type %}{{ product.metafields.specifications.metal_type }}{% endif %}</div>
+                    </div>
+
+                    {% if product.metafields.specifications.metal_color %}
+                        <div class="specs-row">
+                            <div class="specs-label">Metal Color</div>
+                            <div class="specs-value">{{ product.metafields.specifications.metal_color }}</div>
+                        </div>
+                    {% endif %}
+
+                    {% if product.metafields.specifications.description %}
+                        <div class="specs-row">
+                            <div class="specs-label">Description</div>
+                            <div class="specs-value">{{ product.metafields.specifications.description }}</div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="specs-content" data-content="companion">
+            <table class="companion-table">
+                {% if product.metafields.companion.round %}
+                    <tr>
+
+                        <td class="td-img"><img src="{{ 'Round.png' | asset_url }}"/> Round</td>
+                        <td>{{ product.metafields.companion.round }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.oval %}
+                    <tr>
+                        <td class="td-img"><img src="{{ 'Oval.png' | asset_url }}"/> Oval</td>
+                        <td>{{ product.metafields.companion.oval }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.princess %}
+                    <tr>
+                        <td class="td-img"><img src="{{ 'Princess.png' | asset_url }}"/> Princess</td>
+                        <td>{{ product.metafields.companion.princess }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.pear %}
+
+                    <tr>
+                        <td class="td-img"><img src="{{ 'Pear.png' | asset_url }}"/> Pear</td>
+                        <td>{{ product.metafields.companion.pear }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.emerald %}
+
+
+                    <tr>
+                        <td class="td-img"><img src="{{ 'Emerald.png' | asset_url }}"/> Emerald</td>
+                        <td>{{ product.metafields.companion.emerald }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.radiant %}
+
+                    <tr>
+                        <td class="td-img"><img src="{{ 'Radiant.png' | asset_url }}"/> Radiant</td>
+                        <td>{{ product.metafields.companion.radiant }}</td>
+                    </tr>
+
+                {% endif %}
+
+                {% if product.metafields.companion.cushion %}
+
+                    <tr>
+                        <td class="td-img"><img src="{{ 'Cushion.png' | asset_url }}"/> Cushion (Old Miner)</td>
+                        <td>{{ product.metafields.companion.cushion }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.marquise %}
+                    <tr>
+                        <td>Marquise</td>
+                        <td>{{ product.metafields.companion.marquise }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.heart %}
+
+                    <tr>
+                        <td class="td-img"><img src="{{ 'Heart.png' | asset_url }}"/> Heart</td>
+                        <td>{{ product.metafields.companion.heart }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.asscher %}
+                    <tr>
+                        <td class="td-img"><img src="{{ 'Asscher.png' | asset_url }}"/> Asscher</td>
+                        <td>{{ product.metafields.companion.asscher }}</td>
+                    </tr>
+
+                {% endif %}
+
+                {% if product.metafields.companion.cushion_modified %}
+                    <tr>
+                        <td>Cushion Modified</td>
+                        <td>{{ product.metafields.companion.cushion_modified }}</td>
+                    </tr>
+                {% endif %}
+
+                {% if product.metafields.companion.square_radiant %}
+                    <tr>
+                        <td>Square Radiant</td>
+                        <td>{{ product.metafields.companion.square_radiant }}</td>
+                    </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+</section>
+
+<script>
+    const tabs = document.querySelectorAll('.specs-tab');
+    const contents = document.querySelectorAll('.specs-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            tab.classList.add('active');
+            document.querySelector(`.specs-content[data-content="${tab.dataset.tab}"]`).classList.add('active');
+        });
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Product Specifications",
+  "tag": "section",
+  "class": "product-specifications-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ],
+      "default": "container"
+    },
+    {
+      "type": "text",
+      "id": "specs_tab_label",
+      "label": "Specifications tab label",
+      "default": "Product Details"
+    },
+    {
+      "type": "text",
+      "id": "companion_tab_label",
+      "label": "Companion tab label",
+      "default": "Can Be Set With"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 36,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 36,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Specifications",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

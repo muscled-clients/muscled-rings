@@ -1,0 +1,232 @@
+<style>
+    #shopify-section-{{ section.id }} {
+        margin-top: {{ section.settings.top_spacing_desktop | append: 'px' }};
+        margin-bottom: {{ section.settings.bottom_spacing_desktop | append: 'px' }};
+    }
+
+    .heading_image_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    {% if section.settings.subheading != blank %}
+    .heading_image_container h2 {
+        margin-bottom: 20px;
+    }
+    {% endif %}
+
+    .images_container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .heading_image_container img {
+        margin-top: 50px;
+        vertical-align: bottom;
+        /* width: 24%; */
+    }
+
+    .images_container div {
+      width: 24%;
+    }
+
+    .images_container div p {
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #shopify-section-{{ section.id }} {
+            margin-top: {{ section.settings.top_spacing_mobile | append: 'px' }};
+            margin-bottom: {{ section.settings.bottom_spacing_mobile | append: 'px' }};
+        }
+
+       .images_container {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 0;
+          row-gap: 16px;
+        }
+
+        .heading_image_container img {
+            margin-top: 0;
+            /* width: 50%; */
+        }
+
+        .images_container div:nth-of-type(1) {
+          margin-right: 10px;
+        }
+
+        .images_container div:nth-of-type(3) {
+          margin-right: 10px;
+        }
+
+        .images_container div {
+          /*width: calc(50% - 10px);*/
+            width: 100%;
+        }
+
+        .heading_image_container {
+            margin: 0 12px;
+        }
+
+        .heading_image_container h2 {
+          margin-bottom: 20px;
+        }
+
+    {% if section.settings.subheading != blank %}
+        .heading_image_container h2 {
+            margin-bottom: 10px;
+        }
+    {% endif %}
+    }
+</style>
+
+
+<div class="section">
+    <div class="heading_image_container">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.subheading }}</p>
+        <div class="images_container">
+        {% if section.settings.image_1 != blank %}
+          <div>
+            <img src="{{ section.settings.image_1 | img_url: 'master' }}" alt="">
+            {% if section.settings.text_1 != blank %}
+              <p>{{ section.settings.text_1 }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if section.settings.image_2 != blank %}
+          <div>
+            <img src="{{ section.settings.image_2 | img_url: 'master' }}" alt="">
+            {% if section.settings.text_2 != blank %}
+              <p>{{ section.settings.text_2 }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if section.settings.image_3 != blank %}
+          <div>
+            <img src="{{ section.settings.image_3 | img_url: 'master' }}" alt="">
+            {% if section.settings.text_3 != blank %}
+              <p>{{ section.settings.text_3 }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if section.settings.image_4 != blank %}
+          <div>
+            <img src="{{ section.settings.image_4 | img_url: 'master' }}" alt="">
+            {% if section.settings.text_4 != blank %}
+              <p>{{ section.settings.text_4 }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Heading with image",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "text_1",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "text_2",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_3",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "text_3",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_4",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "text_4",
+            "label": "Text"
+        },
+        {
+            "type": "range",
+            "id": "top_spacing_desktop",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Top spacing desktop",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "bottom_spacing_desktop",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Bottom spacing desktop",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "top_spacing_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Top spacing mobile",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "bottom_spacing_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Bottom spacing mobile",
+            "default": 50
+        }
+    ],
+    "presets": [
+        {
+            "name": "Heading with image"
+        }
+    ]
+}
+{% endschema %}

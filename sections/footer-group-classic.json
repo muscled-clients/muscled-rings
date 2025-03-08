@@ -1,0 +1,121 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer_icon_bar": {
+      "type": "footer__icon-bar",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "icon": "globe",
+            "text": "Ethically Sourced",
+            "link": ""
+          }
+        },
+        "text_2": {
+          "type": "text",
+          "settings": {
+            "icon": "Gem",
+            "text": "Customer Education",
+            "link": ""
+          }
+        },
+        "text_3": {
+          "type": "text",
+          "settings": {
+            "icon": "star",
+            "text": "Concierge Support",
+            "link": ""
+          }
+        },
+        "text_4": {
+          "type": "text",
+          "settings": {
+            "icon": "truck",
+            "text": "Free Shipping",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_1",
+        "text_2",
+        "text_3",
+        "text_4"
+      ],
+      "settings": {
+        "show_icon_bar": true,
+        "icon_position": "row",
+        "alignment": "center",
+        "mobile_alignment": "none",
+        "size": "small",
+        "background": "#e2c8dd",
+        "link_color": "#8b5e9a",
+        "link_hover_color": "#5a3e6b",
+        "text_color": "#2d1b38",
+        "width": "standard",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "footer": {
+      "type": "footer-classic",
+      "blocks": {
+        "logo": {
+          "type": "logo",
+          "settings": {
+            "size": "small",
+            "text": "<p>sales@rings.com<\/p><p><br\/>+1 604 248 5000<\/p><p><\/p>",
+            "social_icons_footer": true
+          }
+        },
+        "link_list": {
+          "type": "link_list",
+          "settings": {
+            "menu": "main-menu",
+            "social_icons_footer": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "title": "POLICIES",
+            "content": "<p><a href=\"\/policies\/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms of Service<\/a><\/p><p><a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Privacy Policy<\/a><\/p><p><a href=\"\/pages\/custom-order-policy\" target=\"_blank\" title=\"Custom Order Policy\">Custom Order Policy<\/a><\/p><p><a href=\"\/policies\/refund-policy\" target=\"_blank\" title=\"Refund Policy\">Return & Refund Policy<\/a><\/p><p><a href=\"\/pages\/faq\" title=\"FAQ\">FAQ<\/a><\/p>",
+            "social_icons_footer": false
+          }
+        },
+        "newsletter_FrngqD": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_title": "SUBSCRIBE",
+            "newsletter_richtext": "<p>✨ Unlock exclusive offers and get insider tips to make your ring dreams a reality. 💍<\/p>",
+            "display_first_name": false,
+            "display_last_name": false
+          }
+        }
+      },
+      "block_order": [
+        "logo",
+        "link_list",
+        "text",
+        "newsletter_FrngqD"
+      ],
+      "settings": {
+        "copyright_text": "",
+        "display_designed_by": false,
+        "display_shopify": false,
+        "show_follow_on_shop": false,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "display_payment_methods": true,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "footer_icon_bar",
+    "footer"
+  ]
+}

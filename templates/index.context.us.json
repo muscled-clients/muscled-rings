@@ -1,0 +1,16 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "index_image_with_text_overlay_XkJEx3": {
+      "settings": {
+        "title": "Every Ring Has A Story",
+        "subtitle": "<p>Write Yours in 2025<\/p>",
+        "button_1": "Create Your Dream Ring"
+      },
+      "blocks": {}
+    }
+  }
+}

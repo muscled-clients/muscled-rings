@@ -1,0 +1,145 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product__breadcrumb",
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "product__sidebar",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "product__main",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient_form": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "form"
+      ],
+      "settings": {
+        "product_images_position": "left",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "gallery_arrows": true,
+        "enable_zoom": true,
+        "enable_product_lightbox": true,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "display_thumbnails": true,
+        "thumbnail_position": "bottom-thumbnails",
+        "enable_thumbnail_slider": true,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_heading_UDTMD9": {
+      "type": "index__heading",
+      "settings": {
+        "preheading": "",
+        "title": "RINGS.COM",
+        "subheading": "",
+        "heading_alignment": "center",
+        "vertical_spacing": "large",
+        "preheading_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "subheading_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "163795705866c6ff30": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "Gem sourcing + anti-slavery statement",
+        "heading_font": "monotype_bodoni_n4",
+        "heading_alignment": "center",
+        "heading_size": 40,
+        "text": "<p>The diamond industry has in the past been associated with conflict and exploitation, the industry has taken a number of pro-active steps to combat this, most notably in the form of the Kimberley Process (which certifies that diamonds originate from conflict free zones). Through our procurement and polishing division we are subject to rigorous requirements which set out the detailed standards that our procurement and polishing division is required to adhere to in order to maintain its status. Among other requirements there is a focus on supply chain management, provenance claims, child and forced labour and ethical standards generally. <\/p>",
+        "text_font": "optima_nova_n4",
+        "text_alignment": "center",
+        "text_size": 18,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--primary",
+        "button_alignment": "center",
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "#eeeeee",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 180,
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_title": "",
+        "mobile_text": "",
+        "mobile_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "sidebar",
+    "main",
+    "index_heading_UDTMD9",
+    "163795705866c6ff30"
+  ]
+}
