@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(()=> {
     const sliderMain = document.querySelector('.flickity-slider');
   console.log("Main slider: ", sliderMain);
-  }, 5000);
+  }, 10000);
 
 if (sliderMain) {
     var flkty = window.Flickity.data(sliderMain); // Retrieve existing instance
