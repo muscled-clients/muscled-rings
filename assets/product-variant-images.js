@@ -27,7 +27,7 @@ function ShowProductImages() {
 ShowProductImages();
 productForm.addEventListener("change", function(event) {
   if(event.target.checked == true){
-        console.log("Input changed:", event.target.value);
+    ShowProductImages();
   }
     });
 // console.log('Swatch Options', swatchOptions);
