@@ -6,6 +6,7 @@ const sliderMain = document.querySelector('.flickity-slider');
 document.addEventListener("DOMContentLoaded", function () {
   var flkty = window.Flickity.data(sliderMain);
 console.log("Flikety: ", flkty);
+  console.log(document.querySelector("[data-gallery-wrapper]"));
 });
 
 swatchOptions[0].checked = true;
