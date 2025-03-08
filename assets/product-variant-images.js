@@ -7,7 +7,7 @@ function ShowProductImages() {
    const imageAttr = image.getAttribute('data-title');
   const match = imageAttr.match(/\$(.*?)\$/);
    if(match) {
-     console.log(match[1]);
+     console.log("split string: ", match[1]);
    }
   console.log(image.getAttribute('data-title'));
    
