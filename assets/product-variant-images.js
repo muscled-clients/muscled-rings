@@ -53,9 +53,8 @@ function removeSlide(flkty, conditionClass) {
 // checkAndModifyFlickity('.product-gallery__main', 'd4-remove-slide');
 
 function ShowProductImages() {
-  console.log(productImages);
  productImages.forEach(image=> {
-   const imageAttr = image.getAttribute('d4-img-alt');
+   let imageAttr = image.getAttribute('d4-img-alt');
    let count = 0;
    if(imageAttr) {
      count++;
