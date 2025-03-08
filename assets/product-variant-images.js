@@ -1,8 +1,11 @@
 const productImages = document.querySelectorAll('.d4-product .product-gallery__image');
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
+document.addEventListener("DOMContentLoaded", function () {
 const fliktyMain = document.querySelector('.product-gallery__main');
-var flkty = Flickty.data(fliktyMain);
+let flkty = Flickty.data(fliktyMain);
+  console.log("Flickty Data: ", flkty);
+  )}
 
 swatchOptions[0].checked = true;
 
