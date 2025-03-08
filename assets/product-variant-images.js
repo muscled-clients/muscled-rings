@@ -46,6 +46,7 @@ function ShowProductImages() {
          if(finalValue.includes(option.value)) {
            image.classList.add('d4-display-image');
          } else {
+           image.classList.add('d4-remove-slide');
            if(image.classList.contains('d4-display-image')) {
              image.classList.remove('d4-display-image');
            }
