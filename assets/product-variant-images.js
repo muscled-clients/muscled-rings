@@ -2,10 +2,12 @@ const productImages = document.querySelectorAll('.d4-product .product-gallery__i
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
 document.addEventListener("DOMContentLoaded", function () {
-const fliktyMain = document.querySelector('.product-gallery__main');
-let flkty = Flickty.data(fliktyMain);
-  console.log("Flickty Data: ", flkty);
-  )}
+    const fliktyMain = document.querySelector('.product-gallery__main');
+    let flkty = Flickity.data(fliktyMain);
+
+    console.log("Flickity Data: ", flkty);
+});
+
 
 swatchOptions[0].checked = true;
 
