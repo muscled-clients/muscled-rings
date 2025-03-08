@@ -1,4 +1,5 @@
 const productImages = document.querySelectorAll('.d4-product .product-gallery__image');
+const productThumbnails = document.querySelector('.product-gallery__thumbnail');
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
 swatchOptions[0].checked = true;
