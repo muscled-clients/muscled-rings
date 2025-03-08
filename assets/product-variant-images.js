@@ -3,27 +3,31 @@ const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
 
 
-const intervalCheck = setInterval(() => {
-    const fliktyMain = document.querySelector('.product-gallery__main');
-    
-    if (fliktyMain) {
-        let flkty = Flickity.data(fliktyMain);
-        console.log("Flickity Data: ", flkty);
+function removeSlide(conditionClass) {
+    const fliktyMain = document.querySelector('.product-gallery__main'); // Select Flickity container
+    let flkty = Flickity.data(fliktyMain); // Get existing Flickity instance
 
-        if (flkty) {
-            console.log("✅ Flickity is initialized!");
-            clearInterval(intervalCheck); // Stop checking once Flickity is found
-        }
+    if (flkty) {
+        // Find slides that match the condition
+        flkty.cells.forEach(cell => {
+            let slide = cell.element; // Get the actual slide element
+            
+            if (slide.classList.contains(conditionClass)) { // Condition check
+                flkty.remove(slide); // Remove from Flickity
+                slide.remove(); // Remove from DOM
+                console.log("🗑️ Removed Slide: ", slide);
+            }
+        });
+
+        flkty.reloadCells(); // Refresh Flickity after removing a slide
     } else {
-        console.log("❌ Flickity container not found.");
+        console.log("⚠️ Flickity is not initialized yet.");
     }
-}, 2000); // Run every 2 seconds
+}
 
-// Stop checking after 15 seconds
-setTimeout(() => {
-    clearInterval(intervalCheck);
-    console.log("⏳ Stopped checking after 15 seconds.");
-}, 15000);
+// Example Usage: Remove slides that have class 'hide-slide'
+removeSlide("d4-display-image");
+
 
 
 
