@@ -60,7 +60,6 @@ function ShowProductImages() {
      const finalValue = match[1];
      
      swatchOptions.forEach(option=> {
-       if(option.checked) {
          if(finalValue.includes(option.value)) {
            image.classList.add('d4-display-image');
            if(image.classList.contains('d4-remove-slide')) {
@@ -73,7 +72,6 @@ function ShowProductImages() {
              image.classList.remove('d4-display-image');
            }
          }
-       }
      })
   
    
