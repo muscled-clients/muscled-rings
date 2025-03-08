@@ -56,7 +56,7 @@ function ShowProductImages() {
  productImages.forEach(image=> {
    let imageAttr = image.getAttribute('d4-img-alt');
    console.log(imageAttr);
-   const match = imageAttr.match(/\$(.*?)\$/);
+   // const match = imageAttr.match(/\$(.*?)\$/);
    // console.log(match);
      const finalValue = match[1];
      
