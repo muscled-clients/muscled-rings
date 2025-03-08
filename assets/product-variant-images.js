@@ -5,28 +5,24 @@ swatchOptions[0].checked = true;
 
 function checkAndModifyFlickity(targetSelector, removeClass) {
     const checkFlickityInterval = setInterval(() => {
-        const fliktyMain = document.querySelector(targetSelector); // Select Flickity container
-        let flkty = Flickity.data(fliktyMain); // Retrieve Flickity instance
+        const fliktyMain = document.querySelector(targetSelector);
+        let flkty = Flickity.data(fliktyMain);
 
         if (flkty) {
-            console.log("✅ Flickity is initialized:", flkty);
-            clearInterval(checkFlickityInterval); // Stop checking once Flickity is found
+            console.log("Flickity is initialized:", flkty);
+            clearInterval(checkFlickityInterval);
 
-            // **Print all slide elements**
             let slides = flkty.cells.map(cell => cell.element);
-            console.log("📸 All Slides in Flickity:", slides);
+            console.log("All Slides in Flickity:", slides);
 
-            // **Remove slides with the specified class**
             removeSlide(flkty, removeClass);
         } else {
-            console.log("❌ Flickity is not ready yet. Checking again...");
+            console.log("Flickity is not ready yet. Checking again...");
         }
-    }, 2000); // Check every 2 seconds
-
-    // **Stop checking after 15 seconds if Flickity is not found**
+    }, 2000);
     setTimeout(() => {
         clearInterval(checkFlickityInterval);
-        console.log("⏳ Stopped checking for Flickity after 15 seconds.");
+        console.log("Stopped checking for Flickity after 15 seconds.");
     }, 15000);
 }
 
@@ -35,21 +31,21 @@ function removeSlide(flkty, conditionClass) {
     let slidesRemoved = false;
 
     flkty.cells.forEach(cell => {
-        let slide = cell.element; // Get the actual slide element
+        let slide = cell.element; 
         
-        if (slide.classList.contains(conditionClass)) { // Condition check
-            console.log("🗑️ Removing Slide:", slide);
-            flkty.remove(slide); // Remove from Flickity
-            slide.remove(); // Remove from DOM
+        if (slide.classList.contains(conditionClass)) { 
+            console.log("Removing Slide:", slide);
+            flkty.remove(slide);
+            slide.remove(); 
             slidesRemoved = true;
         }
     });
 
     if (slidesRemoved) {
-        flkty.reloadCells(); // Refresh Flickity only if a slide was removed
-        console.log("🔄 Flickity reloaded after slide removal.");
+        flkty.reloadCells();
+        console.log("Flickity reloaded after slide removal.");
     } else {
-        console.log("⚠️ No slides matched the condition.");
+        console.log("No slides matched the condition.");
     }
 }
 
@@ -88,6 +84,7 @@ function ShowProductImages() {
 ShowProductImages();
 
 productForm.addEventListener("change", function(event) {
+  event.target.checked = true;
   if(event.target.checked){
     ShowProductImages();
    checkAndModifyFlickity('.product-gallery__main', 'd4-remove-slide');
