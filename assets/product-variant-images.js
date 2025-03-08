@@ -2,7 +2,7 @@ const productImages = document.querySelectorAll('.d4-product .product-gallery__i
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
 const sliderMain = document.querySelector('.flickity-slider');
-let flkty = window.Flickity.data;
+// let flkty = window.Flickity.data;
 console.log("Flickity data: ", window.Flickity.data);
 swatchOptions[0].checked = true;
 
