@@ -26,7 +26,7 @@ function removeSlide(conditionClass) {
 }
 
 // Example Usage: Remove slides that have class 'hide-slide'
-removeSlide("d4-display-image");
+removeSlide("d4-remove-slide");
 
 
 
@@ -45,6 +45,9 @@ function ShowProductImages() {
        if(option.checked) {
          if(finalValue.includes(option.value)) {
            image.classList.add('d4-display-image');
+           if(image.classList.contains('d4-remove-slide')) {
+             image.classList.remove('d4-remove-slide');
+           }
          } else {
            image.classList.add('d4-remove-slide');
            if(image.classList.contains('d4-display-image')) {
