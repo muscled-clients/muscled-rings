@@ -15,6 +15,10 @@ function ShowProductImages() {
        if(option.checked == true) {
          if(option.value == finalValue) {
            image.classList.add('d4-display-image');
+         } else {
+           if(image.classList.contains('d4-dislay-image')) {
+             image.classList.remove('d4-display-image');
+           }
          }
        }
      })
