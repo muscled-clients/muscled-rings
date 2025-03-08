@@ -14,7 +14,9 @@ function ShowProductImages() {
      swatchOptions.forEach(option=> {
        if(option.checked == true) {
          if(option.value == finalValue) {
-           console.log(image);
+           image.style.display = 'block'
+         } else {
+           image.style.display = 'none';
          }
        }
      })
