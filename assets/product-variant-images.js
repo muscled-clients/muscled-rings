@@ -57,24 +57,24 @@ function ShowProductImages() {
    let imageAttr = image.getAttribute('d4-img-alt');
    console.log(imageAttr);
    // const match = imageAttr.match(/\$(.*?)\$/);
-   // console.log(match);
-     const finalValue = match[1];
+   // // console.log(match);
+   //   const finalValue = match[1];
      
-     swatchOptions.forEach(option=> {
-       if(option.checked) {
-         if(finalValue.includes(option.value)) {
-           image.classList.add('d4-display-image');
-           if(image.classList.contains('d4-remove-slide')) {
-             image.classList.remove('d4-remove-slide');
-           }
-         } else {
-           image.classList.add('d4-remove-slide');
-           if(image.classList.contains('d4-display-image')) {
-             image.classList.remove('d4-display-image');
-           }
-         }
-       }
-     })
+   //   swatchOptions.forEach(option=> {
+   //     if(option.checked) {
+   //       if(finalValue.includes(option.value)) {
+   //         image.classList.add('d4-display-image');
+   //         if(image.classList.contains('d4-remove-slide')) {
+   //           image.classList.remove('d4-remove-slide');
+   //         }
+   //       } else {
+   //         image.classList.add('d4-remove-slide');
+   //         if(image.classList.contains('d4-display-image')) {
+   //           image.classList.remove('d4-display-image');
+   //         }
+   //       }
+   //     }
+   //   })
   
    
 }) 
