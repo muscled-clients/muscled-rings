@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             cellAlign: 'left',
             contain: true
         });
-        console.log("Flickity Initialized:", flkty.data(sliderMain));
+        console.log("Flickity Initialized:", flkty);
     } else {
         console.log("Flickity already exists:", flkty);
     }
