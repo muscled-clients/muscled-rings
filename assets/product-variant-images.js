@@ -30,23 +30,33 @@ function waitForFlickity(targetSelector, callback) {
 
 // **Function to Remove All Slides Marked with d4-remove-slide**
 function removeMarkedSlides(flkty, removedSlidesArray) {
-    let newRemovedSlides = [];
+    let slidesToRemove = []; // Store elements to remove
+    let totalRemoved = 0;
 
+    // **Find all elements with 'd4-remove-slide'**
     flkty.cells.forEach(cell => {
         let slide = cell.element;
         if (slide.classList.contains('d4-remove-slide')) {
-            console.log("🗑 Removing Slide:", slide);
-            newRemovedSlides.push(slide);
-            flkty.remove(slide);
+            slidesToRemove.push(slide);
         }
     });
 
-    if (newRemovedSlides.length > 0) {
-        removedSlidesArray.push(...newRemovedSlides); // Store removed slides
-        flkty.reloadCells(); // Reload Flickity after removals
-        console.log("🔄 Flickity reloaded after removing slides.");
+    console.log(`🗑 Found ${slidesToRemove.length} slides to remove.`);
+
+    // **Ensure all slides are removed**
+    while (slidesToRemove.length > 0) {
+        let slide = slidesToRemove.pop(); // Remove last element in array
+        flkty.remove(slide);
+        removedSlidesArray.push(slide); // Store removed slides
+        totalRemoved++;
+    }
+
+    if (totalRemoved > 0) {
+        console.log(`✅ Successfully removed ${totalRemoved} slides.`);
+        flkty.reloadCells(); // Ensure Flickity updates
+        console.log(`🔄 Flickity reloaded. Remaining slides: ${flkty.cells.length}`);
     } else {
-        console.log("✅ No new slides removed.");
+        console.log("⚠️ No slides removed.");
     }
 }
 
@@ -54,14 +64,12 @@ function removeMarkedSlides(flkty, removedSlidesArray) {
 function restoreSlides(flkty, removedSlidesArray) {
     if (removedSlidesArray.length > 0) {
         console.log("♻️ Restoring All Removed Slides...");
-        removedSlidesArray.forEach(slide => {
+        while (removedSlidesArray.length > 0) {
+            let slide = removedSlidesArray.pop(); // Restore last removed slide
             flkty.append(slide);
-            slide.classList.remove('d4-remove-slide');
-        });
-
-        removedSlidesArray.length = 0; // Clear storage after restoring
+        }
         flkty.reloadCells();
-        console.log("✅ Flickity reloaded after restoring slides.");
+        console.log(`✅ Flickity reloaded after restoring slides. Total slides: ${flkty.cells.length}`);
     }
 }
 
