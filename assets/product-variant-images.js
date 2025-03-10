@@ -12,6 +12,8 @@ function waitForFlickity(targetSelector, callback) {
     const checkFlickityInterval = setInterval(() => {
         const fliktyMain = document.querySelector(targetSelector);
         let flkty = Flickity.data(fliktyMain);
+      const images = fliktyMain.querySelectorAll('img');
+      console.log("This is new image: ", images);
 
         if (flkty) {
             clearInterval(checkFlickityInterval);
