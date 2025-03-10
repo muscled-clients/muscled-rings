@@ -26,16 +26,10 @@ function waitForFlickity(targetSelector, callback) {
     }, 15000);
 }
 
-// **Function to Update Flickity Slides Based on the Selected Variant**
-function updateSlides(flkty) {
-    console.log("🔄 Updating Flickity Slides...");
-
-    // **Restore All Removed Slides First**
-    restoreSlides(flkty);
-
+// **Function to Remove All Slides Marked with d4-remove-slide**
+function removeMarkedSlides(flkty) {
     let newRemovedSlides = [];
 
-    // **Find slides that now need to be removed**
     flkty.cells.forEach(cell => {
         let slide = cell.element;
         if (slide.classList.contains('d4-remove-slide')) {
@@ -49,7 +43,7 @@ function updateSlides(flkty) {
     if (newRemovedSlides.length > 0) {
         removedSlides = [...removedSlides, ...newRemovedSlides];
         flkty.reloadCells(); // Reload Flickity after removals
-        console.log("🔄 Flickity reloaded after slide removal.");
+        console.log("🔄 Flickity reloaded after removing slides.");
     } else {
         console.log("✅ No new slides removed.");
     }
@@ -116,7 +110,10 @@ function ShowProductImages() {
     }
 
     // **Wait for Flickity, then Update Slides**
-    waitForFlickity('.product-gallery__main', updateSlides);
+    waitForFlickity('.product-gallery__main', (flkty) => {
+        restoreSlides(flkty); // Restore first
+        removeMarkedSlides(flkty); // Then remove again
+    });
 }
 
 // **Initialize on Page Load**
