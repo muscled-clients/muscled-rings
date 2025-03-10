@@ -121,6 +121,7 @@ ShowProductImages();
 
 // **Event Listener for Variant Selection Change**
 productForm.addEventListener("change", function (event) {
+  console.log("D4 variant changed");
     if (event.target.checked) {
         ShowProductImages();
     }
