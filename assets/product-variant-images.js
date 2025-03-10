@@ -3,51 +3,49 @@ const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
 swatchOptions[0].checked = true;
 
-// Store original slides so we can restore them when needed
-let removedSlides = [];
+let flickityReady = false;
+let removedSlides = []; // Stores removed slides to restore later
 
-function checkAndModifyFlickity(targetSelector, removeClass) {
+// **Function to Wait for Flickity Initialization**
+function waitForFlickity(targetSelector, callback) {
     const checkFlickityInterval = setInterval(() => {
         const fliktyMain = document.querySelector(targetSelector);
         let flkty = Flickity.data(fliktyMain);
 
         if (flkty) {
-            console.log("✅ Flickity is initialized:", flkty);
             clearInterval(checkFlickityInterval);
-
-            let slides = flkty.cells.map(cell => cell.element);
-            console.log("🔄 All Slides in Flickity:", slides);
-
-            updateSlides(flkty, removeClass);
+            flickityReady = true;
+            console.log("✅ Flickity is initialized:", flkty);
+            callback(flkty); // Execute function once Flickity is ready
         } else {
-            console.log("⏳ Flickity is not ready yet. Checking again...");
+            console.log("⏳ Flickity not ready yet. Checking again...");
         }
-    }, 2000);
+    }, 500);
+
     setTimeout(() => {
         clearInterval(checkFlickityInterval);
         console.log("⏹️ Stopped checking for Flickity after 15 seconds.");
     }, 15000);
 }
 
-// **Function to dynamically update slides based on the current variant**
+// **Function to Update Flickity Slides Based on the Selected Swatch**
 function updateSlides(flkty, removeClass) {
     let newRemovedSlides = [];
 
-    // Restore slides first
+    // **Restore previously removed slides first**
     restoreSlides(flkty);
 
     flkty.cells.forEach(cell => {
         let slide = cell.element;
-
         if (slide.classList.contains(removeClass)) {
             console.log("🗑 Removing Slide:", slide);
-            newRemovedSlides.push(slide); // Store removed slides
+            newRemovedSlides.push(slide);
             flkty.remove(slide);
         }
     });
 
     if (newRemovedSlides.length > 0) {
-        removedSlides = [...removedSlides, ...newRemovedSlides]; // Store them globally
+        removedSlides = [...removedSlides, ...newRemovedSlides]; // Store removed slides globally
         flkty.reloadCells();
         console.log("🔄 Flickity reloaded after slide removal.");
     } else {
@@ -55,16 +53,16 @@ function updateSlides(flkty, removeClass) {
     }
 }
 
-// **Function to restore slides when the variant changes**
+// **Function to Restore Removed Slides**
 function restoreSlides(flkty) {
     if (removedSlides.length > 0) {
         console.log("♻️ Restoring Removed Slides...");
         removedSlides.forEach(slide => {
-            flkty.append(slide); // Re-add to Flickity
-            slide.classList.remove('d4-remove-slide'); // Ensure it's visible again
+            flkty.append(slide);
+            slide.classList.remove('d4-remove-slide'); // Ensure visibility
         });
 
-        removedSlides = []; // Clear stored slides after restoring
+        removedSlides = [];
         flkty.reloadCells();
         console.log("✅ Flickity reloaded after restoring slides.");
     }
@@ -77,7 +75,7 @@ function ShowProductImages() {
     if (!selectedSwatch) {
         console.log("⚠️ No swatch selected. Resetting all images...");
         productImages.forEach(image => {
-            image.classList.remove('d4-display-image', 'd4-remove-slide'); // Reset all images
+            image.classList.remove('d4-display-image', 'd4-remove-slide');
         });
         return;
     }
@@ -120,20 +118,17 @@ function ShowProductImages() {
         });
     }
 
-    // Update Flickity to reflect the changes
-    const fliktyMain = document.querySelector('.product-gallery__main');
-    let flkty = Flickity.data(fliktyMain);
-
-    if (flkty) {
+    // **Update Flickity after modifying slides**
+    waitForFlickity('.product-gallery__main', (flkty) => {
         restoreSlides(flkty);
         updateSlides(flkty, 'd4-remove-slide');
-    }
+    });
 }
 
 // **Initialize on Page Load**
 ShowProductImages();
 
-// **Event Listener for Swatch Selection Change**
+// **Event Listener for Variant Selection Change**
 productForm.addEventListener("change", function (event) {
     event.target.checked = true;
     if (event.target.checked) {
