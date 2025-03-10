@@ -160,6 +160,7 @@
     {{ "shopify_common.js" | shopify_asset_url | script_tag }}
     {{ "customer_area.js"  | shopify_asset_url | script_tag }}
   {% endif %}
+  {{ 'd5-style.css' | asset_url | stylesheet_tag }}
 </head>
 
 {%- capture money_format_output -%}
