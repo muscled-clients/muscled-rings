@@ -386,7 +386,7 @@
             <div class="tooltip">{{ value }}</div>
           {% endif %}
           {% if is_color %}
-            {% for variant in product.variants %}
+            {% for variant in product.variants limit: 1 %}
   {% assign d5_image = variant.metafields.custom.swatch_image.value %}
 
   <label
