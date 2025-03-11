@@ -394,7 +394,7 @@
     <div class="description-text">
       {{ product_description }}
     </div>
-    <button class="read-more-btn">Read More</button>
+    <button class="toggle-btn">Read More</button>
   </div>
 
   {% if block.settings.mobile_product_description != blank %}
@@ -402,7 +402,7 @@
       <div class="description-text">
         {{ block.settings.mobile_product_description }}
       </div>
-      <button class="read-more-btn">Read More</button>
+      <button class="toggle-btn">Read More</button>
     </div>
   {% endif %}
 </div>
@@ -414,9 +414,16 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     position: relative;
+    transition: all 0.3s ease;
   }
 
-  .read-more-btn {
+  .expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  .toggle-btn {
     display: block;
     background: none;
     border: none;
@@ -429,13 +436,17 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".read-more-btn").forEach(function (button) {
+    document.querySelectorAll(".toggle-btn").forEach(function (button) {
       button.addEventListener("click", function () {
         let textContainer = this.previousElementSibling;
-        textContainer.style.display = "block";
-        textContainer.style.overflow = "visible";
-        textContainer.style.webkitLineClamp = "unset";
-        this.style.display = "none"; // Hide button after expansion
+        
+        if (textContainer.classList.contains("expanded")) {
+          textContainer.classList.remove("expanded");
+          this.textContent = "Read More";
+        } else {
+          textContainer.classList.add("expanded");
+          this.textContent = "Show Less";
+        }
       });
     });
   });
