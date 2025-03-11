@@ -7,3 +7,11 @@
   line-height: normal;
   margin-bottom: 16px;
 }
+.d5-main-product .price-ui .price .money{
+  color: #1B1B1B;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
