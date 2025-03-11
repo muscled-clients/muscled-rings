@@ -30,7 +30,7 @@
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease;
-}
+} 
 
 .d5-main-product .expanded {
   display: block;
