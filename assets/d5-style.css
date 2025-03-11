@@ -58,12 +58,14 @@
 .d5-main-product  .option-title.label{
   z-index: 0;
 }
-.swatch-element{
+.d5-main-product .swatch-element.color{
   min-width: 60px;
   min-height: 60px;
   padding: 16px;
 }
-
+.d5-main-product .swatch-element.color label{
+  border: none;
+}
 
 
 
