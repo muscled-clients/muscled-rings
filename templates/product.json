@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumbs": {
@@ -40,7 +49,8 @@
           "type": "form",
           "settings": {
             "show_payment_button": true,
-            "show_gift_card_recipient_form": false
+            "show_gift_card_recipient_form": false,
+            "atc_color": "#ee5340"
           }
         }
       },
@@ -61,7 +71,7 @@
         "slideshow_speed": 0,
         "slideshow_transition": "slide",
         "display_thumbnails": true,
-        "thumbnail_position": "bottom-thumbnails",
+        "thumbnail_position": "left-thumbnails",
         "enable_thumbnail_slider": true,
         "width": "standard",
         "padding_top": 20,
@@ -79,7 +89,7 @@
           "settings": {
             "icon_label": "truck",
             "title": "Free Shipping",
-            "text": "<p>Free delivery within USA and Canada<\/p>",
+            "text": "<p>Free delivery within USA and Canada</p>",
             "button_label": "",
             "link": ""
           }
@@ -89,7 +99,7 @@
           "settings": {
             "icon_label": "calendar",
             "title": "30 Day Return",
-            "text": "<p>Free returns within 30 days of item delivery<\/p>",
+            "text": "<p>Free returns within 30 days of item delivery</p>",
             "button_label": "",
             "link": ""
           }
@@ -99,7 +109,7 @@
           "settings": {
             "icon_label": "lock",
             "title": "Secure Payment",
-            "text": "<p>Secure checkout and payment<\/p>",
+            "text": "<p>Secure checkout and payment</p>",
             "button_label": "",
             "link": ""
           }
@@ -109,7 +119,7 @@
           "settings": {
             "icon_label": "gem",
             "title": "Ethically Created",
-            "text": "<p>100% conflict-free diamonds<\/p>",
+            "text": "<p>100% conflict-free diamonds</p>",
             "button_label": "",
             "link": ""
           }
@@ -122,6 +132,7 @@
         "logo_image_HVpQML"
       ],
       "settings": {
+        "hide_section": false,
         "icons_per_row": 4,
         "align_text": "center",
         "icon_size": "medium",
@@ -152,28 +163,28 @@
         "heading_Fyifgf": {
           "type": "heading",
           "settings": {
-            "title": "Shipping\/Returns"
+            "title": "Shipping/Returns"
           }
         },
         "content_ebXz79": {
           "type": "content",
           "settings": {
             "title": "What is your shipping policy?",
-            "answer": "<p>We offer FREE SHIPPING within USA and Canada. You'll receive a tracking number as soon as your ring ships to keep track of your package every step of the way.  <\/p>"
+            "answer": "<p>We offer FREE SHIPPING within USA and Canada. You'll receive a tracking number as soon as your ring ships to keep track of your package every step of the way.  </p>"
           }
         },
         "content_apYcKk": {
           "type": "content",
           "settings": {
             "title": "What is your return policy?",
-            "answer": "<p>Your satisfaction is 100% guaranteed. Take 30 days to examine your ring, try it on, or even have it independently appraised. If you're not completely satisfied, simply return your diamond ring in its original condition using our secure shipping kit, and we'll refund your entire purchase – including your membership fee. No restocking fees, no questions asked.<\/p>"
+            "answer": "<p>Your satisfaction is 100% guaranteed. Take 30 days to examine your ring, try it on, or even have it independently appraised. If you're not completely satisfied, simply return your diamond ring in its original condition using our secure shipping kit, and we'll refund your entire purchase – including your membership fee. No restocking fees, no questions asked.</p>"
           }
         },
         "content_Ubhtwx": {
           "type": "content",
           "settings": {
             "title": "How do I track my order?",
-            "answer": "<p>Once your order has shipped, you will receive an email with tracking information. You can use this link to monitor your order's progress. If you have any issues with tracking, please contact our customer service team.<\/p>"
+            "answer": "<p>Once your order has shipped, you will receive an email with tracking information. You can use this link to monitor your order's progress. If you have any issues with tracking, please contact our customer service team.</p>"
           }
         },
         "heading_ktHj6q": {
@@ -186,14 +197,14 @@
           "type": "content",
           "settings": {
             "title": "Where are your products made?",
-            "answer": "<p>Our rings are custom-designed and crafted using high-quality precious metals, diamonds, and gemstones, with a focus on ethical sourcing and exceptional craftsmanship. Our production process is managed through a carefully selected network of trusted suppliers, ensuring that each piece meets our high standards for quality and integrity. We collaborate with both local and international artisans to bring you rings that are made with care and precision. <\/p>"
+            "answer": "<p>Our rings are custom-designed and crafted using high-quality precious metals, diamonds, and gemstones, with a focus on ethical sourcing and exceptional craftsmanship. Our production process is managed through a carefully selected network of trusted suppliers, ensuring that each piece meets our high standards for quality and integrity. We collaborate with both local and international artisans to bring you rings that are made with care and precision. </p>"
           }
         },
         "content_cpnTw9": {
           "type": "content",
           "settings": {
             "title": "Are your gems and materials sourced responsibly?",
-            "answer": "<p>Yes, we prioritize ethical sourcing for all our gems and materials. We carefully vet our suppliers to ensure they adhere to strict standards of integrity, social responsibility, and conflict-free sourcing. Our commitment to transparency means that we continually work to maintain a trustworthy supply chain, so you can feel confident in the origins, quality, and craftsmanship of every ring we create.<\/p>"
+            "answer": "<p>Yes, we prioritize ethical sourcing for all our gems and materials. We carefully vet our suppliers to ensure they adhere to strict standards of integrity, social responsibility, and conflict-free sourcing. Our commitment to transparency means that we continually work to maintain a trustworthy supply chain, so you can feel confident in the origins, quality, and craftsmanship of every ring we create.</p>"
           }
         }
       },
