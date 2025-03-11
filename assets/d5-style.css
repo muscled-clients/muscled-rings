@@ -97,6 +97,7 @@
 .section.d5-main-product, .d5-main-steps{
   max-width: 1180px;
   width: calc(100% - 60px);
+  margin: 0 auto;
 }
 .steps-row-d5{
   display: flex;
@@ -116,7 +117,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7px 16px 7px 40px;
+  padding: 7px 40px 7px 16px;
+  position: relative;
+  z-index: 4;
 }
 
 
