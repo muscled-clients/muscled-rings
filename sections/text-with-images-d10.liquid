@@ -1,6 +1,41 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Custom Ring Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Beautifully Handcrafted Rings That Celebrate Love, Commitment, and Timeless Elegance"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "This contemporary rope style solitaire engagement ring features a woven design that is"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Right Image"
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_description",
+      "label": "Bottom Description",
+      "default": "Enjoy quality packaging and free shipping with every order. We also offer hassle-free, 30-day returns - no questions asked! Don't forget we'll be here forever with our lifetime warranty."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Ring Section",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
