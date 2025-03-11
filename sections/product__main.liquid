@@ -70,7 +70,32 @@
 {% for block in section.blocks %}
   {% if block.type == 'steps' %}
 <div class="d5-main-steps">
-  
+  <div class="steps-inner-d5">
+    <div class="steps-row-d5">
+      <div class="step-item-d5 step-1-d5">
+        <div class="svg-bg-d5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="410" height="82" viewBox="0 0 410 82" fill="none">
+            <path d="M384.35 81H5C2.79086 81 1 79.2091 1 77V5C1 2.79086 2.79086 1 5 1H384.35L408.82 39.8249C409.659 41.1564 409.64 42.8563 408.77 44.168L384.35 81Z" fill="#F2F1EA" stroke="#2D1B38"/>
+          </svg>
+        </div>
+        <div class="item-d5">
+          <div class="count-d5">
+            <p class="count">1</p>
+            <p class="rt-d5">{{ block.settings.lb_1 }}</p>
+          </div>
+          <div class="dynamic-content-d5">
+            <div class="selected-image-d5">
+              <img src="{{ product.selected_or_first_available_variant.featured_image | image_url: width: '400px' }}" width="48" height="48">
+            </div>
+            <div class="selected-price-d5">
+              <p>{{ product.selected_or_first_available_variant.price | money }}</p>
+              <p>Change | View</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
     {% endif %}
 {% endfor %}
