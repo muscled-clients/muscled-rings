@@ -105,6 +105,7 @@
 .step-item-d5{
   flex: 0 0 33.33%;
   position: relative;
+  aspect-ratio: 400/66;
 }
 .svg-bg-d5{
   position: absolute;
