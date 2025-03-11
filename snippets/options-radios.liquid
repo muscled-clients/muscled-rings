@@ -458,26 +458,26 @@
                 }
             });
         });
-        {% if template contains 'shopibro' %}
-        const AtcButton = document.querySelector('.atc_button_overlay');
-        const colorSwatched = document.querySelectorAll('.swatch-element');
-        const AtcText = document.querySelector('.atc_no_selection');
-        colorSwatched.forEach((swatch)=> {
-            swatch.addEventListener('click', ()=> {
-                document.querySelectorAll(".swatch-element.red_border").forEach((el) => {
-                    el.classList.remove("red_border");
-                });
-                AtcButton.classList.add('atc_button_overlay_disabled');
-                AtcText.classList.remove('atc_no_selection_visible');
-            })
-        })
-        AtcButton.addEventListener('click', ()=> {
-            colorSwatched.forEach((swatch)=> {
-                swatch.classList.add('red_border');
-            })
-            AtcText.classList.add('atc_no_selection_visible');
-        })
-        {% endif %}
+        // {% if template contains 'shopibro' %}
+        // const AtcButton = document.querySelector('.atc_button_overlay');
+        // const colorSwatched = document.querySelectorAll('.swatch-element');
+        // const AtcText = document.querySelector('.atc_no_selection');
+        // colorSwatched.forEach((swatch)=> {
+        //     swatch.addEventListener('click', ()=> {
+        //         document.querySelectorAll(".swatch-element.red_border").forEach((el) => {
+        //             el.classList.remove("red_border");
+        //         });
+        //         AtcButton.classList.add('atc_button_overlay_disabled');
+        //         AtcText.classList.remove('atc_no_selection_visible');
+        //     })
+        // })
+        // AtcButton.addEventListener('click', ()=> {
+        //     colorSwatched.forEach((swatch)=> {
+        //         swatch.classList.add('red_border');
+        //     })
+        //     AtcText.classList.add('atc_no_selection_visible');
+        // })
+        // {% endif %}
 
     });
 
