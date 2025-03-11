@@ -386,6 +386,11 @@
             <div class="tooltip">{{ value }}</div>
           {% endif %}
           {% if is_color %}
+             {% assign variant = product.variants | where: 'option1', value | first %}
+                {% assign d5_image = variant.metafields.custom.swatch_image.value %}
+                {% if d5_image != blank %}
+                {% assign swatch_file_url = d5_image %}
+              {% endif %}
             <label
               style="
                 {% if settings.swatches_option_style == 'variant_image' and product.variants[forloop.index0].image != blank %}
@@ -402,12 +407,8 @@
                 {% assign image_name = value | handle | append: '.' | append: file_extension %}
                 {% assign swatch = images[image_name] %}
               {% endif %}
-              {% assign variant = product.variants | where: 'option1', value | first %}
-                {% assign d5_image = variant.metafields.custom.swatch_image.value %}
-              
-              {% if d5_image != blank %}
-                {% assign swatch = d5_image %}
-              {% endif %}
+             
+            
               <img class="swatch__image {% if swatch == empty %}swatch__image--empty{% endif %}" src="{{ swatch | img_url: '50x' }}" alt="">
 
               <span class="crossed-out" aria-label="{{ 'products.product.sold_out' | t }}" alt="{{ 'products.product.sold_out' | t }}"></span>
