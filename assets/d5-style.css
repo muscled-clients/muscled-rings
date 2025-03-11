@@ -71,12 +71,16 @@
 }
 .d5-main-product .purchase-details .purchase-details__spb--true{
   flex-direction: column;
+  gap: 12px;
 }
 .d5-main-product .purchase-details .purchase-details__spb--true .action_button.action_button--secondary,
 .d5-main-product .purchase-details .purchase-details__spb--true .shopify-payment-button{
   max-width: 100%;
   width: 100%;
   flex: 0 0 100%;
+  margin: 0;
+  height: 52px;
+  padding: 10px;
 }
 
 
