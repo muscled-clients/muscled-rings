@@ -14,11 +14,11 @@
   <legend class="option-title label">
     <span
       class="options-selection__option-name"
-      data-variant-option-name=""
+      data-variant-option-name="."
       data-variant-option-choose-name="{{ 'product.variants.choose_option' | t: option: option.name }}"
     >
       {% if selected_variant %}
-        {{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value }}
+        {{ 'product.variants.chosen_option_html' | t: value: option.selected_value }}
       {% else %}
         {{ 'product.variants.choose_option' | t: option: option.name }}
       {% endif %}
