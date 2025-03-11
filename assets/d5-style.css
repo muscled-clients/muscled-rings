@@ -25,7 +25,7 @@
 }
 .d5-main-product .description-text {
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Show only 2 lines */
+  -webkit-line-clamp: 1; /* Show only 2 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   position: relative;
