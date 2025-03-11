@@ -402,9 +402,9 @@
                 {% assign image_name = value | handle | append: '.' | append: file_extension %}
                 {% assign swatch = images[image_name] %}
               {% endif %}
-              {% for variant in product.variants %}
+              {% assign variant = product.variants | where: 'option1', value | first %}
                 {% assign d5_image = variant.metafields.custom.swatch_image.value %}
-              {% endfor %}
+              
               {% if d5_image != blank %}
                 {% assign swatch = d5_image %}
               {% endif %}
