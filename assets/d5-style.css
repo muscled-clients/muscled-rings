@@ -39,7 +39,14 @@
 }
 
 .d5-main-product .toggle-btn {
-  color: #2d1b38;
+  display: block;
+  background: none;
+  border: none;
+  color: #0073e6;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  color: #2D1B38;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
