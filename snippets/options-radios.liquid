@@ -389,7 +389,7 @@
              {% assign variant = product.variants | where: 'option1', value | first %}
                 {% assign d5_image = variant.metafields.custom.swatch_image.value %}
                 {% if d5_image != blank %}
-                {% assign swatch_file_url = d5_image %}
+                {% assign swatch_file_url = d5_image | image_url: width: '200px' %}
               {% endif %}
             <label
               style="
