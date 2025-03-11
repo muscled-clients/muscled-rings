@@ -415,8 +415,11 @@
       let lineHeight = parseFloat(window.getComputedStyle(textContainer).lineHeight);
       let maxHeight = lineHeight * 2; // Maximum height for two lines
 
-      if (textContainer.scrollHeight > maxHeight) {
-        button.style.display = "block"; // Show button only if text exceeds two lines
+      // Get actual height of text
+      let actualHeight = textContainer.getBoundingClientRect().height;
+
+      if (actualHeight > maxHeight) {
+        button.style.display = "block"; // Show button if text exceeds two lines
       }
 
       button.addEventListener("click", function () {
@@ -431,7 +434,6 @@
     });
   });
 </script>
-
 
           {% if is_product_modal %}
             <a
