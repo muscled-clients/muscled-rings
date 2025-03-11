@@ -1,5 +1,5 @@
-.d5-main-product .product-block--first .product-title{
-  color: #1B1B1B;
+.d5-main-product .product-block--first .product-title {
+  color: #1b1b1b;
   font-family: "Tenor Sans";
   font-size: 32px;
   font-style: normal;
@@ -7,11 +7,43 @@
   line-height: normal;
   margin-bottom: 16px;
 }
-.d5-main-product .price-ui .price .money{
-  color: #1B1B1B;
+.d5-main-product .price-ui .price .money {
+  color: #1b1b1b;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.d5-main-product .description-text {
+  color: #626161;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.d5-main-product .description-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show only 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.d5-main-product .expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.d5-main-product .toggle-btn {
+  color: #2d1b38;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration-line: underline;
 }
