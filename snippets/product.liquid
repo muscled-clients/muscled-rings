@@ -410,16 +410,22 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".toggle-btn").forEach(function (button) {
+    document.querySelectorAll(".description-text").forEach(function (textContainer) {
+      let button = textContainer.nextElementSibling;
+      let lineHeight = parseFloat(window.getComputedStyle(textContainer).lineHeight);
+      let maxHeight = lineHeight * 2; // Maximum height for two lines
+
+      if (textContainer.scrollHeight > maxHeight) {
+        button.style.display = "block"; // Show button only if text exceeds two lines
+      }
+
       button.addEventListener("click", function () {
-        let textContainer = this.previousElementSibling;
-        
         if (textContainer.classList.contains("expanded")) {
           textContainer.classList.remove("expanded");
-          this.textContent = "More";
+          this.textContent = "Read More";
         } else {
           textContainer.classList.add("expanded");
-          this.textContent = "Less";
+          this.textContent = "Show Less";
         }
       });
     });
