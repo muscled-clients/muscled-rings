@@ -136,7 +136,7 @@
   align-items: center;
   gap: 18px;
 }
-.count-d5 .count{
+.count-d5 p.count{
   color: #000;
   text-align: center;
   font-family: Roboto;
@@ -145,7 +145,7 @@
   font-weight: 400;
   line-height: normal;
 }
-.count-d5 .rt-d5, .selected-price-d5 p{
+.count-d5 p.rt-d5, .selected-price-d5 p{
   color: #000;
   text-align: center;
   font-family: Roboto;
