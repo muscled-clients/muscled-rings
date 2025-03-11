@@ -83,6 +83,17 @@
   border-radius: 0;
   min-height: 52px;
 }
+.d5-main-product .purchase-details .purchase-details__spb--true .action_button.action_button--secondary{
+  background: #2D1B38;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
 
 
 
