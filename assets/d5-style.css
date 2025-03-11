@@ -94,7 +94,10 @@
   line-height: normal;
   text-transform: uppercase;
 }
-
+.section.d5-main-product{
+  max-width: 1240px;
+  width: calc(100% - 60px);
+}
 
 
 
