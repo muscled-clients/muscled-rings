@@ -386,12 +386,21 @@
             <div class="tooltip">{{ value }}</div>
           {% endif %}
           {% if is_color %}
-            <label
+            {% assign variant_swatch_map = '{}' | parse_json %}
+
+{% for variant in product.variants %}
+  {% assign d5_image = variant.metafields.custom.swatch_image.value %}
+  {% if d5_image != blank %}
+    {% assign variant_swatch_map = variant_swatch_map | merge: { variant.id: d5_image } %}
+  {% endif %}
+{% endfor %}
+
+<label
   style="
     {% if settings.swatches_option_style == 'variant_image' and product.variants[forloop.index0].image != blank %}
       background-image: url({{ swatch_file_url }});
-    {% elsif variant.metafields.custom.swatch_image.value != blank %}
-      background-image: url({{ variant.metafields.custom.swatch_image.value }});
+    {% elsif variant_swatch_map[variant.id] != blank %}
+      background-image: url({{ variant_swatch_map[variant.id] }});
     {% else %}
       background-color: {{ value | split: ' ' | last | handle }};
     {% endif %}
@@ -399,12 +408,10 @@
   data-variant-option-value-label
   data-variant-image="{% if settings.swatches_option_style == 'variant_image' and product.variants[forloop.index0].image != blank %}true{% endif %}"
 >
-  {% for variant in product.variants %}
-  {% assign d5_image = variant.metafields.custom.swatch_image.value %}
-  {% endfor %}
-  {% if d5_image != blank %}
-    {% assign swatch = d5_image %}
-  {% else %}
+
+  {% assign swatch = variant_swatch_map[variant.id] %}
+
+  {% if swatch == blank %}
     {% assign image_name = value | handle | append: '.' | append: file_extension %}
     {% assign swatch = images[image_name] %}
   {% endif %}
