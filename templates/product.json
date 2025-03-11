@@ -32,6 +32,16 @@
     "main": {
       "type": "product__main",
       "blocks": {
+        "steps_qj8fG3": {
+          "type": "steps",
+          "settings": {
+            "lb_1": "CHOOSE<br>SETTING",
+            "lb_2": "CHOOSE<br>STONE",
+            "svg_1": "",
+            "lb_3": "REVIEW<br>COMPLETE RING",
+            "svg_3": ""
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -56,6 +66,7 @@
         }
       },
       "block_order": [
+        "steps_qj8fG3",
         "title",
         "price",
         "description",
