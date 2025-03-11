@@ -27,7 +27,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 1; /* Show only 2 lines */
   -webkit-box-orient: vertical;
-  overflow: hidden; 
+  overflow: hidden;  
   position: relative;
   transition: all 0.3s ease;
 } 
