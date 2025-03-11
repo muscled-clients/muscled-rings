@@ -399,9 +399,9 @@
   data-variant-option-value-label
   data-variant-image="{% if settings.swatches_option_style == 'variant_image' and product.variants[forloop.index0].image != blank %}true{% endif %}"
 >
-
+  {% for variant in product.variants %}
   {% assign d5_image = variant.metafields.custom.swatch_image.value %}
-
+  {% endfor %}
   {% if d5_image != blank %}
     {% assign swatch = d5_image %}
   {% else %}
