@@ -58,7 +58,11 @@
 .d5-main-product  .option-title.label{
   z-index: 0;
 }
-
+.swatch-element{
+  min-width: 60px;
+  min-height: 60px;
+  padding: 16px;
+}
 
 
 
