@@ -1,3 +1,68 @@
+<section class="custom-ring-section">
+  <div class="container">
+    <h2>{{ section.settings.title }}</h2>
+    <p class="description">{{ section.settings.description }}</p>
+    
+    <div class="images-container">
+      {% if section.settings.image_1 %}
+        <img src="{{ section.settings.image_1 | img_url: 'large' }}" alt="Left Image" class="image-left">
+      {% endif %}
+      {% if section.settings.image_2 %}
+        <img src="{{ section.settings.image_2 | img_url: 'large' }}" alt="Right Image" class="image-right">
+      {% endif %}
+    </div>
+
+    <p class="bottom-description">{{ section.settings.bottom_description }}</p>
+  </div>
+</section>
+
+<style>
+  .custom-ring-section {
+  background-color: #F5F5F0;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.custom-ring-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.custom-ring-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-ring-section .description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.custom-ring-section .images-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.custom-ring-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-ring-section .bottom-description {
+  font-size: 14px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+</style>
+
 {% schema %}
 {
   "name": "Custom Ring Section",
