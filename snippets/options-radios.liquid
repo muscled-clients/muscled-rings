@@ -400,7 +400,12 @@
 
               {% if product.variants[forloop.index0].image == blank or settings.swatches_option_style != 'variant_image' %}
                 {% assign image_name = value | handle | append: '.' | append: file_extension %}
+                {% assign d5-image = variant.metafields.custom.swatch_image.value %}
+                {% if d5-image != blank %}
+                  {% assign swatch = d5-image %}
+                {% else %}
                 {% assign swatch = images[image_name] %}
+                {% endif %}
               {% endif %}
 
               <img class="d5-swatch swatch__image {% if swatch == empty %}swatch__image--empty{% endif %}" src="{{ swatch | img_url: '50x' }}" alt="">
