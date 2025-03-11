@@ -14,11 +14,11 @@
   <legend class="option-title label">
     <span
       class="options-selection__option-name"
-      data-variant-option-name="{{ value: option.selected_value | escape }}"
+      data-variant-option-name="{{ option.selected_value | escape }}"
       data-variant-option-choose-name="."
     >
       {% if selected_variant %}
-        {{ value: option.selected_value }}
+        {{ option.selected_value }}
       {% else %}
         .
       {% endif %}
