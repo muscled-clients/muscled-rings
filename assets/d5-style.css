@@ -73,7 +73,7 @@
   flex-direction: column;
 }
 .d5-main-product .purchase-details .purchase-details__spb--true .action_button.action_button--secondary,
-.d5-main-product .shopify-payment-button{
+.d5-main-product .purchase-details .purchase-details__spb--true .shopify-payment-button{
   max-width: 100%;
   width: 100%;
   flex: 0 0 100%;
