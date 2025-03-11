@@ -94,13 +94,30 @@
   line-height: normal;
   text-transform: uppercase;
 }
-.section.d5-main-product{
+.section.d5-main-product, .d5-main-steps{
   max-width: 1180px;
   width: calc(100% - 60px);
 }
-
-
-
+.steps-row-d5{
+  display: flex;
+}
+.step-item-d5{
+  flex: 0 0 33.33%;
+  position: relative;
+}
+.svg-bg-d5{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.item-d5{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 16px 7px 40px;
+}
 
 
 
