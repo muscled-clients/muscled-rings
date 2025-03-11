@@ -558,7 +558,7 @@ class OptionsSelection extends HTMLElement {
           const optionNameValueSpan = optionsNameEl.querySelector('span');
 
           if (optionNameValueSpan) {
-            optionNameValueSpan.innerHTML = variantOptionChosenValue;
+            optionNameValueSpan.innerHTML = optionsEl.dataset.variantOptionChosenValue;
           }
         } else {
           optionsNameEl.innerHTML = optionsNameEl.dataset.variantOptionChooseName;
