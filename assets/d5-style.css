@@ -107,6 +107,8 @@
   flex: 0 0 33.33%;
   position: relative;
   aspect-ratio: 400/83;
+  display: flex;
+  align-items: center;
 }
 .svg-bg-d5{
   position: absolute;
@@ -122,6 +124,7 @@
   padding: 7px 40px 7px 16px;
   position: relative;
   z-index: 4;
+  width: 100%;
 }
 .count-d5{
   display: flex;
