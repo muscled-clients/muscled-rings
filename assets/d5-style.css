@@ -152,6 +152,9 @@
   font-weight: 400;
   line-height: normal;
 }
+.selected-price-d5 p{
+  margin: 2px 0;
+}
 .selected-image-d5{
   display: flex;
   width: 48px;
