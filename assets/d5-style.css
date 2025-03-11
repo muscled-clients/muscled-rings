@@ -121,7 +121,16 @@
   position: relative;
   z-index: 4;
 }
-
+.count-d5{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dynamic-content-d5{
+   display: flex;
+  align-items: center;
+  gap: 18px;
+}
 
 
 
