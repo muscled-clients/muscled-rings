@@ -383,23 +383,64 @@
           %}
 
           <div class="product__description content">
-            <div
-              class="
-                has-padding-top
-                {% if block.settings.mobile_product_description != blank %}
-                  is-hidden-mobile-only
-                {% endif %}
-              "
-            >
-              {{- product_description -}}
-            </div>
+  <div
+    class="
+      has-padding-top
+      {% if block.settings.mobile_product_description != blank %}
+        is-hidden-mobile-only
+      {% endif %}
+    "
+  >
+    <div class="description-text">
+      {{ product_description }}
+    </div>
+    <button class="read-more-btn">Read More</button>
+  </div>
 
-            {% if block.settings.mobile_product_description != blank %}
-              <div class="is-hidden-desktop-only has-padding-top">
-                {{- block.settings.mobile_product_description -}}
-              </div>
-            {% endif %}
-          </div>
+  {% if block.settings.mobile_product_description != blank %}
+    <div class="is-hidden-desktop-only has-padding-top">
+      <div class="description-text">
+        {{ block.settings.mobile_product_description }}
+      </div>
+      <button class="read-more-btn">Read More</button>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  .description-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Show only 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .read-more-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: #0073e6;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".read-more-btn").forEach(function (button) {
+      button.addEventListener("click", function () {
+        let textContainer = this.previousElementSibling;
+        textContainer.style.display = "block";
+        textContainer.style.overflow = "visible";
+        textContainer.style.webkitLineClamp = "unset";
+        this.style.display = "none"; // Hide button after expansion
+      });
+    });
+  });
+</script>
+
 
           {% if is_product_modal %}
             <a
