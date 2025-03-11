@@ -67,7 +67,13 @@
     assign enable_thumbnail_slider = false
   endif
 %} 
-
+{% for block in section.blocks %}
+  {% if block.type == 'steps' %}
+<div class="d5-main-steps">
+  
+</div>
+    {% endif %}
+{% endfor %}
 <section class="d5-main-product section
         product-template-shopibro
         {{ css_class }}
@@ -494,6 +500,40 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "steps",
+      "name": "Steps",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "lb_1",
+          "label": "Label step 1",
+          "default": "CHOOSE<br>SETTING"
+        },
+         {
+          "type": "liquid",
+          "id": "lb_2",
+          "label": "Label step 2",
+          "default": "CHOOSE<br>STONE"
+        },
+        {
+          "type": "liquid",
+          "id": "svg_1",
+          "label": "SVG step 2"
+        },
+        {
+          "type": "liquid",
+          "id": "lb_3",
+          "label": "Label step 3",
+          "default": "REVIEW<br>COMPLETE RING"
+        },
+        {
+          "type": "liquid",
+          "id": "svg_3",
+          "label": "SVG step 3"
+        }
+      ]
     },
     {
       "type": "product_accordions",
