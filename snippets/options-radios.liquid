@@ -386,40 +386,35 @@
             <div class="tooltip">{{ value }}</div>
           {% endif %}
           {% if is_color %}
-            {% assign variant_swatch_map = '{}' | parse_json %}
-
-{% for variant in product.variants %}
+            {% for variant in product.variants %}
   {% assign d5_image = variant.metafields.custom.swatch_image.value %}
-  {% if d5_image != blank %}
-    {% assign variant_swatch_map = variant_swatch_map | merge: { variant.id: d5_image } %}
-  {% endif %}
-{% endfor %}
 
-<label
-  style="
-    {% if settings.swatches_option_style == 'variant_image' and product.variants[forloop.index0].image != blank %}
-      background-image: url({{ swatch_file_url }});
-    {% elsif variant_swatch_map[variant.id] != blank %}
-      background-image: url({{ variant_swatch_map[variant.id] }});
-    {% else %}
-      background-color: {{ value | split: ' ' | last | handle }};
+  <label
+    style="
+      {% if settings.swatches_option_style == 'variant_image' and variant.image != blank %}
+        background-image: url({{ variant.image | img_url: '50x' }});
+      {% elsif d5_image != blank %}
+        background-image: url({{ d5_image }});
+      {% else %}
+        background-color: {{ variant.option1 | handle }};
+      {% endif %}
+    "
+    data-variant-option-value-label
+    data-variant-id="{{ variant.id }}"
+    data-variant-image="{% if settings.swatches_option_style == 'variant_image' and variant.image != blank %}true{% endif %}"
+  >
+
+    {% assign swatch = d5_image %}
+    {% if swatch == blank %}
+      {% assign image_name = variant.option1 | handle | append: '.' | append: file_extension %}
+      {% assign swatch = images[image_name] %}
     {% endif %}
-  "
-  data-variant-option-value-label
-  data-variant-image="{% if settings.swatches_option_style == 'variant_image' and product.variants[forloop.index0].image != blank %}true{% endif %}"
->
 
-  {% assign swatch = variant_swatch_map[variant.id] %}
+    <img class="d5-swatch swatch__image {% if swatch == blank %}swatch__image--empty{% endif %}" src="{{ swatch | img_url: '50x' }}" alt="">
 
-  {% if swatch == blank %}
-    {% assign image_name = value | handle | append: '.' | append: file_extension %}
-    {% assign swatch = images[image_name] %}
-  {% endif %}
-
-  <img class="d5-swatch swatch__image {% if swatch == empty %}swatch__image--empty{% endif %}" src="{{ swatch | img_url: '50x' }}" alt="">
-
-  <span class="crossed-out" aria-label="{{ 'products.product.sold_out' | t }}" alt="{{ 'products.product.sold_out' | t }}"></span>
-</label>
+    <span class="crossed-out" aria-label="{{ 'products.product.sold_out' | t }}" alt="{{ 'products.product.sold_out' | t }}"></span>
+  </label>
+{% endfor %}
 
           {% else %}
             <label
