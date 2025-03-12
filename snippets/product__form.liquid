@@ -265,7 +265,30 @@
       {% endif %}
     </variant-selection>
     {% comment %}Inject @pixelunion/shopify-variants-ui/variant-selection end{% endcomment %}
+    <div class="product__description content d5-mobile">
+  <div
+    class="
+      has-padding-top
+      {% if block.settings.mobile_product_description != blank %}
+        is-hidden-mobile-only
+      {% endif %}
+    "
+  >
+    <div class="description-text">
+      {{ product_description }}
+    </div>
+    <button class="toggle-btn">More</button>
+  </div>
 
+  {% if block.settings.mobile_product_description != blank %}
+    <div class="is-hidden-desktop-only has-padding-top">
+      <div class="description-text">
+        {{ block.settings.mobile_product_description }}
+      </div>
+      <button class="toggle-btn">More</button>
+    </div>
+  {% endif %}
+</div>
 
     {% if product.available %}
       {% if settings.display_inventory_left %}
