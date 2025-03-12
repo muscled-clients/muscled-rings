@@ -355,4 +355,7 @@
   .d5-main-product .flickity-button{
     display: none;
   }
+  .d5-main-product .product-gallery__thumbnails{
+    margin-top: 4px;
+  }
 }
