@@ -76,7 +76,7 @@
           "type": "d5_faq",
           "settings": {
             "quest": "100% money back guarantee",
-            "ans": "<p>We thoroughly vet our vendors, from credit checks, financial reviews, industry reference checks, and much more.<br/><br/>But beyond that, you can simply rely on our 100%, no questions asked, money-back guarantee to know you are safe when you purchase through us.<br/><br/>If you do not get exactly what you ordered, you get your money back – no fine print.<br/><br/>After all – a customer trusted us with $2.5 million dollars, a record online sale.</p>",
+            "ans": "<p>We thoroughly vet our vendors, from credit checks, financial reviews, industry reference checks, and <a href=\"#\" title=\"#\">much more</a>.<br/><br/>But beyond that, you can simply rely on our 100%, no questions asked, money-back guarantee to know you are safe when you purchase through us.<br/><br/>If you do not get exactly what you ordered, you get your money back – no fine print.<br/><br/>After all – a customer trusted us with $2.5 million dollars, a record online sale.</p>",
             "info": false
           }
         },
