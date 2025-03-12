@@ -427,4 +427,7 @@
   .d5-atc-label p {
     font-size: 12px;
   }
+  .d5-main-product .purchase-details .purchase-details__spb--true{
+    gap: 8px;
+  }
 }
