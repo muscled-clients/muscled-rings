@@ -311,4 +311,7 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+  .section.d5-main-product, .d5-main-steps{
+    width: calc(100% - 20px);
+  }
 }
