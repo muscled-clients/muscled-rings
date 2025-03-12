@@ -268,6 +268,15 @@
 .size_chart_container {
   display: none;
 }
+.price-label-d5{
+  color: #1B1B1B;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 12px 0 0;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
