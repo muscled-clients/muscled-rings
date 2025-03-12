@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   stepsUpdate();
   faqD5();
+  readMoreLess();
 });
 
 function faqD5(){
@@ -12,6 +13,31 @@ function faqD5(){
     })
   })
   
+}
+
+function readMoreLess(){
+  document.querySelectorAll(".description-text").forEach(function (textContainer) {
+      let button = textContainer.nextElementSibling;
+      let lineHeight = parseFloat(window.getComputedStyle(textContainer).lineHeight);
+      let maxHeight = lineHeight * 2; // Maximum height for two lines
+
+      // Get actual height of text
+      let actualHeight = textContainer.getBoundingClientRect().height;
+
+      if (actualHeight > maxHeight) {
+        button.style.display = "block"; // Show button if text exceeds two lines
+      }
+
+      button.addEventListener("click", function () {
+        if (textContainer.classList.contains("expanded")) {
+          textContainer.classList.remove("expanded");
+          this.textContent = "More";
+        } else {
+          textContainer.classList.add("expanded");
+          this.textContent = "Less";
+        }
+      });
+    });
 }
 
 
