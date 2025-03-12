@@ -331,6 +331,18 @@
   }
 }
 @media (max-width: 798px) {
+  .icon-item-d5{
+    flex-direction: row;
+    gap: 12px;
+  }
+  .icon-row-d5{
+    flex-direction: column;
+    gap: 4px;
+  }
+  .icon-d5{
+    width: 20px;
+    height: 20px;
+  }
   .selected-price-d5,
   .d5-desktop {
     display: none;
