@@ -269,4 +269,12 @@
     width: 20px;
     height: 20px;
   }
+  .svg-bg-d5 svg path{
+    stroke: #F2F1EA;
+    fill: #F2F1EA;
+  }
+  .step-1-d5 .svg-bg-d5 svg path{
+    stroke: #8B5E9A;
+    fill: #8B5E9A;
+  }
 }
