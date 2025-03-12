@@ -331,6 +331,9 @@
   }
 }
 @media (max-width: 798px) {
+  .purchase-details__buttons{
+    margin-top: 0;
+  }
   #more-payment-options-link{
     padding-bottom: 0 !important;
   }
