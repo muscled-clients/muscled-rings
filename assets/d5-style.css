@@ -337,7 +337,7 @@
   }
   .icon-row-d5{
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
   }
   .icon-d5{
     width: 20px;
