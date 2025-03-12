@@ -112,7 +112,11 @@
             </div>
             </div>
             <div class="answer-d5">
+              {% unless block.settings.info %}
               {{ block.settings.ans }}
+              {% else %}
+                
+              {% endunless %}
             </div>
           </div>
         {%- elsif block.type == 'vendor' -%}
