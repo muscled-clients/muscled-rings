@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   stepsUpdate();
-  faqD5()
+  faqD5();
 });
 
 function faqD5(){
