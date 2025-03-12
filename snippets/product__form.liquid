@@ -937,6 +937,12 @@
                 <div class="atc_button_overlay"></div>
             {% endif %}
             {% if is_vdbrc_variant_tag_available == true %}
+              <div class="d5-atc-label">
+                {% capture 'atc_label' %}
+                  <p>Financing as low as $129/mo with Affirm. Prequalify Now</p>
+                {% endcapture %}
+              {{ atc_label}}
+              </div>
             <button type="button" onclick="gofor_choose_stone()" class="button action_button action_button--secondary add_to_stone">
               <span>Explore more stone</span>
             </button>
