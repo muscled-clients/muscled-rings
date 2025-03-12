@@ -22,6 +22,7 @@ function stepsUpdate() {
   const variantSwatches = document.querySelectorAll(".swatch__option input"); // Swatch buttons
   const imageElement = document.querySelector(".selected-image-d5 img"); // Image element
   const priceElement = document.querySelector(".selected-price-d5 p"); // Price element
+  const skuElement = document.querySelector('.selected-sku-d5')
 
   if (!window.productData) {
     console.error("Product data is not available.");
@@ -37,7 +38,9 @@ function stepsUpdate() {
       if (selectedVariant.featured_image) {
         imageElement.src = selectedVariant.featured_image.src;
       }
-
+      if(skuElement){
+        skuElement.textContent = selectedVariant.sku;
+      }
       // Update Price
       priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
     } else {
