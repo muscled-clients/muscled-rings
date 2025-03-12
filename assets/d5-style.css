@@ -280,4 +280,8 @@
   .step-1-d5 *{
     color: #fff !important;
   }
+  .dynamic-content-d5 svg{
+    max-height: 20px;
+    width: auto;
+  }
 }
