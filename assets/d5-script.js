@@ -28,7 +28,8 @@ function readMoreLess(){
         button.style.display = "block"; // Show button if text exceeds two lines
       }
 
-      button.addEventListener("click", function () {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
         if (textContainer.classList.contains("expanded")) {
           textContainer.classList.remove("expanded");
           this.textContent = "More";
