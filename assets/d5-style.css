@@ -387,4 +387,7 @@
   .d5-main-product .purchase-details .purchase-details__spb--true .action_button.action_button--secondary,.d5-main-product .label{
     font-size: 14px !important;
   }
+  .quest-d5{
+    padding: 12px 0;
+  }
 }
