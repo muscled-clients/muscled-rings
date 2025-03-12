@@ -487,7 +487,8 @@
   .d5-main-product .purchase-details .purchase-details__spb--true {
     gap: 8px;
   }
-  .product-gallery__thumbnail{
+  .d5-main-product .product-gallery__thumbnail{
     border: 0.5px solid rgba(45, 27, 56, 0.25);
+    margin-inline: 2px;
   }
 }
