@@ -177,4 +177,44 @@
 .step-3-d5{
   margin-left: -8.5px;
 }
+.d5-faq-main{
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(45, 27, 56, 0.10);
+}
+.quest-d5{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quest-d5 h3{
+  color: #000;
+  font-family: "Tenor Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.answer-d5 *{
+  color: #1B1B1B;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 142.857%;
+}
+.answer-d5 a{
+  color: #2D1B38;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+
+
+
+
+
 
