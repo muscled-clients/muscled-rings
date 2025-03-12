@@ -63,6 +63,30 @@
             "show_gift_card_recipient_form": false,
             "atc_color": "#ee5340"
           }
+        },
+        "d5_faq_x8xJA6": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "Ring information",
+            "ans": "",
+            "info": true
+          }
+        },
+        "d5_faq_xDy8XD": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "100% money back guarantee",
+            "ans": "<p>We thoroughly vet our vendors, from credit checks, financial reviews, industry reference checks, and much more.<br/><br/>But beyond that, you can simply rely on our 100%, no questions asked, money-back guarantee to know you are safe when you purchase through us.<br/><br/>If you do not get exactly what you ordered, you get your money back – no fine print.<br/><br/>After all – a customer trusted us with $2.5 million dollars, a record online sale.</p>",
+            "info": false
+          }
+        },
+        "d5_faq_Kb6B7L": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "Free 30-days returns and resizing",
+            "ans": "<p>Some Text Here....</p>",
+            "info": false
+          }
         }
       },
       "block_order": [
@@ -70,7 +94,10 @@
         "title",
         "price",
         "description",
-        "form"
+        "form",
+        "d5_faq_x8xJA6",
+        "d5_faq_xDy8XD",
+        "d5_faq_Kb6B7L"
       ],
       "settings": {
         "product_images_position": "left",
