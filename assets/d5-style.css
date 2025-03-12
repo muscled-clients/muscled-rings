@@ -491,4 +491,19 @@
     border: 0.5px solid rgba(45, 27, 56, 0.25);
     margin-inline: 2px;
   }
+  .flickity-viewport::-webkit-scrollbar {
+    height: 2px;
+    width: 100%;
+}
+
+.flickity-viewport::-webkit-scrollbar-track {
+    background: #E9E9E9;
+    border-radius: 0px;
+}
+
+.flickity-viewport::-webkit-scrollbar-thumb {
+    background: #2D1B38;
+    border-radius: 0px;
+}
+
 }
