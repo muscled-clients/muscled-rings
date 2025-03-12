@@ -64,6 +64,17 @@
             "atc_color": "#ee5340"
           }
         },
+        "trusts_fyXekW": {
+          "type": "trusts",
+          "settings": {
+            "img_1": "shopify://shop_images/Group_2.svg",
+            "text_1": "Free 30 day returns  & 90 day resizing",
+            "img_2": "shopify://shop_images/Group_1000006059.svg",
+            "text_2": "Guaranteed for life",
+            "img_3": "shopify://shop_images/Vector_7.svg",
+            "text_3": "Authenticity inspection"
+          }
+        },
         "d5_faq_x8xJA6": {
           "type": "d5_faq",
           "settings": {
@@ -95,6 +106,7 @@
         "price",
         "description",
         "form",
+        "trusts_fyXekW",
         "d5_faq_x8xJA6",
         "d5_faq_xDy8XD",
         "d5_faq_Kb6B7L"
@@ -116,6 +128,8 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
+        "atc_label": "",
+        "top-t": false,
         "css_class": "",
         "custom_css": ""
       }
