@@ -332,7 +332,7 @@
 }
 @media (max-width: 798px) {
   .purchase-details__buttons{
-    margin-top: 0;
+    margin-top: 0 !important;
   }
   #more-payment-options-link{
     padding-bottom: 0 !important;
