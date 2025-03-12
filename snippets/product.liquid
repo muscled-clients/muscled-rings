@@ -102,6 +102,19 @@
               {% assign block_product = block.settings.block_product %}
           {% endif %}
           {% render 'product__accordions', product: block_product %}
+        {% elsif block.type == 'd5_faq' %}
+          <div class="d5-faq-main">
+            <div class="quest-d5"><h3>{{ block.settings.quest }}</h3>
+            <div class="faq_icon-d5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+                <path d="M0.712885 0.718996C0.421225 1.01041 0.421225 1.48323 0.712885 1.77464L7.2195 8.28125C7.51091 8.57291 7.98373 8.57291 8.27514 8.28125L14.7818 1.77464C14.9276 1.62881 15.0005 1.43769 15.0005 1.24657C15.0005 1.05545 14.9276 0.864326 14.7818 0.718745C14.4903 0.427085 14.0175 0.427085 13.7261 0.718745L7.74732 6.69753L1.76854 0.718996C1.47712 0.427335 1.0043 0.427335 0.712885 0.718996Z" fill="#2D1B38" fill-opacity="0.75"/>
+              </svg>
+            </div>
+            </div>
+            <div class="answer-d5">
+              {{ block.settings.ans }}
+            </div>
+          </div>
         {%- elsif block.type == 'vendor' -%}
           {% comment %} Vendor {% endcomment %}
           <p class="vendor">
