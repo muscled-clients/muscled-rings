@@ -287,4 +287,7 @@
   .item-d5{
     padding: 10px 14px 10px 20px;
   }
+  .step-3-d5, .step-2-d5{
+    padding: 0;
+  }
 }
