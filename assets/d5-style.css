@@ -340,4 +340,7 @@
   .d5-main-product .product-block--price{
     margin-bottom: 10px;
   }
+  .d5-main-product .swatch .swatch__option{
+    margin-right: 4px;
+  }
 }
