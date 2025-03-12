@@ -67,6 +67,7 @@
     assign enable_thumbnail_slider = false
   endif
 %} 
+<script src="{{ 'd5-script.js' | asset_url }}" defer="defer"></script>
 {% for block in section.blocks %}
   {% if block.type == 'steps' %}
 <div class="d5-main-steps">
