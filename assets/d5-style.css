@@ -352,4 +352,7 @@
   .product__description .has-padding-top{
     padding-top: 15px;
   }
+  .d5-main-product .flickity-button{
+    display: none;
+  }
 }
