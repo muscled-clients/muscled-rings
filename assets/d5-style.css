@@ -277,4 +277,7 @@
     stroke: #8B5E9A;
     fill: #8B5E9A;
   }
+  .step-1-d5 *{
+    color: #fff;
+  }
 }
