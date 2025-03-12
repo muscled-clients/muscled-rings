@@ -384,4 +384,7 @@
     .shopify-payment-button {
     height: 48px;
   }
+  .d5-main-product .purchase-details .purchase-details__spb--true .action_button.action_button--secondary{
+    font-size: 14px !important;
+  }
 }
