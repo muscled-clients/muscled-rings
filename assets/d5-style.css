@@ -331,6 +331,12 @@
   }
 }
 @media (max-width: 798px) {
+  #more-payment-options-link{
+    padding-bottom: 0 !important;
+  }
+  .icon-text-main-d5{
+    padding: 20px 0;
+  }
   .icon-item-d5{
     flex-direction: row;
     gap: 12px;
