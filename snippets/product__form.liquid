@@ -941,7 +941,11 @@
                 {% capture 'atc_label' %}
                   <p>Financing as low as $129/mo with Affirm. Prequalify Now</p>
                 {% endcapture %}
+                {% if section.settings.label_atc != blank %}
+                  <p>{{ section.settings.label_atc }}</p>
+                {% else %}
               {{ atc_label}}
+                {% endif %}
               </div>
             <button type="button" onclick="gofor_choose_stone()" class="button action_button action_button--secondary add_to_stone">
               <span>Explore more stone</span>
