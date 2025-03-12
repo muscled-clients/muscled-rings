@@ -323,7 +323,7 @@
   .steps-row-d5{
     padding: 10px 0;
   }
-  .product-title.title{
+  .d5-main-steps .product-title.title{
     color: #1B1B1B;
     font-family: "Tenor Sans";
     font-size: 24px;
@@ -332,7 +332,7 @@
     line-height: normal;
     margin: 0 0 8px;
   }
-  .price-ui .price .money{
+  .d5-main-steps .price-ui .price .money{
     color: #1B1B1B;
     font-family: Inter;
     font-size: 16px;
