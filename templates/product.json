@@ -129,7 +129,7 @@
         "padding_bottom": 20,
         "animation": "none",
         "atc_label": "",
-        "top-t": false,
+        "top-t": true,
         "css_class": "",
         "custom_css": ""
       }
