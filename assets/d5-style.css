@@ -230,7 +230,12 @@
 .d5-faq-main.active .quest-d5 .faq_icon-d5{
   rotate: 180deg;
 }
-
+.info-item-d5{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
 
 
 
