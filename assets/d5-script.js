@@ -8,7 +8,7 @@ function faqD5(){
   faqMain.forEach((faq) => {
     const quest = faq.querySelector('.quest-d5');
     quest.addEventListener('click', () =>{
-      faq.classList.add('active');
+      faq.classList.toggle('active');
     })
   })
   
