@@ -197,6 +197,9 @@
 }
 .answer-d5{
   padding-top: 16px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 .answer-d5 *{
   color: #1B1B1B;
