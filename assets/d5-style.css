@@ -265,4 +265,8 @@
   .step-3-d5, .step-2-d5{
     margin-left: 0;
   }
+  .selected-image-d5{
+    width: 20px;
+    height: 20px;
+  }
 }
