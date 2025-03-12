@@ -291,4 +291,7 @@
   .step-3-d5, .step-2-d5{
     padding: 0;
   }
+  .count-d5 p.rt-d5{
+    font-size: 12px;
+  }
 }
