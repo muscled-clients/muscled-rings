@@ -173,9 +173,10 @@
 }
 .shopify-section.product-template.product-main{
   background: #fff;
+  margin-left: -15px
 }
 .step-3-d5{
-  margin-left: -8.5px;
+  margin-left: -15px
 }
 .d5-faq-main{
   width: 100%;
