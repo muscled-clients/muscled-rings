@@ -329,4 +329,12 @@
     line-height: normal;
     margin: 0 0 16px;
   }
+  .d5-main-product .price-ui .price .money{
+    color: #1B1B1B;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 }
