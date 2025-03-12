@@ -140,7 +140,7 @@
     
     <variant-selection
       {% if variant_selection_id != blank %}id="{{ variant_selection_id }}"{% endif %}
-      class="variant-selection"
+      class="variant-selection d5-variant-selector"
       product-url="{{ product.url }}.js"
       variant="{% if selected_variant %}{{ selected_variant.id }}{% else %}not-selected{% endif %}"
       data-variant-selection
