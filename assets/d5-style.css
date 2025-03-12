@@ -277,6 +277,21 @@
   line-height: normal;
   margin: 12px 0 0;
 }
+.d5-atc-label{
+  max-width: 391px;
+  width: 100%;
+  padding: 8px;
+  background: #F2F1EA80;
+  margin-bottom: 12px;
+}
+.d5-atc-label p{
+  color: #1B1B1B;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
