@@ -37,8 +37,6 @@
               is-flex-row-reverse
             {% endif %}">
 
-    <div class="mobile_title_price"></div>
-
   <div class="product__images
               one-half
               column
@@ -102,6 +100,59 @@
               {% assign block_product = block.settings.block_product %}
           {% endif %}
           {% render 'product__accordions', product: block_product %}
+        {% elsif block.type == 'd5_faq' %}
+          <div class="d5-faq-main">
+            <div class="quest-d5"><h3>{{ block.settings.quest }}</h3>
+            <div class="faq_icon-d5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+                <path d="M0.712885 0.718996C0.421225 1.01041 0.421225 1.48323 0.712885 1.77464L7.2195 8.28125C7.51091 8.57291 7.98373 8.57291 8.27514 8.28125L14.7818 1.77464C14.9276 1.62881 15.0005 1.43769 15.0005 1.24657C15.0005 1.05545 14.9276 0.864326 14.7818 0.718745C14.4903 0.427085 14.0175 0.427085 13.7261 0.718745L7.74732 6.69753L1.76854 0.718996C1.47712 0.427335 1.0043 0.427335 0.712885 0.718996Z" fill="#2D1B38" fill-opacity="0.75"/>
+              </svg>
+            </div>
+            </div>
+            <div class="answer-d5">
+              {% unless block.settings.info %}
+              {{ block.settings.ans }}
+              {% else %}
+                <div class="info-table-d5">
+                  {% assign d5_meta = product.metafields.custom %}
+                  <div class="info-item-d5">
+                    <p>SKU</p>
+                    <p class="selected-sku-d5">{{ product.selected_or_first_available_variant.sku }}</p>
+                  </div>
+                  {% if d5_meta.setting_style.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Setting Style</p>
+                    <p>{{ d5_meta.setting_style.value }}</p>
+                  </div>
+                  {% endif %}
+                   {% if d5_meta.sizes_available.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Sizes Available</p>
+                    <p>{{ d5_meta.sizes_available.value }}</p>
+                  </div>
+                  {% endif %}
+                   {% if d5_meta.width_range.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Width Range</p>
+                    <p>{{ d5_meta.width_range.value }}</p>
+                  </div>
+                  {% endif %}
+                   {% if d5_meta.metal.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Metal</p>
+                    <p>{{ d5_meta.metal.value }}</p>
+                  </div>
+                  {% endif %}
+                   {% if d5_meta.can_be_set_with.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Can be set with</p>
+                    <p>{{ d5_meta.can_be_set_with.value }}</p>
+                  </div>
+                  {% endif %}
+                </div>
+              {% endunless %}
+            </div>
+          </div>
         {%- elsif block.type == 'vendor' -%}
           {% comment %} Vendor {% endcomment %}
           <p class="vendor">
@@ -382,24 +433,31 @@
             endif
           %}
 
-          <div class="product__description content">
-            <div
-              class="
-                has-padding-top
-                {% if block.settings.mobile_product_description != blank %}
-                  is-hidden-mobile-only
-                {% endif %}
-              "
-            >
-              {{- product_description -}}
-            </div>
+          <div class="product__description content d5-desktop">
+  <div
+    class="
+      has-padding-top
+      {% if block.settings.mobile_product_description != blank %}
+        is-hidden-mobile-only
+      {% endif %}
+    "
+  >
+    <div class="description-text">
+      {{ product_description }}
+    </div>
+    <button class="toggle-btn">More</button>
+  </div>
 
-            {% if block.settings.mobile_product_description != blank %}
-              <div class="is-hidden-desktop-only has-padding-top">
-                {{- block.settings.mobile_product_description -}}
-              </div>
-            {% endif %}
-          </div>
+  {% if block.settings.mobile_product_description != blank %}
+    <div class="is-hidden-desktop-only has-padding-top">
+      <div class="description-text">
+        {{ block.settings.mobile_product_description }}
+      </div>
+      <button class="toggle-btn">More</button>
+    </div>
+  {% endif %}
+</div>
+
 
           {% if is_product_modal %}
             <a
@@ -410,7 +468,23 @@
               {{- 'collections.general.view_product_details' | t -}}
             </a>
           {% endif %}
-
+        {% elsif block.type == 'trusts' %}
+          <div class="icon-text-main-d5">
+          <div class="icon-row-d5">
+            <div class="icon-item-d5">
+              <div class="icon-d5">{{ block.settings.icon_1 | image_url: width: 400 | image_tag }}</div>
+              <div class="icon-content-d5">{{ block.settings.text_1 }}</div>
+            </div>
+              <div class="icon-item-d5">
+              <div class="icon-d5">{{ block.settings.icon_2 | image_url: width: 400 | image_tag }}</div>
+              <div class="icon-content-d5">{{ block.settings.text_2 }}</div>
+            </div>
+              <div class="icon-item-d5">
+              <div class="icon-d5">{{ block.settings.icon_3 | image_url: width: 400 | image_tag }}</div>
+              <div class="icon-content-d5">{{ block.settings.text_3 }}</div>
+            </div>
+          </div>
+          </div>
         {%- elsif block.type == 'form' -%}
           {% comment %} Purchase form {% endcomment %}
           <style>
