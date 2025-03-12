@@ -294,4 +294,9 @@
   .count-d5 p.rt-d5{
     font-size: 12px;
   }
+  .d5-main-product .swatch-element.color{
+    min-width: 40px;
+    min-height: 40px;
+    padding: 14px;
+  }
 }
