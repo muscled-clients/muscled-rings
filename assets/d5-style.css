@@ -301,4 +301,8 @@
     max-height: 40px;
     padding: 14px;
   }
+  .d5-main-product .swatch__options{
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
