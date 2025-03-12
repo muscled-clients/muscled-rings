@@ -115,7 +115,12 @@
               {% unless block.settings.info %}
               {{ block.settings.ans }}
               {% else %}
-                
+                <div class="info-table-d5">
+                  <div class="info-item-d5">
+                    <p>SKU</p>
+                    <p>{{ product.sku }}</p>
+                  </div>
+                </div>
               {% endunless %}
             </div>
           </div>
