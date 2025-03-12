@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   stepsUpdate();
+  faqD5()
 });
+
+function faqD5(){
+  const faqMain = document.querySelectorAll('.d5-faq-main');
+  faqMain.forEach((faq) => {
+    const quest = faq.querySelector('.quest-d5');
+    quest.addEventListener('click', () =>{
+      faq.classList.add('active');
+    })
+  })
+  
+}
+
+
 function stepsUpdate() {
   const variantSelector = document.querySelector(
     ".variant-selection__variants"
