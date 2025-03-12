@@ -235,7 +235,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
+  border-bottom: 1px solid rgba(45, 27, 56, 0.10);
 }
-
+.info-item-d5:last-child{
+  border: none;
+}
 
 
