@@ -317,7 +317,7 @@
   .section.d5-main-product, .d5-main-steps{
     width: calc(100% - 20px);
   }
-  .mobile_title_price, .d5-main-steps{
+  .d5-main-steps{
     padding-inline: 10px;
   }
   .steps-row-d5{
