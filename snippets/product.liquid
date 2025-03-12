@@ -468,7 +468,23 @@
               {{- 'collections.general.view_product_details' | t -}}
             </a>
           {% endif %}
-
+        {% elsif block.type == 'trusts' %}
+          <div class="icon-text-main-d5">
+          <div class="icon-row-d5">
+            <div class="icon-item-d5">
+              <div class="icon-d5">{{ block.settings.icon_1 | image_url: width: 400 | image_tag }}</div>
+              <div class="icon-content-d5">{{ block.settings.text_1 }}</div>
+            </div>
+              <div class="icon-item-d5">
+              <div class="icon-d5">{{ block.settings.icon_2 | image_url: width: 400 | image_tag }}</div>
+              <div class="icon-content-d5">{{ block.settings.text_2 }}</div>
+            </div>
+              <div class="icon-item-d5">
+              <div class="icon-d5">{{ block.settings.icon_3 | image_url: width: 400 | image_tag }}</div>
+              <div class="icon-content-d5">{{ block.settings.text_3 }}</div>
+            </div>
+          </div>
+          </div>
         {%- elsif block.type == 'form' -%}
           {% comment %} Purchase form {% endcomment %}
           <style>
