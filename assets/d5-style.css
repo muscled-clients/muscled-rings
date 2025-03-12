@@ -179,13 +179,14 @@
 }
 .d5-faq-main{
   width: 100%;
-  padding: 16px 0;
   border-bottom: 1px solid rgba(45, 27, 56, 0.10);
 }
 .quest-d5{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 0;
+  cursor: pointer;
 }
 .quest-d5 h3{
   color: #000;
@@ -196,10 +197,10 @@
   line-height: normal;
 }
 .answer-d5{
-  padding-top: 16px;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
+  transition: all .4s;
 }
 .answer-d5 *{
   color: #1B1B1B;
@@ -218,7 +219,11 @@
   line-height: 20px;
   text-decoration-line: underline;
 }
-
+.d5-faq-main.active .answer-d5{
+  max-height: 900px;
+  opacity: 1;
+  padding-bottom: 16px;
+}
 
 
 
