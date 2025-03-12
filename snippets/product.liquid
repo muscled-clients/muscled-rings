@@ -116,10 +116,41 @@
               {{ block.settings.ans }}
               {% else %}
                 <div class="info-table-d5">
+                  {% assign d5_meta = product.metafields.custom %}
                   <div class="info-item-d5">
                     <p>SKU</p>
                     <p class="selected-sku-d5">{{ product.selected_or_first_available_variant.sku }}</p>
                   </div>
+                  {% if d5_meta.setting_style.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Setting Style</p>
+                    <p>{{ d5_meta.setting_style.value }}</p>
+                  </div>
+                  {% endif %}
+                   {% if d5_meta.sizes_available.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Sizes Available</p>
+                    <p>{{ d5_meta.sizes_available.value }}</p>
+                  </div>
+                  {% endif %}
+                   {% if d5_meta.width_range.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Width Range</p>
+                    <p>{{ d5_meta.width_range.value }}</p>
+                  </div>
+                  {% endif %}
+                   {% if d5_meta.metal.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Metal</p>
+                    <p>{{ d5_meta.metal.value }}</p>
+                  </div>
+                  {% endif %}
+                   {% if d5_meta.can_be_set_with.value != blank %}
+                  <div class="info-item-d5">
+                    <p>Can be set with</p>
+                    <p>{{ d5_meta.can_be_set_with.value }}</p>
+                  </div>
+                  {% endif %}
                 </div>
               {% endunless %}
             </div>
