@@ -393,4 +393,7 @@
   .d5-faq-main.active .answer-d5{
     padding-bottom: 12px;
   }
+  .product-gallery__thumbnails .flickity-viewport{
+    overflow-x: scroll;
+  }
 }
