@@ -349,4 +349,7 @@
   .d5-main-product .description-text{
     -webkit-line-clamp: 2;
   }
+  .product__description .has-padding-top{
+    padding-top: 15px;
+  }
 }
