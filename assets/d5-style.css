@@ -56,7 +56,7 @@
   padding: 0;
 }
 .d5-main-product  .option-title.label{
-  z-index: 0;
+  z-index: 10;
 }
 .d5-main-product .swatch-element.color{
   min-width: 60px;
