@@ -390,4 +390,7 @@
   .quest-d5{
     padding: 12px 0;
   }
+  .d5-faq-main.active .answer-d5{
+    padding-bottom: 12px;
+  }
 }
