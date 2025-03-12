@@ -295,6 +295,16 @@
 #more-payment-options-link{
   margin-top: 0 !important;
 }
+.icon-row-d5{
+  display: flex;
+}
+.icon-item-d5{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 0 0 33%;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
