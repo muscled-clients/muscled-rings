@@ -262,4 +262,7 @@
   .selected-price-d5, .d5-desktop{
     display: none;
   }
+  .step-3-d5, .step-2-d5{
+    margin-left: 0;
+  }
 }
