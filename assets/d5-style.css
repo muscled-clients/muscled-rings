@@ -254,5 +254,7 @@
   height: 100%;
 }
 @media (max-width: 798px){
-  
+  .selected-price-d5{
+    display: none;
+  }
 }
