@@ -299,7 +299,7 @@
     min-height: 40px;
     max-width: 40px;
     max-height: 40px;
-    padding: 0;
+    padding: 14px;
   }
   .d5-main-product .swatch__options{
     display: flex;
@@ -307,6 +307,8 @@
   }
   .d5-main-product .swatch .color label{
     width: 24.7px;
-    height: 24.7px;
+    height: 24.7px !important;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
