@@ -305,6 +305,14 @@
   gap: 20px;
   flex: 0 0 33%;
 }
+.icon-d5{
+  width: 32px;
+  height: 32px;
+}
+.icon-d5 img{
+  width: 100%;
+  height: 100%;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
