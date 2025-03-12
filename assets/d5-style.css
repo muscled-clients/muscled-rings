@@ -224,7 +224,12 @@
   opacity: 1;
   padding-bottom: 16px;
 }
-
+.quest-d5 .faq_icon-d5{
+  transition: all .4s;
+}
+.d5-faq-main.active .quest-d5 .faq_icon-d5{
+  rotate: 180deg;
+}
 
 
 
