@@ -73,7 +73,7 @@
 {% for block in section.blocks %}
   {% if block.type == 'steps' %}
 <div class="d5-main-steps">
-     <div class="mobile_title_price"></div>
+    {% if section.settings.top-t %} <div class="mobile_title_price"></div>{% endif %}
   <div class="steps-inner-d5">
     <div class="steps-row-d5">
       <div class="step-item-d5 step-1-d5">
