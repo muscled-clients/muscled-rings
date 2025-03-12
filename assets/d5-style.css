@@ -283,6 +283,7 @@
   .dynamic-content-d5 svg{
     max-height: 20px;
     width: auto;
+    max-width: 24px;
   }
   .item-d5{
     padding: 10px 14px 10px 20px;
