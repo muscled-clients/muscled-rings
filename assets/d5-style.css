@@ -295,11 +295,11 @@
     font-size: 12px;
   }
   .d5-main-product .swatch-element.color{
-    min-width: 40px;
-    min-height: 40px;
-    max-width: 40px;
-    max-height: 40px;
-    padding: 7px;
+    min-width: 53px;
+    min-height: 53px;
+    max-width: 53px;
+    max-height: 53px;
+    padding: 14px;
   }
   .d5-main-product .swatch__options{
     display: flex;
