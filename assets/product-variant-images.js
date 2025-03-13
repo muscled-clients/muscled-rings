@@ -58,7 +58,7 @@ function removeMarkedSlides(flkty, removedSlidesArray) {
         let newCells = flkty.cells;
       console.log(newCells);
       for(i = 0; i < newCells.length; i++) {
-      console.log(newCells[i]);
+      console.log(newCells[i].element.classList);
       }
     } else {
         console.log("No slides removed.");
