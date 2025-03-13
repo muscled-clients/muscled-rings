@@ -638,7 +638,7 @@
   .social-icons-d5 ul{
     gap: 6px;
   }
-  .d5-footer .disclosure__toggle-content{
+  .d5-footer .disclosure__toggle-content,.d5-footer .disclosure__button{
     font-size: 12px;
   }
   .d5-footer .disclosure.disclosure--country{
