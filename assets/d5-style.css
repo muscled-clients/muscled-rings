@@ -361,6 +361,7 @@
 .d5-footer p.footer__heading {
   font-family: "Tenor Sans";
   font-size: 20px;
+  margin-bottom: 24px;
 }
 .cta_icon-container-d5 {
   display: flex;
