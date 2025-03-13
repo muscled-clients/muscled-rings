@@ -332,6 +332,10 @@
 .d5-footer .footer__extra-content.section{
   display: none;
 }
+.d5-footer .section.is-width-wide .container.has-limit{
+  width: 100%;
+  max-width: 1280px;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
