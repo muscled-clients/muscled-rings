@@ -319,7 +319,10 @@
     },
     "newsletter_sec_d6_3NtTwh": {
       "type": "newsletter-sec-d6",
-      "settings": {}
+      "settings": {
+        "heading": "Want First Dibs?",
+        "content": "Join our email list and be the first to know about new limited edition products, material innovations, and lots of other fun updates."
+      }
     },
     "17362140264e61d429": {
       "type": "apps",
