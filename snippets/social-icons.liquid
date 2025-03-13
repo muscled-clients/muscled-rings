@@ -71,6 +71,14 @@
     </li>
   {% endif %}
 
+   {% if settings.x_link != '' %}
+    <li>
+      <a href="{{ settings.x_link }}" title="{{ shop.name }} on X" rel="me" target="_blank"  rel="noopener" class="icon-x">
+        {% render 'icon', name: 'x-social' %}
+      </a>
+    </li>
+  {% endif %}
+  
   {% if settings.twitch_link != '' %}
     <li>
       <a href="{{ settings.twitch_link }}" title="{{ shop.name }} on Twitch" rel="me" target="_blank"  rel="noopener" class="icon-twitch">
@@ -175,14 +183,6 @@
     </li>
   {% endif %}
 
-
-  {% if settings.x_link != '' %}
-    <li>
-      <a href="{{ settings.x_link }}" title="{{ shop.name }} on X" rel="me" target="_blank"  rel="noopener" class="icon-x">
-        {% render 'icon', name: 'x-social' %}
-      </a>
-    </li>
-  {% endif %}
 
   {% if settings.vimeo_link != '' %}
     <li>
