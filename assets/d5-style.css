@@ -346,6 +346,7 @@
 }
 .d5-footer #shopify-section-logo {
   width: 29%;
+  max-width: unset;
 }
 .d5-footer p,
 .d5-footer a {
