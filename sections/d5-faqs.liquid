@@ -33,6 +33,7 @@
           <h2>{{ section.settings.title }}</h2>
           <div class="f-rt-d5">{{ section.settings.rt }}</div>
         </div>
+        {% for block in section.blocks %}
          <div class="d5-faq-main">
             <div class="quest-d5"><h3>{{ block.settings.quest }}</h3>
             <div class="faq_icon-d5">
@@ -45,6 +46,7 @@
               {{ block.settings.ans }}
             </div>
           </div>
+                  {% endfor %}
       </div>
     </div>
   </div>
