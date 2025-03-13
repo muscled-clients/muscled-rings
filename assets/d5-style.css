@@ -628,6 +628,9 @@
     padding: 15px 0 14px;
     gap: 16px;
   }
+  .footer__menu ul li{
+    margin-bottom: 12px;
+  }
 }
 
 
