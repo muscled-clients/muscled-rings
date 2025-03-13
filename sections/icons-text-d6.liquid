@@ -215,20 +215,11 @@
   </style>
 
   <style>
-     .section-template-{{ section.id }}.features-template-{{ section.id }} *{
-      font-family: "Josefin Sans";
-    }
     @media(min-width: 1024px) {
       .features-item-template-{{ section.id }} {
         display: block;
       }
     }
-    {% if section.settings.show-image %}
-     .section-template-{{ section.id }}.features-template-{{ section.id }} *{
-      font-family: "Montserrat, sans-serif";
-    }
-      {% endif %}
-
     .features-icon-template-{{ section.id }}.f9-icon-d6 img {
       width: {{ section.settings.icon_size }}px;
       height: {{ section.settings.icon_size }}px;
