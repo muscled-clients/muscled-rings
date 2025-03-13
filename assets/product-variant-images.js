@@ -147,13 +147,6 @@ function ShowProductImages() {
     waitForFlickity('.product-gallery__thumbnails', (flktyThumbs) => {
         restoreSlides(flktyThumbs, removedSlidesThumbs);
         removeMarkedSlides(flktyThumbs, removedSlidesThumbs);
-      console.log('thumbs rendered!');
-      productThumbnails.forEach(thumb=> {
-        if(thumb.classList.contains('d4-main-image')) {
-          console.log("Main thumb: ",thumb);
-            thumb.click();
-          }
-      })
     });
 }
 
