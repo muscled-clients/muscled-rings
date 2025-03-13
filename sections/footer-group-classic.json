@@ -53,6 +53,7 @@
         "text_3",
         "text_4"
       ],
+      "disabled": true,
       "settings": {
         "show_icon_bar": true,
         "icon_position": "row",
