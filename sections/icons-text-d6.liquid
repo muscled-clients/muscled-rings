@@ -1,6 +1,560 @@
+<div
+  id="shopify-section-template-{{ section.id }}"
+  class="shopify-section"
+  bis_skin_checked="1"
+>
+  <style data-shopify="">
+    .section-template-{{ section.id }} {
+      border-top: solid #000000 0px;
+      border-bottom: solid #000000 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .section-template-{{ section.id }}-settings {
+      margin: 0 auto;
+      padding-top: 27px;
+      padding-bottom: 27px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .features-grid-template-{{ section.id }} {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: start;
+      gap: 40px;
+    }
+
+    .features-heading-template-{{ section.id }} * {
+      margin: 0;
+      font-size: {{ section.settings.title-font-mobl }}px;
+      color: {{ section.settings.title-color }};
+      line-height: 110%;
+      text-transform: unset;
+    }
+
+    .features-items-template-{{ section.id }} {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+
+    .features-icon-template-{{ section.id }} {
+      max-width: fit-content;
+      height: fit-content;
+      padding: 12px 12px;
+    }
+
+    .features-icon-template-{{ section.id }} img,
+    .features-icon-template-{{ section.id }} svg {
+      display: block;
+      width: 32px;
+      height: 32px;
+    }
+
+    .features-title-template-{{ section.id }} {
+      margin-top: 12px;
+    }
+
+    .features-title-template-{{ section.id }} * {
+      margin: 0;
+      line-height: 130%;
+      text-transform: unset;
+    }
+
+    .features-text-template-{{ section.id }} {
+      margin-top: 11px;
+    }
+
+    .features-text-template-{{ section.id }} * {
+      margin: 0;
+      line-height: 150%;
+      text-transform: unset;
+    }
+
+    .features-image-template-{{ section.id }} {
+      width: 100%;
+      margin: 0px auto;
+      max-width: 100%;
+      border-radius: 6px;
+      border: 0px solid #000000;
+      overflow: hidden;
+      display: none;
+      {% if section.settings.show-image %}
+      display: block;
+        {% endif %}
+    }
+
+    .features-image-template-{{ section.id }} img,
+    .features-image-template-{{ section.id }} svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .features-image-template-{{ section.id }} svg {
+      background-color: #DDDDDD;
+    }
+
+    @media(min-width: 1024px) {
+
+      .section-template-{{ section.id }} {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .section-template-{{ section.id }}-settings {
+        padding: 0 5rem;
+        padding-top: 36px;
+        padding-bottom: 36px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+
+      .features-grid-template-{{ section.id }} {
+        gap: 50px;
+        flex-direction: column;
+      }
+
+      .features-heading-template-{{ section.id }} {
+        text-align:  {{ section.settings.heading-align }};
+      }
+
+      .features-heading-template-{{ section.id }} * {
+        font-size: {{ section.settings.title-font }}px;
+      }
+
+      .features-items-template-{{ section.id }} {
+        margin-top: 48px;
+        gap: 50px;
+      }
+
+      .features-icon-template-{{ section.id }} {
+        padding: 16px 16px;
+      }
+
+      .features-icon-template-{{ section.id }} img,
+      .features-icon-template-{{ section.id }} svg {
+        width: 40px;
+        height: 40px;
+      }
+
+      .features-title-template-{{ section.id }} {
+        margin-top: 16px;
+      }
+
+      .features-text-template-{{ section.id }} {
+        margin-top: 14px;
+      }
+      .features-image-template-{{ section.id }} {
+        max-width: 40%;
+      }
+    }
+  </style>
+  <style>
+    .section-template-{{ section.id }}-settings {
+      max-width: 140rem;
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+       .features-grid-template-{{ section.id }} {
+        flex-direction: row;
+       }
+      .features-content-template-{{ section.id }} {
+        flex: 0 1 100%;
+      }
+      .features-items-template-{{ section.id }}{
+      grid-template-columns: repeat(4, 1fr);
+      }
+      .features-image-template-{{ section.id }}{
+      display: none;
+      }
+      {% if section.settings.show-image %}
+      .features-image-template-{{ section.id }} {
+        flex: 0 0 40%;
+        display: flex;
+      }
+        .features-content-template-{{ section.id }} {
+        flex: 0 1 60%;
+      }
+        .features-items-template-{{ section.id }}{
+      grid-template-columns: repeat(2, 1fr);
+      }
+      {% endif %}
+    }
+  </style>
+
+  <style>
+    .features-image-template-{{ section.id }} {
+     aspect-ratio: 12/12;
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+     .features-image-template-{{ section.id }} {
+       aspect-ratio: 9.6/13;
+      }
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+      .features-icon-template-{{ section.id }} {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
+  </style>
+
+  <style>
+    .features-item-template-{{ section.id }} {
+      display: flex;
+      gap: 12px;
+    }
+  </style>
+
+  <style>
+     .section-template-{{ section.id }}.features-template-{{ section.id }} *{
+      font-family: "Josefin Sans";
+    }
+    @media(min-width: 1024px) {
+      .features-item-template-{{ section.id }} {
+        display: block;
+      }
+    }
+    {% if section.settings.show-image %}
+     .section-template-{{ section.id }}.features-template-{{ section.id }} *{
+      font-family: "Montserrat, sans-serif";
+    }
+      {% endif %}
+
+    .features-icon-template-{{ section.id }}.f9-icon-d6 img {
+      width: {{ section.settings.icon_size }}px;
+      height: {{ section.settings.icon_size }}px;
+    }
+  </style>
+
+  <div
+    id="{{ section.settings.features-id }}"
+    class="section-template-{{ section.id }} features-template-{{ section.id }}"
+    style="background-color: {{ section.settings.sec-color }};"
+    bis_skin_checked="1"
+  >
+    <div class="section-template-{{ section.id }}-settings" bis_skin_checked="1">
+      <div class="features-grid-template-{{ section.id }}" bis_skin_checked="1">
+        <div
+          class="features-content-template-{{ section.id }}"
+          bis_skin_checked="1"
+        >
+          <div
+            class="features-heading-template-{{ section.id }}"
+            bis_skin_checked="1"
+          >
+            <h2>{{ section.settings['sec-title'] }}</h2>
+          </div>
+
+          <div
+            class="features-items-template-{{ section.id }}"
+            bis_skin_checked="1"
+          >
+            {% for block in section.blocks %}
+              <style>
+                .f9-block-{{ block.id }} {
+                  text-align: {{ block.settings.text-align }};
+                }
+                .f9-block-{{ block.id }} .f9-icon-d6{
+                  border-radius: {{ block.settings.icon-radius }}%;
+                  background: {{ block.settings.icon-color }};
+                  border: {{ block.settings.icon-border }}px solid;
+                  border-color: {{ block.settings.border-color }};
+                  {% if block.settings.icon-center %}
+                  margin: 0 auto;
+                  {% endif %}
+                }
+                .f9-block-{{ block.id }} .f9-block-title h4{
+                  font-size: {{ block.settings.block-title-font }}px;
+                  color: {{ block.settings.block-title-color }};
+                }
+                .f9-block-{{ block.id }} .f9-block-content{
+                  font-size: {{ block.settings.content-font }}px;
+                  color: {{ block.settings.content-color }};
+                }
+                @media (max-width: 1024px){
+                  .f9-block-{{ block.id }} .f9-block-title h4{
+                  font-size: {{ block.settings.block-title-font-mobl }}px;
+                }
+                .f9-block-{{ block.id }} .f9-block-content{
+                  font-size: {{ block.settings.content-font-mobl }}px;
+                }
+                }
+              </style>
+              <div
+                class="features-item-template-{{ section.id }} f9-block-{{ block.id }}"
+                bis_skin_checked="1"
+              >
+                <div
+                  class="features-icon-template-{{ section.id }} f9-icon-d6"
+                  bis_skin_checked="1"
+                >
+                  {% render 'ss-media-v1', img: block.settings['block-icon'] %}
+                </div>
+
+                <div
+                  class="features-item-content-template-{{ section.id }}"
+                  bis_skin_checked="1"
+                >
+                  <div
+                    class="features-title-template-{{ section.id }} f9-block-title"
+                    bis_skin_checked="1"
+                  >
+                    <h4>{{ block.settings['block-title'] }}</h4>
+                  </div>
+
+                  <div
+                    class="features-text-template-{{ section.id }} f9-block-content"
+                    bis_skin_checked="1"
+                  >
+                    <p>
+                      {{ block.settings['block-content'] }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="features-image-template-{{ section.id }}" bis_skin_checked="1">
+          {% render 'ss-media-v1', img: section.settings['sec-image'] %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Featured-9 Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sec-title",
+      "label": "Heading"
+    },
+    {
+      "type": "color",
+      "id": "title-color",
+      "label": "Color",
+      "default": "#000"
+    },
+    {
+      "type": "range",
+      "id": "title-font",
+      "label": "Font size",
+      "default": 56,
+      "min": 30,
+      "max": 80,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "heading-align",
+      "label": "Heading Alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center",
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "sec-image",
+      "label": "Section Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show-image",
+      "label": "Show Image",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "title-font-mobl",
+      "label": "Font size for Mobile",
+      "default": 32,
+      "min": 20,
+      "max": 50,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "sec-color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "features-id",
+      "label": "Section Custom I'd"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "unit": "px",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 32,
+      "label": "Icon size"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block-icon",
+          "label": "Icon"
+        },
+        {
+          "type": "select",
+          "id": "text-align",
+          "default": "left",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "block-title",
+          "label": "Block Heading"
+        },
+        {
+          "type": "color",
+          "id": "block-title-color",
+          "label": "Color",
+          "default": "#000"
+        },
+        {
+          "type": "range",
+          "id": "block-title-font",
+          "label": "Font-size",
+          "max": 24,
+          "default": 20,
+          "min": 18,
+          "unit": "px"
+        },
+         {
+          "type": "range",
+          "id": "block-title-font-mobl",
+          "label": "Font-size for Mobile",
+          "max": 22,
+          "default": 18,
+          "min": 16,
+          "unit": "px"
+        },
+        {
+          "type": "textarea",
+          "id": "block-content",
+          "label": "Block Content"
+        },
+        {
+          "type": "color",
+          "id": "content-color",
+          "label": "Color",
+          "default": "#000"
+        },
+        {
+          "type": "range",
+          "id": "content-font",
+          "label": "Font-size",
+          "min": 14,
+          "default": 18,
+          "max": 20,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "content-font-mobl",
+          "label": "Font-size for Mobile",
+          "min": 12,
+          "default": 16,
+          "max": 20,
+          "unit": "px"
+        },
+
+        {
+          "type": "color",
+          "id": "icon-color",
+          "label": "Icon Background",
+          "default": "#F3F1F0"
+        },
+        {
+          "type": "checkbox",
+          "id": "icon-center",
+          "default": false,
+          "label": "Icon Alignment Center"
+        },
+        {
+          "type": "range",
+          "id": "icon-border",
+          "label": "Icon Border",
+          "min": 0,
+          "default": 0,
+          "max": 4,
+          "unit": "px"
+        },
+        {
+          "type": "color",
+          "id": "border-color",
+          "label": "Border-color",
+          "default": "#000"
+        },
+        {
+          "type": "range",
+          "id": "icon-radius",
+          "label": "Icon Border-radius",
+          "min": 0,
+          "default": 50,
+          "max": 80,
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured-9 Section"
+    }
+  ]
+}
 {% endschema %}
