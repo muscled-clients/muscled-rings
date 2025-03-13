@@ -274,10 +274,6 @@
       "type": "recently-viewed-pro-d6",
       "settings": {}
     },
-    "newsletter_sec_d6_3NtTwh": {
-      "type": "newsletter-sec-d6",
-      "settings": {}
-    },
     "images_grid_sec_NX3CBg": {
       "type": "images-grid-sec",
       "blocks": {
@@ -321,6 +317,10 @@
       ],
       "settings": {}
     },
+    "newsletter_sec_d6_3NtTwh": {
+      "type": "newsletter-sec-d6",
+      "settings": {}
+    },
     "17362140264e61d429": {
       "type": "apps",
       "settings": {
@@ -339,8 +339,8 @@
     "index_icon_with_text_column_tfmeiW",
     "index_faq_HqXX36",
     "recently_viewed_pro_d6_HgeUky",
-    "newsletter_sec_d6_3NtTwh",
     "images_grid_sec_NX3CBg",
+    "newsletter_sec_d6_3NtTwh",
     "17362140264e61d429"
   ]
 }
