@@ -628,7 +628,7 @@
     padding: 15px 0 14px;
     gap: 16px;
   }
-  .footer__menu ul li{
+  .d5-footer .footer__menu ul li, .d5-footer .footer__block.block__text p{
     margin-bottom: 12px;
   }
 }
