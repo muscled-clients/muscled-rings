@@ -115,7 +115,7 @@ function ShowProductImages() {
     productThumbnails.forEach(thumb => {
         let thumbAttr = thumb.getAttribute('data-title');
 
-          if(thumb.classList.includes('d4-main-image')) {
+          if(thumb.classList.contains('d4-main-image')) {
             thumb.click();
           }
 
