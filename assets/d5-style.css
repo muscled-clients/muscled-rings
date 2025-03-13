@@ -325,6 +325,9 @@
 .icon-text-main-d5 {
   padding: 4px 0 32px;
 }
+.d5-footer{
+  padding: 60px 40px;
+}
 .d5-footer .footer__content{
   background: #fff;
   border: none;
