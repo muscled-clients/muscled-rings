@@ -148,6 +148,11 @@ function ShowProductImages() {
         restoreSlides(flktyThumbs, removedSlidesThumbs);
         removeMarkedSlides(flktyThumbs, removedSlidesThumbs);
       console.log('thumbs rendered!');
+      productThumbnails.forEach(thumb=> {
+        if(thumb.classList.contains('d4-main-image')) {
+            thumb.click();
+          }
+      })
     });
 }
 
