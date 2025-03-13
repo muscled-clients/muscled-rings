@@ -346,6 +346,14 @@
 .d5-footer #shopify-section-logo{
   width: 29%;
 }
+.d5-footer p, .d5-footer a{
+  color: #553365;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
