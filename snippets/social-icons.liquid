@@ -71,6 +71,14 @@
     </li>
   {% endif %}
 
+  {% if settings.twitch_link != '' %}
+    <li>
+      <a href="{{ settings.twitch_link }}" title="{{ shop.name }} on Twitch" rel="me" target="_blank"  rel="noopener" class="icon-twitch">
+        {% render 'icon', name: 'twitch' %}
+      </a>
+    </li>
+  {% endif %}
+  
   {% if settings.kickstarter_link != '' %}
     <li>
       <a href="{{ settings.kickstarter_link }}" title="{{ shop.name }} on Kickstarter" rel="me" target="_blank"  rel="noopener" class="icon-kickstarter">
@@ -167,13 +175,6 @@
     </li>
   {% endif %}
 
-  {% if settings.twitch_link != '' %}
-    <li>
-      <a href="{{ settings.twitch_link }}" title="{{ shop.name }} on Twitch" rel="me" target="_blank"  rel="noopener" class="icon-twitch">
-        {% render 'icon', name: 'twitch' %}
-      </a>
-    </li>
-  {% endif %}
 
   {% if settings.x_link != '' %}
     <li>
