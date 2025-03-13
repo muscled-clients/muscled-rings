@@ -105,7 +105,7 @@ additional_classes: <string>
             aria-describedby="country-heading-{{ id }}"
             data-disclosure-toggle
           >
-            <img src="https://flagcdn.com/w40/{{ localization.country.iso_code | downcase }}.png" alt="{{ localization.country.name }} flag" width="20" height="15">
+            <img src="https://flagcdn.com/w40/{{ localization.country.iso_code | downcase }}.png" style="margin-right: 16px;" alt="{{ localization.country.name }} flag" width="20" height="15">
           <span class="disclosure__toggle-content">{{ localization.country.name }} ({{ localization.country.currency.iso_code }}{% if localization.country.currency.symbol %} {{ localization.country.currency.symbol }}{%- endif -%})</span> {% render 'icon', name: 'down-caret' %}
           </button>
           <div class="disclosure__list-wrap">
@@ -128,7 +128,7 @@ additional_classes: <string>
                     name="country_code"
                     value="{{ country.iso_code }}"
                   >
-                    <img src="https://flagcdn.com/w40/{{ country.iso_code | downcase }}.png" alt="{{ country.name }} flag" width="20" height="15">
+                    <img src="https://flagcdn.com/w40/{{ country.iso_code | downcase }}.png" style="margin-right: 16px;" alt="{{ country.name }} flag" width="20" height="15">
                     {{ country.name }} ({{ country.currency.iso_code }}{% if country.currency.symbol %} {{ country.currency.symbol }}{%- endif -%})
                   </button>
                 </li>
