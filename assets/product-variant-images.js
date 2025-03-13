@@ -59,7 +59,7 @@ function removeMarkedSlides(flkty, removedSlidesArray) {
       console.log(newCells);
       for(i = 0; i < newCells.length; i++) {
         if(newCells[i].element.classList.contains('d4-main-image')){
-          newCells[i].click();
+          newCells[i].element.click();
         }
       }
     } else {
