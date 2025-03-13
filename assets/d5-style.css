@@ -329,6 +329,9 @@
   background: #fff;
   border: none;
 }
+.d5-footer .footer__extra-content.section{
+  display: none;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
