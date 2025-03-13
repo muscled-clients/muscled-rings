@@ -393,7 +393,7 @@
   height: 24px;
   aspect-ratio: 1/1;
 }
-.social-icons-d5 ul { 
+.social-icons-d5 ul { a
   align-items: center;
   gap: 14px;
 }
@@ -580,5 +580,15 @@
   .flickity-viewport::-webkit-scrollbar-thumb {
     background: #2d1b38;
     border-radius: 0px;
+  }
+  .d5-footer{
+    padding: 30px 20px;
+  }
+  .d5-footer #shopify-section-logo{
+    width: 100%;
+  }
+  .d5-footer .one-fourth {
+    width: calc(50% - 8px);
+    max-width: 165px;
   }
 }
