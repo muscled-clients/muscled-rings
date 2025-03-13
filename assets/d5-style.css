@@ -397,7 +397,7 @@
   align-items: center;
   gap: 14px;
 }
-.footer-end-content-d5 .disclosure__toggle{
+.footer-end-content-d5 .disclosure__toggle,.footer-end-content-d5 .disclosure-list{
   border: none;
   background: none;
 }
