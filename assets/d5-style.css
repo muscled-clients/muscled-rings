@@ -388,7 +388,7 @@
   max-width: 1280px;
   margin: 0 auto;
 }
-.social-icons-d5 ul li a svg{
+.social-icons-d5 ul li a svg, .social-icons-d5 ul .icon{
   width: 24px;
   height: 24px;
   aspect-ratio: 1/1;
