@@ -590,5 +590,6 @@
   .d5-footer .one-fourth {
     width: calc(50% - 8px);
     max-width: 165px;
+    padding: 0;
   }
 }
