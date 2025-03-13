@@ -326,6 +326,10 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "newsletter_sec_d6_3NtTwh": {
+      "type": "newsletter-sec-d6",
+      "settings": {}
     }
   },
   "order": [
@@ -336,6 +340,7 @@
     "index_faq_HqXX36",
     "recently_viewed_pro_d6_HgeUky",
     "images_grid_sec_NX3CBg",
-    "17362140264e61d429"
+    "17362140264e61d429",
+    "newsletter_sec_d6_3NtTwh"
   ]
 }
