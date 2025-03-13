@@ -631,6 +631,10 @@
   .d5-footer .footer__menu ul li, .d5-footer .footer__block.block__text p{
     margin-bottom: 12px;
   }
+  .social-icons-d5 ul li a svg, .social-icons-d5 ul .icon{
+    width: 14px;
+    height: 14px;
+  }
 }
 
 
