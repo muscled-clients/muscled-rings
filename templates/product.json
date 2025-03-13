@@ -282,10 +282,38 @@
           "settings": {
             "block-img": "shopify://shop_images/Rectangle_2476.png"
           }
+        },
+        "text_NqWVBM": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2478.png"
+          }
+        },
+        "text_xxqN8V": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2477.png"
+          }
+        },
+        "text_nXYKiM": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2479.png"
+          }
+        },
+        "text_DHFWx6": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2480.png"
+          }
         }
       },
       "block_order": [
-        "text_6VhqEJ"
+        "text_6VhqEJ",
+        "text_NqWVBM",
+        "text_xxqN8V",
+        "text_nXYKiM",
+        "text_DHFWx6"
       ],
       "settings": {}
     },
