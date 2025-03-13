@@ -341,7 +341,8 @@
   max-width: 1280px;
 }
 .d5-footer .one-fourth {
-  width: calc(15% - 20px);
+  width: calc(23.33% - 20px);
+  max-width: 210px;
 }
 .d5-footer #shopify-section-logo {
   width: 29%;
