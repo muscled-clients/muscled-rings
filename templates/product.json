@@ -170,6 +170,16 @@
         "img": "shopify://shop_images/image.png"
       }
     },
+    "d5_image_grid_TT6fEf": {
+      "type": "d5-image-grid",
+      "settings": {
+        "title": "Beautifully Handcrafted Rings That Celebrate Love, Commitment, and Timeless Elegance",
+        "description": "This contemporary rope style solitaire engagement ring features a woven design that is",
+        "image_1": "shopify://shop_images/image_1.png",
+        "image_2": "shopify://shop_images/image_2.png",
+        "bottom_description": "Enjoy quality packaging and free shipping with every order. We also offer hassle-free, 30-day returns - no questions asked! Don't forget we'll be here forever with our lifetime warranty."
+      }
+    },
     "index_icon_with_text_column_tfmeiW": {
       "type": "index__icon-with-text-column",
       "blocks": {
@@ -334,6 +344,7 @@
     "sidebar",
     "main",
     "d5_faqs_meCEw6",
+    "d5_image_grid_TT6fEf",
     "index_icon_with_text_column_tfmeiW",
     "index_faq_HqXX36",
     "17362140264e61d429"
