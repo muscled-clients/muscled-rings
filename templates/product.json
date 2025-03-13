@@ -134,6 +134,42 @@
         "custom_css": ""
       }
     },
+    "d5_faqs_meCEw6": {
+      "type": "d5-faqs",
+      "blocks": {
+        "faqs_Kq7N7C": {
+          "type": "faqs",
+          "settings": {
+            "quest": "Discreet Packaging",
+            "ans": "<p>Demure and sparkling, this diamond engagement ring features round diamonds pavé-set in 18k yellow gold to complement your choice of diamond.</p>"
+          }
+        },
+        "faqs_mzb6rx": {
+          "type": "faqs",
+          "settings": {
+            "quest": "Secure and Convenient Pickup Option",
+            "ans": "<p>Some Text Here ......</p>"
+          }
+        },
+        "faqs_XJJ7hT": {
+          "type": "faqs",
+          "settings": {
+            "quest": "Free Shipping",
+            "ans": "<p>SOME Texts Here .....</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faqs_Kq7N7C",
+        "faqs_mzb6rx",
+        "faqs_XJJ7hT"
+      ],
+      "settings": {
+        "title": "We're committed to making your entire experience a pleasant one,",
+        "rt": "<p>Every item we send comes in our signature Blue Nile packaging. Engagement rings arrive in a deluxe ring box within an elegant presentation box ready for your proposal. </p>",
+        "img": "shopify://shop_images/image.png"
+      }
+    },
     "index_icon_with_text_column_tfmeiW": {
       "type": "index__icon-with-text-column",
       "blocks": {
@@ -297,6 +333,7 @@
     "breadcrumbs",
     "sidebar",
     "main",
+    "d5_faqs_meCEw6",
     "index_icon_with_text_column_tfmeiW",
     "index_faq_HqXX36",
     "17362140264e61d429"
