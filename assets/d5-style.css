@@ -340,6 +340,9 @@
   width: 100%;
   max-width: 1280px;
 }
+.d5-footer .one-fourth {
+    width: calc(15% - 20px);
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
