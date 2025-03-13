@@ -57,7 +57,9 @@ function removeMarkedSlides(flkty, removedSlidesArray) {
         console.log(`Flickity reloaded. Remaining slides: ${flkty.cells.length}`);
         let newCells = flkty.cells;
       for(i = 0; i < newCells.length; i++) {
-      console.log(newCells[i]);        
+      if(newCells[i].classList.contains('d4-main-image')){
+        newCells[i].click();
+      }      
       }
     } else {
         console.log("No slides removed.");
