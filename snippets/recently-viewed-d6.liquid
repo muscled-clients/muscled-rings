@@ -1,75 +1,78 @@
 <style>
-              @media only screen and (min-width: 750px)
-          {
-          .js-recentPdpBlock{
-            display: flex;
-            gap: 20px;
-            overflow: scroll;
-            width: 100%;
-          }
-          }
-
-          @media only screen and (max-width: 576px)
-          {
-             /* Code by https://websensepro.com */
+                @media only screen and (min-width: 750px)
+            {
             .js-recentPdpBlock{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: var(--grid-desktop-horizontal-spacing);
-          }
-            .c-product img{
-          height: 230px !important;
+              display: flex;
+              gap: 20px;
+              overflow: scroll;
+              width: 100%;
             }
-          }
-        .recently-title h2 {
-         color: #1B1B1B;
-        font-family: "Tenor Sans";
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-            padding: 0 0 32px 0;
-          }
-          .c-product{
-            cursor: pointer;
-          }
+            }
+    section#Recent {
+      max-width: 280px;
+  }
 
-          .c-product img {
-              height: 280px;
-            width: 100%;
-            object-fit: cover;
-          }
-      .c-product p.c-productPrice {
-        color: #1B1B1B;
-        font-family: Roboto;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        padding: 12px 2px;
-        letter-spacing: 0.08px;
-    }
-         h3.c-product__title,
-     h3.c-product__title a.c-product__url {
-          color: rgba(27, 27, 27, 0.60);
+            @media only screen and (max-width: 576px)
+            {
+               /* Code by https://websensepro.com */
+              .js-recentPdpBlock{
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              column-gap: var(--grid-desktop-horizontal-spacing);
+            }
+              .c-product img{
+            height: 230px !important;
+              }
+            }
+          .recently-title h2 {
+           color: #1B1B1B;
+          font-family: "Tenor Sans";
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+              padding: 0 0 32px 0;
+            }
+            .c-product{
+              cursor: pointer;
+            }
+
+            .c-product img {
+                height: 280px;
+              width: 100%;
+              object-fit: cover;
+            }
+        .c-product p.c-productPrice {
+          color: #1B1B1B;
           font-family: Roboto;
           font-size: 16px;
           font-style: normal;
-          font-weight: 400;
-          line-height: 20px;
+          font-weight: 600;
+          line-height: normal;
+          padding: 12px 2px;
           letter-spacing: 0.08px;
-          padding: 12px 2px 0;
       }
-           a.c-product__url{
-              position: relative;
-            }
-    .c-product{
-             padding: 0 8px;
+           h3.c-product__title,
+       h3.c-product__title a.c-product__url {
+            color: rgba(27, 27, 27, 0.60);
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.08px;
+            padding: 12px 2px 0;
+        }
+             a.c-product__url{
+                position: relative;
+              }
+      .c-product{
+               padding: 0 8px;
+      }
+      section#Recent:hover {
+        border: 1px solid rgba(45, 27, 56, 0.10);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
     }
-    section#Recent:hover {
-      border: 1px solid rgba(45, 27, 56, 0.10);
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  }
 </style>
 <script>
   // First Block
