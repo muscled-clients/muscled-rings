@@ -393,7 +393,7 @@
   height: 24px;
   aspect-ratio: 1/1;
 }
-.social-icons-d5 ul { a
+.social-icons-d5 ul a{ 
   align-items: center;
   gap: 14px;
 }
@@ -645,7 +645,7 @@
     border: none;
     background: none;
   }
-  .d5-footer .disclosure__toggle img{
+  .d5-footer .disclosure__toggle img,.d5-footer .disclosure__button img{
     margin-right: 4px !important;
   }
 }
