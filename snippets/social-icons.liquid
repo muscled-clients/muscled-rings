@@ -95,14 +95,6 @@
     </li>
   {% endif %}
 
-  {% if settings.linkedin_link != '' %}
-    <li>
-      <a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank"  rel="noopener" class="icon-linkedin">
-        {% render 'icon', name: 'linkedin' %}
-      </a>
-    </li>
-  {% endif %}
-
   {% if settings.medium_link != '' %}
     <li>
       <a href="{{ settings.medium_link }}" title="{{ shop.name }} on Medium" rel="me" target="_blank"  rel="noopener" class="icon-medium">
@@ -204,6 +196,14 @@
     <li>
       <a href="{{ settings.youtube_link }}" title="{{ shop.name }} on YouTube" rel="me" target="_blank"  rel="noopener" class="icon-youtube">
         {% render 'icon', name: 'youtube' %}
+      </a>
+    </li>
+  {% endif %}
+
+   {% if settings.linkedin_link != '' %}
+    <li>
+      <a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank"  rel="noopener" class="icon-linkedin">
+        {% render 'icon', name: 'linkedin' %}
       </a>
     </li>
   {% endif %}
