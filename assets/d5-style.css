@@ -613,4 +613,20 @@
   .d5-footer .section.is-width-wide .container.has-limit{
     gap: 16px;
   }
+  .footer__logo-wrapper .image-element__wrap{
+    width: 153px;
+    height: 28px;
+  }
+  .footer__logo-wrapper .image-element__wrap img{
+    object-fit: contain;
+  }
 }
+
+
+
+
+
+
+
+
+
