@@ -129,7 +129,7 @@
           "type": "text",
           "settings": {
             "block-icon": "shopify://shop_images/Group_1000006056.png",
-            "text-align": "left",
+            "text-align": "center",
             "block-title": "",
             "block-title-color": "#000",
             "block-title-font": 20,
