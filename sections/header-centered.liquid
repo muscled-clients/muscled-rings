@@ -372,6 +372,13 @@
           {% endfor %}
         </div>
       </div>
+      
+    {%
+      render 'header__action-icons',
+      display_search: section.settings.display_search,
+      header_icon_class: 'top-bar__icons',
+      icon_style: section.settings.icon_style,
+    %}
     </nav>
   </header>
 
