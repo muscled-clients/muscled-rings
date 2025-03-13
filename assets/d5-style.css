@@ -591,5 +591,6 @@
     width: calc(50% - 8px);
     max-width: 165px;
     padding: 0;
+    margin: 0;
   }
 }
