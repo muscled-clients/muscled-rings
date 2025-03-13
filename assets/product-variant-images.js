@@ -147,6 +147,7 @@ function ShowProductImages() {
     waitForFlickity('.product-gallery__thumbnails', (flktyThumbs) => {
         restoreSlides(flktyThumbs, removedSlidesThumbs);
         removeMarkedSlides(flktyThumbs, removedSlidesThumbs);
+      console.log('thumbs rendered!');
     });
 }
 
