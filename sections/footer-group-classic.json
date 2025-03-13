@@ -104,13 +104,21 @@
             "display_first_name": false,
             "display_last_name": false
           }
+        },
+        "link_list_eRyaAn": {
+          "type": "link_list",
+          "settings": {
+            "menu": "brand",
+            "social_icons_footer": false
+          }
         }
       },
       "block_order": [
         "logo",
         "link_list",
         "text",
-        "newsletter_FrngqD"
+        "newsletter_FrngqD",
+        "link_list_eRyaAn"
       ],
       "settings": {
         "copyright_text": "",
