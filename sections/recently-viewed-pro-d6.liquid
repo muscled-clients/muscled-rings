@@ -10,6 +10,22 @@
     {% render 'recently-viewed-d6' %}
   </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".js-recentPdpBlock");
+    const leftArrow = document.querySelector(".arrow-left");
+    const rightArrow = document.querySelector(".arrow-right");
+    const scrollAmount = 300; // Adjust scroll amount per click
+
+    leftArrow.addEventListener("click", () => {
+      slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    rightArrow.addEventListener("click", () => {
+      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  });
+</script>
 {% schema %}
 {
   "name": "Recently Viewed",
