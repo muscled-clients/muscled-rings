@@ -623,6 +623,9 @@
   .d5-footer .footer__logo-wrapper.is-small{
     padding-bottom: 5px;
   }
+  .cta_icon-container-d5{
+    padding: 15px 0 14px;
+  }
 }
 
 
