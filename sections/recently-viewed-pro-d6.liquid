@@ -17,6 +17,11 @@
     const rightArrow = document.querySelector(".arrow-right");
     const scrollAmount = 300; // Adjust scroll amount per click
 
+    function checkScroll() {
+      leftArrow.disabled = slider.scrollLeft <= 0;
+      rightArrow.disabled = slider.scrollLeft + slider.clientWidth >= slider.scrollWidth;
+    }
+
     leftArrow.addEventListener("click", () => {
       slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     });
@@ -24,6 +29,11 @@
     rightArrow.addEventListener("click", () => {
       slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });
+
+    slider.addEventListener("scroll", checkScroll);
+
+    // Initial check on page load
+    checkScroll();
   });
 </script>
 {% schema %}
