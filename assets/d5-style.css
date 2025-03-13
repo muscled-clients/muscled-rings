@@ -332,6 +332,7 @@
 .d5-footer .footer__content {
   background: #fff;
   border: none;
+  padding: 0;
 }
 .d5-footer .footer__extra-content.section {
   display: none;
