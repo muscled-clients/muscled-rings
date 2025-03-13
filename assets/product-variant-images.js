@@ -2,7 +2,7 @@ const productImages = document.querySelectorAll('.d4-product .product-gallery__i
 const productThumbnails = document.querySelectorAll('.product-gallery__thumbnail'); // Thumbnails
 const productForm = document.querySelector('.d4-product .shopify-product-form');
 const swatchOptions = document.querySelectorAll('.swatch__option input');
-swatchOptions[1].checked = true;
+swatchOptions[0].checked = true;
 
 let removedSlidesMain = []; // Stores removed slides for main Flickity
 let removedSlidesThumbs = []; // Stores removed slides for thumbnails Flickity
