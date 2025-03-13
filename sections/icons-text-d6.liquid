@@ -1,17 +1,17 @@
 <div
-  id="shopify-section-template-{{ section.id }}"
+  id="shopify-section-icons-text-d6"
   class="shopify-section"
   bis_skin_checked="1"
 >
   <style data-shopify="">
-    .section-template-{{ section.id }} {
+    .section-icons-text-d6 {
       border-top: solid #000000 0px;
       border-bottom: solid #000000 0px;
       margin-top: 0px;
       margin-bottom: 0px;
     }
 
-    .section-template-{{ section.id }}-settings {
+    .section-icons-text-d6-settings {
       margin: 0 auto;
       padding-top: 27px;
       padding-bottom: 27px;
@@ -25,14 +25,14 @@
       font-family: Roboto;
     }
 
-    .features-grid-template-{{ section.id }} {
+    .features-grid-icons-text-d6 {
       display: flex;
       flex-direction: column-reverse;
       align-items: start;
       gap: 40px;
     }
 
-    .features-heading-template-{{ section.id }} * {
+    .features-heading-icons-text-d6 * {
       margin: 0;
       font-size: {{ section.settings.title-font-mobl }}px;
       color: {{ section.settings.title-color }};
@@ -40,46 +40,46 @@
       text-transform: unset;
     }
 
-    .features-items-template-{{ section.id }} {
+    .features-items-icons-text-d6 {
       margin-top: 36px;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
     }
 
-    .features-icon-template-{{ section.id }} {
+    .features-icon-icons-text-d6 {
       max-width: fit-content;
       height: fit-content;
     }
 
-    .features-icon-template-{{ section.id }} img,
-    .features-icon-template-{{ section.id }} svg {
+    .features-icon-icons-text-d6 img,
+    .features-icon-icons-text-d6 svg {
       display: block;
       width: 32px;
       height: 32px;
     }
 
-    .features-title-template-{{ section.id }} {
+    .features-title-icons-text-d6 {
       margin-top: 12px;
     }
 
-    .features-title-template-{{ section.id }} * {
+    .features-title-icons-text-d6 * {
       margin: 0;
       line-height: 130%;
       text-transform: unset;
     }
 
-    .features-text-template-{{ section.id }} {
+    .features-text-icons-text-d6 {
       margin-top: 11px;
     }
 
-    .features-text-template-{{ section.id }} * {
+    .features-text-icons-text-d6 * {
       margin: 0;
       line-height: 20px;
       text-transform: unset;
     }
 
-    .features-image-template-{{ section.id }} {
+    .features-image-icons-text-d6 {
       width: 100%;
       margin: 0px auto;
       max-width: 100%;
@@ -92,26 +92,26 @@
         {% endif %}
     }
 
-    .features-image-template-{{ section.id }} img,
-    .features-image-template-{{ section.id }} svg {
+    .features-image-icons-text-d6 img,
+    .features-image-icons-text-d6 svg {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .features-image-template-{{ section.id }} svg {
+    .features-image-icons-text-d6 svg {
       background-color: #DDDDDD;
     }
 
     @media(min-width: 1024px) {
 
-      .section-template-{{ section.id }} {
+      .section-icons-text-d6 {
         margin-top: 0px;
         margin-bottom: 0px;
       }
 
-      .section-template-{{ section.id }}-settings {
+      .section-icons-text-d6-settings {
         padding: 0 5rem;
         padding-top: 36px;
         padding-bottom: 36px;
@@ -119,71 +119,71 @@
         padding-right: 130px;
       }
 
-      .features-grid-template-{{ section.id }} {
+      .features-grid-icons-text-d6 {
         gap: 50px;
         flex-direction: column;
       }
 
-      .features-heading-template-{{ section.id }} {
+      .features-heading-icons-text-d6 {
         text-align:  {{ section.settings.heading-align }};
       }
 
-      .features-heading-template-{{ section.id }} * {
+      .features-heading-icons-text-d6 * {
         font-size: {{ section.settings.title-font }}px;
       }
 
-      .features-items-template-{{ section.id }} {
+      .features-items-icons-text-d6 {
         margin-top: 48px;
         gap: 20px;
       }
 
-      .features-icon-template-{{ section.id }} img,
-      .features-icon-template-{{ section.id }} svg {
+      .features-icon-icons-text-d6 img,
+      .features-icon-icons-text-d6 svg {
         width: 40px;
         height: 40px;
       }
 
-      .features-title-template-{{ section.id }} {
+      .features-title-icons-text-d6 {
         margin-top: 16px;
       }
 
-      .features-text-template-{{ section.id }} {
+      .features-text-icons-text-d6 {
         margin-top: 20px;
       }
-      .features-image-template-{{ section.id }} {
+      .features-image-icons-text-d6 {
         max-width: 40%;
       }
     }
   </style>
   <style>
-    .section-template-{{ section.id }}-settings {
+    .section-icons-text-d6-settings {
       max-width: 140rem;
     }
   </style>
 
   <style>
     @media(min-width: 1024px) {
-       .features-grid-template-{{ section.id }} {
+       .features-grid-icons-text-d6 {
         flex-direction: row;
        }
-      .features-content-template-{{ section.id }} {
+      .features-content-icons-text-d6 {
         flex: 0 1 100%;
       }
-      .features-items-template-{{ section.id }}{
+      .features-items-icons-text-d6{
       grid-template-columns: repeat(4, 1fr);
       }
-      .features-image-template-{{ section.id }}{
+      .features-image-icons-text-d6{
       display: none;
       }
       {% if section.settings.show-image %}
-      .features-image-template-{{ section.id }} {
+      .features-image-icons-text-d6 {
         flex: 0 0 40%;
         display: flex;
       }
-        .features-content-template-{{ section.id }} {
+        .features-content-icons-text-d6 {
         flex: 0 1 60%;
       }
-        .features-items-template-{{ section.id }}{
+        .features-items-icons-text-d6{
       grid-template-columns: repeat(2, 1fr);
       }
       {% endif %}
@@ -191,14 +191,14 @@
   </style>
 
   <style>
-    .features-image-template-{{ section.id }} {
+    .features-image-icons-text-d6 {
      aspect-ratio: 12/12;
     }
   </style>
 
   <style>
     @media(min-width: 1024px) {
-     .features-image-template-{{ section.id }} {
+     .features-image-icons-text-d6 {
        aspect-ratio: 9.6/13;
       }
     }
@@ -206,7 +206,7 @@
 
   <style>
     @media(min-width: 1024px) {
-      .features-icon-template-{{ section.id }} {
+      .features-icon-icons-text-d6 {
         margin-left: 0px;
         margin-right: 0px;
       }
@@ -214,7 +214,7 @@
   </style>
 
   <style>
-    .features-item-template-{{ section.id }} {
+    .features-item-icons-text-d6 {
       display: flex;
       gap: 12px;
     }
@@ -222,11 +222,11 @@
 
   <style>
     @media(min-width: 1024px) {
-      .features-item-template-{{ section.id }} {
+      .features-item-icons-text-d6 {
         display: block;
       }
     }
-    .features-icon-template-{{ section.id }}.f9-icon-d6 img {
+    .features-icon-icons-text-d6.f9-icon-d6 img {
       width: {{ section.settings.icon_size }}px;
       height: {{ section.settings.icon_size }}px;
     }
@@ -234,25 +234,25 @@
 
   <div
     id="{{ section.settings.features-id }}"
-    class="section-template-{{ section.id }} features-template-{{ section.id }}"
+    class="section-icons-text-d6 features-icons-text-d6"
     style="background-color: {{ section.settings.sec-color }};"
     bis_skin_checked="1"
   >
-    <div class="section-template-{{ section.id }}-settings" bis_skin_checked="1">
-      <div class="features-grid-template-{{ section.id }}" bis_skin_checked="1">
+    <div class="section-icons-text-d6-settings" bis_skin_checked="1">
+      <div class="features-grid-icons-text-d6" bis_skin_checked="1">
         <div
-          class="features-content-template-{{ section.id }}"
+          class="features-content-icons-text-d6"
           bis_skin_checked="1"
         >
           <div
-            class="features-heading-template-{{ section.id }}"
+            class="features-heading-icons-text-d6"
             bis_skin_checked="1"
           >
             <h2>{{ section.settings['sec-title'] }}</h2>
           </div>
 
           <div
-            class="features-items-template-{{ section.id }}"
+            class="features-items-icons-text-d6"
             bis_skin_checked="1"
           >
             {% for block in section.blocks %}
@@ -287,29 +287,29 @@
                 }
               </style>
               <div
-                class="features-item-template-{{ section.id }} f9-block-{{ block.id }}"
+                class="features-item-icons-text-d6 f9-block-{{ block.id }}"
                 bis_skin_checked="1"
               >
                 <div
-                  class="features-icon-template-{{ section.id }} f9-icon-d6"
+                  class="features-icon-icons-text-d6 f9-icon-d6"
                   bis_skin_checked="1"
                 >
                   <img src="{{  block.settings['block-icon'] | image_url: width: 300  }}">
                 </div>
 
                 <div
-                  class="features-item-content-template-{{ section.id }}"
+                  class="features-item-content-icons-text-d6"
                   bis_skin_checked="1"
                 >
                   <div
-                    class="features-title-template-{{ section.id }} f9-block-title"
+                    class="features-title-icons-text-d6 f9-block-title"
                     bis_skin_checked="1"
                   >
                     <h4>{{ block.settings['block-title'] }}</h4>
                   </div>
 
                   <div
-                    class="features-text-template-{{ section.id }} f9-block-content"
+                    class="features-text-icons-text-d6 f9-block-content"
                     bis_skin_checked="1"
                   >
                     <p>
