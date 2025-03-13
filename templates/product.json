@@ -122,6 +122,44 @@
         "custom_css": ""
       }
     },
+    "icons_text_d6_4z6yh3": {
+      "type": "icons-text-d6",
+      "blocks": {
+        "text_kzNDeP": {
+          "type": "text",
+          "settings": {
+            "text-align": "left",
+            "block-title": "",
+            "block-title-color": "#000",
+            "block-title-font": 20,
+            "block-title-font-mobl": 18,
+            "block-content": "",
+            "content-color": "#000",
+            "content-font": 18,
+            "content-font-mobl": 16,
+            "icon-color": "#F3F1F0",
+            "icon-center": false,
+            "icon-border": 0,
+            "border-color": "#000",
+            "icon-radius": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_kzNDeP"
+      ],
+      "settings": {
+        "sec-title": "",
+        "title-color": "#000",
+        "title-font": 56,
+        "heading-align": "left",
+        "show-image": true,
+        "title-font-mobl": 32,
+        "sec-color": "#fff",
+        "features-id": "",
+        "icon_size": 32
+      }
+    },
     "index_icon_with_text_column_tfmeiW": {
       "type": "index__icon-with-text-column",
       "blocks": {
@@ -321,7 +359,8 @@
       "type": "newsletter-sec-d6",
       "settings": {
         "heading": "Want First Dibs?",
-        "content": "Join our email list and be the first to know about new limited edition products, material innovations, and lots of other fun updates."
+        "content": "Join our email list and be the first to know about new limited edition products, material innovations, and lots of other fun updates.",
+        "note-text": "Note: You can opt-out at any time"
       }
     },
     "17362140264e61d429": {
@@ -339,6 +378,7 @@
     "breadcrumbs",
     "sidebar",
     "main",
+    "icons_text_d6_4z6yh3",
     "index_icon_with_text_column_tfmeiW",
     "index_faq_HqXX36",
     "recently_viewed_pro_d6_HgeUky",
