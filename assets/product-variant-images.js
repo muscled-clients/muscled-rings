@@ -15,16 +15,12 @@ function waitForFlickity(targetSelector, callback) {
 
         if (flkty) {
             clearInterval(checkFlickityInterval);
-            console.log(`Flickity for ${targetSelector} is initialized.`);
             callback(flkty);
-        } else {
-            console.log(`Waiting for Flickity (${targetSelector})...`);
         }
     }, 500);
 
     setTimeout(() => {
         clearInterval(checkFlickityInterval);
-        console.log(`Stopped checking for Flickity after 15 seconds (${targetSelector}).`);
     }, 15000);
 }
 
