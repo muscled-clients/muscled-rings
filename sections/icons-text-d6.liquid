@@ -343,37 +343,35 @@
   </div>
 </div>
 <script>
-    <script>
-      const slider = document.querySelector('.slider-d6');
-      const slides = document.querySelectorAll('.slide-d6');
-      const dotsContainer = document.querySelector('.dots-container-d6');
+  const slider = document.querySelector('.slider-d6');
+  const slides = document.querySelectorAll('.slide-d6');
+  const dotsContainer = document.querySelector('.dots-container-d6');
 
-      // Generate dots dynamically
-      slides.forEach((_, index) => {
-          let dot = document.createElement('span');
-          dot.classList.add('dot');
-          dot.dataset.index = index;
-          if (index === 0) dot.classList.add('active'); // Set the first dot as active
-          dotsContainer.appendChild(dot);
+  // Generate dots dynamically
+  slides.forEach((_, index) => {
+      let dot = document.createElement('span');
+      dot.classList.add('dot');
+      dot.dataset.index = index;
+      if (index === 0) dot.classList.add('active'); // Set the first dot as active
+      dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.dot');
+
+  function updateDots() {
+      let index = Math.round(slider.scrollLeft / slider.clientWidth);
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+  }
+
+  dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+          let index = e.target.dataset.index;
+          slider.scrollLeft = index * slider.clientWidth;
       });
+  });
 
-      const dots = document.querySelectorAll('.dot');
-
-      function updateDots() {
-          let index = Math.round(slider.scrollLeft / slider.clientWidth);
-          dots.forEach(dot => dot.classList.remove('active'));
-          dots[index].classList.add('active');
-      }
-
-      dots.forEach(dot => {
-          dot.addEventListener('click', (e) => {
-              let index = e.target.dataset.index;
-              slider.scrollLeft = index * slider.clientWidth;
-          });
-      });
-
-      slider.addEventListener('scroll', updateDots);
-  </script>
+  slider.addEventListener('scroll', updateDots);
 </script>
 {% schema %}
 {
