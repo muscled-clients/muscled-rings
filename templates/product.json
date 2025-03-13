@@ -198,10 +198,6 @@
         "custom_css": ""
       }
     },
-    "recently_viewed_pro_d6_HgeUky": {
-      "type": "recently-viewed-pro-d6",
-      "settings": {}
-    },
     "index_faq_HqXX36": {
       "type": "index__faq",
       "blocks": {
@@ -274,6 +270,25 @@
         "custom_css": ""
       }
     },
+    "recently_viewed_pro_d6_HgeUky": {
+      "type": "recently-viewed-pro-d6",
+      "settings": {}
+    },
+    "images_grid_sec_NX3CBg": {
+      "type": "images-grid-sec",
+      "blocks": {
+        "text_6VhqEJ": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2476.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_6VhqEJ"
+      ],
+      "settings": {}
+    },
     "17362140264e61d429": {
       "type": "apps",
       "settings": {
@@ -290,8 +305,9 @@
     "sidebar",
     "main",
     "index_icon_with_text_column_tfmeiW",
-    "recently_viewed_pro_d6_HgeUky",
     "index_faq_HqXX36",
+    "recently_viewed_pro_d6_HgeUky",
+    "images_grid_sec_NX3CBg",
     "17362140264e61d429"
   ]
 }
