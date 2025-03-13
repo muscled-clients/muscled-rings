@@ -618,7 +618,8 @@
     height: 28px;
   }
   .d5-footer .footer__logo-wrapper .image-element__wrap img{
-    object-fit: contain;
+    object-fit: contain !important;
+    filter: grayscale(100%) brightness(0%) invert(14%);
   }
   .d5-footer .footer__logo-wrapper.is-small{
     padding-bottom: 5px;
