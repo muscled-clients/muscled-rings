@@ -362,6 +362,17 @@
   font-family: "Tenor Sans";
   font-size: 20px;
 }
+.cta_icon-container-d5{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.cta_item-d5{
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
