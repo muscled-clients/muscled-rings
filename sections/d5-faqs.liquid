@@ -1,6 +1,74 @@
+<style></style>
+<div class="main-f-d5">
+  <div class="inner-f-d5">
+    <div class="row-f-d5">
+      <div class="col-f-d5 img-f-col">
+        <img src="{{ section.settings.img | image_url: width: '1440px' }}" width="580" height="440">
+      </div>
+      <div class="col-f-d5 faqs-f-col">
+        <div class="title-content-d5">
+          <h2>{{ section.settings.title }}</h2>
+          <div class="f-rt-d5">{{ section.settings.rt }}</div>
+        </div>
+         <div class="d5-faq-main">
+            <div class="quest-d5"><h3>{{ block.settings.quest }}</h3>
+            <div class="faq_icon-d5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+                <path d="M0.712885 0.718996C0.421225 1.01041 0.421225 1.48323 0.712885 1.77464L7.2195 8.28125C7.51091 8.57291 7.98373 8.57291 8.27514 8.28125L14.7818 1.77464C14.9276 1.62881 15.0005 1.43769 15.0005 1.24657C15.0005 1.05545 14.9276 0.864326 14.7818 0.718745C14.4903 0.427085 14.0175 0.427085 13.7261 0.718745L7.74732 6.69753L1.76854 0.718996C1.47712 0.427335 1.0043 0.427335 0.712885 0.718996Z" fill="#2D1B38" fill-opacity="0.75"/>
+              </svg>
+            </div>
+            </div>
+            <div class="answer-d5">
+              {{ block.settings.ans }}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "D5 FAQs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "rt",
+        "label": "Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faqs",
+        "name": "FAQs",
+        "settings": [
+          {
+            "type": "text",
+            "id": "quest",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "ans",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "D5 FAQs"
+      }
+    ]
   }
 {% endschema %}
