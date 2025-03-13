@@ -593,4 +593,21 @@
     padding: 0;
     margin: 0;
   }
+  .d5-footer p, .d5-footer a{
+    color: #1B1B1B;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .d5-footer p.footer__heading{
+    color: #1B1B1B;
+    font-family: "Tenor Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
 }
