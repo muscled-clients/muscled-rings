@@ -1,3 +1,14 @@
+<section>
+  <div class="main-images-grid-d6">
+    <div class="images-grid-d6">
+      {% for block in section.blocks %}
+        <div class="image-block-d6">
+          <img src="{{ block.settings.block-img | image_url: width: 800 }}" width="300%" height="300">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% schema %}
 {
   "name": "Images Grid",
