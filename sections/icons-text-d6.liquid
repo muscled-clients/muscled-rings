@@ -268,7 +268,7 @@
           </div>
 
           <div
-            class="features-items-icons-text-d6"
+            class="features-items-icons-text-d6 slider-d6"
             bis_skin_checked="1"
           >
             {% for block in section.blocks %}
@@ -303,7 +303,7 @@
                 }
               </style>
               <div
-                class="features-item-icons-text-d6 f9-block-{{ block.id }}"
+                class="features-item-icons-text-d6 slide-d6 f9-block-{{ block.id }}"
                 bis_skin_checked="1"
               >
                 <div
@@ -344,8 +344,8 @@
 </div>
 <script>
     <script>
-      const slider = document.querySelector('.features-items-icons-text-d6');
-      const slides = document.querySelectorAll('.features-item-icons-text-d6');
+      const slider = document.querySelector('.slider-d6');
+      const slides = document.querySelectorAll('.slide-d6');
       const dotsContainer = document.querySelector('.dots-container-d6');
 
       // Generate dots dynamically
