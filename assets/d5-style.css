@@ -368,12 +368,12 @@
   gap: 32px;
   padding-top: 30px;
   flex-wrap: wrap;
-  max-width: 145px;
 }
 .cta_item-d5{
   display: flex;
   align-items: center;
   gap: 8px; 
+  max-width: 145px;
 }
 .footer__logo-wrapper{
   margin-bottom: 10px;
