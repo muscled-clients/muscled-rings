@@ -638,12 +638,15 @@
   .social-icons-d5 ul{
     gap: 6px;
   }
-  .d5-footer  .disclosure__toggle-content{
+  .d5-footer .disclosure__toggle-content{
     font-size: 12px;
   }
   .d5-footer .disclosure.disclosure--country{
     border: none;
     background: none;
+  }
+  .d5-footer .disclosure__toggle img{
+    margin-right: 4px;
   }
 }
 
