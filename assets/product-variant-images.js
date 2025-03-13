@@ -115,6 +115,10 @@ function ShowProductImages() {
     productThumbnails.forEach(thumb => {
         let thumbAttr = thumb.getAttribute('data-title');
 
+          if(thumb.classList.includes('d4-main-image')) {
+            thumb.click();
+          }
+
         if (!thumbAttr) {
             console.log(`Skipping thumbnail (No data-title found):`, thumb);
             return;
