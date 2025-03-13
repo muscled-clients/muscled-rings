@@ -144,17 +144,80 @@
             "border-color": "#000",
             "icon-radius": 0
           }
+        },
+        "text_CJ36BG": {
+          "type": "text",
+          "settings": {
+            "block-icon": "shopify://shop_images/Group_1000006056.png",
+            "text-align": "center",
+            "block-title": "Craftsmanship",
+            "block-title-color": "#000",
+            "block-title-font": 20,
+            "block-title-font-mobl": 18,
+            "block-content": "Every ring is meticulously handcrafted by skilled artisans, ensuring precision, elegance, and lasting beauty.",
+            "content-color": "#000",
+            "content-font": 18,
+            "content-font-mobl": 16,
+            "icon-color": "rgba(0,0,0,0)",
+            "icon-center": true,
+            "icon-border": 0,
+            "border-color": "#000",
+            "icon-radius": 0
+          }
+        },
+        "text_rLX9kk": {
+          "type": "text",
+          "settings": {
+            "block-icon": "shopify://shop_images/Group_1000006056.png",
+            "text-align": "center",
+            "block-title": "Craftsmanship",
+            "block-title-color": "#000",
+            "block-title-font": 20,
+            "block-title-font-mobl": 18,
+            "block-content": "Every ring is meticulously handcrafted by skilled artisans, ensuring precision, elegance, and lasting beauty.",
+            "content-color": "#000",
+            "content-font": 18,
+            "content-font-mobl": 16,
+            "icon-color": "rgba(0,0,0,0)",
+            "icon-center": true,
+            "icon-border": 0,
+            "border-color": "#000",
+            "icon-radius": 0
+          }
+        },
+        "text_UywEBq": {
+          "type": "text",
+          "settings": {
+            "block-icon": "shopify://shop_images/Group_1000006056.png",
+            "text-align": "center",
+            "block-title": "Craftsmanship",
+            "block-title-color": "#000",
+            "block-title-font": 20,
+            "block-title-font-mobl": 18,
+            "block-content": "Every ring is meticulously handcrafted by skilled artisans, ensuring precision, elegance, and lasting beauty.",
+            "content-color": "#000",
+            "content-font": 18,
+            "content-font-mobl": 16,
+            "icon-color": "rgba(0,0,0,0)",
+            "icon-center": true,
+            "icon-border": 0,
+            "border-color": "#000",
+            "icon-radius": 0
+          }
         }
       },
       "block_order": [
-        "text_kzNDeP"
+        "text_kzNDeP",
+        "text_CJ36BG",
+        "text_rLX9kk",
+        "text_UywEBq"
       ],
       "settings": {
         "sec-title": "",
         "title-color": "#000",
         "title-font": 56,
         "heading-align": "left",
-        "show-image": true,
+        "show-image": false,
         "title-font-mobl": 32,
         "sec-color": "#fff",
         "features-id": "",
