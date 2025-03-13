@@ -635,6 +635,9 @@
     width: 14px;
     height: 14px;
   }
+  .social-icons-d5 ul{
+    gap: 6px;
+  }
 }
 
 
