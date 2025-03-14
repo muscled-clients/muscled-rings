@@ -3,19 +3,21 @@ const shopiSwatch = document.querySelectorAll('.swatch__option input');
 const shopiForm = document.querySelector('.d4-product .shopify-product-form');
 
 function showSelectedImagesShopi(swatchValue){
-  console.log(swatchValue);
+  if (window.innerWidth <= 768) {
+    console.log("Skipping script execution on devices ≤ 768px.");
+    return;
+  }
   shopiThumbnail.forEach(image=> {
     let imageAttr = image.getAttribute('data-title');
 
     if (!imageAttr) {
-        console.log(`Skipping image (No data-title found): ${image.src}`);
         return;
     }
 
     let finalValue;
     const match = imageAttr.match(/\$(.*?)\$/);
     finalValue = match ? match[1] : imageAttr;
-    console.log("Final value: ", finalValue);
+    
     if(finalValue == swatchValue) {
       image.style.display = 'block';
     } else {
@@ -23,8 +25,6 @@ function showSelectedImagesShopi(swatchValue){
     }
   })
 }
-
-console.log(shopiSwatch[0].value);
 
 showSelectedImagesShopi(shopiSwatch[0].value);
 
