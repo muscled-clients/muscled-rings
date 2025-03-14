@@ -277,7 +277,7 @@
         "text_EmxxQa": {
           "type": "text",
           "settings": {
-            "video": "",
+            "video": "shopify://files/videos/Rings.com UGC (1).mov",
             "video_autoplay": true,
             "video_controls": true,
             "video_muted": true,
@@ -290,7 +290,6 @@
         "text_RWLgHL": {
           "type": "text",
           "settings": {
-            "video": "",
             "video_autoplay": true,
             "video_controls": true,
             "video_muted": true,
@@ -303,7 +302,6 @@
         "text_YHCG38": {
           "type": "text",
           "settings": {
-            "video": "",
             "video_autoplay": true,
             "video_controls": true,
             "video_muted": true,
@@ -316,7 +314,6 @@
         "text_cTEQBh": {
           "type": "text",
           "settings": {
-            "video": "",
             "video_autoplay": true,
             "video_controls": true,
             "video_muted": true,
@@ -334,7 +331,7 @@
         "text_cTEQBh"
       ],
       "settings": {
-        "sec_bg_color": "#F2F1EA",
+        "sec_bg_color": "#f2f1ea",
         "title": "Real Customers, Real Stories",
         "sub_heading": "Thousand of Ring Enthusiasts' Preferred Ring.com",
         "padding_top": 14,
