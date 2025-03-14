@@ -65,11 +65,15 @@
       <div class="logo-d5">
         {{ logo }}
       </div>
+      
       <nav class="navigation-d5">
+        {% assign links = section.settings.link_list %}
         <ul class="nav-links-list-d5">
+          {% for link in links.links %}
           <li class="nav-item-d5">
-            <a class="nav-link-d5" href=""></a>
+            <a class="nav-link-d5" href="{{ link.url }}">{{ link.title }}</a>
           </li>
+          {% endfor %}
         </ul>
       </nav>
       <div class="d5-icons">
@@ -94,6 +98,11 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "link_list",
+      "label": "Menu"
     }
   ],
   "presets": [
