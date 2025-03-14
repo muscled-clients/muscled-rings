@@ -272,58 +272,51 @@
       let playIcon = playButton.querySelector(".play-icon-d6");
       let pauseIcon = playButton.querySelector(".pause-icon-d6");
 
-      // Control container
-      let controlsContainer = videoContainer.querySelector(".controls-container-d6");
-
       // Set initial states
-      function updateUI() {
-        if (video.muted) {
-          unmutedIcon.style.display = "block";
-          mutedIcon.style.display = "none";
-        } else {
-          unmutedIcon.style.display = "none";
-          mutedIcon.style.display = "block";
-        }
-
-        if (video.paused) {
-          playIcon.style.display = "block";
-          pauseIcon.style.display = "none";
-          controlsContainer.style.display = "flex"; // Show controls when paused
-        } else {
-          playIcon.style.display = "none";
-          pauseIcon.style.display = "block";
-          controlsContainer.style.display = "none"; // Hide controls when playing
-        }
+      if (video.muted) {
+        unmutedIcon.style.display = "block";
+        mutedIcon.style.display = "none";
+      } else {
+        unmutedIcon.style.display = "none";
+        mutedIcon.style.display = "block";
       }
 
-      updateUI(); // Initialize UI
+      if (video.paused) {
+        playIcon.style.display = "block";
+        pauseIcon.style.display = "none";
+      } else {
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "block";
+      }
 
       // Mute/Unmute toggle
       muteButton.addEventListener("click", function () {
-        video.muted = !video.muted;
-        updateUI();
+        if (video.muted) {
+          video.muted = false;
+          unmutedIcon.style.display = "none";
+          mutedIcon.style.display = "block";
+        } else {
+          video.muted = true;
+          unmutedIcon.style.display = "block";
+          mutedIcon.style.display = "none";
+        }
       });
 
       // Play/Pause toggle
-      function togglePlayPause() {
+      playButton.addEventListener("click", function () {
         if (video.paused) {
           video.play();
+          playIcon.style.display = "none";
+          pauseIcon.style.display = "block";
         } else {
           video.pause();
+          playIcon.style.display = "block";
+          pauseIcon.style.display = "none";
         }
-        updateUI();
-      }
-
-      playButton.addEventListener("click", togglePlayPause);
-      video.addEventListener("click", togglePlayPause);
-
-      // Update UI when the video is played or paused externally
-      video.addEventListener("play", updateUI);
-      video.addEventListener("pause", updateUI);
+      });
     });
   });
 </script>
-
 {% schema %}
 {
   "name": "Social Video Grid",
