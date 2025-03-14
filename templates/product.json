@@ -271,6 +271,61 @@
         "heading": "Thousands of reviews <br>from extraordinary people like you"
       }
     },
+    "d11_video_blocks_gBKDQn": {
+      "type": "d11-video-blocks",
+      "blocks": {
+        "text_EmxxQa": {
+          "type": "text",
+          "settings": {
+            "video": "",
+            "video_autoplay": true,
+            "video_controls": true,
+            "video_muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977.png",
+            "auth": "Amelia Thompson",
+            "desig": "Brand Consultant"
+          }
+        },
+        "text_RWLgHL": {
+          "type": "text",
+          "settings": {
+            "video": "",
+            "video_autoplay": true,
+            "video_controls": true,
+            "video_muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977_045ac376-a2a3-4b0e-9304-3ca435a8cf04.png",
+            "auth": "Isabella Carter",
+            "desig": "Wedding Planner"
+          }
+        },
+        "text_YHCG38": {
+          "type": "text",
+          "settings": {
+            "video": "",
+            "video_autoplay": true,
+            "video_controls": true,
+            "video_muted": true,
+            "video_loop": true,
+            "auth": "Amelia Thompson",
+            "desig": "Brand Consultant"
+          }
+        }
+      },
+      "block_order": [
+        "text_EmxxQa",
+        "text_RWLgHL",
+        "text_YHCG38"
+      ],
+      "settings": {
+        "sec_bg_color": "#F2F1EA",
+        "title": "Real Customers, Real Stories",
+        "sub_heading": "Thousand of Ring Enthusiasts' Preferred Ring.com",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "index_icon_with_text_column_tfmeiW": {
       "type": "index__icon-with-text-column",
       "blocks": {
@@ -491,6 +546,7 @@
     "main",
     "icons_text_d6_4z6yh3",
     "image_blocks_kVtxTd",
+    "d11_video_blocks_gBKDQn",
     "index_icon_with_text_column_tfmeiW",
     "index_faq_HqXX36",
     "recently_viewed_pro_d6_HgeUky",
