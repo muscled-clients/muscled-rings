@@ -284,7 +284,7 @@
             "video_loop": true,
             "image": "shopify://shop_images/image_977.png",
             "auth": "Amelia Thompson",
-            "desig": "Brand Consultant"
+            "desig": "Fashion Blogger"
           }
         },
         "text_RWLgHL": {
@@ -312,12 +312,26 @@
             "auth": "Olivia Bennett",
             "desig": "Designer"
           }
+        },
+        "text_cTEQBh": {
+          "type": "text",
+          "settings": {
+            "video": "",
+            "video_autoplay": true,
+            "video_controls": true,
+            "video_muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977_584c309b-9b7d-47b3-b74f-48136bfb8f3b.png",
+            "auth": "Amelia Thompson",
+            "desig": "Brand Consultant"
+          }
         }
       },
       "block_order": [
         "text_EmxxQa",
         "text_RWLgHL",
-        "text_YHCG38"
+        "text_YHCG38",
+        "text_cTEQBh"
       ],
       "settings": {
         "sec_bg_color": "#F2F1EA",
