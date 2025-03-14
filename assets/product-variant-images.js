@@ -106,25 +106,29 @@ function ShowProductImages() {
     let hasMatchingThumbnail = false;
 
     // **Check Main Images & Apply Conditions**
-    productImages.forEach(image => {
-        let imageAttr = image.getAttribute('d4-img-alt');
+   productImages.forEach(image => {
+    let imageAttr = image.getAttribute('d4-img-alt');
 
-        if (!imageAttr) {
-            console.log(`Skipping image (No d4-img-alt found): ${image.src}`);
-            return;
-        }
+    if (!imageAttr) {
+        console.log(`Skipping image (No d4-img-alt found): ${image.src}`);
+        return;
+    }
 
-        let finalValue;
-        const match = imageAttr.match(/\$(.*?)\$/);
-        finalValue = match ? match[1] : imageAttr;
+    let finalValue;
+    const match = imageAttr.match(/\$(.*?)\$/);
+    finalValue = match ? match[1] : imageAttr;
 
-        if (finalValue.includes(selectedValue)) {
-            image.classList.remove('d4-remove-slide');
-            hasMatchingImage = true;
-        } else {
-            image.classList.add('d4-remove-slide');
-        }
-    });
+    // Check if selectedValue is purely numeric
+    const isNumeric = /^\d+$/.test(selectedValue);
+
+    if (isNumeric ? finalValue == selectedValue : finalValue.includes(selectedValue)) {
+        image.classList.remove('d4-remove-slide');
+        hasMatchingImage = true;
+    } else {
+        image.classList.add('d4-remove-slide');
+    }
+});
+
 
     // **Check Thumbnails & Apply Conditions**
     productThumbnails.forEach(thumb => {
