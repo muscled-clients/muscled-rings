@@ -138,7 +138,7 @@
 </script>
 
 <script src="{{ 'z__jsProduct.js' | asset_url }}"></script>
-{% if template.suffix contains 'default' %}
+{% if template.suffix == default %}
 <script src="{{ 'product-variant-images.js' | asset_url }}"></script>
   {% endif %}
 {% if template contains 'shopibro' %}
