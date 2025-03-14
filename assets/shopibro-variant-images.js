@@ -7,6 +7,6 @@ console.log('shopiForm: ', shopiForm);
 
 shopiForm.addEventListener('change', (event)=> {
   if(event.target.checked) {
-    console.log('variant changed!');
+    console.log(event.target.value);
   }
 })
