@@ -248,7 +248,9 @@
     },
     "d5_header_wYykhi": {
       "type": "d5-header",
-      "settings": {}
+      "settings": {
+        "link_list": "main-menu"
+      }
     }
   },
   "order": [
