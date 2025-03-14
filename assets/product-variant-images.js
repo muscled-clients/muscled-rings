@@ -178,19 +178,36 @@ swatchOptions[0].checked = true;
 document.addEventListener("DOMContentLoaded", function () {
   let variantSelect = document.querySelector('.d4-product .shopify-product-form');
   let allVariantContainers = document.querySelectorAll('.d4-product .product-gallery__image');
+  let allThumbnailContainers = document.querySelectorAll('.d4-product .product-gallery__thumbnail');
 
+  // Function to update images and thumbnails based on the selected variant
   function updateVariantImages(variantId) {
+    // Hide all main image containers
     allVariantContainers.forEach(container => container.style.display = "none");
+
+    // Show the main image container for the selected variant
     let selectedImagesContainer = document.querySelector(`.d4-product .product-gallery__image[data-variant-id='${variantId}']`);
-    if (selectedImagesContainer) selectedImagesContainer.style.display = "block";
+    if (selectedImagesContainer) {
+      selectedImagesContainer.style.display = "block";
+    }
+
+    // Hide all thumbnail containers
+    allThumbnailContainers.forEach(container => container.style.display = "none");
+
+    // Show the thumbnail container for the selected variant
+    let selectedThumbnailsContainer = document.querySelector(`.d4-product .thumbnail-container[data-variant-id='${variantId}']`);
+    if (selectedThumbnailsContainer) {
+      selectedThumbnailsContainer.style.display = "block";
+    }
   }
 
+  // Add event listener for variant change
   variantSelect.addEventListener("change", function (event) {
     console.log('hello');
     updateVariantImages(variantSelect.querySelector('variant-selection').getAttribute('variant'));
     console.log(event.target.value);
   });
 
+  // Initialize with the default selected variant
   updateVariantImages(variantSelect.querySelector('variant-selection').getAttribute('variant'));
 });
-
