@@ -44,24 +44,24 @@ function searchD5() {
 searchD5();
 
 function openDrawerD5() {
-    const overlay = document.querySelector('.site-overlay');
+    const overlay = document.querySelector('.d5-overlay');
     const openIcon = document.querySelector('.menu-icon-d5');
     const closeIcon = document.querySelector('.close-icon-d5');
     const drawer = document.querySelector('.navigation-d5');
 
     openIcon?.addEventListener('click', () => {
-        drawer.classList.toggle('active');
-        overlay.classList.toggle('site-overlay--hidden');
+        drawer.classList.add('active');
+        overlay.classList.add('active');
     });
 
     closeIcon?.addEventListener('click', () => {
         drawer.classList.remove('active');
-        overlay.classList.add('site-overlay--hidden');
+        overlay.classList.remove('active');
     });
   
     overlay?.addEventListener('click', () => {
         drawer.classList.remove('active');
-        overlay.classList.add('site-overlay--hidden');
+        overlay.classList.remove('active');
     });
 }
 openDrawerD5();
