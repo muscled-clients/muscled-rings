@@ -69,7 +69,7 @@ function stepsUpdate() {
         skuElement.textContent = selectedVariant.sku;
       }
       // Update Price
-      if(priceElemen){
+      if(priceElement){
       priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
       }
     } else {
