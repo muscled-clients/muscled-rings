@@ -132,20 +132,24 @@ function ShowProductImages() {
 
     // **Check Thumbnails & Apply Conditions**
     productThumbnails.forEach(thumb => {
-        let thumbAttr = thumb.getAttribute('data-title');
+    let thumbAttr = thumb.getAttribute('data-title');
 
-        if (!thumbAttr) {
-            console.log(`Skipping thumbnail (No data-title found):`, thumb);
-            return;
-        }
+    if (!thumbAttr) {
+        console.log(`Skipping thumbnail (No data-title found):`, thumb);
+        return;
+    }
 
-        if (thumbAttr.includes(selectedValue)) {
-            thumb.classList.remove('d4-remove-slide');
-            hasMatchingThumbnail = true;
-        } else {
-            thumb.classList.add('d4-remove-slide');
-        }
-    });
+    // Check if selectedValue is purely numeric (still a string like "5")
+    const isNumeric = /^[0-9]+$/.test(selectedValue);
+
+    if (isNumeric ? thumbAttr == selectedValue : thumbAttr.includes(selectedValue)) {
+        thumb.classList.remove('d4-remove-slide');
+        hasMatchingThumbnail = true;
+    } else {
+        thumb.classList.add('d4-remove-slide');
+    }
+});
+
 
     if (!hasMatchingImage) {
         console.log("No matching images found. Hiding all images.");
