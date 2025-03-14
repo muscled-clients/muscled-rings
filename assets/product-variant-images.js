@@ -180,28 +180,26 @@ document.addEventListener("DOMContentLoaded", function () {
   let allVariantContainers = document.querySelectorAll('.d4-product .product-gallery__image');
   let allThumbnailContainers = document.querySelectorAll('.d4-product .thumbnail-container');
 
-  let flkty; // Variable to store the Flickity instance
-  let maxTimeout = 15000; // Maximum time to wait for Flickity (15 seconds)
-  let intervalTime = 2000; // Interval to check for Flickity (2 seconds)
-  let startTime = Date.now();
-
   // Function to check for Flickity initialization
-  function waitForFlickity(callback) {
-    if (typeof Flickity !== 'undefined' && document.querySelector('.product-gallery__main').flickity) {
-      // Flickity is available
-      flkty = new Flickity('.product-gallery__main'); // Initialize or reuse Flickity instance
-      callback();
-    } else if (Date.now() - startTime < maxTimeout) {
-      // Flickity not yet available, check again after interval
-      setTimeout(() => waitForFlickity(callback), intervalTime);
-    } else {
-      // Flickity not available after maxTimeout
-      console.error('Flickity not loaded within the expected time.');
-    }
+  function waitForFlickity(targetSelector, callback) {
+    const checkFlickityInterval = setInterval(() => {
+      const fliktyMain = document.querySelector(targetSelector);
+      let flkty = Flickity.data(fliktyMain); // Check if Flickity is initialized
+
+      if (flkty) {
+        clearInterval(checkFlickityInterval);
+        callback(flkty); // Pass the Flickity instance to the callback
+      }
+    }, 500); // Check every 500ms
+
+    // Stop checking after 15 seconds
+    setTimeout(() => {
+      clearInterval(checkFlickityInterval);
+    }, 15000);
   }
 
   // Function to update images and thumbnails based on the selected variant
-  function updateVariantImages(variantId) {
+  function updateVariantImages(variantId, flkty) {
     // Hide all main image containers
     allVariantContainers.forEach(container => container.style.display = "none");
 
@@ -215,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
     allThumbnailContainers.forEach(container => container.style.display = "none");
 
     // Show the thumbnail container for the selected variant
-    let selectedThumbnailsContainer = document.querySelector(`.d4-product .product-gallery__thumbnail[data-variant-id='${variantId}']`);
+    let selectedThumbnailsContainer = document.querySelector(`.d4-product .thumbnail-container[data-variant-id='${variantId}']`);
     if (selectedThumbnailsContainer) {
       selectedThumbnailsContainer.style.display = "block";
     }
@@ -227,15 +225,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Wait for Flickity to initialize
-  waitForFlickity(function () {
+  waitForFlickity('.product-gallery__main', function (flkty) {
     // Add event listener for variant change
     variantSelect.addEventListener("change", function (event) {
       console.log('hello');
-      updateVariantImages(variantSelect.querySelector('variant-selection').getAttribute('variant'));
+      updateVariantImages(variantSelect.querySelector('variant-selection').getAttribute('variant'), flkty);
       console.log(event.target.value);
     });
 
     // Initialize with the default selected variant
-    updateVariantImages(variantSelect.querySelector('variant-selection').getAttribute('variant'));
+    updateVariantImages(variantSelect.querySelector('variant-selection').getAttribute('variant'), flkty);
   });
 });
