@@ -1,3 +1,12 @@
+ window.addEventListener("scroll", function () {
+        let header = document.querySelector(".d5-header-main");
+        if (window.scrollY >= 100) {
+            header.classList.add("sticky-d5");
+        } else {
+            header.classList.remove("sticky-d5");
+        }
+    });
+
 function searchD5() {
     const overlay = document.querySelector('.site-overlay');
     const search = document.querySelector('.d5-header-main .search-overlay');
