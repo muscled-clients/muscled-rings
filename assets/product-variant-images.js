@@ -187,9 +187,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to check for Flickity initialization
   function waitForFlickity(callback) {
-    if (typeof Flickity !== 'undefined' && document.querySelector('.product-gallery').flickity) {
+    if (typeof Flickity !== 'undefined' && document.querySelector('.product-gallery__main').flickity) {
       // Flickity is available
-      flkty = new Flickity('.product-gallery'); // Initialize or reuse Flickity instance
+      flkty = new Flickity('.product-gallery__main'); // Initialize or reuse Flickity instance
       callback();
     } else if (Date.now() - startTime < maxTimeout) {
       // Flickity not yet available, check again after interval
