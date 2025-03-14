@@ -14,6 +14,7 @@ function showSelectedImagesShopi(swatchValue){
     let finalValue;
     const match = imageAttr.match(/\$(.*?)\$/);
     finalValue = match ? match[1] : imageAttr;
+    console.log(finalValue);
   })
 }
 
