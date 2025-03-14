@@ -185,9 +185,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selectedImagesContainer) selectedImagesContainer.style.display = "block";
   }
 
-  variantSelect.addEventListener("change", function () {
+  variantSelect.addEventListener("change", function (event) {
     console.log('hello');
-    updateVariantImages(this.value);
+    updateVariantImages(event.target.value);
   });
 
   updateVariantImages(variantSelect.value);
