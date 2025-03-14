@@ -151,6 +151,36 @@
     </div>
   </div>
 </div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const progressBarD5 = document.querySelector(".proscroll-video-bar__d5");
+    const sectionD5 = document.querySelector(".remove-swiper-wrapper");
+
+    function updateProgressBar() {
+        let visibleWidth = sectionD5.clientWidth;
+        let totalWidth = sectionD5.scrollWidth;
+        let initialWidth = (visibleWidth / totalWidth) * 100;
+        
+        let scrollPositionD5 = sectionD5.scrollLeft;
+        let maxScrollD5 = totalWidth - visibleWidth;
+        let scrollPercentageD5 = (scrollPositionD5 / maxScrollD5) * (100 - initialWidth) + initialWidth;
+        
+        progressBarD5.style.width = scrollPercentageD5 + "%";
+    }
+
+    function setInitialProgressBar() {
+        let visibleWidth = sectionD5.clientWidth;
+        let totalWidth = sectionD5.scrollWidth;
+        let initialWidth = (visibleWidth / totalWidth) * 100;
+        progressBarD5.style.width = initialWidth + "%";
+    }
+
+    setInitialProgressBar();
+    sectionD5.addEventListener("scroll", updateProgressBar);
+});
+
+</script>
 {% schema %}
 {
   "name": "Social Video Grid",
