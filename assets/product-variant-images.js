@@ -101,12 +101,7 @@ function ShowProductImages() {
         return;
     }
 
-    const selectedValueNew = selectedSwatch.getAttribute('input-d4');
-  const selectedValue = selectedValueNew.replace(/\s+/g, ' ');
-  console.log("Selected Value: ", selectedValue);
-  // const selectedValue_two = selectedSwatch.getAttribute('input-d4');
-  // console.log("Selected Value one: ", selectedValue, "Type is: ", typeof(selectedValue));
-  // console.log("Selected Value two: ", selectedValue_two, "Type is: ", typeof(selectedValue_two));
+    const selectedValue = selectedSwatch.getAttribute('input-d4');
     let hasMatchingImage = false;
     let hasMatchingThumbnail = false;
 
