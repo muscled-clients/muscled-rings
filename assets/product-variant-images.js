@@ -123,7 +123,7 @@ function ShowProductImages() {
 
      let validVariants = finalValue.split(',').map(v => v.trim()); 
 
-    if (isNumeric ? finalValue == selectedValue : finalValue.includes(selectedValue)) {
+    if (isNumeric ? finalValue.includes(selectedValue) : finalValue.includes(selectedValue)) {
         image.classList.remove('d4-remove-slide');
         hasMatchingImage = true;
     } else {
