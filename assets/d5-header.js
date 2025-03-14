@@ -52,14 +52,14 @@ function openDrawerD5() {
   const closeIcon = document.querySelector('.close-icon-d5');
   const drawer = document.querySelector('.navigation-d5');
 
-  openIcon.addEventListener('click', () {
+  openIcon.addEventListener('click', () => {
     drawer.classList.add('active');
     if(overlay.classList.contains('site-overlay--hidden')){
       overlay.classList.remove('site-overlay--hidden');
     }
   });
 
-   closeIcon.addEventListener('click', () {
+   closeIcon.addEventListener('click', () => {
     drawer.classList.remove('active');
       overlay.classList.remove('site-overlay--hidden');
   })
