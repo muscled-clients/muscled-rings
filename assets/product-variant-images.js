@@ -145,8 +145,10 @@ function ShowProductImages() {
     if (isNumeric ? thumbAttr == selectedValue : thumbAttr.includes(selectedValue)) {
         thumb.classList.remove('d4-remove-slide');
         hasMatchingThumbnail = true;
+      thumb.style.display = 'block';
     } else {
         thumb.classList.add('d4-remove-slide');
+      thumb.style.display = 'none';
     }
 });
 
