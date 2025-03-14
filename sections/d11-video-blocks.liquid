@@ -234,6 +234,11 @@
     document.querySelectorAll(".video-social-video-d11__video-block").forEach(videoContainer => {
       let video = videoContainer.querySelector("video");
 
+      if (!video) {
+        console.warn("No video element found inside .video-social-video-d11__video-block");
+        return;
+      }
+
       // Mute/Unmute buttons
       let muteButton = videoContainer.querySelector(".muted-btn-d6");
       let unmutedIcon = muteButton.querySelector(".unmuted-icon-d6");
@@ -245,46 +250,43 @@
       let pauseIcon = playButton.querySelector(".pause-icon-d6");
 
       // Set initial states
-      if (video.muted) {
-        unmutedIcon.style.display = "block";
-        mutedIcon.style.display = "none";
-      } else {
-        unmutedIcon.style.display = "none";
-        mutedIcon.style.display = "block";
+      function updateMuteState() {
+        if (video.muted) {
+          unmutedIcon.style.display = "block";
+          mutedIcon.style.display = "none";
+        } else {
+          unmutedIcon.style.display = "none";
+          mutedIcon.style.display = "block";
+        }
       }
 
-      if (video.paused) {
-        playIcon.style.display = "block";
-        pauseIcon.style.display = "none";
-      } else {
-        playIcon.style.display = "none";
-        pauseIcon.style.display = "block";
+      function updatePlayState() {
+        if (video.paused) {
+          playIcon.style.display = "block";
+          pauseIcon.style.display = "none";
+        } else {
+          playIcon.style.display = "none";
+          pauseIcon.style.display = "block";
+        }
       }
+
+      updateMuteState();
+      updatePlayState();
 
       // Mute/Unmute toggle
       muteButton.addEventListener("click", function () {
-        if (video.muted) {
-          video.muted = false;
-          unmutedIcon.style.display = "none";
-          mutedIcon.style.display = "block";
-        } else {
-          video.muted = true;
-          unmutedIcon.style.display = "block";
-          mutedIcon.style.display = "none";
-        }
+        video.muted = !video.muted;
+        updateMuteState();
       });
 
       // Play/Pause toggle
       playButton.addEventListener("click", function () {
         if (video.paused) {
           video.play();
-          playIcon.style.display = "none";
-          pauseIcon.style.display = "block";
         } else {
           video.pause();
-          playIcon.style.display = "block";
-          pauseIcon.style.display = "none";
         }
+        updatePlayState();
       });
     });
   });
