@@ -86,12 +86,6 @@
         {% if animation != "none" %}
           data-scroll-class="{{ animation }}"
         {% endif %}>
- {% for variant in product.variants %}
-{% for media in variant.metafields.custom.selected_variant_images.value %}
-<img src="{{ media | img_url: '100x'}}">
-  <p>image</p>
-{% endfor %}
-{% endfor %}
   <div class="d4-product product-{{ product.id }}">
     {%
       render 'product',
