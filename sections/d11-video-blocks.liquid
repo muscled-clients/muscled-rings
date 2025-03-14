@@ -39,7 +39,6 @@
     .remove-swiper-wrapper {
       display: flex;
       gap: 20px;
-      overflow-x: auto;
       scroll-behavior: smooth;
     }
 
@@ -97,9 +96,14 @@
       background-color: #2D1B38;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 798px) {
+      .remove-swiper-wrapper{
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+      }
       .video-social-card-d11__video-block {
         flex: 0 0 80%;
+        scroll-snap-align: center;
       }
 
       .d11__video-auth-wrap {
