@@ -102,7 +102,7 @@ function ShowProductImages() {
     }
 
     const selectedValueNew = selectedSwatch.getAttribute('input-d4');
-  const selectedValue = selectedValueNew.trim();
+  const selectedValue = selectedValueNew.replace(/\s+/g, ' ');
   console.log("Selected Value: ", selectedValue);
   // const selectedValue_two = selectedSwatch.getAttribute('input-d4');
   // console.log("Selected Value one: ", selectedValue, "Type is: ", typeof(selectedValue));
