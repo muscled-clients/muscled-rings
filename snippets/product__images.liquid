@@ -69,6 +69,7 @@ enable_product_lightbox: <boolean>
     {% for media in variant.metafields.custom.selected_variant_images %}
       {% comment %} Check alt text for video iframe {% endcomment %}
       <div class="product-gallery__image "
+        data-variant-id="{{ variant.id }}" style="display: none;"
             data-product-id="{{ product.id }}"
             d4-img-alt="{{ media.alt }}{% if media.alt == blank %}{{ product.title }}{% endif %}"
             data-title="{% if image_alt contains 'youtube' or image_alt contains 'vimeo' %}{{ product.title }}{% else %}{{ image_alt | escape }}{% endif %}"
