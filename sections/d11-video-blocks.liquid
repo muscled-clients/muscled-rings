@@ -143,7 +143,8 @@
                   controls: block.settings.controls,
                   loop: block.settings.loop,
                   autoplay: block.settings.autoplay,
-                  muted: block.settings.muted
+                  muted: block.settings.muted,
+                  poster: block.settings.image
                 %}
                 <div class="d11__video-auth-wrap">
                   <p class="video_auth-name">{{ block.settings.auth }}</p>
@@ -247,20 +248,20 @@
       },
       {
         "type": "checkbox",
-        "id": "video_autoplay",
+        "id": "autoplay",
         "label": "Autoplay video",
         "default": true,
         "info": "Autoplay will only work if the video is muted"
       },
       {
         "type": "checkbox",
-        "id": "video_controls",
+        "id": "controls",
         "label": "Show video controls",
         "default": true
       },
       {
         "type": "checkbox",
-        "id": "video_muted",
+        "id": "muted",
         "label": "Mute video",
         "default": true
       },
