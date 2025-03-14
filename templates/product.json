@@ -278,7 +278,7 @@
           "type": "text",
           "settings": {
             "video": "shopify://files/videos/Rings.com UGC (1).mov",
-            "autoplay": false,
+            "autoplay": true,
             "controls": false,
             "muted": true,
             "video_loop": true,
