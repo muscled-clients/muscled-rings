@@ -50,8 +50,8 @@ function openDrawerD5() {
     const drawer = document.querySelector('.navigation-d5');
 
     openIcon?.addEventListener('click', () => {
-        drawer.classList.add('active');
-        overlay.classList.remove('site-overlay--hidden');
+        drawer.classList.toggle('active');
+        overlay.classList.toggle('site-overlay--hidden');
     });
 
     closeIcon?.addEventListener('click', () => {
