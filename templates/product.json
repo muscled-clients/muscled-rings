@@ -254,6 +254,7 @@
         "image_dqjqtj": {
           "type": "Image",
           "settings": {
+            "image": "shopify://shop_images/image_3.png",
             "description": "Elegant, timeless, and beautifully crafted. This ring made my special moment even more memorable!",
             "author_text": "Amilia Thompson"
           }
