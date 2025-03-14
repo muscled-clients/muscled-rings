@@ -2,21 +2,23 @@ function stickyD5(){
     let header = document.querySelector(".d5-header-main");
     let isSticky = false;
 
-    window.addEventListener("scroll", function () {
-        if (window.scrollY >= 100 && !isSticky) {
-            header.classList.add("sticky-d5");
-            setTimeout(() => {
-                header.classList.add("active"); // Delay for smooth transition
-            }, 10);
-            isSticky = true;
-        } else if (window.scrollY < 100 && isSticky) {
-            header.classList.remove("active"); // Remove active first
-            setTimeout(() => {
-                header.classList.remove("sticky-d5");
-            }, 400); // Wait for transition before removing class
-            isSticky = false;
-        }
-    });
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= 100 && !isSticky) {
+        header.classList.add("sticky-d5");
+        setTimeout(() => {
+            header.classList.add("active"); // Delay for smooth transition
+        }, 10);
+        isSticky = true;
+    } else if (window.scrollY < 100 && isSticky) {
+        header.classList.remove("active"); // Remove active first
+        setTimeout(() => {
+            header.classList.remove("sticky-d5");
+            window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top
+        }, 400); // Wait for transition before removing class
+        isSticky = false;
+    }
+});
+
 }
 stickyD5();
 
