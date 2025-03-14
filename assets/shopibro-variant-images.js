@@ -4,10 +4,10 @@ const shopiForm = document.querySelector('.d4-product .shopify-product-form');
 
 function showSelectedImagesShopi(swatchValue){
   shopiThumbnail.forEach(image=> {
-    let imageAttr = image.getAttribute('d4-img-alt');
+    let imageAttr = image.getAttribute('data-title');
 
     if (!imageAttr) {
-        console.log(`Skipping image (No d4-img-alt found): ${image.src}`);
+        console.log(`Skipping image (No data-title found): ${image.src}`);
         return;
     }
 
