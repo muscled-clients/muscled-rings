@@ -308,8 +308,9 @@
             "video_controls": true,
             "video_muted": true,
             "video_loop": true,
-            "auth": "Amelia Thompson",
-            "desig": "Brand Consultant"
+            "image": "shopify://shop_images/image_977_c01c347f-4bb2-42a8-ac1c-4ca5bafb5ef3.png",
+            "auth": "Olivia Bennett",
+            "desig": "Designer"
           }
         }
       },
