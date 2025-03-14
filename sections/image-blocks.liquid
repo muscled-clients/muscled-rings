@@ -237,6 +237,8 @@
           let maxScroll = section.scrollWidth - section.clientWidth;
           let scrollPercentage = (scrollPosition / maxScroll) * 100;
           progressBar.style.width = scrollPercentage + "%";
+        console.log('scrollPercentage', scrollPercentage);
+        console.log('scrollPosition / maxScroll', scrollPosition / maxScroll);
       }
 
       // Listen for horizontal scroll event
