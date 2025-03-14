@@ -138,20 +138,13 @@
           {% for block in section.blocks %}
             <div class="video-social-card-d11__video-block">
               <div class="video-social-video-d11__video-block">
-                <video
-                  src="{{ block.settings.video }}"
-                  {% if block.settings.video_autoplay %}
-                    autoplay
-                  {% endif %}
-                  {% if block.settings.video_loop %}
-                    loop
-                  {% endif %}
-                  {% if block.settings.video_muted %}
-                    muted
-                  {% endif %}
-                  playsinline
-                  poster="{{ block.settings.image | img_url: 'master' }}"
-                ></video>
+                {% render 'ss-media-v1',
+                  video: block.settings.video,
+                  controls: block.settings.controls,
+                  loop: block.settings.loop,
+                  autoplay: block.settings.autoplay,
+                  muted: block.settings.muted
+                %}
                 <div class="d11__video-auth-wrap">
                   <p class="video_auth-name">{{ block.settings.auth }}</p>
                   <p class="video_auth-desig">{{ block.settings.desig }}</p>
