@@ -1,2 +1,2 @@
-const shopThumbnail = document.querySelector('.shopibro-product-thumbnails');
+const shopThumbnail = document.querySelectorAll('.shopibro-product-thumbnails');
 console.log('Shopibro template: ', shopThumbnail);
