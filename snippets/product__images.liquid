@@ -186,7 +186,7 @@ enable_product_lightbox: <boolean>
             {% assign thumbnail_badge = '' %}
           {% endif %}
 
-          <div data-variant-id="{{ variant.id }}" style="display: none;" class="product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %} {% if media.alt contains 'main-image' %}d4-main-image{% endif %}"
+          <div data-variant-id="{{ variant.id }}" class="product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %} {% if media.alt contains 'main-image' %}d4-main-image{% endif %}"
                 data-title="{% for variant in product.variants %} {{ variant.metafields.custom.show_variant_image }}{% endfor %}{{ media.alt | escape }}" tabindex="0">
             <img src="{{ media | img_url: 'master' }}" alt="">
             {% if thumbnail_badge != blank %}
