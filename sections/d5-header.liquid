@@ -65,7 +65,13 @@
       <div class="logo-d5">
         {{ logo }}
       </div>
-      <nav class="navigation-d5"></nav>
+      <nav class="navigation-d5">
+        <ul class="nav-links-list-d5">
+          <li class="nav-item-d5">
+            <a class="nav-link-d5" href=""></a>
+          </li>
+        </ul>
+      </nav>
       <div class="d5-icons">
          {%
           render 'header__action-icons',
@@ -83,7 +89,13 @@
 {% schema %}
 {
   "name": "D5 Header",
-  "settings": [],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    }
+  ],
   "presets": [
     {
       "name": "Header D5"
