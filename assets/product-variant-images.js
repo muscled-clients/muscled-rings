@@ -177,7 +177,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   let variantSelect = document.querySelector('.d4-product .shopify-product-form');
-  let allVariantContainers = document.querySelectorAll(".variant-images");
+  let allVariantContainers = document.querySelectorAll('.d4-product .product-gallery__image');
 
   function updateVariantImages(variantId) {
     allVariantContainers.forEach(container => container.style.display = "none");
