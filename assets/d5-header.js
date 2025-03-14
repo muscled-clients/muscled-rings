@@ -61,7 +61,7 @@ function openDrawerD5() {
 
    closeIcon.addEventListener('click', () => {
     drawer.classList.remove('active');
-      overlay.classList.remove('site-overlay--hidden');
+    overlay.classList.remove('site-overlay--hidden');
   })
   
 }
