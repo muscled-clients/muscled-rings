@@ -249,6 +249,7 @@
     "d5_header_wYykhi": {
       "type": "d5-header",
       "settings": {
+        "logo": "shopify://shop_images/RINGS.COM_1.svg",
         "link_list": "main-menu"
       }
     }
