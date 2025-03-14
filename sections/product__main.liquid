@@ -87,7 +87,6 @@
           data-scroll-class="{{ animation }}"
         {% endif %}>
  {% for variant in product.variants %}
-   <p>hello</p>
 {% for media in variant.metafields.custom.selected_variant_images.value %}
 <img src="{{ media | img_url: '100x'}}">
   <p>image</p>
