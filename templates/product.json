@@ -278,7 +278,7 @@
           "type": "text",
           "settings": {
             "video": "shopify://files/videos/Rings.com UGC (1).mov",
-            "autoplay": true,
+            "autoplay": false,
             "controls": false,
             "muted": true,
             "video_loop": true,
@@ -291,7 +291,7 @@
           "type": "text",
           "settings": {
             "video": "shopify://files/videos/Rings UGC - 4K (2).mov",
-            "autoplay": true,
+            "autoplay": false,
             "controls": false,
             "muted": true,
             "video_loop": true,
@@ -304,7 +304,7 @@
           "type": "text",
           "settings": {
             "video": "shopify://files/videos/ASMR unboxing - 4K (1).mov",
-            "autoplay": true,
+            "autoplay": false,
             "controls": false,
             "muted": true,
             "video_loop": true,
@@ -317,7 +317,7 @@
           "type": "text",
           "settings": {
             "video": "shopify://files/videos/ERSM0660Rd150-WG.mp4",
-            "autoplay": true,
+            "autoplay": false,
             "controls": false,
             "muted": true,
             "video_loop": true,
