@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateVariantImages(variantId) {
     allVariantContainers.forEach(container => container.style.display = "none");
-    let selectedImagesContainer = document.querySelector(`.variant-images[data-variant-id='${variantId}']`);
+    let selectedImagesContainer = document.querySelector(`.d4-product .product-gallery__image[data-variant-id='${variantId}']`);
     if (selectedImagesContainer) selectedImagesContainer.style.display = "block";
   }
 
