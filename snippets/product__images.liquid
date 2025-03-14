@@ -65,7 +65,8 @@ enable_product_lightbox: <boolean>
 >
   <div class="product-gallery__main slideshow-transition--{{ slideshow_transition }}" data-product-id="{{ product.id }}" data-media-count="{{ product.media.size }}">
 
-    {% for media in product.media %}
+    {% for variant in product.variants %}
+    {% for media in variant.metafields.custom.selected_variant_images %}
       {% comment %} Check alt text for video iframe {% endcomment %}
       <div class="product-gallery__image "
             data-product-id="{{ product.id }}"
@@ -161,6 +162,7 @@ enable_product_lightbox: <boolean>
         {% endcase %}
       </div>
     {% endfor %}
+                    {% endfor %}
   </div>
   {% if display_thumbnails == true %}
     {% if thumbnail_position != 'no-thumbnails' and product.media.size > 1 %}
