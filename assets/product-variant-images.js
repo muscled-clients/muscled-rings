@@ -17,8 +17,6 @@ function assignVariantValue() {
   })
 }
 
-assignVariantValue()
-
 // **Function to Wait for Flickity to Load**
 function waitForFlickity(targetSelector, callback) {
     const checkFlickityInterval = setInterval(() => {
@@ -70,6 +68,7 @@ function removeMarkedSlides(flkty, removedSlidesArray) {
           newCells[i].element.click();
         }
       }
+      assignVariantValue();
     } else {
         console.log("No slides removed.");
     }
