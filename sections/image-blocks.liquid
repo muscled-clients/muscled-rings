@@ -222,8 +222,9 @@
 </section>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const progressBarD5 = document.querySelector(".progress-bar__d11");
-      const sectionD5 = document.querySelector(".d11-image-text-container");
+      const container = document.querySelector('#shopify-{{ section.id }}');
+      const progressBarD5 = container.querySelector(".progress-bar__d11");
+      const sectionD5 = container.querySelector(".d11-image-text-container");
       console.log("This is section ", sectionD5);
       console.log(progressBarD5);
 
