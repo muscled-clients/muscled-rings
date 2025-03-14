@@ -243,7 +243,9 @@
       }
 
       // Listen for horizontal scroll event
-      section.addEventListener("scroll", updateProgressBar);
+      section.addEventListener("scroll", ()=>{
+       updateProgressBar();
+      });
   });
 </script>
 {% schema %}
