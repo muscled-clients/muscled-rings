@@ -224,6 +224,25 @@
         "icon_size": 72
       }
     },
+    "image_blocks_kVtxTd": {
+      "type": "image-blocks",
+      "blocks": {
+        "image_wQqPeb": {
+          "type": "Image",
+          "settings": {
+            "description": "Absolutely in love with my ring! The quality and elegance are unmatched. Highly recommend!",
+            "author_text": "Emma Richardson"
+          }
+        }
+      },
+      "block_order": [
+        "image_wQqPeb"
+      ],
+      "settings": {
+        "accent": "Testimonials",
+        "heading": "Thousands of reviews from extraordinary people like you"
+      }
+    },
     "index_icon_with_text_column_tfmeiW": {
       "type": "index__icon-with-text-column",
       "blocks": {
@@ -443,6 +462,7 @@
     "sidebar",
     "main",
     "icons_text_d6_4z6yh3",
+    "image_blocks_kVtxTd",
     "index_icon_with_text_column_tfmeiW",
     "index_faq_HqXX36",
     "recently_viewed_pro_d6_HgeUky",
