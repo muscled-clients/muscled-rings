@@ -102,6 +102,7 @@ function ShowProductImages() {
     }
 
     const selectedValue = selectedSwatch.getAttribute('input-d4');
+  console.log("Selected Value: ", selectedValue);
     let hasMatchingImage = false;
     let hasMatchingThumbnail = false;
 
