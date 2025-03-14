@@ -371,6 +371,7 @@
           tabindex="0"
           name="option-{{ option_index }}"
           value="{{ value | escape }}"
+          input-d4="{{ value | escape }}"
           {% comment %}{% if selected_variant and option.selected_value == value %}checked{% endif %}{% endcomment %}
           data-variant-option-value
           data-variant-option-value-index="{{ option_index }}"
