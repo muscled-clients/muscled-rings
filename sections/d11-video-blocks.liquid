@@ -220,14 +220,17 @@
       button.addEventListener("click", function () {
         let videoContainer = this.closest(".video-social-video-d11__video-block");
         let video = videoContainer.querySelector("video");
-        let icon = this.querySelector(".mute-icon");
+        let unmutedIcon = this.querySelector(".unmuted-icon-d6");
+        let mutedIcon = this.querySelector(".muted-icon-d6");
 
         if (video.muted) {
           video.muted = false;
-          icon.src = "https://cdn.shopify.com/s/files/1/0900/0199/8097/files/Frame_1000003926.png?v=1741984932"; // Replace with unmute icon
+          unmutedIcon.style.display = "none";
+          mutedIcon.style.display = "block";
         } else {
           video.muted = true;
-          icon.src = "https://cdn.shopify.com/s/files/1/0900/0199/8097/files/volume.png?v=1741985989"; // Replace with mute icon
+          unmutedIcon.style.display = "block";
+          mutedIcon.style.display = "none";
         }
       });
     });
