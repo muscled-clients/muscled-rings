@@ -123,7 +123,7 @@ function ShowProductImages() {
 
      let validVariants = finalValue.split(',').map(v => v.trim()); 
 
-    if (isNumeric ? finalValue.includes(selectedValue) : finalValue.includes(selectedValue)) {
+    if (isNumeric ? validVariants.includes(selectedValue) : finalValue.includes(selectedValue)) {
         image.classList.remove('d4-remove-slide');
         hasMatchingImage = true;
     } else {
@@ -144,7 +144,9 @@ function ShowProductImages() {
     // Check if selectedValue is purely numeric (still a string like "5")
     const isNumeric = /^[0-9]+$/.test(selectedValue);
 
-    if (isNumeric ? thumbAttr == selectedValue : thumbAttr.includes(selectedValue)) {
+      let validVariants = finalValue.split(',').map(v => v.trim()); 
+
+    if (isNumeric ? validVariants.includes(selectedValue) : thumbAttr.includes(selectedValue)) {
         thumb.classList.remove('d4-remove-slide');
         hasMatchingThumbnail = true;
       thumb.style.display = 'block';
