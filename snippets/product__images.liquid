@@ -66,13 +66,10 @@ enable_product_lightbox: <boolean>
   <div class="product-gallery__main slideshow-transition--{{ slideshow_transition }}" data-product-id="{{ product.id }}" data-media-count="{{ product.media.size }}">
 
     {% for media in product.media %}
-{% for variant in product.variants%}
-  {% assign variant_metafield = variant.metafields.custom.show_variant_image.value %}
-  {% endfor %}
       {% comment %} Check alt text for video iframe {% endcomment %}
       <div class="product-gallery__image "
             data-product-id="{{ product.id }}"
-            d4-img-alt="{{ variant_metafield }} {{ media.alt }}{% if media.alt == blank %}{{ product.title }}{% endif %}"
+            d4-img-alt="{{ media.alt }}{% if media.alt == blank %}{{ product.title }}{% endif %}"
             data-title="{% if image_alt contains 'youtube' or image_alt contains 'vimeo' %}{{ product.title }}{% else %}{{ image_alt | escape }}{% endif %}"
             data-media-type="{% if media.alt contains 'youtube' or media.alt contains 'vimeo' %}external_video{% else %}{{ media.media_type }}{% endif %}">
 
