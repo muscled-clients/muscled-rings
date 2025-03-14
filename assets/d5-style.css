@@ -408,6 +408,9 @@
 .d5-footer .footer__block.block__text p {
   margin-bottom: 12px;
 }
+.atc_button_overlay{
+  display: none;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
