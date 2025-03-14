@@ -174,3 +174,21 @@
 //         ShowProductImages();
 //     }
 // });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let variantSelect = document.querySelector('.d4-product .shopify-product-form');
+  let allVariantContainers = document.querySelectorAll(".variant-images");
+
+  function updateVariantImages(variantId) {
+    allVariantContainers.forEach(container => container.style.display = "none");
+    let selectedImagesContainer = document.querySelector(`.variant-images[data-variant-id='${variantId}']`);
+    if (selectedImagesContainer) selectedImagesContainer.style.display = "block";
+  }
+
+  variantSelect.addEventListener("change", function () {
+    updateVariantImages(this.value);
+  });
+
+  updateVariantImages(variantSelect.value);
+});
+
