@@ -1,693 +1,114 @@
 {{ 'ss-media-v1.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'ss-media-v1.js' | asset_url }}" defer="defer"></script>
-<div
-  id="shopify-section-d11__video-block"
-  class="shopify-section shopify-section-padding-{{ section.id }}"
->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <style data-shopify="">
-        .section-d11__video-block {
-          border-top: solid #000000 0px;
-          border-bottom: solid #000000 0px;
-          margin-top: 0px;
-          margin-bottom: 0px;
-          overflow: hidden;
-          background-color: {{ section.settings.sec_bg_color }};
-        }
+<div id="shopify-section-d11__video-block" class="shopify-section">
+  <style>
+    .section-d11__video-block {
+      margin: 40px 0;
+      background-color: {{ section.settings.sec_bg_color }};
+    }
 
-        .section-d11__video-block-settings {
-          margin: 0 auto;
-          padding-top: 45px;
-          padding-bottom: 45px;
-          padding-left: 0rem;
-          padding-right: 0rem;
-        }
+    .section-d11__video-block-settings {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-        .video-social-heading-d11__video-block {
-          text-align: center;
-        }
-
-        .video-social-heading-d11__video-block * {
-          margin: 0;
-         color: #1B1B1B;
-    text-align: center;
-    font-family: "Tenor Sans";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-        }
-
-        .video-social-subheading-d11__video-block {
-          margin-top: 12px;
-          text-align: center;
-        }
-
-        .video-social-subheading-d11__video-block * {
-          margin: 0;
+    .video-social-heading-d11__video-block h2 {
       color: #1B1B1B;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 20px; /* 142.857% */
-        }
-
-        .video-social-slider-d11__video-block {
-          margin-top: 53px;
-          overflow: visible !important;
-        }
-
-        .video-social-card-d11__video-block {
-          display: flex;
-          flex-direction: column;
-          padding: 0px 0px;
-          border-radius: 20px;
-          border: 0px solid #000000;
-          background-color: #2f222b;
-          box-sizing: border-box !important;
-          height: auto !important;
-          text-decoration: none;
-          overflow: hidden;
-          transform: scale(0.8) !important;
-          transition: all 0.25s ease 0s;
-        }
-
-        .video-social-video-d11__video-block {
-          border-radius: 20px;
-          overflow: hidden;
-          position: relative;
-        }
-
-        .video-social-video-d11__video-block video,
-        .video-social-video-d11__video-block iframe {
-          display: block;
-          width: 100%;
-          height: 100%;
-          /* object-fit: cover; */
-          object-fit: contain;
-          box-shadow: none;
-          border: 0px;
-          position: relative;
-          z-index: 1;
-        }
-
-        .video-social-content-d11__video-block {
-          padding: 10px 10px;
-          border-radius: 0px;
-          border: 0px solid #000000;
-          background-color: #2f222b;
-          box-sizing: border-box !important;
-          position: relative;
-        }
-
-        .video-social-info-d11__video-block {
-          display: block;
-          width: 100%;
-          margin: 0;
-          text-align: center;
-          font-size: 12px;
-          line-height: 130%;
-          text-transform: unset;
-          font-weight: 700;
-          text-decoration: none;
-        }
-
-        .video-social-action-d11__video-block {
-          position: absolute;
-          width: 34px;
-          height: 34px;
-          border: 0px solid #000000;
-          border-radius: 50%;
-          /* background: #fff8f4; */
-          display: flex !important;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s ease 0s;
-          cursor: pointer;
-          -webkit-appearance: none;
-          transition: all 0.25s ease 0s;
-          z-index: 2;
-        }
-
-        .video-social-action-d11__video-block:hover {
-          transition: all 0.25s ease 0s;
-          border: 0px solid #000000;
-          /* background: #fff8f4; */
-        }
-
-        .video-social-action-d11__video-block svg {
-          height: 24px;
-          width: 24px;
-        }
-
-        .video-social-action-d11__video-block svg {
-          fill: #121212;
-          transition: all 0.25s ease 0s;
-        }
-
-        video-social-action-d11__video-block:hover svg {
-          fill: #121212;
-          transition: all 0.25s ease 0s;
-        }
-
-        .video-social-navigation-d11__video-block {
-          margin-top: 38px;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 30px;
-        }
-
-        .video-social-btn-prev-d11__video-block,
-        .video-social-btn-next-d11__video-block {
-          position: static !important;
-          flex: 0 0 50px;
-          height: 50px;
-          border: 0px solid #000000;
-          border-radius: 50%;
-          background: #c2d6ff;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s ease 0s;
-          cursor: pointer;
-          -webkit-appearance: none;
-        }
-
-        .video-social-btn-prev-d11__video-block {
-          left: 0px !important
-        }
-
-        .video-social-btn-next-d11__video-block {
-          right: 0px !important
-        }
-
-        .video-social-btn-prev-d11__video-block svg,
-        .video-social-btn-next-d11__video-block svg {
-          height: 16px;
-          width: 16px;
-        }
-
-        .video-social-btn-prev-d11__video-block svg {
-          transform: rotate(180deg);
-        }
-
-        .video-social-btn-prev-d11__video-block svg path,
-        .video-social-btn-next-d11__video-block svg path {
-          fill: #000000;
-          transition: all 0.3s ease 0s;
-        }
-
-        .video-social-btn-prev-d11__video-block:hover,
-        .video-social-btn-next-d11__video-block:hover {
-          transition: all 0.3s ease 0s;
-          border: 0px solid #000000;
-          background: #c2d6ff;
-        }
-
-        .video-social-btn-prev-d11__video-block:hover svg path,
-        .video-social-btn-next-d11__video-block:hover svg path {
-          fill: #000000;
-          transition: all 0.3s ease 0s;
-        }
-
-        .video-social-btn-prev-d11__video-block.swiper-button-disabled,
-        .video-social-btn-next-d11__video-block.swiper-button-disabled {
-          opacity: 0.3;
-        }
-
-        .video-social-pagination-d11__video-block {
-          align-items: center;
-          gap: 8px;
-        }
-
-        .video-social-line-d11__video-block {
-          display: block;
-          margin: 0px;
-          width: 46px;
-          height: 2px;
-          background-color: #000000;
-          vertical-align: baseline;
-        }
-
-        .video-social-current-d11__video-block,
-        .video-social-all-d11__video-block {
-          margin: 0;
-          font-size: 16px;
-          color: #000000;
-          line-height: 100%;
-          text-transform: unset;
-          text-decoration: none;
-        }
-
-
-        @media(min-width: 1024px) {
-
-          .shopify-section-padding-{{ section.id }} {
-            padding-top: {{ section.settings.padding_top }}px;
-            padding-bottom: {{ section.settings.padding_bottom }}px;
-          }
-
-          .section-d11__video-block {
-            margin-top: 0px;
-            margin-bottom: 0px;
-          }
-
-          .section-d11__video-block-settings {
-            padding: 0 5rem;
-            padding-top: 46px;
-            padding-bottom: 46px;
-            padding-left: 0rem;
-            padding-right: 0rem;
-          }
-
-          .video-social-heading-d11__video-block {
-            text-align: center;
-          }
-
-          .video-social-subheading-d11__video-block {
-            margin-top: 20px;
-            text-align: center;
-          }
-
-          .video-social-subheading-d11__video-block * {
-            font-size: 20px;
-          }
-
-          .video-social-slider-d11__video-block {
-            margin-top: 70px;
-          }
-
-          .video-social-card-d11__video-block {
-            padding: 0px 0px;
-            transform: scale(0.9);
-          }
-
-          .video-social-content-d11__video-block {
-            padding: 10px 10px;
-          }
-
-          .video-social-info-d11__video-block {
-            text-align: center;
-            font-size: 14px;
-          }
-
-          .video-social-action-d11__video-block {
-            width: 40px;
-            height: 40px;
-          }
-
-          .video-social-action-d11__video-block svg {
-            width: 24px;
-            height: 24px;
-          }
-
-          .video-social-navigation-d11__video-block {
-            margin-top: 50px;
-            gap: 100px;
-          }
-
-          .video-social-btn-prev-d11__video-block,
-          .video-social-btn-next-d11__video-block {
-            height: 50px;
-            flex: 0 0 50px;
-          }
-
-          .video-social-btn-prev-d11__video-block svg,
-          .video-social-btn-next-d11__video-block svg {
-            height: 16px;
-            width: 16px;
-          }
-
-          .video-social-current-d11__video-block,
-          .video-social-all-d11__video-block {
-            font-size: 16px;
-          }
-
-        }
-  </style>
-
-  <style>
-    .video-social-video-d11__video-block {
-      border: 0px solid #000000;
-    }
-  </style>
-
-  <style>
-    .video-social-video-d11__video-block {
-     aspect-ratio: 9.6/14;
-    }
-  </style>
-
-  <style>
-    @media(min-width: 1024px) {
-     .video-social-video-d11__video-block {
-       aspect-ratio: 9.6/14;
-      }
-    }
-  </style>
-
-  <style>
-    .video-social-btn-prev-d11__video-block,
-    .video-social-btn-next-d11__video-block {
-      display: flex;
+      font-family: "Tenor Sans";
+      font-size: 32px;
+      font-weight: 400;
+      text-align: center;
+      margin: 0;
     }
 
-    .video-social-right-d11__video-block {
-      padding: 0px 60px;
-    }
-  </style>
-
-  <style>
-    @media(min-width: 1024px) {
-      .video-social-btn-prev-d11__video-block,
-      .video-social-btn-next-d11__video-block {
-        display: flex;
-      }
-    }
-  </style>
-
-  <style>
-    .video-social-pagination-d11__video-block {
-      display: flex;
-    }
-  </style>
-
-  <style>
-    @media(min-width: 1024px) {
-      .video-social-pagination-d11__video-block {
-        display: flex;
-      }
-    }
-  </style>
-
-  <style>
-    @media(min-width: 1024px) {
-      .video-social-navigation-d11__video-block {
-        display: flex;
-      }
-    }
-  </style>
-
-  <style>
-    .video-social-action-d11__video-block {
-      top: 20px;
-      left: 20px;
-    }
-  </style>
-
-  <style>
-    @media(min-width: 1024px){
-       .video-social-action-d11__video-block {
-        top: 20px;
-        left: 20px;
-        right: unset;
-        bottom: unset;
-      }
-    }
-  </style>
-
-  <style>
-    .video-social-slider-d11__video-block.preview .swiper-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      overflow: hidden;
-      gap: 16px;
+    .video-social-subheading-d11__video-block p {
+      color: #1B1B1B;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      text-align: center;
+      margin: 12px 0 0;
     }
 
-    .video-social-slider-d11__video-block.preview .video-social-card-d11__video-block {
-      width: 100%;
-    }
-
-    @media(min-width: 1024px) {
-     .video-social-slider-d11__video-block.preview .video-social-card-d11__video-block {
-        width: calc(20% - 16px);
-      }
-
-      .video-social-slider-d11__video-block.preview .video-social-card-d11__video-block:not(:first-child) {
-        margin-left: 16px;
-      }
-    }
-  </style>
-
-  <style>
-        @media(min-width: 1024px) {
-          .video-social-card-d11__video-block {
-            transform: scale(0.8) !important;
-          }
-          .video-social-card-d11__video-block.swiper-slide-active {
-            transform: scale(1) !important;
-            transition: all 0.25s ease 0s;
-          }
-        }
-
-    /* ////////////////////////////////d11 start */
-        .section-d11__video-block-settings {
-          padding: 46px 40px;
-          max-width: 1440px;
-          margin: 0 auto;
-        }
-        .remove-swiper-wrapper {
-        display: flex;
-        justify-content: normal;
-        gap: 20px;
-    }
-        .video-social-slider-d11__video-block {
-            margin-top: 40px;
-        }
-        .video-social-card-d11__video-block {
-          background: transparent;
-        border-radius: 8px;
-          width: 25%;
-        height: auto;
-        /* border: 2px solid #2D1B38; */
-          transform: unset!important;
-        /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 71.64%, #000 100%), url(<path-to-image>) lightgray 50% / cover no-repeat; */
-    }
-        .video-social-video-d11__video-block {
-        border-radius: 0;
-        border: none;
-        /* max-width: 321px;
-        width: 100%;
-        aspect-ratio: unset; */
-    }
-        .d11__video-auth-wrap {
-        position: absolute;
-        bottom: 10%;
-        left: 28%;
-        z-index: 1;
-          text-align: center;
-    }
-        p.video_auth-name {
-        color: var(--neutral-color-100, #FFF);
-        font-family: Poppins;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin: 0;
-    }
-        p.video_auth-desig {
-        color: #C7C7C7;
-        font-family: Poppins;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin: 0;
-    }
-        .video-social-subheading-d11__video-block {
-        margin: 12px 0 0;
-    }
-      .video-social-subheading-d11__video-block p {
-        color: #1B1B1B;
-        text-align: center;
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 20px;
-    }
-
-    svg.video-social-unmute-d11__video-block {
-        width: 8px;
-        height: 12px;
-    }
-    svg.video-social-mute-d11__video-block {
-        width: 5.5px;
-        height: 5.5px;
-    }
-          .video-social-action-d11__video-block {
-            top: 20px;
-            left: unset;
-            right: 20px;
-            bottom: unset;
-            width: 36px;
-            height: 36px;
-            border-radius: 120px;
-            background: rgba(0, 0, 0, 0.24);
-            /* justify-content: end; */
-            /* padding: 4px 4px 0 0; */
-          }
-        svg.video-social-mute-d11__video-block {
-        width: 23px;
-        height: 20px;
-        }
-        .video-social-heading-d11__video-block h2 br {
-        display: none;
-    }
-    svg.video-social-mute-d11__video-block {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 3px 0 0 6px;
-    }
-      @media(max-width: 1200px) {
-        div#shopify-section-d11__video-block {
-        margin: 40px 0;
-    }
-        .section-d11__video-block-settings {
-        padding: 20px 0;
-    }
-        .video-social-heading-d11__video-block h2 {
-        font-size: 24px;
-        font-weight: 400;
-    }
-        .video-social-subheading-d11__video-block {
-        margin: 8px 0 0;
-    }
-        .video-social-subheading-d11__video-block p {
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 20px;
-    }
-        .video-social-slider-d11__video-block {
-        margin: 16px 0 0;
-    }
-    .video-social-card-d11__video-block {
-        border-radius: 6.231px;
-        /* border: 1.558px solid #2D1B38; */
-    }
-    p.video_auth-desig {
-        font-size: 10px;
-    }
-      p.video_auth-name {
-        font-size: 12px;
-    }
-    /* Progress bar fill */
-    .proscroll-video-bar__d11 {
-        height: 100%;
-        width: 0; /* Initially empty */
-        background-color: #2D1B38!important; /* Progress color */
-        transition: width 0.3s ease-in-out;
-        display: block!important;
-      margin: 16px 0 0;
-    }
-
-     .proscroll-video-bar__d11 {
-        appearance: none;
-        -webkit-appearance: none;
-        width: 100%;
-        height: 2px;
-    }
-
-    .proscroll-video-bar__d11::-webkit-progress-bar {
-        background-color: #EDEDED; /* Background color */
-    }
-
-    .proscroll-video-bar__d11::-webkit-progress-value {
-        background-color: #2D1B38; /* Foreground bar color */
-    }
-
-    .proscroll-video-bar__d11::-moz-progress-bar {
-        background-color: #2D1B38;
-       padding: 16px 20px 0;
-      margin: 16px 20px 0;
-    }
-     ::-webkit-scrollbar {
-        height: 2px;
-          padding: 16px 20px 0;
-      margin: 16px 20px 0;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #E9E9E9; /* Track color */
-         padding: 16px 20px 0;
-      margin: 16px 20px 0;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #2D1B38; /* Thumb color */
-        border-radius: 10px;
-       padding: 16px 20px 0;
-      margin: 16px 20px 0;
-    }
-        .video-social-card-d11__video-block {
-        min-width: 80%;
-        }
-        .proscroll-video-bar__d11 {
-        height: 3px; /* Adjusted height */
-        width: 0; /* Initially empty */
-        background-color: #2D1B38!important; /* Progress color */
-        transition: width 0.3s ease-in-out;
-        display: block!important;
-        margin-top: 10px;
+    .video-social-slider-d11__video-block {
+      margin-top: 40px;
     }
 
     .remove-swiper-wrapper {
-        overflow-x: auto; /* Ensure horizontal scrolling is enabled */
-        white-space: nowrap; /* Keep items in a single line */
-        display: flex;
-        gap: 4px;
-        scroll-behavior: smooth;
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
     }
 
-        /* Progress bar container */
-    .proscroll-video-container {
-        position: relative;
-        width: 100%;
-        height: 4px; /* Adjust based on design */
-        background-color: #EDEDED; /* Background color */
-        overflow: hidden;
-        margin-top: 10px;
+    .video-social-card-d11__video-block {
+      flex: 0 0 25%;
+      background: transparent;
+      border-radius: 8px;
     }
 
-    /* Actual progress bar */
+    .video-social-video-d11__video-block {
+      position: relative;
+      border-radius: 0;
+      border: none;
+    }
+
+    .video-social-video-d11__video-block video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .d11__video-auth-wrap {
+      position: absolute;
+      bottom: 10%;
+      left: 33%;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .video_auth-name {
+      color: #FFF;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .video_auth-desig {
+      color: #C7C7C7;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+    }
+
     .proscroll-video-bar__d11 {
-        height: 4px;
-        width: 0; /* Initially empty */
-        background-color: #2D1B38!important; /* Progress color */
-        transition: width 0.2s ease-in-out;
-        display: block!important;
-        position: absolute;
-        top: 0;
-        left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #EDEDED;
+      margin-top: 10px;
     }
 
-       .video-social-card-d11__video-block:first-child {
-        margin-left: 20px;
+    .proscroll-video-bar__d11::-webkit-progress-value {
+      background-color: #2D1B38;
     }
-          .video-social-card-d11__video-block:last-child {
-        margin-right: 20px;
-    }
+
+    @media (max-width: 1200px) {
       .video-social-card-d11__video-block {
-         margin: 0 0 16px 0px;
+        flex: 0 0 80%;
       }
+
       .d11__video-auth-wrap {
-        left: 33%;
+        left: 28%;
       }
-      .video-social-heading-d11__video-block h2 br {
-        display: block;
     }
-      }
   </style>
 
-  <div
-    class="section-d11__video-block video-social-d11__video-block"
-  >
+  <div class="section-d11__video-block">
     <div class="section-d11__video-block-settings">
       <div class="video-social-heading-d11__video-block">
         <h2>{{ section.settings.title }}</h2>
@@ -698,53 +119,18 @@
       </div>
 
       <div class="video-social-slider-d11__video-block">
-        <div
-          class="remove-swiper-wrapper"
-        >
+        <div class="remove-swiper-wrapper">
           {% for block in section.blocks %}
             <div class="video-social-card-d11__video-block">
               <div class="video-social-video-d11__video-block">
                 <video
                   src="{{ block.settings.video }}"
-                  {% if block.settings.video_autoplay %}
-                    autoplay
-                  {% endif %}
-                  {% if block.settings.video_loop %}
-                    loop
-                  {% endif %}
-                  {% if block.settings.video_muted %}
-                    muted
-                  {% endif %}
+                  {% if block.settings.video_autoplay %}autoplay{% endif %}
+                  {% if block.settings.video_loop %}loop{% endif %}
+                  {% if block.settings.video_muted %}muted{% endif %}
                   playsinline
-                  style="object-fit: cover;"
                   poster="{{ block.settings.image | img_url: 'master' }}"
                 ></video>
-                <div class="video-social-action-d11__video-block">
-                  <svg
-                    class="video-social-unmute-d11__video-block"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="9"
-                    height="13"
-                    viewBox="0 0 9 13"
-                    fill="none"
-                  >
-                    <path d="M8.76923 2.19276V11.6529C8.76923 12.3543 8.20067 12.9229 7.49932 12.9229C7.13313 12.9229 6.78476 12.7648 6.54362 12.4892L4.28992 9.91354C3.91015 9.4795 3.3615 9.23054 2.78477 9.23054H2C0.895431 9.23054 0 8.33511 0 7.23054V6.61516C0 5.51059 0.895431 4.61516 2 4.61516H2.78477C3.3615 4.61516 3.91015 4.3662 4.28993 3.93217L6.54362 1.35652C6.78476 1.08093 7.13313 0.922852 7.49932 0.922852C8.20067 0.922852 8.76923 1.49141 8.76923 2.19276Z" fill="white"/>
-                  </svg>
-
-                  <svg
-                    class="video-social-mute-d11__video-block"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    style="display: none;"
-                  >
-                    <path d="M8.76923 2.19276V11.6529C8.76923 12.3543 8.20067 12.9229 7.49932 12.9229C7.13313 12.9229 6.78476 12.7648 6.54362 12.4892L4.28992 9.91354C3.91015 9.4795 3.3615 9.23054 2.78477 9.23054H2C0.895431 9.23054 0 8.33511 0 7.23054V6.61516C0 5.51059 0.895431 4.61516 2 4.61516H2.78477C3.3615 4.61516 3.91015 4.3662 4.28993 3.93217L6.54362 1.35652C6.78476 1.08093 7.13313 0.922852 7.49932 0.922852C8.20067 0.922852 8.76923 1.49141 8.76923 2.19276Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.12309 4.02641C14.31835 3.83114 14.31835 3.51456 14.12309 3.3193C13.92782 3.12404 13.61124 3.12404 13.41598 3.3193L11.51953 5.21574L9.62309 3.3193C9.42782 3.12404 9.11124 3.12404 8.91598 3.3193C8.72072 3.51456 8.72072 3.83114 8.91598 4.02641L10.81242 5.92285L8.91598 7.8193C8.72072 8.01456 8.72072 8.33114 8.91598 8.5264C9.11124 8.72167 9.42782 8.72167 9.62308 8.5264L11.51953 6.62996L13.41598 8.5264C13.61124 8.72167 13.92782 8.72167 14.12309 8.5264C14.31835 8.33114 14.31835 8.01456 14.12309 7.8193L12.22664 5.92285L14.12309 4.02641Z" fill="white"/>
-                  </svg>
-                </div>
-
                 <div class="d11__video-auth-wrap">
                   <p class="video_auth-name">{{ block.settings.auth }}</p>
                   <p class="video_auth-desig">{{ block.settings.desig }}</p>
@@ -757,210 +143,6 @@
       <div class="proscroll-video-bar__d11"></div>
     </div>
   </div>
-  <!-- mobile prodress -->
-  <script>
-
-document.addEventListener("DOMContentLoaded", function () {
-    const progressBar = document.querySelector(".proscroll-video-bar__d11");
-    const scrollContainer = document.querySelector(".video-social-d11__video-block");
-
-    if (!progressBar || !scrollContainer) {
-        console.error("Progress bar or scroll container not found.");
-        return;
-    }
-
-    function updateProgressBar() {
-        let scrollPosition = scrollContainer.scrollLeft;
-        let maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-        let scrollPercentage = (scrollPosition / maxScroll) * 100;
-        
-        // ✅ Prevent duplicate inline styles
-        if (progressBar.style.width !== `${scrollPercentage}%`) {
-            progressBar.style.width = `${scrollPercentage}%`;
-        }
-    }
-
-    // ✅ Ensure progress bar updates on scroll
-    scrollContainer.addEventListener("scroll", updateProgressBar);
-
-    // ✅ Ensure progress bar initializes correctly on page load
-    updateProgressBar();
-});
-  </script>
-  <!-- /mobile progress -->
-  <script>
-    //     function initVideoFromSocial2() {
-    //     document.querySelector('.video-social-slider-d11__video-block').classList.remove('preview');
-
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     console.log("✅ Video Script Loaded");
-
-    //     document.querySelectorAll('.video-social-card-d11__video-block').forEach(el => {
-    //         let video = el.querySelector('video');
-    //         let muteBtn = el.querySelector('.video-social-mute-d11__video-block');
-    //         let unmuteBtn = el.querySelector('.video-social-unmute-d11__video-block');
-
-    //         // Ensure video plays when clicked
-    //         el.addEventListener('click', function () {
-    //             if (video.paused) {
-    //                 video.play();
-    //             } else {
-    //                 video.pause();
-    //             }
-    //         });
-
-    //         // Toggle mute/unmute
-    //         function toggleMute() {
-    //             video.muted = !video.muted;
-
-    //             if (video.muted) {
-    //                 muteBtn.style.display = "block";
-    //                 unmuteBtn.style.display = "none";
-    //             } else {
-    //                 muteBtn.style.display = "none";
-    //                 unmuteBtn.style.display = "block";
-    //             }
-    //         }
-
-    //         muteBtn.addEventListener('click', function (event) {
-    //             event.stopPropagation(); // Prevent video click from triggering
-    //             toggleMute();
-    //         });
-
-    //         unmuteBtn.addEventListener('click', function (event) {
-    //             event.stopPropagation(); // Prevent video click from triggering
-    //             toggleMute();
-    //         });
-
-    //         // Set initial state
-    //         if (video.muted) {
-    //             muteBtn.style.display = "block";
-    //             unmuteBtn.style.display = "none";
-    //         } else {
-    //             muteBtn.style.display = "none";
-    //             unmuteBtn.style.display = "block";
-    //         }
-    //     });
-    // });
-
-    //     var ssVideoElements = document.querySelectorAll('.section-d11__video-block video');
-    //     ssVideoElements.forEach(function (ssVideo) {
-    //         ssVideo.setAttribute('controlsList', 'nodownload');
-    //     });
-
-    //     const observer = lozad();
-    //     observer.observe();
-    // }
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     document.querySelectorAll('.video-social-card-d11__video-block').forEach(card => {
-    //         let video = card.querySelector('video');
-    //         let muteBtn = card.querySelector('.video-social-mute-d11__video-block');
-    //         let unmuteBtn = card.querySelector('.video-social-unmute-d11__video-block');
-
-    //         if (!video) return; // Ensure video exists
-
-    //         // ✅ Play video on click
-    //         card.addEventListener("click", function () {
-    //             if (video.paused) {
-    //                 video.play();
-    //             } else {
-    //                 video.pause();
-    //             }
-    //         });
-
-    //         // ✅ Toggle Mute/Unmute
-    //         muteBtn.addEventListener("click", function (event) {
-    //             event.stopPropagation(); // Prevent clicking video while toggling mute
-    //             video.muted = false;
-    //             muteBtn.style.display = "none";
-    //             unmuteBtn.style.display = "block";
-    //         });
-
-    //         unmuteBtn.addEventListener("click", function (event) {
-    //             event.stopPropagation();
-    //             video.muted = true;
-    //             muteBtn.style.display = "block";
-    //             unmuteBtn.style.display = "none";
-    //         });
-
-    //         // ✅ Ensure the correct icon is shown on page load
-    //         if (video.muted) {
-    //             muteBtn.style.display = "block";
-    //             unmuteBtn.style.display = "none";
-    //         } else {
-    //             muteBtn.style.display = "none";
-    //             unmuteBtn.style.display = "block";
-    //         }
-    //     });
-    // });
-
-    // document.addEventListener('DOMContentLoaded', initVideoFromSocial2);
-
-    // if (Shopify.designMode) {
-    //     document.addEventListener('shopify:section:load', initVideoFromSocial2);
-    // }
-    document.addEventListener("DOMContentLoaded", function () {
-        console.log("✅ Video Script Loaded");
-
-        function initVideoFromSocial2() {
-            document.querySelector('.video-social-slider-d11__video-block').classList.remove('preview');
-
-            document.querySelectorAll('.video-social-card-d11__video-block').forEach(card => {
-                let video = card.querySelector('video');
-                let muteButtons = card.querySelectorAll('.video-social-mute-d11__video-block');
-                let unmuteButtons = card.querySelectorAll('.video-social-unmute-d11__video-block');
-
-                if (!video || muteButtons.length === 0 || unmuteButtons.length === 0) return;
-
-                // ✅ Play/Pause video on click
-                card.addEventListener("click", function () {
-                    video.paused ? video.play() : video.pause();
-                });
-
-                // ✅ Toggle Mute/Unmute for All Buttons
-                function toggleMute() {
-                    let isMuted = !video.muted;
-                    video.muted = isMuted;
-
-                    // ✅ Sync all mute/unmute buttons for this video
-                    muteButtons.forEach(btn => btn.style.display = isMuted ? "block" : "none");
-                    unmuteButtons.forEach(btn => btn.style.display = isMuted ? "none" : "block");
-                }
-
-                // ✅ Add event listeners to mute/unmute buttons
-                muteButtons.forEach(btn => btn.addEventListener("click", function (event) {
-                    event.stopPropagation(); // Prevent video click event from triggering
-                    toggleMute();
-                }));
-
-                unmuteButtons.forEach(btn => btn.addEventListener("click", function (event) {
-                    event.stopPropagation();
-                    toggleMute();
-                }));
-
-                // ✅ Set initial mute/unmute state for all buttons
-                muteButtons.forEach(btn => btn.style.display = video.muted ? "block" : "none");
-                unmuteButtons.forEach(btn => btn.style.display = video.muted ? "none" : "block");
-            });
-
-            // ✅ Prevent video downloads
-            document.querySelectorAll('.section-d11__video-block video').forEach(video => {
-                video.setAttribute('controlsList', 'nodownload');
-            });
-
-            // ✅ Lazy loading for performance optimization
-            const observer = lozad();
-            observer.observe();
-        }
-
-        initVideoFromSocial2(); // Initialize function on page load
-
-        // ✅ Reinitialize when Shopify theme editor changes the section
-        if (Shopify.designMode) {
-            document.addEventListener('shopify:section:load', initVideoFromSocial2);
-        }
-    });
-  </script>
 </div>
 {% schema %}
 {
