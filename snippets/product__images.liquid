@@ -173,9 +173,6 @@ enable_product_lightbox: <boolean>
                   is-justify-center
                 {% endif %}">
         {% for media in product.media %}
-          {% for variant in product.variants%}
-  {% assign variant_metafield = variant.metafields.custom.show_variant_image.value %}
-  {% endfor %}
 
           {% if media.media_type contains 'video' %}
             {% assign thumbnail_badge = 'video-thumbnail' %}
@@ -186,7 +183,7 @@ enable_product_lightbox: <boolean>
           {% endif %}
 
           <div class="product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %} {% if media.alt contains 'main-image' %}d4-main-image{% endif %}"
-                data-title="{{ variant_metafield }} {{ media.alt | escape }}" tabindex="0">
+                data-title="{{ media.alt | escape }}" tabindex="0">
             <img src="{{ media | img_url: 'master' }}" alt="">
             {% if thumbnail_badge != blank %}
               {% render 'icon',
