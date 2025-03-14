@@ -187,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   variantSelect.addEventListener("change", function (event) {
     console.log('hello');
+    console.log(variantSelect.querySelector('variant-selection').getAttribute('variant'));
     updateVariantImages(event.target.value);
     console.log(event.target.value);
   });
