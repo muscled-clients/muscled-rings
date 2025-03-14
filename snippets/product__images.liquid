@@ -183,7 +183,7 @@ enable_product_lightbox: <boolean>
             {% assign thumbnail_badge = '' %}
           {% endif %}
 
-          <div class="product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %} {% if media.alt contains 'main-image' %}d4-main-image{% endif %}"
+          <div class="{% if template contains 'shopibro' %}shopibro-product-thumbnails{% endif %} product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %} {% if media.alt contains 'main-image' %}d4-main-image{% endif %}"
                 data-title="{{ media.alt | escape }}" tabindex="0">
             <img src="{{ media | img_url: 'master' }}" alt="">
             {% if thumbnail_badge != blank %}
