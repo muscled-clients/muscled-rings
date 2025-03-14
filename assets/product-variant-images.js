@@ -121,6 +121,8 @@ function ShowProductImages() {
     // Check if selectedValue is purely numeric
     const isNumeric = /^\d+$/.test(selectedValue);
 
+     let validVariants = finalValue.split(',').map(v => v.trim()); 
+
     if (isNumeric ? finalValue == selectedValue : finalValue.includes(selectedValue)) {
         image.classList.remove('d4-remove-slide');
         hasMatchingImage = true;
