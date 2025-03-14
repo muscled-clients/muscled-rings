@@ -1,4 +1,3 @@
-
 <div id="shopify-section-d11__video-block" class="shopify-section">
   <style>
     .section-d11__video-block {
@@ -139,9 +138,15 @@
               <div class="video-social-video-d11__video-block">
                 <video
                   src="{{ block.settings.video }}"
-                  {% if block.settings.video_autoplay %}autoplay{% endif %}
-                  {% if block.settings.video_loop %}loop{% endif %}
-                  {% if block.settings.video_muted %}muted{% endif %}
+                  {% if block.settings.video_autoplay %}
+                    autoplay
+                  {% endif %}
+                  {% if block.settings.video_loop %}
+                    loop
+                  {% endif %}
+                  {% if block.settings.video_muted %}
+                    muted
+                  {% endif %}
                   playsinline
                   poster="{{ block.settings.image | img_url: 'master' }}"
                 ></video>
@@ -160,33 +165,32 @@
 </div>
 
 <script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const progressBarD5 = document.querySelector(".proscroll-video-bar__d5");
-    const sectionD5 = document.querySelector(".remove-swiper-wrapper");
+     document.addEventListener("DOMContentLoaded", function () {
+      const progressBarD5 = document.querySelector(".proscroll-video-bar__d5");
+      const sectionD5 = document.querySelector(".remove-swiper-wrapper");
 
-    function updateProgressBar() {
-        let visibleWidth = sectionD5.clientWidth;
-        let totalWidth = sectionD5.scrollWidth;
-        let initialWidth = (visibleWidth / totalWidth) * 100;
-        
-        let scrollPositionD5 = sectionD5.scrollLeft;
-        let maxScrollD5 = totalWidth - visibleWidth;
-        let scrollPercentageD5 = (scrollPositionD5 / maxScrollD5) * (100 - initialWidth) + initialWidth;
-        
-        progressBarD5.style.width = scrollPercentageD5 + "%";
-    }
+      function updateProgressBar() {
+          let visibleWidth = sectionD5.clientWidth;
+          let totalWidth = sectionD5.scrollWidth;
+          let initialWidth = (visibleWidth / totalWidth) * 100;
 
-    function setInitialProgressBar() {
-        let visibleWidth = sectionD5.clientWidth;
-        let totalWidth = sectionD5.scrollWidth;
-        let initialWidth = (visibleWidth / totalWidth) * 100;
-        progressBarD5.style.width = initialWidth + "%";
-    }
+          let scrollPositionD5 = sectionD5.scrollLeft;
+          let maxScrollD5 = totalWidth - visibleWidth;
+          let scrollPercentageD5 = (scrollPositionD5 / maxScrollD5) * (100 - initialWidth) + initialWidth;
 
-    setInitialProgressBar();
-    sectionD5.addEventListener("scroll", updateProgressBar);
-});
+          progressBarD5.style.width = scrollPercentageD5 + "%";
+      }
 
+      function setInitialProgressBar() {
+          let visibleWidth = sectionD5.clientWidth;
+          let totalWidth = sectionD5.scrollWidth;
+          let initialWidth = (visibleWidth / totalWidth) * 100;
+          progressBarD5.style.width = initialWidth + "%";
+      }
+
+      setInitialProgressBar();
+      sectionD5.addEventListener("scroll", updateProgressBar);
+  });
 </script>
 {% schema %}
 {
@@ -242,7 +246,7 @@
         "type":"text",
         "settings":[
           {
-        "type": "text",
+        "type": "video",
         "id": "video",
         "label": "Video"
       },
