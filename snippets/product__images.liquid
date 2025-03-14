@@ -44,7 +44,7 @@ enable_product_lightbox: <boolean>
 {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
 {% liquid
     if template contains 'shopibro'
-        assign enable_thumbnail_slider = false
+        assign enable_thumbnail_slider = true
     endif
 %}
 
