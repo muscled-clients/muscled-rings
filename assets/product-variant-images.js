@@ -13,8 +13,8 @@ function isFlickityInitialized(selector) {
     return element && Flickity.data(element);
 }
 
-// **Function to Remove Slides or Simply Hide Them**
-function removeOrHideSlides(flkty, removedSlidesArray, selector) {
+// **Function to Remove or Hide Slides**
+function removeSlides(flkty, removedSlidesArray, selector) {
     let slidesToRemove = [];
 
     document.querySelectorAll(`${selector} .d4-remove-slide`).forEach(slide => {
@@ -22,22 +22,22 @@ function removeOrHideSlides(flkty, removedSlidesArray, selector) {
     });
 
     if (flkty) {
-        // If Flickity is active, remove slides properly
+        // **If Flickity is active, remove slides properly**
         slidesToRemove.forEach(slide => {
             flkty.remove(slide);
             removedSlidesArray.push(slide);
         });
         flkty.reloadCells();
     } else {
-        // If Flickity is not active, simply hide slides
+        // **If Flickity is NOT active, just hide slides**
         slidesToRemove.forEach(slide => {
             slide.style.display = 'none';
         });
     }
 }
 
-// **Function to Restore Slides or Show Them Again**
-function restoreOrShowSlides(flkty, removedSlidesArray, selector) {
+// **Function to Restore or Show Slides**
+function restoreSlides(flkty, removedSlidesArray, selector) {
     if (removedSlidesArray.length > 0) {
         if (flkty) {
             while (removedSlidesArray.length > 0) {
@@ -46,7 +46,7 @@ function restoreOrShowSlides(flkty, removedSlidesArray, selector) {
             }
             flkty.reloadCells();
         } else {
-            // If Flickity is not in use, just make slides visible
+            // **If Flickity is NOT active, just show slides**
             document.querySelectorAll(`${selector} .d4-remove-slide`).forEach(slide => {
                 slide.style.display = 'block';
             });
@@ -58,6 +58,7 @@ function restoreOrShowSlides(flkty, removedSlidesArray, selector) {
 function ShowProductImages() {
     console.log("Checking Images for Selected Variant...");
 
+    // **Get Selected Swatch**
     const selectedSwatch = Array.from(swatchOptions).find(option => option.checked);
     if (!selectedSwatch) {
         console.log("No swatch selected. Resetting images...");
@@ -126,12 +127,35 @@ function ShowProductImages() {
     const isFlickityMain = isFlickityInitialized('.product-gallery__main');
     const isFlickityThumbs = isFlickityInitialized('.product-gallery__thumbnails');
 
-    // **Restore or Hide Slides Based on Flickity Usage**
-    restoreOrShowSlides(isFlickityMain, removedSlidesMain, '.product-gallery__main');
-    removeOrHideSlides(isFlickityMain, removedSlidesMain, '.product-gallery__main');
+    // **Restore and Remove Slides Based on Flickity Presence**
+    restoreSlides(isFlickityMain, removedSlidesMain, '.product-gallery__main');
+    removeSlides(isFlickityMain, removedSlidesMain, '.product-gallery__main');
 
-    restoreOrShowSlides(isFlickityThumbs, removedSlidesThumbs, '.product-gallery__thumbnails');
-    removeOrHideSlides(isFlickityThumbs, removedSlidesThumbs, '.product-gallery__thumbnails');
+    restoreSlides(isFlickityThumbs, removedSlidesThumbs, '.product-gallery__thumbnails');
+    removeSlides(isFlickityThumbs, removedSlidesThumbs, '.product-gallery__thumbnails');
+
+    // **Handle Case When Flickity is Only for Mobile**
+    if (!isFlickityMain && window.innerWidth >= 1024) {
+        console.log("Flickity is not active on desktop. Using display: none/block.");
+        document.querySelectorAll('.product-gallery__main .d4-remove-slide').forEach(slide => {
+            slide.style.display = 'none';
+        });
+    } else {
+        document.querySelectorAll('.product-gallery__main .d4-remove-slide').forEach(slide => {
+            slide.style.display = 'block';
+        });
+    }
+
+    if (!isFlickityThumbs && window.innerWidth >= 1024) {
+        console.log("Flickity is not active on desktop thumbnails. Using display: none/block.");
+        document.querySelectorAll('.product-gallery__thumbnails .d4-remove-slide').forEach(slide => {
+            slide.style.display = 'none';
+        });
+    } else {
+        document.querySelectorAll('.product-gallery__thumbnails .d4-remove-slide').forEach(slide => {
+            slide.style.display = 'block';
+        });
+    }
 }
 
 // **Initialize on Page Load**
