@@ -66,7 +66,13 @@
         {{ logo }}
       </div>
       <nav class="navigation-d5"></nav>
-      <div class="d5-icons"></div>
+      <div class="d5-icons">
+         {%
+          render 'header__action-icons',
+          display_search: true,
+          header_icon_class: 'd5-header-icons',
+        %}
+      </div>
     </header>
   </div>
 </div>
