@@ -258,7 +258,7 @@
   });
 </script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".video-social-video-d11__video-block").forEach(videoContainer => {
       let video = videoContainer.querySelector("video");
 
@@ -272,15 +272,7 @@
       let playIcon = playButton.querySelector(".play-icon-d6");
       let pauseIcon = playButton.querySelector(".pause-icon-d6");
 
-      // Set initial states
-      if (video.muted) {
-        unmutedIcon.classList.remove("hidden-d6");
-        mutedIcon.classList.add("hidden-d6");
-      } else {
-        unmutedIcon.classList.add("hidden-d6");
-        mutedIcon.classList.remove("hidden-d6");
-      }
-
+      // Set initial states for play/pause
       if (video.paused) {
         playIcon.classList.remove("hidden-d6");
         pauseIcon.classList.add("hidden-d6");
@@ -293,12 +285,12 @@
       muteButton.addEventListener("click", function () {
         if (video.muted) {
           video.muted = false;
-          unmutedIcon.classList.add("hidden-d6");
-          mutedIcon.classList.remove("hidden-d6");
+          unmutedIcon.style.display = "none";
+          mutedIcon.style.display = "block";
         } else {
           video.muted = true;
-          unmutedIcon.classList.remove("hidden-d6");
-          mutedIcon.classList.add("hidden-d6");
+          unmutedIcon.style.display = "block";
+          mutedIcon.style.display = "none";
         }
       });
 
