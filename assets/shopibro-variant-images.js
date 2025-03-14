@@ -24,7 +24,7 @@ function showSelectedImagesShopi(swatchValue){
   })
 }
 
-showSelectedImagesShopi();
+showSelectedImagesShopi(shopiForm[0].value);
 
 shopiForm.addEventListener('change', (event)=> {
   if(event.target.checked) {
