@@ -3,7 +3,7 @@ function stickyD5(){
     let isSticky = false;
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY >= 100 && !isSticky) {
+        if (window.scrollY >= 50 && !isSticky) {
             header.classList.add("sticky-d5");
             setTimeout(() => {
                 header.classList.add("active"); // Delay for smooth transition
