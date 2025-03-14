@@ -8,16 +8,16 @@ let removedSlidesMain = []; // Stores removed slides for main Flickity
 let removedSlidesThumbs = []; // Stores removed slides for thumbnails Flickity
 
 // add variant attr in image
-function assignVariantValue() {
-  swatchOptions.forEach(swatch=> {
-    let getValue = swatch.getAttribute('variant-metafield-attr');
-    productThumbnails.forEach(image=> {
-      image.setAttribute('data-title', image.getAttribute('data-title') + "," + getValue);
-    })
-  })
-}
+// function assignVariantValue() {
+//   swatchOptions.forEach(swatch=> {
+//     let getValue = swatch.getAttribute('variant-metafield-attr');
+//     productThumbnails.forEach(image=> {
+//       image.setAttribute('data-title', image.getAttribute('data-title') + "," + getValue);
+//     })
+//   })
+// }
 
-assignVariantValue();
+// assignVariantValue();
 
 // **Function to Wait for Flickity to Load**
 function waitForFlickity(targetSelector, callback) {
