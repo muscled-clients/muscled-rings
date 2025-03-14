@@ -15,6 +15,11 @@ function showSelectedImagesShopi(swatchValue){
     const match = imageAttr.match(/\$(.*?)\$/);
     finalValue = match ? match[1] : imageAttr;
     console.log("Final value: ", finalValue);
+    if(finalValue == swatchValue) {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
+    }
   })
 }
 
@@ -22,6 +27,6 @@ showSelectedImagesShopi();
 
 shopiForm.addEventListener('change', (event)=> {
   if(event.target.checked) {
-    console.log(event.target.value);
+    showSelectedImagesShopi(event.target.value);
   }
 })
