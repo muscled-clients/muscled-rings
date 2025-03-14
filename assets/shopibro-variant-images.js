@@ -24,9 +24,9 @@ function showSelectedImagesShopi(swatchValue){
   })
 }
 
-console.log(shopiForm[0].value);
+console.log(shopiSwatch[0].value);
 
-showSelectedImagesShopi(shopiForm[0].value);
+showSelectedImagesShopi(shopiSwatch[0].value);
 
 shopiForm.addEventListener('change', (event)=> {
   if(event.target.checked) {
