@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header",
@@ -10,12 +19,12 @@
         "enable_sticky": true,
         "show_close_icon": true,
         "icon_label": "gift",
-        "text": "<p>1 Carat Diamond Solitaire Ring for $1999 CAD<\/p>",
-        "mobile_text": "<p>1 Carat Diamond Solitaire Ring for $1999 CAD<\/p>",
+        "text": "<p>1 Carat Diamond Solitaire Ring for $1999 CAD</p>",
+        "mobile_text": "<p>1 Carat Diamond Solitaire Ring for $1999 CAD</p>",
         "alignment": "center",
         "size": "regular",
         "button_label": "SHOP NOW",
-        "link": "shopify:\/\/products\/1-carat-lab-grown-diamond-solitaire-ring",
+        "link": "shopify://products/1-carat-lab-grown-diamond-solitaire-ring",
         "button_style": "button--link-style",
         "background": "#8b5e9a",
         "text_color": "#ffffff",
@@ -26,9 +35,10 @@
     },
     "header_top_bar": {
       "type": "header-centered__top-bar",
+      "disabled": true,
       "settings": {
         "show_social_icons": false,
-        "text": "<p><strong>Your dream ring, our mission. Contact us to source it today!  💎<\/strong><a href=\"\/pages\/contact-us\" title=\"Contact Us\"><strong>Get in Touch<\/strong><\/a><strong>💎<\/strong><\/p>",
+        "text": "<p><strong>Your dream ring, our mission. Contact us to source it today!  💎</strong><a href=\"/pages/contact-us\" title=\"Contact Us\"><strong>Get in Touch</strong></a><strong>💎</strong></p>",
         "top_bar_background": "#e2c8dd",
         "top_bar_link": "#8b5e9a",
         "top_bar_link_hover": "#6f4a7d",
@@ -49,6 +59,7 @@
     },
     "header": {
       "type": "header-centered",
+      "disabled": true,
       "settings": {
         "logo_width": 140,
         "logo_position": "above",
@@ -84,7 +95,7 @@
         "featured_promo_iJcLzz": {
           "type": "featured_promo",
           "settings": {
-            "richtext": "<p>Add description and links to your promotion<\/p>",
+            "richtext": "<p>Add description and links to your promotion</p>",
             "bgr_color": "#eeeeee",
             "text_color": "#000000",
             "button_label": "Shop now",
@@ -118,7 +129,7 @@
           "type": "image",
           "settings": {
             "image_link": "",
-            "image_caption": "<p>Image caption appears here<\/p>"
+            "image_caption": "<p>Image caption appears here</p>"
           }
         },
         "featured_product_dx9p6Y": {
@@ -166,7 +177,7 @@
         "featured_promo": {
           "type": "featured_promo",
           "settings": {
-            "richtext": "<p>Add description and links to your promotion<\/p>",
+            "richtext": "<p>Add description and links to your promotion</p>",
             "bgr_color": "#eeeeee",
             "text_color": "#000000",
             "button_label": "Shop now",
@@ -200,7 +211,7 @@
           "type": "image",
           "settings": {
             "image_link": "",
-            "image_caption": "<p>Image caption appears here<\/p>"
+            "image_caption": "<p>Image caption appears here</p>"
           }
         },
         "featured_product": {
