@@ -290,8 +290,9 @@
         "text_RWLgHL": {
           "type": "text",
           "settings": {
+            "video": "shopify://files/videos/Rings UGC - 4K (2).mov",
             "autoplay": true,
-            "controls": true,
+            "controls": false,
             "muted": true,
             "video_loop": true,
             "image": "shopify://shop_images/image_977_045ac376-a2a3-4b0e-9304-3ca435a8cf04.png",
@@ -302,8 +303,9 @@
         "text_YHCG38": {
           "type": "text",
           "settings": {
+            "video": "shopify://files/videos/ASMR unboxing - 4K (1).mov",
             "autoplay": true,
-            "controls": true,
+            "controls": false,
             "muted": true,
             "video_loop": true,
             "image": "shopify://shop_images/image_977_c01c347f-4bb2-42a8-ac1c-4ca5bafb5ef3.png",
@@ -314,8 +316,9 @@
         "text_cTEQBh": {
           "type": "text",
           "settings": {
+            "video": "shopify://files/videos/ERSM0660Rd150-WG.mp4",
             "autoplay": true,
-            "controls": true,
+            "controls": false,
             "muted": true,
             "video_loop": true,
             "image": "shopify://shop_images/image_977_584c309b-9b7d-47b3-b74f-48136bfb8f3b.png",
