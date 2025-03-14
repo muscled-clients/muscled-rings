@@ -1,4 +1,4 @@
- {% capture logo %}
+{% capture logo %}
             {% comment %} Logo {% endcomment %}
             <div class="header__brand is-align-center is-justify-space-between is-flex text-align-center">
               {% if section.settings.enable_overlay and section.settings.overlay_logo != blank %}
@@ -56,28 +56,28 @@
                   </a>
                 {% endif %}
               {% endif %}
-            </div>
+            </div> 
           {% endcapture %}
 
 <div class="d5-header-main">
   <div class="d5-header-sticky">
     <header id="d5-header" class="header-d5">
-        <div class="logo-d5">
-          {{ logo }}
-        </div>
-        <nav class="navigation-d5"></nav>
-        <div class="d5-icons"></div>
+      <div class="logo-d5">
+        {{ logo }}
+      </div>
+      <nav class="navigation-d5"></nav>
+      <div class="d5-icons"></div>
     </header>
   </div>
 </div>
 {% schema %}
-  {
-    "name": "D5 Header",
-    "settings": [],
-    "presets": [
-      {
-        "name": "Header D5"
-      }
-    ]
-  }
+{
+  "name": "D5 Header",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Header D5"
+    }
+  ]
+}
 {% endschema %}
