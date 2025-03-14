@@ -245,6 +245,10 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "d5_header_wYykhi": {
+      "type": "d5-header",
+      "settings": {}
     }
   },
   "order": [
@@ -252,6 +256,7 @@
     "header_top_bar",
     "header",
     "mega_menu_3QnKeG",
-    "mega_menu"
+    "mega_menu",
+    "d5_header_wYykhi"
   ]
 }
