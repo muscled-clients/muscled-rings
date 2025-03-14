@@ -18,7 +18,7 @@ function stickyD5(){
         }
     });
 }
-function stickyD5();
+stickyD5();
 
 function searchD5() {
     const overlay = document.querySelector('.site-overlay');
