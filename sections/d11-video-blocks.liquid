@@ -230,6 +230,34 @@
 </div>
 
 <script>
+     document.addEventListener("DOMContentLoaded", function () {
+      const progressBarD5 = document.querySelector(".proscroll-video-bar__d5");
+      const sectionD5 = document.querySelector(".remove-swiper-wrapper");
+
+      function updateProgressBar() {
+          let visibleWidth = sectionD5.clientWidth;
+          let totalWidth = sectionD5.scrollWidth;
+          let initialWidth = (visibleWidth / totalWidth) * 100;
+
+          let scrollPositionD5 = sectionD5.scrollLeft;
+          let maxScrollD5 = totalWidth - visibleWidth;
+          let scrollPercentageD5 = (scrollPositionD5 / maxScrollD5) * (100 - initialWidth) + initialWidth;
+
+          progressBarD5.style.width = scrollPercentageD5 + "%";
+      }
+
+      function setInitialProgressBar() {
+          let visibleWidth = sectionD5.clientWidth;
+          let totalWidth = sectionD5.scrollWidth;
+          let initialWidth = (visibleWidth / totalWidth) * 100;
+          progressBarD5.style.width = initialWidth + "%";
+      }
+
+      setInitialProgressBar();
+      sectionD5.addEventListener("scroll", updateProgressBar);
+  });
+</script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".video-social-video-d11__video-block").forEach(videoContainer => {
       let video = videoContainer.querySelector("video");
@@ -284,38 +312,6 @@
           video.pause();
           playIcon.style.display = "block";
           pauseIcon.style.display = "none";
-        }
-      });
-    });
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".muted-btn-d6").forEach(button => {
-      let videoContainer = button.closest(".video-social-video-d11__video-block");
-      let video = videoContainer.querySelector("video");
-      let unmutedIcon = button.querySelector(".unmuted-icon-d6");
-      let mutedIcon = button.querySelector(".muted-icon-d6");
-
-      // Initially set icon states based on video muted status
-      if (video.muted) {
-        unmutedIcon.style.display = "block";
-        mutedIcon.style.display = "none";
-      } else {
-        unmutedIcon.style.display = "none";
-        mutedIcon.style.display = "block";
-      }
-
-      // Add event listener for click
-      button.addEventListener("click", function () {
-        if (video.muted) {
-          video.muted = false;
-          unmutedIcon.style.display = "none";
-          mutedIcon.style.display = "block";
-        } else {
-          video.muted = true;
-          unmutedIcon.style.display = "block";
-          mutedIcon.style.display = "none";
         }
       });
     });
