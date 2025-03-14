@@ -250,12 +250,20 @@
             "description": "Gorgeous design and incredible shine! My fiancé loves it, and the fit is perfect. Thank you!",
             "author_text": "Sophia Williams"
           }
+        },
+        "image_dqjqtj": {
+          "type": "Image",
+          "settings": {
+            "description": "Elegant, timeless, and beautifully crafted. This ring made my special moment even more memorable!",
+            "author_text": "Amilia Thompson"
+          }
         }
       },
       "block_order": [
         "image_wQqPeb",
         "image_iDKFne",
-        "image_4GjkPJ"
+        "image_4GjkPJ",
+        "image_dqjqtj"
       ],
       "settings": {
         "accent": "Testimonials",
