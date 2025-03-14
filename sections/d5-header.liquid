@@ -9,9 +9,15 @@
     z-index: 999;
     transition: all .4s;
   }
-  .d5-header-main.sticky-d5{
+  .d5-header-main.sticky-d5 {
     position: fixed;
+    top: -100px;
+    width: 100%;
+    transition: top 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  }
+  .d5-header-main.sticky-d5.active {
     top: 0;
+    background: rgba(255, 255, 255, 0.95);
   }
   .d5-header-sticky{
     max-width: 1180px;
