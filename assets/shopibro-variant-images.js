@@ -14,9 +14,11 @@ function showSelectedImagesShopi(swatchValue){
     let finalValue;
     const match = imageAttr.match(/\$(.*?)\$/);
     finalValue = match ? match[1] : imageAttr;
-    console.log(finalValue);
+    console.log("Final value: ", finalValue);
   })
 }
+
+showSelectedImagesShopi();
 
 shopiForm.addEventListener('change', (event)=> {
   if(event.target.checked) {
