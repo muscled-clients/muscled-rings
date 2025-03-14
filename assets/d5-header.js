@@ -1,11 +1,24 @@
- window.addEventListener("scroll", function () {
-        let header = document.querySelector(".d5-header-main");
-        if (window.scrollY >= 100) {
+function stickyD5(){
+    let header = document.querySelector(".d5-header-main");
+    let isSticky = false;
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= 100 && !isSticky) {
             header.classList.add("sticky-d5");
-        } else {
-            header.classList.remove("sticky-d5");
+            setTimeout(() => {
+                header.classList.add("active"); // Delay for smooth transition
+            }, 10);
+            isSticky = true;
+        } else if (window.scrollY < 100 && isSticky) {
+            header.classList.remove("active"); // Remove active first
+            setTimeout(() => {
+                header.classList.remove("sticky-d5");
+            }, 400); // Wait for transition before removing class
+            isSticky = false;
         }
     });
+}
+function stickyD5();
 
 function searchD5() {
     const overlay = document.querySelector('.site-overlay');
