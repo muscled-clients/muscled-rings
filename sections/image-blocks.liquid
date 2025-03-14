@@ -229,24 +229,24 @@
 </section>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const progressBar = document.querySelector(".progress-bar__d11");
-      const section = document.querySelector(".img-w-text-main");
+      const progressBarD5 = document.querySelector(".progress-bar__d11");
+      const sectionD5 = document.querySelector(".img-w-text-main");
 
       function updateProgressBar() {
-          let scrollPosition = section.scrollLeft;
-          let maxScroll = section.scrollWidth - section.clientWidth;
-          let scrollPercentage = (scrollPosition / maxScroll) * 100;
-          progressBar.style.width = scrollPercentage + "%";
+          let scrollPositionD5 = sectionD5.scrollLeft;
+          let maxScrollD5 = sectionD5.scrollWidth - sectionD5.clientWidth;
+          let scrollPercentageD5 = (scrollPositionD5 / maxScrollD5) * 100;
+          progressBarD5.style.width = scrollPercentageD5 + "%";
         console.log('scrollPercentage', scrollPercentage);
         console.log('scrollPosition', scrollPosition);
         console.log('maxScroll', maxScroll);
       }
 
       // Listen for horizontal scroll event
-      section.addEventListener("scroll", ()=>{
+      section.addEventListener("scrollD5", ()=>{
 
        updateProgressBar();
-        console.log('scroll');
+        console.log('scrollD5');
       });
   });
 </script>
