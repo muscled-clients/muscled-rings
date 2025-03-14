@@ -58,5 +58,12 @@ function openDrawerD5() {
         drawer.classList.remove('active');
         overlay.classList.add('site-overlay--hidden');
     });
+  
+    overlay?.addEventListener('click', () => {
+        drawer.classList.remove('active');
+        overlay.classList.add('site-overlay--hidden');
+    });
 }
 openDrawerD5();
+
+
