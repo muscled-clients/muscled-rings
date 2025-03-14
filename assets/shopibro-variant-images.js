@@ -3,6 +3,7 @@ const shopiSwatch = document.querySelectorAll('.swatch__option input');
 const shopiForm = document.querySelector('.d4-product .shopify-product-form');
 
 function showSelectedImagesShopi(swatchValue){
+  console.log(swatchValue);
   shopiThumbnail.forEach(image=> {
     let imageAttr = image.getAttribute('data-title');
 
