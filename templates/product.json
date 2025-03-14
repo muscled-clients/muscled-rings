@@ -234,10 +234,19 @@
             "description": "Absolutely in love with my ring! The quality and elegance are unmatched. Highly recommend!",
             "author_text": "Emma Richardson"
           }
+        },
+        "image_iDKFne": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_1_5b0bd5a0-e0fd-4b81-917d-c78bfce96fac.png",
+            "description": "Stunning ring! The quality is amazing, and the customer service was outstanding. Worth every penny!",
+            "author_text": "Grace Taylor"
+          }
         }
       },
       "block_order": [
-        "image_wQqPeb"
+        "image_wQqPeb",
+        "image_iDKFne"
       ],
       "settings": {
         "accent": "Testimonials",
