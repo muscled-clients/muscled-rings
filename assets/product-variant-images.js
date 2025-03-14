@@ -143,7 +143,7 @@ function ShowProductImages() {
 
       let finalValue;
     const match = thumbAttr.match(/\$(.*?)\$/);
-    finalValue = match ? match[1] : imageAttr;
+    finalValue = match ? match[1] : thumbAttr;
     // Check if selectedValue is purely numeric (still a string like "5")
     const isNumeric = /^[0-9]+$/.test(selectedValue);
 
