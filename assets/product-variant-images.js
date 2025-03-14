@@ -101,7 +101,7 @@ function ShowProductImages() {
         return;
     }
 
-    const selectedValue = selectedSwatch.value;
+    const selectedValue = selectedSwatch.getAttribute('input-d4');
     let hasMatchingImage = false;
     let hasMatchingThumbnail = false;
 
