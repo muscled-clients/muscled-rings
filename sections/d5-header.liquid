@@ -1,8 +1,74 @@
+ {% capture logo %}
+            {% comment %} Logo {% endcomment %}
+            <div class="header__brand is-align-center is-justify-space-between is-flex text-align-center">
+              {% if section.settings.enable_overlay and section.settings.overlay_logo != blank %}
+                {% if template.name == 'index' %}
+                  <h1 class="visually-hidden">{{ shop.name }}</h1>
+                {% endif %}
+                <div class="overlay-logo__content">
+                  <a class="header__logo header__link overlay-logo" href="{{ routes.root_url }}" title="{{ shop.name }}">
+                    {%
+                      render 'image-element',
+                      image: section.settings.overlay_logo,
+                      alt: section.settings.overlay_logo.alt,
+                      additional_classes: 'overlay-logo',
+                      back_to_basics: true,
+                      focal_point: section.settings.overlay_logo.presentation.focal_point,
+                    %}
+                  </a>
+                </div>
+                <div class="logo__content">
+                  {% if section.settings.logo != blank %}
+                    <a class="header__logo header__link primary-logo" href="{{ routes.root_url }}" title="{{ shop.name }}">
+                      {%
+                        render 'image-element',
+                        image: section.settings.logo,
+                        alt: section.settings.logo.alt,
+                        additional_classes: 'primary-logo',
+                        focal_point: section.settings.logo.presentation.focal_point,
+                      %}
+                    </a>
+                  {% endif %}
+                </div>
+              {% elsif section.settings.logo != blank %}
+                {% if template.name == 'index' %}
+                  <h1 class="visually-hidden">{{ shop.name }}</h1>
+                {% endif %}
+                <a class="header__logo header__link primary-logo" href="{{ routes.root_url }}" title="{{ shop.name }}">
+                  {%
+                    render 'image-element',
+                    image: section.settings.logo,
+                    alt: section.settings.logo.alt,
+                    additional_classes: 'primary-logo',
+                    focal_point: section.settings.logo.presentation.focal_point,
+                  %}
+                </a>
+              {% else %}
+                {% if template.name == 'index' %}
+                  <h1 class="header__logo-text">
+                    <a class="header__link primary-brand" href="{{ routes.root_url }}">
+                      {{ shop.name }}
+                    </a>
+                  </h1>
+                {% else %}
+                  <a class="header__logo-text header__link primary-brand" href="{{ routes.root_url }}">
+                    {{ shop.name }}
+                  </a>
+                {% endif %}
+              {% endif %}
+            </div>
+          {% endcapture %}
+
 <div class="d5-header-main">
   <div class="d5-header-sticky">
     <header id="d5-header" class="header-d5">
-         
-nnnsdsvjdjs  </div>
+        <div class="logo-d5">
+          {{ logo }}
+        </div>
+        <nav class="navigation-d5"></nav>
+        <div class="d5-icons"></div>
+    </header>
+  </div>
 </div>
 {% schema %}
   {
