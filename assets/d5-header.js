@@ -1,4 +1,4 @@
-function stickyD5(){ 
+function stickyD5(){
     let header = document.querySelector(".d5-header-main");
     let isSticky = false;
 
