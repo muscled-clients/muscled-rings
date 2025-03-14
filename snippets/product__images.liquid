@@ -65,11 +65,10 @@ enable_product_lightbox: <boolean>
 >
   <div class="product-gallery__main slideshow-transition--{{ slideshow_transition }}" data-product-id="{{ product.id }}" data-media-count="{{ product.media.size }}">
 
-    {% for variant in product.variants %}
-    {% for media in variant.metafields.custom.selected_variant_images.value %}
+    {% for media in product.media %}
+
       {% comment %} Check alt text for video iframe {% endcomment %}
       <div class="product-gallery__image "
-        data-variant-id="{{ variant.id }}" style="display: none;"
             data-product-id="{{ product.id }}"
             d4-img-alt="{{ media.alt }}{% if media.alt == blank %}{{ product.title }}{% endif %}"
             data-title="{% if image_alt contains 'youtube' or image_alt contains 'vimeo' %}{{ product.title }}{% else %}{{ image_alt | escape }}{% endif %}"
@@ -163,7 +162,6 @@ enable_product_lightbox: <boolean>
         {% endcase %}
       </div>
     {% endfor %}
-                    {% endfor %}
   </div>
   {% if display_thumbnails == true %}
     {% if thumbnail_position != 'no-thumbnails' and product.media.size > 1 %}
@@ -175,8 +173,7 @@ enable_product_lightbox: <boolean>
                   container equal-columns--outside-trim
                   is-justify-center
                 {% endif %}">
-        {% for variant in product.variants %}
-    {% for media in variant.metafields.custom.selected_variant_images.value %}
+        {% for media in product.media %}
 
           {% if media.media_type contains 'video' %}
             {% assign thumbnail_badge = 'video-thumbnail' %}
@@ -186,8 +183,8 @@ enable_product_lightbox: <boolean>
             {% assign thumbnail_badge = '' %}
           {% endif %}
 
-          <div data-variant-id="{{ variant.id }}" class="product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %} {% if media.alt contains 'main-image' %}d4-main-image{% endif %}"
-                data-title="{% for variant in product.variants %} {{ variant.metafields.custom.show_variant_image }}{% endfor %}{{ media.alt | escape }}" tabindex="0">
+          <div class="product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %} {% if media.alt contains 'main-image' %}d4-main-image{% endif %}"
+                data-title="{{ media.alt | escape }}" tabindex="0">
             <img src="{{ media | img_url: 'master' }}" alt="">
             {% if thumbnail_badge != blank %}
               {% render 'icon',
@@ -196,7 +193,6 @@ enable_product_lightbox: <boolean>
               %}
             {% endif %}
           </div>
-      {% endfor %}
         {% endfor %}
       </div>
     {% endif %}
