@@ -258,7 +258,7 @@
   });
 </script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".video-social-video-d11__video-block").forEach(videoContainer => {
       let video = videoContainer.querySelector("video");
 
@@ -274,31 +274,31 @@
 
       // Set initial states
       if (video.muted) {
-        unmutedIcon.style.display = "block";
-        mutedIcon.style.display = "none";
+        unmutedIcon.classList.remove("hidden-d6");
+        mutedIcon.classList.add("hidden-d6");
       } else {
-        unmutedIcon.style.display = "none";
-        mutedIcon.style.display = "block";
+        unmutedIcon.classList.add("hidden-d6");
+        mutedIcon.classList.remove("hidden-d6");
       }
 
       if (video.paused) {
-        playIcon.style.display = "block";
-        pauseIcon.style.display = "none";
+        playIcon.classList.remove("hidden-d6");
+        pauseIcon.classList.add("hidden-d6");
       } else {
-        playIcon.style.display = "none";
-        pauseIcon.style.display = "block";
+        playIcon.classList.add("hidden-d6");
+        pauseIcon.classList.remove("hidden-d6");
       }
 
       // Mute/Unmute toggle
       muteButton.addEventListener("click", function () {
         if (video.muted) {
           video.muted = false;
-          unmutedIcon.style.display = "none";
-          mutedIcon.style.display = "block";
+          unmutedIcon.classList.add("hidden-d6");
+          mutedIcon.classList.remove("hidden-d6");
         } else {
           video.muted = true;
-          unmutedIcon.style.display = "block";
-          mutedIcon.style.display = "none";
+          unmutedIcon.classList.remove("hidden-d6");
+          mutedIcon.classList.add("hidden-d6");
         }
       });
 
@@ -306,12 +306,12 @@
       playButton.addEventListener("click", function () {
         if (video.paused) {
           video.play();
-          playIcon.style.display = "none";
-          pauseIcon.style.display = "block";
+          playIcon.classList.add("hidden-d6");
+          pauseIcon.classList.remove("hidden-d6");
         } else {
           video.pause();
-          playIcon.style.display = "block";
-          pauseIcon.style.display = "none";
+          playIcon.classList.remove("hidden-d6");
+          pauseIcon.classList.add("hidden-d6");
         }
       });
     });
