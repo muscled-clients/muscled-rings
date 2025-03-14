@@ -367,6 +367,9 @@
         <input
           class="swatch--{{ value | handle }}"
           type="radio"
+          {% for variant in product.variants %}
+          variant-metafield-attr="{{ variant.metafields.custom.show_variant_image.value }}"
+            {% endfor %}
           aria-label="{{ value | escape }}"
           tabindex="0"
           name="option-{{ option_index }}"
