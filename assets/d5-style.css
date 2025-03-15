@@ -683,4 +683,7 @@
   .main-images-grid-d6{
     padding: 16px !important;
   }
+  .main-images-grid-d6 .main-slider-d5{
+    padding: 0;
+  }
 }
