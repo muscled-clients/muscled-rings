@@ -166,7 +166,7 @@
                         }
   </style>
 
-  <div class="section-d11__video-block">
+  <div class="section-d11__video-block" data-slider-container>
     <div class="section-d11__video-block-settings">
       <div class="video-social-heading-d11__video-block">
         <h2>{{ section.settings.title }}</h2>
@@ -177,7 +177,7 @@
       </div>
 
       <div class="video-social-slider-d11__video-block">
-        <div class="remove-swiper-wrapper">
+        <div class="remove-swiper-wrapper" data-slider-d5>
           {% for block in section.blocks %}
             <div class="video-social-card-d11__video-block">
               <div class="video-social-video-d11__video-block">
@@ -227,40 +227,12 @@
         </div>
       </div>
       <div class="main-scroll-bar-d5">
-        <div class="proscroll-video-bar__d5"></div>
+        <div class="proscroll-video-bar__d5" data-progress-d5></div>
       </div>
     </div>
   </div>
 </div>
 
-<script>
-     document.addEventListener("DOMContentLoaded", function () {
-      const progressBarD5 = document.querySelector(".proscroll-video-bar__d5");
-      const sectionD5 = document.querySelector(".remove-swiper-wrapper");
-
-      function updateProgressBar() {
-          let visibleWidth = sectionD5.clientWidth;
-          let totalWidth = sectionD5.scrollWidth;
-          let initialWidth = (visibleWidth / totalWidth) * 100;
-
-          let scrollPositionD5 = sectionD5.scrollLeft;
-          let maxScrollD5 = totalWidth - visibleWidth;
-          let scrollPercentageD5 = (scrollPositionD5 / maxScrollD5) * (100 - initialWidth) + initialWidth;
-
-          progressBarD5.style.width = scrollPercentageD5 + "%";
-      }
-
-      function setInitialProgressBar() {
-          let visibleWidth = sectionD5.clientWidth;
-          let totalWidth = sectionD5.scrollWidth;
-          let initialWidth = (visibleWidth / totalWidth) * 100;
-          progressBarD5.style.width = initialWidth + "%";
-      }
-
-      setInitialProgressBar();
-      sectionD5.addEventListener("scroll", updateProgressBar);
-  });
-</script>
 <script>
       document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".video-social-video-d11__video-block").forEach(videoContainer => {
