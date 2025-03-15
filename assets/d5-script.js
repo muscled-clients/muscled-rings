@@ -151,6 +151,4 @@ function stepsUpdate() {
   }
 }
 
-// Run the function after script loads
-stepsUpdate();
 
