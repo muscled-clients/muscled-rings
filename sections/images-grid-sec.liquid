@@ -32,11 +32,15 @@
     }
       @media (max-width: 750px){
          .images-grid-d6 {
+           overflow-x: auto;
+           scroll-snap-type: x madatory;
       }
         .image-block-d6{
           width: 75%;
           flex: 0 0 75%;
           line-height: 0;
+          scroll-snap-align: center;
+          
         }
         .image-block-d6 img{
           margin: -1px 0 0 0;
