@@ -134,13 +134,6 @@
         "custom_css": ""
       }
     },
-    "image_blocks_wPTEyn": {
-      "type": "image-blocks",
-      "settings": {
-        "accent": "Testimonials",
-        "heading": "Thousands of reviews from extraordinary people like you"
-      }
-    },
     "d5_image_grid_TT6fEf": {
       "type": "d5-image-grid",
       "settings": {
@@ -149,6 +142,13 @@
         "image_1": "shopify://shop_images/image_1.png",
         "image_2": "shopify://shop_images/image_2.png",
         "bottom_description": "Enjoy quality packaging and free shipping with every order. We also offer hassle-free, 30-day returns - no questions asked! Don't forget we'll be here forever with our lifetime warranty."
+      }
+    },
+    "image_blocks_wPTEyn": {
+      "type": "image-blocks",
+      "settings": {
+        "accent": "Testimonials",
+        "heading": "Thousands of reviews from extraordinary people like you"
       }
     },
     "d5_faqs_meCEw6": {
@@ -185,6 +185,16 @@
         "title": "We're committed to making your entire experience a pleasant one,",
         "rt": "<p>Every item we send comes in our signature Blue Nile packaging. Engagement rings arrive in a deluxe ring box within an elegant presentation box ready for your proposal. </p>",
         "img": "shopify://shop_images/image.png"
+      }
+    },
+    "d11_video_blocks_Vx4pTK": {
+      "type": "d11-video-blocks",
+      "settings": {
+        "sec_bg_color": "#F2F1EA",
+        "title": "Real Customers, Real Stories",
+        "sub_heading": "Thousand of Ring Enthusiasts' Preferred Ring.com",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "recently_viewed_pro_d6_HgeUky": {
@@ -260,6 +270,7 @@
     "d5_image_grid_TT6fEf",
     "image_blocks_wPTEyn",
     "d5_faqs_meCEw6",
+    "d11_video_blocks_Vx4pTK",
     "recently_viewed_pro_d6_HgeUky",
     "images_grid_sec_NX3CBg",
     "newsletter_sec_d6_3NtTwh",
