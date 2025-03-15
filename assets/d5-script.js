@@ -47,9 +47,6 @@ function stepsUpdate() {
   const variantSwatches = document.querySelectorAll(".swatch__option input"); // Swatch buttons
   const imageElement = document.querySelector(".selected-image-d5 img"); // Image element
   const priceElement = document.querySelector(".selected-price-d5 p"); // Price element
-  const skuElement = document.querySelector(".answer-d5 .selected-sku-d5"); // SKU in answer-d5
-
-  // Containers
   const dataContainer = document.querySelector(".update-variant-info-d5"); // Source data container
   const targetContainer = document.querySelector(".answer-d5"); // Target update container
 
@@ -59,18 +56,49 @@ function stepsUpdate() {
   }
 
   function updateVariantInfo(selectedVariantId) {
+    // Ensure product data is available
+    if (!window.productData) {
+      console.error("Product data is missing.");
+      return;
+    }
+
+    // Find the selected variant from productData
+    const selectedVariant = window.productData.variants.find(
+      (variant) => variant.id == selectedVariantId
+    );
+
+    if (selectedVariant) {
+      // Update Image
+      if (selectedVariant.featured_image && imageElement) {
+        imageElement.src = selectedVariant.featured_image.src;
+      }
+
+      // Update Price
+      if (selectedVariant.price && priceElement) {
+        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
+      }
+
+      // Update SKU
+      const skuElement = targetContainer.querySelector(".selected-sku-d5");
+      if (skuElement) {
+        skuElement.textContent = selectedVariant.sku || "N/A";
+      }
+    } else {
+      console.warn("Variant data not found in productData.");
+    }
+
     // Find the correct variant's metafield elements in update-variant-info-d5
     const variantDataElements = dataContainer.querySelectorAll(`[d5-variant="${selectedVariantId}"]`);
 
     if (variantDataElements.length === 0) {
-      console.warn("Variant data not found in update-variant-info-d5.");
+      console.warn("Variant metafield data not found in update-variant-info-d5.");
       return;
     }
 
     // Loop through all the found elements and update corresponding elements in answer-d5
     variantDataElements.forEach((dataElement) => {
       const className = dataElement.className; // Get the class of the element (e.g., selected-metal-d5)
-      const value = dataElement.textContent; // Get the text content
+      const value = dataElement.textContent.trim(); // Get the text content
 
       // Find the corresponding element in answer-d5 and update it
       const targetElement = targetContainer.querySelector(`.${className}`);
@@ -78,14 +106,6 @@ function stepsUpdate() {
         targetElement.textContent = value;
       }
     });
-
-    // Update SKU if exists
-    if (skuElement) {
-      const skuDataElement = dataContainer.querySelector(`[d5-variant="${selectedVariantId}"].selected-sku-d5`);
-      if (skuDataElement) {
-        skuElement.textContent = skuDataElement.textContent;
-      }
-    }
   }
 
   // Handle select dropdown change
