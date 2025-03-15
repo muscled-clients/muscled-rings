@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   faqD5();
   readMoreLess();
+  stepsUpdate();
+   updateVariantInfo(variantSelector.value);
 });
 
 function faqD5(){
@@ -94,9 +96,6 @@ function stepsUpdate() {
       updateVariantInfo(this.value);
     });
 
-    window.addEventListener("DOMContentLoaded", function () {
-      updateVariantInfo(variantSelector.value);
-    });
   }
 
   if (variantSwatches.length) {
