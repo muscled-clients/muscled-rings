@@ -66,7 +66,7 @@ function stepsUpdate() {
         imageElement.src = selectedVariant.featured_image.src;
       }
       if(skuElement){
-        skuElement.textContent = selectedVariant.metafields.custom.supported_diamond_shape.value;
+        skuElement.textContent = selectedVariant.sku;
       }
       // Update Price
       if(priceElement){
