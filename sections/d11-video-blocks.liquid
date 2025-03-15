@@ -2,6 +2,7 @@
 <script src="{{ 'ss-media-v1.js' | asset_url }}" defer="defer"></script>
 <div id="shopify-section-d11__video-block" class="shopify-section">
   <style>
+
                         .section-d11__video-block {
                           padding: 60px 40px;
                           background-color: {{ section.settings.sec_bg_color }};
@@ -28,36 +29,46 @@
                           margin: 12px 0 0;
                         }
 
-                        .video-social-slider-d11__video-block {
-                          margin-top: 40px;
-                        }
 
-                        .remove-swiper-wrapper {
-                          display: flex;
-                          gap: 20px;
-                          scroll-behavior: smooth;
-                        }
+.video-social-slider-d11__video-block {
+  margin-top: 40px;
+}
 
-                        .video-social-card-d11__video-block {
-                          flex: 0 0 calc(25% - 15px);
-                          background: transparent;
-                          border-radius: 8px;
-                          height: 550px;
-                        }
+.remove-swiper-wrapper {
+  display: flex;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
 
-                        .video-social-video-d11__video-block {
-                          position: relative;
-                          border-radius: 0;
-                          border: none;
-                          height: 100%;
-                        }
+.video-social-card-d11__video-block {
+  flex: 0 0 calc(25% - 15px);
+  background: transparent;
+  border-radius: 8px;
+  height: 550px;
+}
 
-                        .video-social-video-d11__video-block video {
-                          width: 100%;
-                          height: 100%;
-                          object-fit: cover;
-                          border-radius: 8px;
-                        }
+.video-social-video-d11__video-block {
+  position: relative;
+  border-radius: 0;
+  border: none;
+  height: 100%;
+}
+
+.video-social-video-d11__video-block video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.d11__video-auth-wrap {
+  position: absolute;
+  bottom: 10%;
+  left: 33%;
+  z-index: 1;
+  text-align: center;
+}
+
 
                         .d11__video-auth-wrap {
                           position: absolute;
@@ -68,67 +79,81 @@
                           text-align: center;
                         }
 
-                        .video_auth-name {
-                          color: #FFF;
-                          font-family: Poppins;
-                          font-size: 16px;
-                          font-weight: 400;
-                          margin: 0;
-                        }
 
-                        .video_auth-desig {
-                          color: #C7C7C7;
-                          font-family: Poppins;
-                          font-size: 14px;
-                          font-weight: 400;
-                          margin: 0;
-                        }
+.video_auth-desig {
+  color: #c7c7c7;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
 
-                        .proscroll-video-bar__d11 {
-                          height: 3px;
-                          width: 100%;
-                          background-color: #EDEDED;
-                          margin-top: 10px;
-                        }
+.proscroll-video-bar__d11 {
+  height: 3px;
+  width: 100%;
+  background-color: #ededed;
+  margin-top: 10px;
+}
 
-                        .proscroll-video-bar__d11::-webkit-progress-value {
-                          background-color: #2D1B38;
-                        }
-                        .muted-btn-d6 {
-                        width: 36px;
-                        height: 36px;
-                        position: absolute;
-                        top: 20px;
-                        right: 20px;
-                        cursor: pointer;
-                    }
-                        .muted-btn-d6 img{
-                          width: 100%;
-                          height: 100%;
-                          object-fit: cover;
-                        }
-            img.play-icon-d6,
-            img.pause-icon-d6{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .play-pause-btn-d6 {
-        width: 60px;
-        height: 60px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .hidden-d6{
-      display: none;
-    }
-    .video-social-card-d11__video-block:hover .hidden-d6 + .pause-icon-d6{
-       display: block !important;
-       cursor: pointer;
-    }
+.proscroll-video-bar__d11::-webkit-progress-value {
+  background-color: #2d1b38;
+}
+.muted-btn-d6 {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.muted-btn-d6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img.play-icon-d6,
+img.pause-icon-d6 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.play-pause-btn-d6 {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hidden-d6 {
+  display: none;
+}
+.video-social-card-d11__video-block:hover .hidden-d6 + .pause-icon-d6 {
+  display: block !important;
+  cursor: pointer;
+}
 
+@media (max-width: 798px) {
+  .video-social-slider-d11__video-block {
+    position: relative;
+  }
+  .video-social-slider-d11__video-block .d5-arrows {
+    padding: 0 20px;
+    z-index: 333;
+  }
+  .remove-swiper-wrapper {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 4px;
+  }
+  .video-social-card-d11__video-block {
+    flex: 0 0 74%;
+    max-width: 320px;
+    scroll-snap-align: center;
+    height: 430px;
+  }
+
+<<<<<
                         @media (max-width: 798px) {
                           .video-social-slider-d11__video-block{
                             position: relative;
@@ -170,6 +195,7 @@
                 margin: 0 20px 0 0;
             }
                         }
+
   </style>
 
   <div class="section-d11__video-block" data-slider-container>
@@ -199,7 +225,7 @@
         </div>
         <div class="remove-swiper-wrapper" data-slider-d5>
           {% for block in section.blocks %}
-            <div class="video-social-card-d11__video-block">
+            <div class="video-social-card-d11__video-block" data-slide-d5>
               <div class="video-social-video-d11__video-block">
                 {% render 'ss-media-v1',
                   video: block.settings.video,
@@ -247,7 +273,9 @@
         </div>
       </div>
       <div class="main-scroll-bar-d5">
-        <div class="proscroll-video-bar__d5" data-progress-d5></div>
+        <div class="progressbar-con-d5">
+        <div class="proscroll-video-bar__d5 d5-progress-bar-inner" data-progress-d5></div>
+          </div>
       </div>
     </div>
   </div>
