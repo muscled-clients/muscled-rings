@@ -134,6 +134,13 @@
         "custom_css": ""
       }
     },
+    "image_blocks_wPTEyn": {
+      "type": "image-blocks",
+      "settings": {
+        "accent": "Testimonials",
+        "heading": "Thousands of reviews from extraordinary people like you"
+      }
+    },
     "d5_image_grid_TT6fEf": {
       "type": "d5-image-grid",
       "settings": {
@@ -251,6 +258,7 @@
     "sidebar",
     "main",
     "d5_image_grid_TT6fEf",
+    "image_blocks_wPTEyn",
     "d5_faqs_meCEw6",
     "recently_viewed_pro_d6_HgeUky",
     "images_grid_sec_NX3CBg",
