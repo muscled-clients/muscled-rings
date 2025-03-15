@@ -93,6 +93,12 @@ function stepsUpdate() {
     variantSelector.addEventListener("change", function () {
       updateVariantInfo(this.value);
     });
+
+    // **Fix: On Page Load, Set the Default Variant**
+    window.addEventListener("DOMContentLoaded", function () {
+      const defaultVariantId = variantSelector.value;
+      updateVariantInfo(defaultVariantId);
+    });
   }
 
   // Handle swatch buttons change
@@ -111,4 +117,7 @@ function stepsUpdate() {
     });
   }
 }
+
+// Run the function after script loads
+stepsUpdate();
 
