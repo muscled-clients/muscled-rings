@@ -411,6 +411,9 @@
 .atc_button_overlay{
   display: none !important;  
 }
+.info-item-d5:nth-child(odd){
+  background: #FBFBFB;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
