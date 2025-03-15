@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   faqD5();
   readMoreLess();
   stepsUpdate();
-   updateVariantInfo(variantSelector.value);
+  setTimout(() => {
+  updateVariantInfo(variantSelector.value);
+  }, 1000)
 });
 
 function faqD5(){
