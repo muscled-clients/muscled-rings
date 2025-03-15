@@ -23,6 +23,14 @@
 {% endcomment %}
 
 {% comment %} HTML markup {% endcomment %}
+
+{% if template.name contains 'product' %}
+  <style>
+    .shopify-section{
+      background: #fff;
+    }
+  </style>
+{% endif %}
 <div class="update-variant-info-d5" hidden>
   {% for variant in product.variants %}
     {% assign d5_meta = variant.metafields.custom %}
