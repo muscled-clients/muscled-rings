@@ -227,36 +227,7 @@
     </div>
   </div>
 </section>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const mainContainerD5 = document.querySelector('[data-slider-container]');
-    const progressBarD5 = document.querySelector("[data-progress-d5]");
-    const sectionD5 = document.querySelector("[data-slider-d5]");
-
-    function updateProgressBar() {
-        let visibleWidth = sectionD5.clientWidth;
-        let totalWidth = sectionD5.scrollWidth;
-        let initialWidth = (visibleWidth / totalWidth) * 100;
-        
-        let scrollPositionD5 = sectionD5.scrollLeft;
-        let maxScrollD5 = totalWidth - visibleWidth;
-        let scrollPercentageD5 = (scrollPositionD5 / maxScrollD5) * (100 - initialWidth) + initialWidth;
-        
-        progressBarD5.style.width = scrollPercentageD5 + "%";
-    }
-
-    function setInitialProgressBar() {
-        let visibleWidth = sectionD5.clientWidth;
-        let totalWidth = sectionD5.scrollWidth;
-        let initialWidth = (visibleWidth / totalWidth) * 100;
-        progressBarD5.style.width = initialWidth + "%";
-    }
-
-    setInitialProgressBar();
-    sectionD5.addEventListener("scroll", updateProgressBar);
-});
-
-</script>
+<script src="{{ 'd5-slider.js' | asset_url }}" defer="defer"></script>
 {% schema %}
 {
   "name": "Image With Text",
