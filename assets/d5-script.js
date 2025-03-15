@@ -96,7 +96,7 @@ function stepsUpdate() {
     });
 
   }
-    setTimout(() => {
+    setTimeout(() => {
   updateVariantInfo(variantSelector.value);
   }, 1000);
   if (variantSwatches.length) {
