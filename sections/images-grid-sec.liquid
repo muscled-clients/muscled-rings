@@ -110,21 +110,23 @@
           </svg>
         </div>
       </div>
-    <div class="images-grid-d6" data-slider-d5>
-      {% for block in section.blocks %}
-        {% if block.settings['block-img'] %}
-          <div class="image-block-d6" data-slide-d5>
-            <img src="{{ block.settings.block-img | image_url: width: 800 }}" width="300%" height="300">
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+      <div class="images-grid-d6" data-slider-d5>
+        {% for block in section.blocks %}
+          {% if block.settings['block-img'] %}
+            <div class="image-block-d6" data-slide-d5>
+              <img src="{{ block.settings.block-img | image_url: width: 800 }}" width="300%" height="300">
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-      <div class="progressbar-d5">
+    </div> <!-- Corrected Closing Tag for .main-slider-d5 -->
+    
+    <div class="progressbar-d5">
       <div class="proscroll-video-bar__d5" data-progress-d5></div>
-      </div>
+    </div>
   </div>
 </section>
+
 {% schema %}
 {
   "name": "Images Grid",
