@@ -680,4 +680,7 @@
   .d5-footer svg path {
     fill: #1b1b1b;
   }
+  .main-images-grid-d6{
+    padding: 16px;
+  }
 }
