@@ -429,7 +429,8 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-bottom: 16px;
+  top: -32px;
+  position: absolute;
 }
 .backtog-d5 span{
   color: #1B1B1B;
