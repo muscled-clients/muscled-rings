@@ -242,10 +242,52 @@
             "auth": "Amelia Thompson",
             "desig": "Brand Consultant"
           }
+        },
+        "text_HbqhYC": {
+          "type": "text",
+          "settings": {
+            "video": "shopify://files/videos/Rings UGC - 4K (2).mov",
+            "autoplay": false,
+            "controls": false,
+            "muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977_045ac376-a2a3-4b0e-9304-3ca435a8cf04.png",
+            "auth": "Isabella Carter",
+            "desig": "Wedding Planner"
+          }
+        },
+        "text_6mjTPP": {
+          "type": "text",
+          "settings": {
+            "video": "shopify://files/videos/Rings.com UGC (1).mov",
+            "autoplay": false,
+            "controls": false,
+            "muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977.png",
+            "auth": "Amelia Thompson",
+            "desig": "Brand Consultant"
+          }
+        },
+        "text_GhaXJ6": {
+          "type": "text",
+          "settings": {
+            "video": "shopify://files/videos/Rings.com UGC (1).mov",
+            "autoplay": false,
+            "controls": false,
+            "muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977.png",
+            "auth": "Amelia Thompson",
+            "desig": "Brand Consultant"
+          }
         }
       },
       "block_order": [
-        "text_wTkJaq"
+        "text_wTkJaq",
+        "text_HbqhYC",
+        "text_6mjTPP",
+        "text_GhaXJ6"
       ],
       "settings": {
         "sec_bg_color": "#F2F1EA",
