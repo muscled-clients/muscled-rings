@@ -411,8 +411,9 @@
           "settings": {
             "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
             "reviewer-name": "Kaylyn",
-            "rating": 4,
-            "star_size": 15,
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12.png",
             "gap": 1,
             "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
             "products": "3-piece-fuzzy-fleece-loungewear-set",
