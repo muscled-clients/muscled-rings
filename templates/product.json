@@ -392,7 +392,7 @@
         "text_GhaXJ6"
       ],
       "settings": {
-        "sec_bg_color": "#f2f1ea",
+        "sec_bg_color": "#fbfbfb",
         "title": "Real Customers, Real Stories",
         "sub_heading": "Thousand of Ring Enthusiasts' Preferred Ring.com",
         "padding_top": 36,
@@ -437,7 +437,10 @@
         "text_nXYKiM",
         "text_DHFWx6"
       ],
-      "settings": {}
+      "settings": {
+        "heading": "As Seen On",
+        "subheading": "#Rings"
+      }
     },
     "newsletter_sec_d6_3NtTwh": {
       "type": "newsletter-sec-d6",
