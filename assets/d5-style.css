@@ -414,6 +414,9 @@
 .info-item-d5:nth-child(odd){
   background: #FBFBFB;
 }
+.info-item-d5{
+  padding-inline: 12px;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
