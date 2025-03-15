@@ -56,11 +56,12 @@ function stepsUpdate() {
   }
 
   function updateVariantInfo(selectedVariantId) {
-    // Ensure product data is available
     if (!window.productData) {
       console.error("Product data is missing.");
       return;
     }
+
+    console.log(`Updating variant: ${selectedVariantId}`);
 
     // Find the selected variant from productData
     const selectedVariant = window.productData.variants.find(
@@ -68,23 +69,33 @@ function stepsUpdate() {
     );
 
     if (selectedVariant) {
+      console.log("Variant found:", selectedVariant);
+
       // Update Image
       if (selectedVariant.featured_image && imageElement) {
         imageElement.src = selectedVariant.featured_image.src;
+        console.log("Updated Image:", selectedVariant.featured_image.src);
+      } else {
+        console.warn("Image not found for this variant.");
       }
 
       // Update Price
-      if (selectedVariant.price && priceElement) {
+      if (typeof selectedVariant.price === "number" && priceElement) {
         priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
+        console.log("Updated Price:", priceElement.textContent);
+      } else {
+        console.warn("Price not found or invalid.");
       }
 
       // Update SKU
       const skuElement = targetContainer.querySelector(".selected-sku-d5");
       if (skuElement) {
         skuElement.textContent = selectedVariant.sku || "N/A";
+        console.log("Updated SKU:", skuElement.textContent);
       }
     } else {
       console.warn("Variant data not found in productData.");
+      return;
     }
 
     // Find the correct variant's metafield elements in update-variant-info-d5
@@ -104,6 +115,7 @@ function stepsUpdate() {
       const targetElement = targetContainer.querySelector(`.${className}`);
       if (targetElement) {
         targetElement.textContent = value;
+        console.log(`Updated ${className}:`, value);
       }
     });
   }
@@ -117,6 +129,7 @@ function stepsUpdate() {
     // **Fix: On Page Load, Set the Default Variant**
     window.addEventListener("DOMContentLoaded", function () {
       const defaultVariantId = variantSelector.value;
+      console.log("Default variant on page load:", defaultVariantId);
       updateVariantInfo(defaultVariantId);
     });
   }
