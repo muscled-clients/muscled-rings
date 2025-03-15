@@ -134,6 +134,45 @@
         "custom_css": ""
       }
     },
+    "icons_text_d6_QpchbD": {
+      "type": "icons-text-d6",
+      "blocks": {
+        "text_LTyhYR": {
+          "type": "text",
+          "settings": {
+            "block-icon": "shopify://shop_images/Group_1000006056_1.png",
+            "text-align": "center",
+            "block-title": "Craftsmanship",
+            "block-title-color": "#000",
+            "block-title-font": 20,
+            "block-title-font-mobl": 18,
+            "block-content": "Every ring is meticulously handcrafted by skilled artisans, ensuring precision, elegance, and lasting beauty.",
+            "content-color": "#000",
+            "content-font": 18,
+            "content-font-mobl": 16,
+            "icon-color": "#F3F1F0",
+            "icon-center": true,
+            "icon-border": 0,
+            "border-color": "#000",
+            "icon-radius": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_LTyhYR"
+      ],
+      "settings": {
+        "sec-title": "",
+        "title-color": "#000",
+        "title-font": 56,
+        "heading-align": "left",
+        "show-image": true,
+        "title-font-mobl": 32,
+        "sec-color": "#fff",
+        "features-id": "",
+        "icon_size": 72
+      }
+    },
     "d5_image_grid_TT6fEf": {
       "type": "d5-image-grid",
       "settings": {
@@ -367,6 +406,7 @@
     "breadcrumbs",
     "sidebar",
     "main",
+    "icons_text_d6_QpchbD",
     "d5_image_grid_TT6fEf",
     "image_blocks_wPTEyn",
     "d5_faqs_meCEw6",
