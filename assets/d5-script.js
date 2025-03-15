@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   faqD5();
   readMoreLess();
+  setTimeout(() => {
   stepsUpdate();
+  }, 1000)
 });
 
 function faqD5(){
@@ -116,5 +118,3 @@ function stepsUpdate() {
   }
 }
 
-
-stepsUpdate();
