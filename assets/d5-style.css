@@ -481,14 +481,14 @@
     width: 20px;
     height: 20px;
   }
-  .svg-bg-d5 svg path {
+  /* .svg-bg-d5 svg path {
     stroke: #f2f1ea;
     fill: #f2f1ea;
   }
   .step-1-d5 .svg-bg-d5 svg path {
     stroke: #8b5e9a;
     fill: #8b5e9a;
-  }
+  } */
   .step-1-d5 * {
     color: #fff !important;
   }
