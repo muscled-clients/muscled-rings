@@ -27,34 +27,27 @@
   {% for variant in product.variants %}
     {% assign d5_meta = variant.metafields.custom %}
     {% if d5_meta.setting_style.value != blank %}
-      <div class="info-item-d5">
-        <p>Setting Style</p>
-        <p class="selected-settings-d5">{{ d5_meta.setting_style.value }}</p>
-      </div>
+        <p class="selected-settings-d5" d5-variant="{{ variant.id }}">{{ d5_meta.setting_style.value }}</p>
     {% endif %}
     {% if d5_meta.sizes_available.value != blank %}
-      <div class="info-item-d5">
-        <p>Sizes Available</p>
-        <p class="selected-sizes-d5">{{ d5_meta.sizes_available.value }}</p>
-      </div>
+
+        <p class="selected-sizes-d5" d5-variant="{{ variant.id }}">{{ d5_meta.sizes_available.value }}</p>
+
     {% endif %}
     {% if d5_meta.center_stone_carat_weight.value != blank %}
-      <div class="info-item-d5">
-        <p>Center Stone Carat Weight</p>
-        <p class="selected-stone-d5">{{ d5_meta.center_stone_carat_weight.value }}</p>
-      </div>
+   
+        <p class="selected-stone-d5" d5-variant="{{ variant.id }}">{{ d5_meta.center_stone_carat_weight.value }}</p>
+
     {% endif %}
     {% if d5_meta.metal.value != blank %}
-      <div class="info-item-d5">
-        <p>Metal</p>
-        <p class="selected-metal-d5">{{ d5_meta.metal.value }}</p>
-      </div>
+  
+        <p class="selected-metal-d5" d5-variant="{{ variant.id }}">{{ d5_meta.metal.value }}</p>
+
     {% endif %}
     {% if d5_meta.supported_diamond_shape.value != blank %}
-      <div class="info-item-d5">
-        <p>Supported Diamond Shape</p>
-        <p class="selected-shape-d5">{{ d5_meta.supported_diamond_shape.value }}</p>
-      </div>
+
+        <p class="selected-shape-d5" d5-variant="{{ variant.id }}">{{ d5_meta.supported_diamond_shape.value }}</p>
+
     {% endif %}
   {% endfor %}
 </div>
