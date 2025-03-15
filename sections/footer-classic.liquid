@@ -100,7 +100,7 @@
 {% endstyle %}
 
 {% comment %} HTML markup {% endcomment %}
-<footer class="footer__container {{ css_class }}">
+<footer class="footer__container d5-footer {{ css_class }}">
   <section class="footer__content
                   section
                   is-width-wide
@@ -137,6 +137,10 @@
                   {% render 'social-icons' %}
                 </div>
               {% endif %}
+              <div class="cta_icon-container-d5">
+                <div class="cta_item-d5">{{ block.settings.ct_1 }}</div>
+                <div class="cta_item-d5">{{ block.settings.ct_2 }}</div>
+              </div>
             </div>
 
           {% elsif block.type == 'html' %}
@@ -200,6 +204,16 @@
       {% endfor %}
     </div>
   </section>
+  <div class="footer-end-content-d5">
+    <div class="fec-row-d5">
+      <div class="social-icons-d5">
+         {% render 'social-icons' %}
+      </div>
+      <div class="curency-selector-d5">
+        {{ footer_right_column }}
+      </div>
+    </div>
+  </div>
   <section class="footer__extra-content section">
     <div
       class="
@@ -396,6 +410,16 @@
             "id": "social_icons_footer",
             "label": "Show social media icons",
             "default": false
+          },
+          {
+            "type": "liquid",
+            "id": "ct_1",
+            "label": "Contact 1"
+          },
+           {
+            "type": "liquid",
+            "id": "ct_2",
+            "label": "Contact 2"
           }
         ]
       },

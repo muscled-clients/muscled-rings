@@ -1,0 +1,271 @@
+<style>
+  .d5-header-main{
+    width: 100%;
+    position: relative;
+    padding: 0 40px;
+    border-bottom: 0.5px solid rgba(74, 74, 74, 0.30);
+    background: #FFF;
+    height: 96px;
+    z-index: 999;
+  }
+  .d5-header-main.sticky-d5 {
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    transition: top 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  }
+  .d5-header-main.sticky-d5.active {
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  .d5-header-sticky{
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  #d5-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .navigation-d5 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+  .navigation-d5 ul li a{
+    color: #1B1B1B;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  #d5-header .header__logo img{
+    height: 24px;
+  }
+  #d5-header .header__brand{
+    padding: 0;
+  }
+  #d5-header .icon-caption{
+    display: none;
+  }
+  #d5-header .header__icons{
+    gap: 18px;
+  }
+  .close-icon-d5, .menu-icon-d5{
+    display: none;
+    cursor: pointer;
+  }
+  #d5-header .action-area__link{
+    padding: 0;
+  }
+  .d5-overlay{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #000c;
+  }
+  .d5-overlay.active{
+    display: block;
+  }
+  @media (max-width: 1170px){
+    .navigation-d5{
+      position: fixed;
+      top: 0;
+      max-width: 450px;
+      width: 90%;
+      left: -500px;
+      background: #fff;
+      height: 100vh;
+      box-shadow: 0px 2px 6px 1px #00000030;
+      transition: all .4s;
+      visibility: hidden;
+    }
+    .navigation-d5.active{
+      visibility: visible;
+      left: 0;
+    }
+    .navigation-d5 ul{
+      flex-direction: column;
+      padding: 60px 30px 20px;
+      overflow-y: auto;
+      gap: 0;
+    }
+    .navigation-d5 ul::-webkit-scrollbar{
+      display: none;
+    }
+    .nav-item-d5{
+      width: 100%;
+      border-bottom: 0.5px solid rgba(74, 74, 74, 0.30);
+    }
+    .nav-item-d5 a{
+      display: block;
+      width: 100%;
+      padding: 13px 0;
+    }
+    .close-icon-d5{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      display: flex;
+    }
+    .menu-icon-d5{
+      display: flex;
+      align-items: center;
+    }
+    .logo-d5{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    } 
+  }
+  @media(max-width: 798px){
+   .logo-d5{
+     gap: 12px;
+    }
+    .d5-header-main{
+      height: 56px;
+      padding: 0 20px;
+    }
+    #d5-header .header__icons{
+      gap: 16px;
+    }
+    #d5-header .action-area__link svg{
+      max-width: 16px;
+      max-height: 16px;
+    }
+    #d5-header .header__logo img{
+      height: 14.3px;
+    }
+  }
+</style>
+<div class="d5-overlay"></div>
+{% capture logo %}
+            {% comment %} Logo {% endcomment %}
+            <div class="header__brand is-align-center is-justify-space-between is-flex text-align-center">
+              {% if section.settings.enable_overlay and section.settings.overlay_logo != blank %}
+                {% if template.name == 'index' %}
+                  <h1 class="visually-hidden">{{ shop.name }}</h1>
+                {% endif %}
+                <div class="overlay-logo__content">
+                  <a class="header__logo header__link overlay-logo" href="{{ routes.root_url }}" title="{{ shop.name }}">
+                    {%
+                      render 'image-element',
+                      image: section.settings.overlay_logo,
+                      alt: section.settings.overlay_logo.alt,
+                      additional_classes: 'overlay-logo',
+                      back_to_basics: true,
+                      focal_point: section.settings.overlay_logo.presentation.focal_point,
+                    %}
+                  </a>
+                </div>
+                <div class="logo__content">
+                  {% if section.settings.logo != blank %}
+                    <a class="header__logo header__link primary-logo" href="{{ routes.root_url }}" title="{{ shop.name }}">
+                      {%
+                        render 'image-element',
+                        image: section.settings.logo,
+                        alt: section.settings.logo.alt,
+                        additional_classes: 'primary-logo',
+                        focal_point: section.settings.logo.presentation.focal_point,
+                      %}
+                    </a>
+                  {% endif %}
+                </div>
+              {% elsif section.settings.logo != blank %}
+                {% if template.name == 'index' %}
+                  <h1 class="visually-hidden">{{ shop.name }}</h1>
+                {% endif %}
+                <a class="header__logo header__link primary-logo" href="{{ routes.root_url }}" title="{{ shop.name }}">
+                  {%
+                    render 'image-element',
+                    image: section.settings.logo,
+                    alt: section.settings.logo.alt,
+                    additional_classes: 'primary-logo',
+                    focal_point: section.settings.logo.presentation.focal_point,
+                  %}
+                </a>
+              {% else %}
+                {% if template.name == 'index' %}
+                  <h1 class="header__logo-text">
+                    <a class="header__link primary-brand" href="{{ routes.root_url }}">
+                      {{ shop.name }}
+                    </a>
+                  </h1>
+                {% else %}
+                  <a class="header__logo-text header__link primary-brand" href="{{ routes.root_url }}">
+                    {{ shop.name }}
+                  </a>
+                {% endif %}
+              {% endif %}
+            </div> 
+          {% endcapture %}
+
+<div class="d5-header-main">
+  <div class="d5-header-sticky">
+    <header id="d5-header" class="header-d5">
+      <div class="logo-d5">
+        <div class="menu-icon-d5">
+          {% render 'ham-icon' %}
+        </div>
+        {{ logo }}
+      </div>
+      
+      <nav class="navigation-d5">
+        <div class="close-icon-d5">
+          {% render 'icon', name: 'x' %}
+        </div>
+        {% assign links = section.settings.link_list %}
+        <ul class="nav-links-list-d5">
+          {% for link in links.links %}
+          <li class="nav-item-d5">
+            <a class="nav-link-d5" href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="d5-icons">
+         {%
+          render 'header__action-icons',
+          display_search: true,
+          header_icon_class: 'd5-header-icons',
+        %}
+      </div>
+    </header>
+  </div>
+  {% if settings.search_display_style == 'overlay' %}
+    {% render 'search-overlay' %}
+  {% endif %}
+</div>
+<script src="{{ 'd5-header.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+{
+  "name": "D5 Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "link_list",
+      "label": "Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header D5"
+    }
+  ]
+}
+{% endschema %}

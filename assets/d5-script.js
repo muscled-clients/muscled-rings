@@ -69,7 +69,9 @@ function stepsUpdate() {
         skuElement.textContent = selectedVariant.sku;
       }
       // Update Price
+      if(priceElement){
       priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
+      }
     } else {
       console.warn("Variant not found in product data.");
     }

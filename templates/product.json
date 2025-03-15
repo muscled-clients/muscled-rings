@@ -64,6 +64,17 @@
             "atc_color": "#ee5340"
           }
         },
+        "trusts_fyXekW": {
+          "type": "trusts",
+          "settings": {
+            "img_1": "shopify://shop_images/Group_2.svg",
+            "text_1": "Free 30 day returns  & 90 day resizing",
+            "img_2": "shopify://shop_images/Group_1000006059.svg",
+            "text_2": "Guaranteed for life",
+            "img_3": "shopify://shop_images/Vector_7.svg",
+            "text_3": "Authenticity inspection"
+          }
+        },
         "d5_faq_x8xJA6": {
           "type": "d5_faq",
           "settings": {
@@ -95,6 +106,7 @@
         "price",
         "description",
         "form",
+        "trusts_fyXekW",
         "d5_faq_x8xJA6",
         "d5_faq_xDy8XD",
         "d5_faq_Kb6B7L"
@@ -117,228 +129,61 @@
         "padding_bottom": 20,
         "animation": "none",
         "atc_label": "",
-        "top-t": false,
+
+        "top-t": true,
+
         "css_class": "",
         "custom_css": ""
       }
     },
-    "icons_text_d6_4z6yh3": {
-      "type": "icons-text-d6",
+
+    "d5_faqs_meCEw6": {
+      "type": "d5-faqs",
       "blocks": {
-        "text_kzNDeP": {
-          "type": "text",
+        "faqs_Kq7N7C": {
+          "type": "faqs",
           "settings": {
-            "block-icon": "shopify://shop_images/Group_1000006056.png",
-            "text-align": "center",
-            "block-title": "Craftsmanship",
-            "block-title-color": "#000000",
-            "block-title-font": 24,
-            "block-title-font-mobl": 20,
-            "block-content": "Every ring is meticulously handcrafted by skilled artisans, ensuring precision, elegance, and lasting beauty.",
-            "content-color": "#000000",
-            "content-font": 14,
-            "content-font-mobl": 14,
-            "icon-color": "rgba(0,0,0,0)",
-            "icon-center": true,
-            "icon-border": 0,
-            "border-color": "#000000",
-            "icon-radius": 0
+            "quest": "Discreet Packaging",
+            "ans": "<p>Demure and sparkling, this diamond engagement ring features round diamonds pavé-set in 18k yellow gold to complement your choice of diamond.</p>"
           }
         },
-        "text_CJ36BG": {
-          "type": "text",
+        "faqs_mzb6rx": {
+          "type": "faqs",
           "settings": {
-            "block-icon": "shopify://shop_images/Group_39554.png",
-            "text-align": "center",
-            "block-title": "Ethical Sourcing",
-            "block-title-color": "#000000",
-            "block-title-font": 24,
-            "block-title-font-mobl": 20,
-            "block-content": "Our diamonds and gemstones are ethically sourced, conflict-free, and meet the highest industry standards.",
-            "content-color": "#000000",
-            "content-font": 14,
-            "content-font-mobl": 14,
-            "icon-color": "rgba(0,0,0,0)",
-            "icon-center": true,
-            "icon-border": 0,
-            "border-color": "#000000",
-            "icon-radius": 0
+            "quest": "Secure and Convenient Pickup Option",
+            "ans": "<p>Some Text Here ......</p>"
           }
         },
-        "text_rLX9kk": {
-          "type": "text",
+        "faqs_XJJ7hT": {
+          "type": "faqs",
           "settings": {
-            "block-icon": "shopify://shop_images/Group_39555.png",
-            "text-align": "center",
-            "block-title": "Customization",
-            "block-title-color": "#000000",
-            "block-title-font": 24,
-            "block-title-font-mobl": 20,
-            "block-content": "Create a ring as unique as your love. Personalize every detail to reflect your story and style.",
-            "content-color": "#000000",
-            "content-font": 14,
-            "content-font-mobl": 14,
-            "icon-color": "rgba(0,0,0,0)",
-            "icon-center": true,
-            "icon-border": 0,
-            "border-color": "#000000",
-            "icon-radius": 0
-          }
-        },
-        "text_UywEBq": {
-          "type": "text",
-          "settings": {
-            "block-icon": "shopify://shop_images/Group_1000006058.png",
-            "text-align": "center",
-            "block-title": "Lifetime Guarantee",
-            "block-title-color": "#000000",
-            "block-title-font": 24,
-            "block-title-font-mobl": 20,
-            "block-content": "Our commitment goes beyond the purchase. Enjoy lifetime warranty and free maintenance on all rings.",
-            "content-color": "#000000",
-            "content-font": 14,
-            "content-font-mobl": 14,
-            "icon-color": "rgba(0,0,0,0)",
-            "icon-center": true,
-            "icon-border": 0,
-            "border-color": "#000000",
-            "icon-radius": 0
+            "quest": "Free Shipping",
+            "ans": "<p>SOME Texts Here .....</p>"
+
           }
         }
       },
       "block_order": [
-        "text_kzNDeP",
-        "text_CJ36BG",
-        "text_rLX9kk",
-        "text_UywEBq"
+
+        "faqs_Kq7N7C",
+        "faqs_mzb6rx",
+        "faqs_XJJ7hT"
       ],
       "settings": {
-        "sec-title": "",
-        "title-color": "#000000",
-        "title-font": 56,
-        "heading-align": "left",
-        "show-image": false,
-        "title-font-mobl": 32,
-        "sec-color": "#ffffff",
-        "features-id": "",
-        "icon_size": 72
+        "title": "We're committed to making your entire experience a pleasant one,",
+        "rt": "<p>Every item we send comes in our signature Blue Nile packaging. Engagement rings arrive in a deluxe ring box within an elegant presentation box ready for your proposal. </p>",
+        "img": "shopify://shop_images/image.png"
       }
     },
-    "image_blocks_kVtxTd": {
-      "type": "image-blocks",
-      "blocks": {
-        "image_wQqPeb": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/image_44467981-4c13-4777-ba82-e63a2a5eb1e9.png",
-            "description": "Absolutely in love with my ring! The quality and elegance are unmatched. Highly recommend!",
-            "author_text": "Emma Richardson"
-          }
-        },
-        "image_iDKFne": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/image_1_5b0bd5a0-e0fd-4b81-917d-c78bfce96fac.png",
-            "description": "Stunning ring! The quality is amazing, and the customer service was outstanding. Worth every penny!",
-            "author_text": "Grace Taylor"
-          }
-        },
-        "image_4GjkPJ": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/image_2_53568c70-a333-483e-9c1f-9f78cabcc4b0.png",
-            "description": "Gorgeous design and incredible shine! My fiancé loves it, and the fit is perfect. Thank you!",
-            "author_text": "Sophia Williams"
-          }
-        },
-        "image_dqjqtj": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/image_3.png",
-            "description": "Elegant, timeless, and beautifully crafted. This ring made my special moment even more memorable!",
-            "author_text": "Amilia Thompson"
-          }
-        }
-      },
-      "block_order": [
-        "image_wQqPeb",
-        "image_iDKFne",
-        "image_4GjkPJ",
-        "image_dqjqtj"
-      ],
+    "d5_image_grid_TT6fEf": {
+      "type": "d5-image-grid",
       "settings": {
-        "accent": "Testimonials",
-        "heading": "Thousands of reviews <br>from extraordinary people like you"
-      }
-    },
-    "d11_video_blocks_gBKDQn": {
-      "type": "d11-video-blocks",
-      "blocks": {
-        "text_EmxxQa": {
-          "type": "text",
-          "settings": {
-            "video": "shopify://files/videos/Rings.com UGC (1).mov",
-            "autoplay": false,
-            "controls": false,
-            "muted": true,
-            "video_loop": true,
-            "image": "shopify://shop_images/image_977.png",
-            "auth": "Sophia Mitchell",
-            "desig": "Fashion Blogger"
-          }
-        },
-        "text_RWLgHL": {
-          "type": "text",
-          "settings": {
-            "video": "shopify://files/videos/Rings UGC - 4K (2).mov",
-            "autoplay": false,
-            "controls": false,
-            "muted": true,
-            "video_loop": true,
-            "image": "shopify://shop_images/image_977_045ac376-a2a3-4b0e-9304-3ca435a8cf04.png",
-            "auth": "Isabella Carter",
-            "desig": "Wedding Planner"
-          }
-        },
-        "text_YHCG38": {
-          "type": "text",
-          "settings": {
-            "video": "shopify://files/videos/ASMR unboxing - 4K (1).mov",
-            "autoplay": false,
-            "controls": false,
-            "muted": true,
-            "video_loop": true,
-            "image": "shopify://shop_images/image_977_c01c347f-4bb2-42a8-ac1c-4ca5bafb5ef3.png",
-            "auth": "Olivia Bennett",
-            "desig": "Designer"
-          }
-        },
-        "text_cTEQBh": {
-          "type": "text",
-          "settings": {
-            "video": "shopify://files/videos/ERSM0660Rd150-WG.mp4",
-            "autoplay": false,
-            "controls": false,
-            "muted": true,
-            "video_loop": true,
-            "image": "shopify://shop_images/image_977_584c309b-9b7d-47b3-b74f-48136bfb8f3b.png",
-            "auth": "Amelia Thompson",
-            "desig": "Brand Consultant"
-          }
-        }
-      },
-      "block_order": [
-        "text_EmxxQa",
-        "text_RWLgHL",
-        "text_YHCG38",
-        "text_cTEQBh"
-      ],
-      "settings": {
-        "sec_bg_color": "#f2f1ea",
-        "title": "Real Customers, Real Stories",
-        "sub_heading": "Thousand of Ring Enthusiasts' Preferred Ring.com",
-        "padding_top": 14,
-        "padding_bottom": 14
+        "title": "Beautifully Handcrafted Rings That Celebrate Love, Commitment, and Timeless Elegance",
+        "description": "This contemporary rope style solitaire engagement ring features a woven design that is",
+        "image_1": "shopify://shop_images/image_1.png",
+        "image_2": "shopify://shop_images/image_2.png",
+        "bottom_description": "Enjoy quality packaging and free shipping with every order. We also offer hassle-free, 30-day returns - no questions asked! Don't forget we'll be here forever with our lifetime warranty."
+
       }
     },
     "index_icon_with_text_column_tfmeiW": {
@@ -559,9 +404,10 @@
     "breadcrumbs",
     "sidebar",
     "main",
-    "icons_text_d6_4z6yh3",
-    "image_blocks_kVtxTd",
-    "d11_video_blocks_gBKDQn",
+
+    "d5_faqs_meCEw6",
+    "d5_image_grid_TT6fEf",
+
     "index_icon_with_text_column_tfmeiW",
     "index_faq_HqXX36",
     "recently_viewed_pro_d6_HgeUky",
