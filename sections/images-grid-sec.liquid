@@ -21,13 +21,14 @@
     .image-block-d6 img{
       margin: -1px 0 0 0;
     }
-     .images-grid-d6:has(.image-block-d6:nth-child(odd):last-child) .image-block-d6:last-child {
-    display: none;
-  }
   }
 </style>
 <section>
   <div class="main-images-grid-d6">
+    <div class="grid-headings-d6">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
     <div class="images-grid-d6">
       {% for block in section.blocks %}
         {% if block.settings['block-img'] %}
