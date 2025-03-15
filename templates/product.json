@@ -143,17 +143,17 @@
             "block-icon": "shopify://shop_images/Group_1000006056_1.png",
             "text-align": "center",
             "block-title": "Craftsmanship",
-            "block-title-color": "#000",
-            "block-title-font": 20,
-            "block-title-font-mobl": 18,
+            "block-title-color": "#000000",
+            "block-title-font": 24,
+            "block-title-font-mobl": 20,
             "block-content": "Every ring is meticulously handcrafted by skilled artisans, ensuring precision, elegance, and lasting beauty.",
-            "content-color": "#000",
-            "content-font": 18,
-            "content-font-mobl": 16,
-            "icon-color": "#F3F1F0",
+            "content-color": "#000000",
+            "content-font": 14,
+            "content-font-mobl": 14,
+            "icon-color": "#f3f1f0",
             "icon-center": true,
             "icon-border": 0,
-            "border-color": "#000",
+            "border-color": "#000000",
             "icon-radius": 50
           }
         },
@@ -163,17 +163,17 @@
             "block-icon": "shopify://shop_images/Group_39554_1.png",
             "text-align": "center",
             "block-title": "Ethical Sourcing",
-            "block-title-color": "#000",
-            "block-title-font": 20,
-            "block-title-font-mobl": 18,
+            "block-title-color": "#000000",
+            "block-title-font": 24,
+            "block-title-font-mobl": 20,
             "block-content": "Our diamonds and gemstones are ethically sourced, conflict-free, and meet the highest industry standards.",
-            "content-color": "#000",
-            "content-font": 18,
-            "content-font-mobl": 16,
-            "icon-color": "#F3F1F0",
+            "content-color": "#000000",
+            "content-font": 14,
+            "content-font-mobl": 14,
+            "icon-color": "#f3f1f0",
             "icon-center": true,
             "icon-border": 0,
-            "border-color": "#000",
+            "border-color": "#000000",
             "icon-radius": 50
           }
         },
@@ -183,17 +183,17 @@
             "block-icon": "shopify://shop_images/Group_39555_1.png",
             "text-align": "center",
             "block-title": "Customization",
-            "block-title-color": "#000",
-            "block-title-font": 20,
-            "block-title-font-mobl": 18,
+            "block-title-color": "#000000",
+            "block-title-font": 24,
+            "block-title-font-mobl": 20,
             "block-content": "Create a ring as unique as your love. Personalize every detail to reflect your story and style.",
-            "content-color": "#000",
-            "content-font": 18,
-            "content-font-mobl": 16,
-            "icon-color": "#F3F1F0",
+            "content-color": "#000000",
+            "content-font": 14,
+            "content-font-mobl": 14,
+            "icon-color": "#f3f1f0",
             "icon-center": true,
             "icon-border": 0,
-            "border-color": "#000",
+            "border-color": "#000000",
             "icon-radius": 50
           }
         },
@@ -203,17 +203,17 @@
             "block-icon": "shopify://shop_images/Group_1000006058_1.png",
             "text-align": "center",
             "block-title": "Lifetime Guarantee",
-            "block-title-color": "#000",
-            "block-title-font": 20,
-            "block-title-font-mobl": 18,
+            "block-title-color": "#000000",
+            "block-title-font": 24,
+            "block-title-font-mobl": 20,
             "block-content": "Our commitment goes beyond the purchase. Enjoy lifetime warranty and free maintenance on all rings.",
-            "content-color": "#000",
-            "content-font": 18,
-            "content-font-mobl": 16,
-            "icon-color": "#F3F1F0",
+            "content-color": "#000000",
+            "content-font": 14,
+            "content-font-mobl": 14,
+            "icon-color": "#f3f1f0",
             "icon-center": true,
             "icon-border": 0,
-            "border-color": "#000",
+            "border-color": "#000000",
             "icon-radius": 50
           }
         }
@@ -226,12 +226,12 @@
       ],
       "settings": {
         "sec-title": "",
-        "title-color": "#000",
+        "title-color": "#000000",
         "title-font": 56,
         "heading-align": "left",
         "show-image": false,
         "title-font-mobl": 32,
-        "sec-color": "#fff",
+        "sec-color": "#ffffff",
         "features-id": "",
         "icon_size": 72
       }
@@ -392,7 +392,7 @@
         "text_GhaXJ6"
       ],
       "settings": {
-        "sec_bg_color": "#F2F1EA",
+        "sec_bg_color": "#f2f1ea",
         "title": "Real Customers, Real Stories",
         "sub_heading": "Thousand of Ring Enthusiasts' Preferred Ring.com",
         "padding_top": 36,
@@ -418,12 +418,6 @@
             "block-img": "shopify://shop_images/Rectangle_2478.png"
           }
         },
-        "text_xxqN8V": {
-          "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/Rectangle_2477.png"
-          }
-        },
         "text_nXYKiM": {
           "type": "text",
           "settings": {
@@ -440,7 +434,6 @@
       "block_order": [
         "text_6VhqEJ",
         "text_NqWVBM",
-        "text_xxqN8V",
         "text_nXYKiM",
         "text_DHFWx6"
       ],

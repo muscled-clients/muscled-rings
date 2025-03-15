@@ -1,33 +1,54 @@
 <style>
-  .main-images-grid-d6{
-    padding: 30px 0 0 0;
-  }
-    .images-grid-d6 {
-      display: flex;
-      align-items: center;
-  }
-  .image-block-d6 img{
-    height: 100%;
-    width: 100%;
-  }
-  @media (max-width: 750px){
-     .images-grid-d6 {
-      flex-wrap: wrap;
-  }
-    .image-block-d6{
-      width: 50%;
-      line-height: 0;
+      .main-images-grid-d6{
+        padding: 60px 40px;
+      }
+        .images-grid-d6 {
+          display: flex;
+          gap: 20px;
+          padding: 40px 0 0;
+      }
+      .image-block-d6 img{
+        height: 100%;
+        width: 100%;
+      }
+      .grid-headings-d6 h2{
+        color: #1B1B1B;
+    text-align: center;
+    font-family: "Tenor Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+      }
+    .grid-headings-d6 p{
+      color: #1B1B1B;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+      padding: 12px 0 0;
     }
-    .image-block-d6 img{
-      margin: -1px 0 0 0;
-    }
-     .images-grid-d6:has(.image-block-d6:nth-child(odd):last-child) .image-block-d6:last-child {
-    display: none;
-  }
-  }
+      @media (max-width: 750px){
+         .images-grid-d6 {
+          flex-wrap: wrap;
+      }
+        .image-block-d6{
+          width: 50%;
+          line-height: 0;
+        }
+        .image-block-d6 img{
+          margin: -1px 0 0 0;
+        }
+      }
 </style>
 <section>
   <div class="main-images-grid-d6">
+    <div class="grid-headings-d6">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
     <div class="images-grid-d6">
       {% for block in section.blocks %}
         {% if block.settings['block-img'] %}
@@ -42,7 +63,20 @@
 {% schema %}
 {
   "name": "Images Grid",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "As Seen On"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub Heading",
+      "default": "#Rings"
+    }
+  ],
   "blocks": [
     {
       "type": "text",
