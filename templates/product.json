@@ -418,12 +418,6 @@
             "block-img": "shopify://shop_images/Rectangle_2478.png"
           }
         },
-        "text_xxqN8V": {
-          "type": "text",
-          "settings": {
-            "block-img": "shopify://shop_images/Rectangle_2477.png"
-          }
-        },
         "text_nXYKiM": {
           "type": "text",
           "settings": {
@@ -440,7 +434,6 @@
       "block_order": [
         "text_6VhqEJ",
         "text_NqWVBM",
-        "text_xxqN8V",
         "text_nXYKiM",
         "text_DHFWx6"
       ],
