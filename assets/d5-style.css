@@ -417,6 +417,14 @@
 .info-item-d5{
   padding-inline: 12px;
 }
+.product-title.title{
+  color: #1B1B1B;
+  font-family: "Tenor Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
