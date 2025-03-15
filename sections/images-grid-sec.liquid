@@ -90,12 +90,12 @@
 }
 </style>
 <section>
-  <div class="main-images-grid-d6" data-slider-container>
+  <div class="main-images-grid-d6">
     <div class="grid-headings-d6">
       <h2>{{ section.settings.heading }}</h2>
       <p>{{ section.settings.subheading }}</p>
     </div>
-    <div class="main-slider-d5">
+    <div class="main-slider-d5" data-slider-container>
       <div class="d5-arrows">
         <div class="prev-arrow-d5" data-prev-d5>
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
@@ -119,11 +119,11 @@
           {% endif %}
         {% endfor %}
       </div>
-    </div> <!-- Corrected Closing Tag for .main-slider-d5 -->
-    
-    <div class="progressbar-d5">
+              <div class="progressbar-d5">
       <div class="proscroll-video-bar__d5" data-progress-d5></div>
     </div>
+    </div> <!-- Corrected Closing Tag for .main-slider-d5 -->
+    
   </div>
 </section>
 
