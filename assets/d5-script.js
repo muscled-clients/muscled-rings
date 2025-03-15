@@ -1,24 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-  stepsUpdate();
   faqD5();
   readMoreLess();
+  stepsUpdate();
 });
 
-function faqD5(){
-  const faqMain = document.querySelectorAll('.d5-faq-main');
+function faqD5() {
+  const faqMain = document.querySelectorAll(".d5-faq-main");
   faqMain.forEach((faq) => {
-    const quest = faq.querySelector('.quest-d5');
-    quest.addEventListener('click', () =>{
-      faq.classList.toggle('active');
-    })
-  })
-  
+    const quest = faq.querySelector(".quest-d5");
+    quest.addEventListener("click", () => {
+      faq.classList.toggle("active");
+    });
+  });
 }
 
-function readMoreLess(){
-  document.querySelectorAll(".description-text").forEach(function (textContainer) {
+function readMoreLess() {
+  document
+    .querySelectorAll(".description-text")
+    .forEach(function (textContainer) {
       let button = textContainer.nextElementSibling;
-      let lineHeight = parseFloat(window.getComputedStyle(textContainer).lineHeight);
+      let lineHeight = parseFloat(
+        window.getComputedStyle(textContainer).lineHeight
+      );
       let maxHeight = lineHeight * 2; // Maximum height for two lines
 
       // Get actual height of text
@@ -41,50 +44,68 @@ function readMoreLess(){
     });
 }
 
-
 function stepsUpdate() {
   const variantSelector = document.querySelector(
     ".variant-selection__variants"
-  ); // Variant select dropdown
-  const variantSwatches = document.querySelectorAll(".swatch__option input"); // Swatch buttons
-  const imageElement = document.querySelector(".selected-image-d5 img"); // Image element
-  const priceElement = document.querySelector(".selected-price-d5 p"); // Price element
-  const skuElement = document.querySelector('.selected-sku-d5')
+  );
+  const variantSwatches = document.querySelectorAll(".swatch__option input");
+  const imageElement = document.querySelector(".selected-image-d5 img");
+  const priceElement = document.querySelector(".selected-price-d5 p");
+  const dataContainer = document.querySelector(".update-variant-info-d5");
+  const targetContainer = document.querySelector(".answer-d5");
 
-  if (!window.productData) {
-    console.error("Product data is not available.");
-    return;
-  }
+  if (!dataContainer || !targetContainer) return;
 
   function updateVariantInfo(selectedVariantId) {
+    if (!window.productData) return;
+
     const selectedVariant = window.productData.variants.find(
       (variant) => variant.id == selectedVariantId
     );
+
     if (selectedVariant) {
-      // Update Image
-      if (selectedVariant.featured_image) {
+      if (selectedVariant.featured_image && imageElement) {
         imageElement.src = selectedVariant.featured_image.src;
       }
-      if(skuElement){
-        skuElement.textContent = selectedVariant.sku;
+
+      if (typeof selectedVariant.price === "number" && priceElement) {
+        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(
+          2
+        )}`;
       }
-      // Update Price
-      if(priceElement){
-      priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
+
+      const skuElement = targetContainer.querySelector(".selected-sku-d5");
+      if (skuElement) {
+        skuElement.textContent = selectedVariant.sku || "N/A";
       }
     } else {
-      console.warn("Variant not found in product data.");
+      return;
     }
+
+    const variantDataElements = dataContainer.querySelectorAll(
+      `[d5-variant="${selectedVariantId}"]`
+    );
+
+    if (variantDataElements.length === 0) return;
+
+    variantDataElements.forEach((dataElement) => {
+      const className = dataElement.className;
+      const value = dataElement.textContent.trim();
+      const targetElement = targetContainer.querySelector(`.${className}`);
+      if (targetElement) {
+        targetElement.textContent = value;
+      }
+    });
   }
 
-  // Handle select dropdown change
   if (variantSelector) {
     variantSelector.addEventListener("change", function () {
       updateVariantInfo(this.value);
     });
   }
-
-  // Handle swatch buttons change
+  setTimeout(() => {
+    updateVariantInfo(variantSelector.value);
+  }, 1000);
   if (variantSwatches.length) {
     variantSwatches.forEach((swatch) => {
       swatch.addEventListener("change", function () {
