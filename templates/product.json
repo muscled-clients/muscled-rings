@@ -239,8 +239,8 @@
             "muted": true,
             "video_loop": true,
             "image": "shopify://shop_images/image_977.png",
-            "auth": "Amelia Thompson",
-            "desig": "Brand Consultant"
+            "auth": "Sophia Mitchell",
+            "desig": "Fashion Blogger"
           }
         },
         "text_HbqhYC": {
@@ -259,25 +259,25 @@
         "text_6mjTPP": {
           "type": "text",
           "settings": {
-            "video": "shopify://files/videos/Rings.com UGC (1).mov",
+            "video": "shopify://files/videos/ASMR unboxing - 4K (1).mov",
             "autoplay": false,
             "controls": false,
             "muted": true,
             "video_loop": true,
-            "image": "shopify://shop_images/image_977.png",
-            "auth": "Amelia Thompson",
-            "desig": "Brand Consultant"
+            "image": "shopify://shop_images/image_977_c01c347f-4bb2-42a8-ac1c-4ca5bafb5ef3.png",
+            "auth": "Olivia Bennett",
+            "desig": "Designer"
           }
         },
         "text_GhaXJ6": {
           "type": "text",
           "settings": {
-            "video": "shopify://files/videos/Rings.com UGC (1).mov",
+            "video": "shopify://files/videos/3.MP4",
             "autoplay": false,
             "controls": false,
             "muted": true,
             "video_loop": true,
-            "image": "shopify://shop_images/image_977.png",
+            "image": "shopify://shop_images/image_977_584c309b-9b7d-47b3-b74f-48136bfb8f3b.png",
             "auth": "Amelia Thompson",
             "desig": "Brand Consultant"
           }
