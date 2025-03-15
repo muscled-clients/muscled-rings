@@ -2,9 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   faqD5();
   readMoreLess();
   stepsUpdate();
-  setTimout(() => {
-  updateVariantInfo(variantSelector.value);
-  }, 1000)
 });
 
 function faqD5(){
@@ -99,7 +96,9 @@ function stepsUpdate() {
     });
 
   }
-
+    setTimout(() => {
+  updateVariantInfo(variantSelector.value);
+  }, 1000);
   if (variantSwatches.length) {
     variantSwatches.forEach((swatch) => {
       swatch.addEventListener("change", function () {
