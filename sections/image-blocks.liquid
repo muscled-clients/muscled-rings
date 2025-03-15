@@ -249,7 +249,7 @@
       </div>
     <div class="d11-image-text-container" data-slider-d5>
       {% for block in section.blocks %}
-        <div class="d11__content-container">
+        <div class="d11__content-container" data-slide-d5>
           <div class="d11__img_wrap">
             {% if block.settings.image != blank %}
               <img src="{{ block.settings.image | image_url: width: 500, height: 500 }}">
@@ -268,7 +268,9 @@
     </div>
     </div>
     <div class="d11__padding">
-      <div class="progress-bar__d11" data-progress-d5></div>
+      <div class="progressbar-con-d5">
+      <div class="progress-bar__d11 d5-progress-bar-inner" data-progress-d5></div>
+      </div>
     </div>
   </div>
 </section>
