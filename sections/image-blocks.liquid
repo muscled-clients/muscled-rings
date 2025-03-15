@@ -194,7 +194,7 @@
     }
     }
 </style>
-<section class="img-w-text-main">
+<section class="img-w-text-main" data-slider-container>
   <div class="d11-w-contain">
     <h5 class="d11-accent">
       {{ section.settings.accent }}
@@ -202,7 +202,7 @@
     <h2 class="d11__heading-h2">
       {{ section.settings.heading }}
     </h2>
-    <div class="d11-image-text-container">
+    <div class="d11-image-text-container" data-slider-d5>
       {% for block in section.blocks %}
         <div class="d11__content-container">
           <div class="d11__img_wrap">
@@ -222,14 +222,16 @@
       {% endfor %}
     </div>
     <div class="d11__padding">
-      <div class="progress-bar__d11"></div>
+      <div class="progress-bar__d11" data-progress-d5></div>
+      <div></div>
     </div>
   </div>
 </section>
 <script>
    document.addEventListener("DOMContentLoaded", function () {
-    const progressBarD5 = document.querySelector(".progress-bar__d11");
-    const sectionD5 = document.querySelector(".d11-image-text-container");
+    const mainContainerD5 = document.querySelector('[data-slider-container]');
+    const progressBarD5 = document.querySelector("[data-progress-d5]");
+    const sectionD5 = document.querySelector("[data-slider-d5]");
 
     function updateProgressBar() {
         let visibleWidth = sectionD5.clientWidth;
