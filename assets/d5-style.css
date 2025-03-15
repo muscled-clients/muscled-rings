@@ -491,10 +491,10 @@
   .step-1-d5 .svg-bg-d5 svg path {
     stroke: #8b5e9a;
     fill: #8b5e9a;
-  } */
+  } 
   .step-1-d5 * {
     color: #fff !important;
-  }
+  } */
   .dynamic-content-d5 svg {
     max-height: 20px;
     width: auto;
