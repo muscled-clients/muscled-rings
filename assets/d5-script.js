@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   faqD5();
   readMoreLess();
+  stepsUpdate();
 });
 
 function faqD5(){
