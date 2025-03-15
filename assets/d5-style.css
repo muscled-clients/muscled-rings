@@ -425,6 +425,20 @@
   font-weight: 400;
   line-height: normal;
 }
+.backtog-d5{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.backtog-d5 span{
+  color: #1B1B1B;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
