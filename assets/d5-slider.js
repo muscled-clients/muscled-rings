@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (nextButton) {
-                if (section.scrollLeft >= section.scrollWidth - section.clientWidth) {
+                let maxScrollLeft = section.scrollWidth - section.clientWidth;
+                if (Math.ceil(section.scrollLeft) >= maxScrollLeft) { // Used Math.ceil for precision fix
                     nextButton.classList.add("d5-disable");
                 } else {
                     nextButton.classList.remove("d5-disable");
@@ -55,8 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
             section.scrollBy({ left: section.clientWidth / 2, behavior: "smooth" });
         }
 
-        if (prevButton) prevButton.addEventListener("click", scrollLeft);
-        if (nextButton) nextButton.addEventListener("click", scrollRight);
+        if (prevButton) prevButton.addEventListener("click", () => {
+            scrollLeft();
+            setTimeout(updateArrowState, 300); // Delay to ensure state updates after smooth scroll
+        });
+
+        if (nextButton) nextButton.addEventListener("click", () => {
+            scrollRight();
+            setTimeout(updateArrowState, 300); // Delay to ensure state updates after smooth scroll
+        });
 
         setInitialProgressBar();
         section.addEventListener("scroll", updateProgressBar);
