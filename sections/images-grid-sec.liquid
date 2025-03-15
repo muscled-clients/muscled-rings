@@ -44,8 +44,13 @@
     scroll-snap-type: x mandatory;
   }
   .image-block-d6 {
-    min-width: 75%;
+    width: 75%;
+    flex: 0 0 75%;
+    line-height: 0;
     scroll-snap-align: center;
+  }
+  .image-block-d6 img {
+    margin: -1px 0 0 0;
   }
   .grid-headings-d6{
     padding: 0 16px;
@@ -68,29 +73,15 @@
   .images-grid-d6{
     padding-top: 16px;
   }
-  .grid-headings-d6 h2{
-    color: #1B1B1B;
-    text-align: center;
-    font-family: "Tenor Sans";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.12px;
-  }
-  .grid-headings-d6 p{
-    font-weight: 400;
-    padding-top: 4px;
-  }
 }
 </style>
 <section>
-  <div class="main-images-grid-d6">
+  <div class="main-images-grid-d6" data-slider-container>
     <div class="grid-headings-d6">
       <h2>{{ section.settings.heading }}</h2>
       <p>{{ section.settings.subheading }}</p>
     </div>
-    <div class="slider-d5" data-slider-container>
+    <div class="main-slider-d5">
       <div class="d5-arrows">
         <div class="prev-arrow-d5" data-prev-d5>
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
@@ -105,23 +96,21 @@
           </svg>
         </div>
       </div>
-      <div class="images-grid-d6" data-slider-d5>
-        {% for block in section.blocks %}
-          {% if block.settings['block-img'] %}
-            <div class="image-block-d6" data-slide-d5>
-              <img src="{{ block.settings.block-img | image_url: width: 800 }}" width="250" height="250">
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-              <div class="progressbar-d5">
-      <div class="video-bar__d5" data-progress-d5></div>
+    <div class="images-grid-d6" data-slider-d5>
+      {% for block in section.blocks %}
+        {% if block.settings['block-img'] %}
+          <div class="image-block-d6">
+            <img src="{{ block.settings.block-img | image_url: width: 800 }}" width="300%" height="300">
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
-    </div> <!-- Corrected Closing Tag for .main-slider-d5 -->
-    
+      </div>
+      <div class="progressbar-d5">
+      <div class="proscroll-video-bar__d5" data-progress-d5></div>
+      </div>
   </div>
 </section>
-
 {% schema %}
 {
   "name": "Images Grid",
