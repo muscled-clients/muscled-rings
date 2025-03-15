@@ -32,10 +32,10 @@
     }
       @media (max-width: 750px){
          .images-grid-d6 {
-          flex-wrap: wrap;
       }
         .image-block-d6{
-          width: 50%;
+          width: 75%;
+          flex: 0 0 75%;
           line-height: 0;
         }
         .image-block-d6 img{
@@ -44,12 +44,12 @@
       }
 </style>
 <section>
-  <div class="main-images-grid-d6">
+  <div class="main-images-grid-d6" data-slider-container>
     <div class="grid-headings-d6">
       <h2>{{ section.settings.heading }}</h2>
       <p>{{ section.settings.subheading }}</p>
     </div>
-    <div class="images-grid-d6">
+    <div class="images-grid-d6" data-slider-d5>
       {% for block in section.blocks %}
         {% if block.settings['block-img'] %}
           <div class="image-block-d6">
@@ -58,6 +58,7 @@
         {% endif %}
       {% endfor %}
     </div>
+      <div class="proscroll-video-bar__d5" data-progress-d5></div>
   </div>
 </section>
 {% schema %}
