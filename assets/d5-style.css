@@ -443,12 +443,27 @@
 .d5-main-product .product-gallery__image,.d5-main-product .product-gallery__thumbnail{
   border: 0.5px solid rgba(45, 27, 56, 0.25);
 }
+.progressbar-con-d5{
+  width: 100%;
+  position: relative;
+  background: #E9E9E9;
+  height: 4px;
+}
+.progressbar-con-d5{
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
   }
 }
 @media (max-width: 798px) {
+  .progressbar-con-d5{
+    height: 2px;
+  }
   .d5-main-product .product__images {
     margin-bottom: 0;
   }
