@@ -47,67 +47,44 @@ function stepsUpdate() {
   const variantSwatches = document.querySelectorAll(".swatch__option input"); // Swatch buttons
   const imageElement = document.querySelector(".selected-image-d5 img"); // Image element
   const priceElement = document.querySelector(".selected-price-d5 p"); // Price element
-  const skuElement = document.querySelector('.selected-sku-d5');
+  const skuElement = document.querySelector(".answer-d5 .selected-sku-d5"); // SKU in answer-d5
 
-  // Elements for metafield updates
-  const settingsElement = document.querySelector('.selected-settings-d5');
-  const sizesElement = document.querySelector('.selected-sizes-d5');
-  const stoneElement = document.querySelector('.selected-stone-d5');
-  const metalElement = document.querySelector('.selected-metal-d5');
-  const shapeElement = document.querySelector('.selected-shape-d5');
+  // Containers
+  const dataContainer = document.querySelector(".update-variant-info-d5"); // Source data container
+  const targetContainer = document.querySelector(".answer-d5"); // Target update container
 
-  if (!window.productData) {
-    console.error("Product data is not available.");
+  if (!dataContainer || !targetContainer) {
+    console.error("Data or target container missing.");
     return;
   }
 
   function updateVariantInfo(selectedVariantId) {
-    const selectedVariant = window.productData.variants.find(
-      (variant) => variant.id == selectedVariantId
-    );
+    // Find the correct variant's metafield elements in update-variant-info-d5
+    const variantDataElements = dataContainer.querySelectorAll(`[d5-variant="${selectedVariantId}"]`);
 
-    if (selectedVariant) {
-      // Update Image
-      if (selectedVariant.featured_image) {
-        imageElement.src = selectedVariant.featured_image.src;
+    if (variantDataElements.length === 0) {
+      console.warn("Variant data not found in update-variant-info-d5.");
+      return;
+    }
+
+    // Loop through all the found elements and update corresponding elements in answer-d5
+    variantDataElements.forEach((dataElement) => {
+      const className = dataElement.className; // Get the class of the element (e.g., selected-metal-d5)
+      const value = dataElement.textContent; // Get the text content
+
+      // Find the corresponding element in answer-d5 and update it
+      const targetElement = targetContainer.querySelector(`.${className}`);
+      if (targetElement) {
+        targetElement.textContent = value;
       }
+    });
 
-      // Update SKU
-      if (skuElement) {
-        skuElement.textContent = selectedVariant.sku;
+    // Update SKU if exists
+    if (skuElement) {
+      const skuDataElement = dataContainer.querySelector(`[d5-variant="${selectedVariantId}"].selected-sku-d5`);
+      if (skuDataElement) {
+        skuElement.textContent = skuDataElement.textContent;
       }
-
-      // Update Price
-      if (priceElement) {
-        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
-      }
-
-      // Update Metafield Data if available
-      if (selectedVariant.metafields && selectedVariant.metafields.custom) {
-        const metafields = selectedVariant.metafields.custom;
-
-        if (settingsElement && metafields.setting_style) {
-          settingsElement.textContent = metafields.setting_style.value || "N/A";
-        }
-
-        if (sizesElement && metafields.sizes_available) {
-          sizesElement.textContent = metafields.sizes_available.value || "N/A";
-        }
-
-        if (stoneElement && metafields.center_stone_carat_weight) {
-          stoneElement.textContent = metafields.center_stone_carat_weight.value || "N/A";
-        }
-
-        if (metalElement && metafields.metal) {
-          metalElement.textContent = metafields.metal.value || "N/A";
-        }
-
-        if (shapeElement && metafields.supported_diamond_shape) {
-          shapeElement.textContent = metafields.supported_diamond_shape.value || "N/A";
-        }
-      }
-    } else {
-      console.warn("Variant not found in product data.");
     }
   }
 
