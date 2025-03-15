@@ -229,6 +229,24 @@
     },
     "d11_video_blocks_Vx4pTK": {
       "type": "d11-video-blocks",
+      "blocks": {
+        "text_wTkJaq": {
+          "type": "text",
+          "settings": {
+            "video": "shopify://files/videos/Rings.com UGC (1).mov",
+            "autoplay": false,
+            "controls": false,
+            "muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977.png",
+            "auth": "Amelia Thompson",
+            "desig": "Brand Consultant"
+          }
+        }
+      },
+      "block_order": [
+        "text_wTkJaq"
+      ],
       "settings": {
         "sec_bg_color": "#F2F1EA",
         "title": "Real Customers, Real Stories",
