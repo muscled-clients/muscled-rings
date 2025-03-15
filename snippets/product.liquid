@@ -25,6 +25,7 @@
 {% comment %} HTML markup {% endcomment %}
 <div class="update-variant-info-d5" hidden>
   {% for variant in product.variants %}
+    {% assign d5_meta = variant.metafields.custom %}
     {% if d5_meta.setting_style.value != blank %}
       <div class="info-item-d5">
         <p>Setting Style</p>
