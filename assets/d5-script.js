@@ -114,6 +114,3 @@ function stepsUpdate() {
     });
   }
 }
-  setTimeout(() => {
-  stepsUpdate();
-  }, 1000)
