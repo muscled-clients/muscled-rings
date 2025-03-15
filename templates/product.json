@@ -129,11 +129,14 @@
         "padding_bottom": 20,
         "animation": "none",
         "atc_label": "",
+
         "top-t": true,
+
         "css_class": "",
         "custom_css": ""
       }
     },
+
     "d5_faqs_meCEw6": {
       "type": "d5-faqs",
       "blocks": {
@@ -156,10 +159,12 @@
           "settings": {
             "quest": "Free Shipping",
             "ans": "<p>SOME Texts Here .....</p>"
+
           }
         }
       },
       "block_order": [
+
         "faqs_Kq7N7C",
         "faqs_mzb6rx",
         "faqs_XJJ7hT"
@@ -178,6 +183,7 @@
         "image_1": "shopify://shop_images/image_1.png",
         "image_2": "shopify://shop_images/image_2.png",
         "bottom_description": "Enjoy quality packaging and free shipping with every order. We also offer hassle-free, 30-day returns - no questions asked! Don't forget we'll be here forever with our lifetime warranty."
+
       }
     },
     "index_icon_with_text_column_tfmeiW": {
@@ -328,6 +334,61 @@
         "custom_css": ""
       }
     },
+    "recently_viewed_pro_d6_HgeUky": {
+      "type": "recently-viewed-pro-d6",
+      "settings": {}
+    },
+    "images_grid_sec_NX3CBg": {
+      "type": "images-grid-sec",
+      "blocks": {
+        "text_6VhqEJ": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2476.png"
+          }
+        },
+        "text_NqWVBM": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2478.png"
+          }
+        },
+        "text_xxqN8V": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2477.png"
+          }
+        },
+        "text_nXYKiM": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2479.png"
+          }
+        },
+        "text_DHFWx6": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2480.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_6VhqEJ",
+        "text_NqWVBM",
+        "text_xxqN8V",
+        "text_nXYKiM",
+        "text_DHFWx6"
+      ],
+      "settings": {}
+    },
+    "newsletter_sec_d6_3NtTwh": {
+      "type": "newsletter-sec-d6",
+      "settings": {
+        "heading": "Want First Dibs?",
+        "content": "Join our email list and be the first to know about new limited edition products, material innovations, and lots of other fun updates.",
+        "note-text": "Note: You can opt-out at any time"
+      }
+    },
     "17362140264e61d429": {
       "type": "apps",
       "settings": {
@@ -343,10 +404,15 @@
     "breadcrumbs",
     "sidebar",
     "main",
+
     "d5_faqs_meCEw6",
     "d5_image_grid_TT6fEf",
+
     "index_icon_with_text_column_tfmeiW",
     "index_faq_HqXX36",
+    "recently_viewed_pro_d6_HgeUky",
+    "images_grid_sec_NX3CBg",
+    "newsletter_sec_d6_3NtTwh",
     "17362140264e61d429"
   ]
 }
