@@ -146,6 +146,46 @@
     },
     "image_blocks_wPTEyn": {
       "type": "image-blocks",
+      "blocks": {
+        "image_x8AyXj": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_44467981-4c13-4777-ba82-e63a2a5eb1e9.png",
+            "description": "Absolutely in love with my ring! The quality and elegance are unmatched. Highly recommend!",
+            "author_text": "Emma Richardson"
+          }
+        },
+        "image_yxDVJB": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_1_5b0bd5a0-e0fd-4b81-917d-c78bfce96fac.png",
+            "description": "“Stunning ring! The quality is amazing, and the customer service was outstanding. Worth every penny!”",
+            "author_text": "Grace Taylor"
+          }
+        },
+        "image_VT3Wcp": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_2_53568c70-a333-483e-9c1f-9f78cabcc4b0.png",
+            "description": "“Gorgeous design and incredible shine! My fiancé loves it, and the fit is perfect. Thank you!”",
+            "author_text": "Sophia Williams"
+          }
+        },
+        "image_kpgGip": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_3.png",
+            "description": "“Elegant, timeless, and beautifully crafted. This ring made my special moment even more memorable!”",
+            "author_text": "Amelia Thompson"
+          }
+        }
+      },
+      "block_order": [
+        "image_x8AyXj",
+        "image_yxDVJB",
+        "image_VT3Wcp",
+        "image_kpgGip"
+      ],
       "settings": {
         "accent": "Testimonials",
         "heading": "Thousands of reviews <br>from extraordinary people like you"
