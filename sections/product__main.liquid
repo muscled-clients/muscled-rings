@@ -1,11 +1,10 @@
 {% comment %}
-** Product - main content area **
-- Product template
+  ** Product - main content area **
+  - Product template
 {% endcomment %}
 {% if template contains 'shopibro' %}
   {{ 'product_updates.css' | asset_url | stylesheet_tag }}
 {% endif %}
-
 
 {% assign id = section.id %}
 {% comment %} Layout {% endcomment %}
@@ -65,101 +64,121 @@
   if template contains 'shopibro'
     assign enable_thumbnail_slider = false
   endif
-%} 
+%}
 <script>
   window.productData = {{ product | json }};
 </script>
 <script src="{{ 'd5-script.js' | asset_url }}" defer="defer"></script>
 {% for block in section.blocks %}
   {% if block.type == 'steps' %}
-<div class="d5-main-steps">
-    {% if section.settings.top-t %} <div class="mobile_title_price"></div>{% endif %}
-  <div class="steps-inner-d5">
-    <div class="steps-row-d5">
-      <div class="step-item-d5 step-1-d5">
-        <div class="svg-bg-d5">
-         <svg xmlns="http://www.w3.org/2000/svg" width="411" height="82" viewBox="0 0 411 82" fill="none">
-  <path d="M384.35 81H5C2.79086 81 1 79.2091 1 77V5C1 2.79086 2.79086 1 5 1H384.35L408.82 39.8249C409.659 41.1564 409.64 42.8563 408.77 44.168L384.35 81Z" fill="white" stroke="#1B1B1B" stroke-width="2"/>
-</svg>
-           <svg class="d5-mobile" xmlns="http://www.w3.org/2000/svg" width="115" height="40" viewBox="0 0 115 40" fill="none">
-          <path d="M107.735 40H1C0.447715 40 0 39.5523 0 39V1C0 0.447715 0.447715 0 0.999999 0H107.735L114.515 19.136C114.828 20.0212 114.82 20.9886 114.492 21.8686L107.735 40Z" fill="#8B5E9A"/>
-        </svg>
-        </div>
-        <div class="item-d5">
-          <div class="count-d5">
-            <p class="count d5-desktop">1</p>
-            <p class="rt-d5 d5-desktop">{{ block.settings.lb_1 }}</p>
-            <p class="rt-d5 d5-mobile">SETTINGS</p>
-          </div>
-          <div class="dynamic-content-d5">
-            <div class="selected-image-d5">
-              <img src="{{ product.selected_or_first_available_variant.featured_image | image_url: width: '400px' }}" width="48" height="48">
+    <div class="d5-main-steps">
+      {% if section.settings['top-t'] %}<div class="mobile_title_price"></div>{% endif %}
+      <div class="steps-inner-d5">
+        <div class="steps-row-d5">
+          <div class="step-item-d5 step-1-d5">
+            <div class="svg-bg-d5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="411" height="82" viewBox="0 0 411 82" fill="none">
+                <path d="M384.35 81H5C2.79086 81 1 79.2091 1 77V5C1 2.79086 2.79086 1 5 1H384.35L408.82 39.8249C409.659 41.1564 409.64 42.8563 408.77 44.168L384.35 81Z" fill="white" stroke="#1B1B1B" stroke-width="2"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="117" height="42" viewBox="0 0 117 42" fill="none">
+                <path d="M108.735 41H2C1.44772 41 1 40.5523 1 40V2C1 1.44772 1.44771 1 2 1H108.735L115.515 20.136C115.828 21.0212 115.82 21.9886 115.492 22.8686L108.735 41Z" fill="white" stroke="#1B1B1B"/>
+              </svg>
             </div>
-            <div class="selected-price-d5">
-              <p>{{ product.selected_or_first_available_variant.price | money }}</p>
-              <p>Change | View</p>
+            <div class="item-d5">
+              <div class="count-d5">
+                <p class="count d5-desktop">1</p>
+                <p class="rt-d5 d5-desktop">{{ block.settings.lb_1 }}</p>
+                <p class="rt-d5 d5-mobile">SETTINGS</p>
+              </div>
+              <div class="dynamic-content-d5">
+                <div class="selected-image-d5">
+                  <img
+                    src="{{ product.selected_or_first_available_variant.featured_image | image_url: width: '400px' }}"
+                    width="48"
+                    height="48"
+                  >
+                </div>
+                <div class="selected-price-d5">
+                  <p>{{ product.selected_or_first_available_variant.price | money }}</p>
+                  <p>Change | View</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item-d5 step-2-d5">
+            <div class="svg-bg-d5">
+              <svg
+                class="d5-desktop"
+                xmlns="http://www.w3.org/2000/svg"
+                width="402"
+                height="82"
+                viewBox="0 0 402 82"
+                fill="none"
+              >
+                <path d="M26.3353 41L1.19922 81L376.344 79.9873L401 41L376.344 1H1.19922L26.3353 41Z" stroke="#2D1B38" stroke-opacity="0.25"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="117" height="42" viewBox="0 0 117 42" fill="none">
+                <path d="M8.23023 21L1 41L108.908 40.4937L116 21L108.908 1H1L8.23023 21Z" fill="#FBFBFB" stroke="#1B1B1B" stroke-opacity="0.25" stroke-width="0.5"/>
+              </svg>
+            </div>
+            <div class="item-d5">
+              <div class="count-d5">
+                <p class="count d5-desktop">2</p>
+                <p class="rt-d5 d5-desktop">{{ block.settings.lb_2 }}</p>
+                <p class="rt-d5 d5-mobile">STONE</p>
+              </div>
+              <div class="dynamic-content-d5">
+                {{ block.settings.svg_2 }}
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item-d5 step-3-d5">
+            <div class="svg-bg-d5">
+              <svg
+                class="d5-desktop"
+                xmlns="http://www.w3.org/2000/svg"
+                width="402"
+                height="82"
+                viewBox="0 0 402 82"
+                fill="none"
+              >
+                <path d="M26.3353 41L1.19922 81L376.344 79.9873L401 41L376.344 1H1.19922L26.3353 41Z" stroke="#2D1B38" stroke-opacity="0.25"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="117" height="42" viewBox="0 0 117 42" fill="none">
+                <path d="M8.23023 21L1 41L108.908 40.4937L116 21L108.908 1H1L8.23023 21Z" fill="#FBFBFB" stroke="#1B1B1B" stroke-opacity="0.25" stroke-width="0.5"/>
+              </svg>
+            </div>
+            <div class="item-d5">
+              <div class="count-d5">
+                <p class="count d5-desktop">3</p>
+                <p class="rt-d5 d5-desktop">{{ block.settings.lb_3 }}</p>
+                <p class="rt-d5 d5-mobile">REVIEW</p>
+              </div>
+              <div class="dynamic-content-d5">
+                {{ block.settings.svg_3 }}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-     <div class="step-item-d5 step-2-d5">
-        <div class="svg-bg-d5">
-         <svg class="d5-desktop" xmlns="http://www.w3.org/2000/svg" width="402" height="82" viewBox="0 0 402 82" fill="none">
-          <path d="M26.3353 41L1.19922 81L376.344 79.9873L401 41L376.344 1H1.19922L26.3353 41Z" stroke="#2D1B38" stroke-opacity="0.25"/>
-        </svg>
-        <svg class="d5-mobile" xmlns="http://www.w3.org/2000/svg" width="115" height="40" viewBox="0 0 115 40" fill="none">
-          <path d="M107.735 40H1C0.447715 40 0 39.5523 0 39V1C0 0.447715 0.447715 0 0.999999 0H107.735L114.515 19.136C114.828 20.0212 114.82 20.9886 114.492 21.8686L107.735 40Z" fill="#8B5E9A"/>
-        </svg>
-        </div>
-        <div class="item-d5">
-          <div class="count-d5">
-            <p class="count d5-desktop">2</p>
-            <p class="rt-d5 d5-desktop">{{ block.settings.lb_2 }}</p>
-            <p class="rt-d5 d5-mobile">STONE</p>
-          </div>
-          <div class="dynamic-content-d5">
-            {{ block.settings.svg_2 }}
-          </div>
-        </div>
-      </div>
-
-    <div class="step-item-d5 step-3-d5">
-        <div class="svg-bg-d5">
-         <svg class="d5-desktop" xmlns="http://www.w3.org/2000/svg" width="402" height="82" viewBox="0 0 402 82" fill="none">
-          <path d="M26.3353 41L1.19922 81L376.344 79.9873L401 41L376.344 1H1.19922L26.3353 41Z" stroke="#2D1B38" stroke-opacity="0.25"/>
-        </svg>
-        <svg class="d5-mobile" xmlns="http://www.w3.org/2000/svg" width="115" height="40" viewBox="0 0 115 40" fill="none">
-          <path d="M107.735 40H1C0.447715 40 0 39.5523 0 39V1C0 0.447715 0.447715 0 0.999999 0H107.735L114.515 19.136C114.828 20.0212 114.82 20.9886 114.492 21.8686L107.735 40Z" fill="#8B5E9A"/>
-        </svg>
-        </div>
-        <div class="item-d5">
-          <div class="count-d5">
-            <p class="count d5-desktop">3</p>
-            <p class="rt-d5 d5-desktop">{{ block.settings.lb_3 }}</p>
-            <p class="rt-d5 d5-mobile">REVIEW</p>
-          </div>
-          <div class="dynamic-content-d5">
-            {{ block.settings.svg_3 }}
-          </div>
-        </div>
-      </div>
-    
     </div>
-  </div>
-</div>
-    {% endif %}
+  {% endif %}
 {% endfor %}
-<section class="d5-main-product section
-        product-template-shopibro
-        {{ css_class }}
-        is-width-{{ width }}"
-        {% if animation != "none" %}
-          data-scroll-class="{{ animation }}"
-        {% endif %}>
+<section
+  class="
+    d5-main-product section
+    product-template-shopibro
+    {{ css_class }}
+    is-width-{{ width }}
+  "
+  {% if animation != 'none' %}
+    data-scroll-class="{{ animation }}"
+  {% endif %}
+>
   <div class="product-{{ product.id }}">
-    {%
-      render 'product',
+    {% render 'product',
       product: product,
       sold_out_options: settings.sold_out_options,
       selected_variant: selected_variant,
@@ -178,7 +197,7 @@
       stickers_enabled: settings.stickers_enabled,
       tag_style: settings.tag_style,
       thumbnail_position: section.settings.thumbnail_position,
-      video_looping: section.settings.video_looping,
+      video_looping: section.settings.video_looping
     %}
   </div>
 </section>
@@ -210,7 +229,7 @@
 
 <script src="{{ 'z__jsProduct.js' | asset_url }}"></script>
 {% if template contains 'shopibro' %}
-<script>
+  <script>
   /*sticky page*/
   (function () {
     // Store references to commonly used elements
@@ -299,7 +318,7 @@
     window.addEventListener('resize', debouncedStickySolve);
     window.addEventListener('scroll', debouncedStickyAtc);
   })();
-</script>
+  </script>
 {% endif %}
 {% comment %} Shopify-XR {% endcomment %}
 {% if product.media %}
@@ -348,13 +367,9 @@
       }
     });
   });
-
-
-
 </script>
 
 {% schema %}
-
 {
   "name": "Product information",
   "class": "product-template product-main has-sidebar-option jsProduct section--has-sidebar-option",
@@ -932,7 +947,4 @@
     }
   }
 }
-
 {% endschema %}
-
-
