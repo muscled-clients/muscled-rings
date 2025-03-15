@@ -4,21 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
   stepsUpdate();
 });
 
-function faqD5(){
-  const faqMain = document.querySelectorAll('.d5-faq-main');
+function faqD5() {
+  const faqMain = document.querySelectorAll(".d5-faq-main");
   faqMain.forEach((faq) => {
-    const quest = faq.querySelector('.quest-d5');
-    quest.addEventListener('click', () =>{
-      faq.classList.toggle('active');
-    })
-  })
-  
+    const quest = faq.querySelector(".quest-d5");
+    quest.addEventListener("click", () => {
+      faq.classList.toggle("active");
+    });
+  });
 }
 
-function readMoreLess(){
-  document.querySelectorAll(".description-text").forEach(function (textContainer) {
+function readMoreLess() {
+  document
+    .querySelectorAll(".description-text")
+    .forEach(function (textContainer) {
       let button = textContainer.nextElementSibling;
-      let lineHeight = parseFloat(window.getComputedStyle(textContainer).lineHeight);
+      let lineHeight = parseFloat(
+        window.getComputedStyle(textContainer).lineHeight
+      );
       let maxHeight = lineHeight * 2; // Maximum height for two lines
 
       // Get actual height of text
@@ -41,9 +44,10 @@ function readMoreLess(){
     });
 }
 
-
 function stepsUpdate() {
-  const variantSelector = document.querySelector(".variant-selection__variants");
+  const variantSelector = document.querySelector(
+    ".variant-selection__variants"
+  );
   const variantSwatches = document.querySelectorAll(".swatch__option input");
   const imageElement = document.querySelector(".selected-image-d5 img");
   const priceElement = document.querySelector(".selected-price-d5 p");
@@ -65,7 +69,9 @@ function stepsUpdate() {
       }
 
       if (typeof selectedVariant.price === "number" && priceElement) {
-        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
+        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(
+          2
+        )}`;
       }
 
       const skuElement = targetContainer.querySelector(".selected-sku-d5");
@@ -76,7 +82,9 @@ function stepsUpdate() {
       return;
     }
 
-    const variantDataElements = dataContainer.querySelectorAll(`[d5-variant="${selectedVariantId}"]`);
+    const variantDataElements = dataContainer.querySelectorAll(
+      `[d5-variant="${selectedVariantId}"]`
+    );
 
     if (variantDataElements.length === 0) return;
 
@@ -94,10 +102,9 @@ function stepsUpdate() {
     variantSelector.addEventListener("change", function () {
       updateVariantInfo(this.value);
     });
-
   }
-    setTimeout(() => {
-  updateVariantInfo(variantSelector.value);
+  setTimeout(() => {
+    updateVariantInfo(variantSelector.value);
   }, 1000);
   if (variantSwatches.length) {
     variantSwatches.forEach((swatch) => {
