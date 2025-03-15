@@ -16,45 +16,7 @@
     {% render 'recently-viewed-d6' %}
   </div>
 </section>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".js-recentPdpBlock");
-    const leftArrow = document.querySelector(".arrow-left");
-    const rightArrow = document.querySelector(".arrow-right");
-    const scrollAmount = 300; // Adjust scroll amount per click
 
-    function checkScroll() {
-      if (slider.scrollLeft <= 0) {
-        leftArrow.classList.add("disabled");
-      } else {
-        leftArrow.classList.remove("disabled");
-      }
-
-      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-        rightArrow.classList.add("disabled");
-      } else {
-        rightArrow.classList.remove("disabled");
-      }
-    }
-
-    leftArrow.addEventListener("click", () => {
-      if (!leftArrow.classList.contains("disabled")) {
-        slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      }
-    });
-
-    rightArrow.addEventListener("click", () => {
-      if (!rightArrow.classList.contains("disabled")) {
-        slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      }
-    });
-
-    slider.addEventListener("scroll", checkScroll);
-
-    // Initial check on page load
-    checkScroll();
-  });
-</script>
 
 {% schema %}
 {

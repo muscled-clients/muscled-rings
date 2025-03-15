@@ -210,6 +210,7 @@
 <div class="recently-title">
   <h2 class="title inline-richtext h2 scroll-trigger animate--slide-in"><b>Recently Viewed</b></h2>
   <div class="slider-arrows-d6 disabled">
+    <span data-prev-d5>
     <svg
       class="arrow-btn arrow-left"
       style="rotate: 180deg;"
@@ -223,6 +224,8 @@
       <path d="M23.5103 17.4229L32 8.93311" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
       <path d="M23.5103 1.42285L32 9.9126" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
     </svg>
+      </span>
+    <span data-next-d5>
     <svg
       class="arrow-btn arrow-right"
       xmlns="http://www.w3.org/2000/svg"
@@ -235,9 +238,10 @@
       <path d="M23.5103 17.4229L32 8.93311" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
       <path d="M23.5103 1.42285L32 9.9126" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
     </svg>
+      </span>
   </div>
 </div>
-<div class="js-recentPdpBlock"></div>
+<div class="js-recentPdpBlock" data-slider-d5></div>
 <script>
         // Third Block
         function getRecentPdp (){
