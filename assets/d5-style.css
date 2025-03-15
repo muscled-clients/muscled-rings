@@ -439,6 +439,9 @@
   font-weight: 400;
   line-height: normal;
 }
+.d5-main-product .product-gallery__image{
+  border: 0.5px solid rgba(45, 27, 56, 0.25);
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
