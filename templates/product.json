@@ -549,13 +549,13 @@
         "text_7mPPFx": {
           "type": "text",
           "settings": {
-            "reviewer-img": "shopify://shop_images/image_8.png",
-            "reviewer-name": "Sarah",
+            "reviewer-img": "shopify://shop_images/image_10.png",
+            "reviewer-name": "Alex",
             "rating": 5,
             "star_size": 17,
             "full_star": "shopify://shop_images/Star_12_1.png",
             "gap": 1,
-            "review-text": "<p>Buying a ring online was daunting, but Rings.com made the process a delight. The detailed descriptions and clear images helped me make an informed choice.</p>",
+            "review-text": "<p>I can't express enough how pleased I am with my purchase from Rings.com. The ring I chose is simply stunning, with intricate details that catch the light beautifully. It arrived in a lovely package, adding to the whole experience. Exceptional quality and service!</p>",
             "products": "2-carat-lab-grown-diamond-solitaire-ring-canada",
             "p-title": ""
           }
@@ -563,14 +563,14 @@
         "text_QjwUtb": {
           "type": "text",
           "settings": {
-            "reviewer-img": "shopify://shop_images/image_8.png",
-            "reviewer-name": "Sarah",
+            "reviewer-img": "shopify://shop_images/image_11.png",
+            "reviewer-name": "Jessica",
             "rating": 5,
             "star_size": 17,
             "full_star": "shopify://shop_images/Star_12_1.png",
             "gap": 1,
-            "review-text": "<p>Buying a ring online was daunting, but Rings.com made the process a delight. The detailed descriptions and clear images helped me make an informed choice.</p>",
-            "products": "2-carat-lab-grown-diamond-solitaire-ring-canada",
+            "review-text": "<p>Gorgeous ring, shines beautifully. Very pleased!</p>",
+            "products": "14k-yellow-engagement-ring-mounting-1",
             "p-title": ""
           }
         }
