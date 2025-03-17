@@ -168,7 +168,7 @@
               productImg : "{{ product.featured_image | img_url: '' }}",
               productPrice : "{{ product.price | money | remove_first: '' }}",
               productUrl : "{{ product.url }}"
-              productWishlist: "{% render 'wishlisthero-collection-product' %}"
+              productWishlist: "{% render 'wishlisthero-collection-product' with product: product %}"
           };
 
           // Init Empty Array to push data
