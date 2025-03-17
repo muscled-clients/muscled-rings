@@ -517,6 +517,20 @@
             "products": "2-carat-lab-grown-diamond-solitaire-ring-canada",
             "p-title": ""
           }
+        },
+        "text_mTmn86": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_8.png",
+            "reviewer-name": "Sarah",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>Buying a ring online was daunting, but Rings.com made the process a delight. The detailed descriptions and clear images helped me make an informed choice.</p>",
+            "products": "2-carat-lab-grown-diamond-solitaire-ring-canada",
+            "p-title": ""
+          }
         }
       },
       "block_order": [
@@ -527,7 +541,8 @@
         "text_86HdAa",
         "text_nPREei",
         "text_PmhUAx",
-        "text_fHzD66"
+        "text_fHzD66",
+        "text_mTmn86"
       ],
       "settings": {}
     },
