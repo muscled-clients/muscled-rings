@@ -419,10 +419,115 @@
             "products": "1-carat-diamond-solitaire",
             "p-title": ""
           }
+        },
+        "text_GTE9q6": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
+            "reviewer-name": "Kaylyn",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "1-carat-diamond-solitaire",
+            "p-title": ""
+          }
+        },
+        "text_xiQtkf": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
+            "reviewer-name": "Kaylyn",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "1-carat-diamond-solitaire",
+            "p-title": ""
+          }
+        },
+        "text_TVDbtq": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
+            "reviewer-name": "Kaylyn",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "1-carat-diamond-solitaire",
+            "p-title": ""
+          }
+        },
+        "text_86HdAa": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
+            "reviewer-name": "Kaylyn",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "1-carat-diamond-solitaire",
+            "p-title": ""
+          }
+        },
+        "text_nPREei": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
+            "reviewer-name": "Kaylyn",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "1-carat-diamond-solitaire",
+            "p-title": ""
+          }
+        },
+        "text_PmhUAx": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
+            "reviewer-name": "Kaylyn",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "1-carat-diamond-solitaire",
+            "p-title": ""
+          }
+        },
+        "text_fHzD66": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
+            "reviewer-name": "Kaylyn",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "1-carat-diamond-solitaire",
+            "p-title": ""
+          }
         }
       },
       "block_order": [
-        "text_ffCtka"
+        "text_ffCtka",
+        "text_GTE9q6",
+        "text_xiQtkf",
+        "text_TVDbtq",
+        "text_86HdAa",
+        "text_nPREei",
+        "text_PmhUAx",
+        "text_fHzD66"
       ],
       "settings": {}
     },
