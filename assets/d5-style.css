@@ -509,7 +509,7 @@
   width: 19px;
   height: 19px;
 }
-.content-height.d5-main-gallery{
+.content-height.d5-main-gallery, .c-product__img{
   position: relative;
 }
 @media (min-width: 798px) {
