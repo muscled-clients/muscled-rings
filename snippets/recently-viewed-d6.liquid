@@ -290,7 +290,7 @@
                         <div class="c-product__img">
                         <div class="d5-collection-wishlist">
                         
-                                {% render 'wishlisthero-collection-product' %}
+                                {% render 'wishlisthero-collection-product' with product: ${item} %}
                         </div>
                         <a href="${item.productUrl}"><img src='${item.productImg}'/></a>
                         </div>
