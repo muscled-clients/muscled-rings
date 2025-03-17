@@ -185,6 +185,8 @@
           productArr.push(pdpData);
         console.log(productArr);
           // Get the product title from pdpData
+        const currPdpId = pdpData.productId;
+        console.log(currPdpId);
           const currPdpTitle = pdpData.productTitle;
           // Now Convert current page data into Strings which we already pushed in Array
           const pdpDataString = JSON.stringify(productArr);
