@@ -318,11 +318,11 @@
     <p>{{ section.settings['sub-heading'] }}</p>
     <div class="sec-reviews-d6">
       {% render 'review-star-d6',
-        rating: block.settings.rating,
-        star_size: block.settings.star_size,
-        full_star: block.settings.full_star,
-        empty_star: block.settings.empty_star,
-        gap: block.settings.gap
+        rating: section.settings.rating,
+        star_size: section.settings.star_size,
+        full_star: section.settings.full_star,
+        empty_star: section.settings.empty_star,
+        gap: section.settings.gap
       %}
     </div>
   </div>
