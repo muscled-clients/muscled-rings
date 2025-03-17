@@ -601,6 +601,7 @@
         "sub-heading": "Your satisfaction, in their words.",
         "rating": 5,
         "star_size": 24,
+        "full_star": "shopify://shop_images/Star_12_1.png",
         "gap": 1
       }
     },
