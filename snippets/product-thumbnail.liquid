@@ -68,7 +68,6 @@
   <div class="product-wrap">
 
       <div class="product-image__wrapper">
-        {% render 'wishlisthero-collection-product' with product: product %}
         <div class="image__container product__imageContainer">
           <a href="{{ product.url | within: collection }}">
             {% if settings.stickers_enabled %}
@@ -117,7 +116,6 @@
 
         {% if hover_enabled or settings.enable_quickshop %}
           <div class="thumbnail-overlay__container">
-            {% render 'wishlisthero-collection-product', product: product %}
             <a class="hidden-product-link" href="{{ product.url | within: collection }}">{{ product.title | escape }}</a>
 
             {% if hover_enabled %}
