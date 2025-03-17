@@ -76,6 +76,7 @@ product_recommendations: <boolean>
           {% if product.media[1] != blank and settings.show_secondary_image == true %}has-secondary-image-swap{% endif %}">
         <div class="product-wrap">
           <div class="product-image__wrapper">
+            {% render 'wishlisthero-collection-product' %}
             <div class="image__container product__imageContainer">
               <a href="{{ product.url | within: collection }}">
 
