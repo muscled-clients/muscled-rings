@@ -674,6 +674,35 @@
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".card-item-s");
+    const readMoreBtn = document.getElementById("readMoreBtn");
+    let visibleCount = 3; // Initially show 3 cards
+
+    // Hide all cards except the first three
+    cards.forEach((card, index) => {
+      if (index >= visibleCount) {
+        card.style.display = "none";
+      }
+    });
+
+    // Event listener for Read More button
+    readMoreBtn.addEventListener("click", function () {
+      let hiddenCards = Array.from(cards).filter(card => card.style.display === "none");
+
+      // Show the next three hidden cards
+      hiddenCards.slice(0, 3).forEach(card => {
+        card.style.display = "block";
+      });
+
+      // Hide the button if all cards are visible
+      if (Array.from(cards).every(card => card.style.display !== "none")) {
+        readMoreBtn.style.display = "none";
+      }
+    });
+  });
+</script>
 {% schema %}
 {
   "name": "Custom Reviews",
@@ -881,24 +910,6 @@
     if (!dotsContainer) {
       return;
     }
-
-    // Show the first slide by default
-    // slides[0].classList.add("active");
-
-    // slides.forEach((slide, index) => {
-    //   const dot = document.createElement("div");
-    //   dot.classList.add("dot-d11-1");
-    //   if (index === 0) {
-    //     dot.classList.add("active");
-    //   }
-    //   dot.addEventListener("click", () => {
-    //     const currentIndex = getCurrentSlideIndex();
-    //     const direction = index > currentIndex ? 'left' : 'right';
-    //     goToSlide(index, direction);
-    //   });
-    //   dotsContainer.appendChild(dot);
-    // });
-
     if (window.matchMedia("(max-width: 768px)").matches) {
       slider.addEventListener("mousedown", dragStart);
       slider.addEventListener("touchstart", dragStart);
@@ -947,44 +958,5 @@
       isDragging = false;
       slider.classList.remove("grabbing");
     }
-
-    // function getCurrentSlideIndex() {
-    //   return Array.from(slides).findIndex(slide => slide.classList.contains("active"));
-    // }
-
-    // function updateDots(index) {
-    //   const activeDot = dotsContainer.querySelector(".dot-d11-1.active");
-    //   if (activeDot) activeDot.classList.remove("active");
-    //   dotsContainer.children[index].classList.add("active");
-    // }
-
-    // function goToSlide(index, direction) {
-    //   if (index < 0 || index >= slides.length) return;
-
-    //   const currentIndex = getCurrentSlideIndex();
-    //   if (currentIndex === index) return;
-
-    //   const currentSlide = slides[currentIndex];
-    //   const nextSlide = slides[index];
-
-    //   slides.forEach(slide => {
-    //     slide.classList.remove("active", "slide-in-left", "slide-in-right", "slide-out-left", "slide-out-right");
-    //   });
-
-    //   if (direction === 'left') {
-    //     currentSlide.classList.add("slide-out-left");
-    //     nextSlide.classList.add("slide-in-right");
-    //   } else {
-    //     currentSlide.classList.add("slide-out-right");
-    //     nextSlide.classList.add("slide-in-left");
-    //   }
-
-    //   setTimeout(() => {
-    //     currentSlide.classList.remove("active");
-    //     nextSlide.classList.add("active");
-    //   }, 100);
-
-    //   updateDots(index);
-    // }
   });
 </script>
