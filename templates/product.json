@@ -255,6 +255,7 @@
     },
     "index_featured_collection_4q4GeV": {
       "type": "index__featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "collection": "frontpage",
