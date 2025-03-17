@@ -566,7 +566,12 @@
                 {% endunless %}
               </div>
             {% endif %}
-
+            {%- if block.type == 'text' -%}
+            {% comment %} Text {% endcomment %}
+            <div class="product-text">
+              {{ block.settings.text }}
+            </div>
+              {% endif %}
           {%- elsif block.type == 'product-links' -%}
             {% comment %} Collections, type, tags {% endcomment %}
             {% if block.settings.show_collections or block.settings.show_tags or block.settings.show_type %}
@@ -685,11 +690,6 @@
               {% render 'social-share-buttons' %}
             </div>
 
-          {%- elsif block.type == 'text' -%}
-            {% comment %} Text {% endcomment %}
-            <div class="product-text">
-              {{ block.settings.text }}
-            </div>
           {% elsif block.type == '@app' %}
             <div class="product-app">
               {% render block %}
