@@ -296,7 +296,16 @@
                     <div class="c-product">
                         <div class="c-product__img">
                         <div class="d5-collection-wishlist">
-                        ${item.productId}
+                        <div data-wlh-id="${item.productId}" 
+                         data-wlh-link="${item.productUrl}"
+                        data-wlh-variantid="${item.productVariant}" 
+                         data-wlh-price="33" 
+                         data-wlh-name="${item.productTitle}" 
+                         data-wlh-image="${item.productImg}" 
+                         class="wishlist-hero-custom-button wishlisthero-floating" 
+                         data-wlh-mode="icon_only"
+                         data-wlh-view="Collection"
+                         style="left: auto;"></div> 
                         </div>
                         <a href="${item.productUrl}"><img src='${item.productImg}'/></a>
                         </div>
