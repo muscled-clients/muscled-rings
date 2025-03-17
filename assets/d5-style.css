@@ -475,6 +475,9 @@
   line-height: 22px; /* 157.143% */
   margin: 5px 0 32px;
 }
+.product-block.product-block--text .product-text p a {
+  color: #553365;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
