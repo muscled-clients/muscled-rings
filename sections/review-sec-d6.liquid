@@ -695,17 +695,12 @@
 <script>
   function handleCardDisplay() {
     const cards = document.querySelectorAll(".card-item-s");
-    const readMoreBtn = document.getElementById("readMoreBtn");
-    const masonryContainer = document.querySelector(".masonry");
+    const readMoreBtn = document.getElementById("showMoreBtn");
     let visibleCount = 3; // Initially show 3 cards
-    let heightIncrease = 120; // Adjust height increase per click
 
     if (window.innerWidth <= 768) {
+      // Hide the button initially
       readMoreBtn.style.display = "block";
-
-      // Set initial height of masonry
-      masonryContainer.style.max-height = "auto";
-      masonryContainer.style.overflow = "hidden";
 
       // Hide all cards except the first three
       cards.forEach((card, index) => {
@@ -720,10 +715,6 @@
           card.style.display = "block";
         });
 
-        // Increase the height of masonry container
-        let currentHeight = masonryContainer.offsetHeight;
-        masonryContainer.style.max-height = `${currentHeight + heightIncrease}px`;
-
         // Hide the button if all cards are visible
         if (Array.from(cards).every(card => card.style.display !== "none")) {
           readMoreBtn.style.display = "none";
@@ -733,7 +724,6 @@
       // If screen is larger than 768px, show all cards and hide the button
       cards.forEach(card => card.style.display = "block");
       readMoreBtn.style.display = "none";
-      masonryContainer.style.height = "auto"; // Reset height on larger screens
     }
   }
 
