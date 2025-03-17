@@ -117,7 +117,7 @@
 
         {% if hover_enabled or settings.enable_quickshop %}
           <div class="thumbnail-overlay__container">
-            {% render 'wishlisthero-collection-product' %}
+            {% render 'wishlisthero-collection-product', product: product %}
             <a class="hidden-product-link" href="{{ product.url | within: collection }}">{{ product.title | escape }}</a>
 
             {% if hover_enabled %}
