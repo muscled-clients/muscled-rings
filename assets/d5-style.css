@@ -465,7 +465,7 @@
 .d5-footer .footer__logo-wrapper .image-element__wrap img {
   filter: grayscale(100%) brightness(0%) invert(14%);
 }
-.product-block.product-block--text .product-text p {
+.pdp-text-d5 p {
   color: #1b1b1b;
   text-align: center;
   font-family: Inter;
@@ -475,7 +475,7 @@
   line-height: 22px; /* 157.143% */
   margin: 5px 0 32px;
 }
-.product-block.product-block--text .product-text p a {
+.pdp-text-d5 p a {
   color: #553365;
   text-decoration: underline;
 }
@@ -754,7 +754,7 @@
     font-weight: 300;
     line-height: normal;
   }
-  .product-block.product-block--text .product-text p {
+  .pdp-text-d5 p {
     line-height: 20px;
     font-size: 12px;
     margin: 5px 0 20px;
