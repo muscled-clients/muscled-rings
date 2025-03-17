@@ -1,5 +1,5 @@
 * {
-  letter-spacing: normal; 
+  letter-spacing: normal;
 }
 .d5-main-product .product-block--first .product-title {
   color: #1b1b1b;
@@ -464,6 +464,16 @@
 }
 .d5-footer .footer__logo-wrapper .image-element__wrap img {
   filter: grayscale(100%) brightness(0%) invert(14%);
+}
+.product-block.product-block--text .product-text p {
+  color: #1b1b1b;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  margin: 5px 0 32px;
 }
 @media (min-width: 798px) {
   .d5-mobile {
