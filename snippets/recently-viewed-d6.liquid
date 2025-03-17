@@ -202,6 +202,7 @@
 
               // Create Variable for oldData or Previous page
               const oldPdpData = localStorage.getItem('recently_viewed');
+            console.log(oldPdpData);
               // Count the amount of data stored in strings so that we can remove // old products from the stack
               const countPdpData = (oldPdpData.match(/productTitle/g) || []).length;
               // we also need to check if user is not visiting page again
