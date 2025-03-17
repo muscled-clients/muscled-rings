@@ -209,7 +209,8 @@ data-wlh-variantid="{{product.selected_or_first_available_variant.id}}"
               productTitle : "{{ product.title }}",
               productImg : "{{ product.featured_image | img_url: '' }}",
               productPrice : "{{ product.price | money | remove_first: '' }}",
-              productUrl : "{{ product.url }}"
+              productUrl : "{{ product.url }}",
+              wishList: "ws"
           };
 
           // Init Empty Array to push data
@@ -332,7 +333,7 @@ data-wlh-variantid="{{product.selected_or_first_available_variant.id}}"
                         <div class="c-product__img">
                         <div class="d5-collection-wishlist">
                         
-                                ${item.productWishlist}
+                                ${wishlist}
                         </div>
                         <a href="${item.productUrl}"><img src='${item.productImg}'/></a>
                         </div>
