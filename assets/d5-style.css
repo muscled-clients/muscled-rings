@@ -190,6 +190,9 @@
 .shopify-section.product-template.product-main {
   background: #fff;
 }
+.shopify-section{
+  overflow-x: hidden;
+}
 .step-3-d5 {
   margin-left: -15px;
 }
