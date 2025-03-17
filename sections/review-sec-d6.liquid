@@ -704,7 +704,7 @@
       readMoreBtn.style.display = "block";
 
       // Set initial height of masonry
-      masonryContainer.style.height = "auto";
+      masonryContainer.style.max-height = "auto";
       masonryContainer.style.overflow = "hidden";
 
       // Hide all cards except the first three
@@ -722,7 +722,7 @@
 
         // Increase the height of masonry container
         let currentHeight = masonryContainer.offsetHeight;
-        masonryContainer.style.height = `${currentHeight + heightIncrease}px`;
+        masonryContainer.style.max-height = `${currentHeight + heightIncrease}px`;
 
         // Hide the button if all cards are visible
         if (Array.from(cards).every(card => card.style.display !== "none")) {
