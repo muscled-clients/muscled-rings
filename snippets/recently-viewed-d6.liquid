@@ -164,11 +164,11 @@
   // First Block
       function setRecentlyViewedPdp() {
           const pdpData = {
-              title : "{{ product.title }}",
+              productTitle : "{{ product.title }}",
               productImg : "{{ product.featured_image | img_url: '' }}",
               productPrice : "{{ product.price | money | remove_first: '' }}",
               productUrl : "{{ product.url }}"
-              wishList: "{% render 'wishlisthero-collection-product' %}"
+              productWishlist: "{% render 'wishlisthero-collection-product' %}"
           };
 
           // Init Empty Array to push data
@@ -182,7 +182,7 @@
           // Now push the pdpData into Array so that we can use it
           productArr.push(pdpData);
           // Get the product title from pdpData
-          const currPdpTitle = pdpData.title;
+          const currPdpTitle = pdpData.productTitle;
           // Now Convert current page data into Strings which we already pushed in Array
           const pdpDataString = JSON.stringify(productArr);
           // Set the variable for localStorage
@@ -200,7 +200,7 @@
               // Create Variable for oldData or Previous page
               const oldPdpData = localStorage.getItem('recently_viewed');
               // Count the amount of data stored in strings so that we can remove // old products from the stack
-              const countPdpData = (oldPdpData.match(/title/g) || []).length;
+              const countPdpData = (oldPdpData.match(/productTitle/g) || []).length;
               // we also need to check if user is not visiting page again
               const reVisitPdp =  oldPdpData.includes(currPdpTitle);
               // Get old data, merged it with new data and store merged data
@@ -290,14 +290,14 @@
                     <div class="c-product">
                         <div class="c-product__img">
                         <div class="d5-collection-wishlist">
-                        ${item.wishList}
-                              
+                        
+                                ${item.productWishlist}
                         </div>
                         <a href="${item.productUrl}"><img src='${item.productImg}'/></a>
                         </div>
                         <h3 class="c-product__title">
                             <a class="c-product__url" href="${item.productUrl}">
-                            ${item.title}
+                            ${item.productTitle}
                             </a>
                         </h3>
                         <p class="c-productPrice">${item.productPrice}</p>
