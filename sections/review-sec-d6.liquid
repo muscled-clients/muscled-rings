@@ -319,6 +319,7 @@
     <div class="sec-reviews-d6">
       {% render 'review-star-d6',
         rating: section.settings.rating,
+        text: section.settings.rating_text,
         star_size: section.settings.star_size,
         full_star: section.settings.full_star,
         empty_star: section.settings.empty_star,
@@ -416,6 +417,12 @@
       "step": 1,
       "default": 5,
       "info": "Set the rating value between 0 and 5."
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Review Value",
+      "default":"1,686 Reviews"
     },
     {
       "type": "range",
