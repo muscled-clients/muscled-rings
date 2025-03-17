@@ -753,6 +753,11 @@
     font-weight: 300;
     line-height: normal;
   }
+  .product-block.product-block--text .product-text p {
+    line-height: 20px;
+    font-size: 12px;
+    margin: 5px 0 20px;
+  }
 }
 
 /*  */
