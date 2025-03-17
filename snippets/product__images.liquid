@@ -184,7 +184,7 @@ enable_product_lightbox: <boolean>
 
           <div class="product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %}"
                 data-title="{{ media.alt | escape }}" tabindex="0">
-            <img src="{{ media | img_url: 'master' }}" alt="">
+            <img src="{{ media | img_url: '300x' }}" alt="">
             {% if thumbnail_badge != blank %}
               {% render 'icon',
                       name: thumbnail_badge,
