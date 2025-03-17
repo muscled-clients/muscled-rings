@@ -598,7 +598,10 @@
       ],
       "settings": {
         "sec-heading": "Customer Reviews",
-        "sub-heading": "Your satisfaction, in their words."
+        "sub-heading": "Your satisfaction, in their words.",
+        "rating": 5,
+        "star_size": 24,
+        "gap": 1
       }
     },
     "recently_viewed_pro_d6_HgeUky": {
