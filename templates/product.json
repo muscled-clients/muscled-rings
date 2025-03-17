@@ -253,6 +253,31 @@
         "bottom_description": "Enjoy quality packaging and free shipping with every order. We also offer hassle-free, 30-day returns - no questions asked! Don't forget we'll be here forever with our lifetime warranty."
       }
     },
+    "index_featured_collection_4q4GeV": {
+      "type": "index__featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "frontpage",
+        "products_per": 5,
+        "products_limit": 10,
+        "align_height": false,
+        "collection_height": 200,
+        "button_label": "",
+        "button_style": "button--primary",
+        "collection_style": "grid",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "collection_layout_mobile": "grid",
+        "mobile_products_per_row": "1",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "image_blocks_wPTEyn": {
       "type": "image-blocks",
       "blocks": {
@@ -600,6 +625,7 @@
         "sec-heading": "Customer Reviews",
         "sub-heading": "Your satisfaction, in their words.",
         "rating": 5,
+        "rating_text": "1,686 Reviews",
         "star_size": 24,
         "full_star": "shopify://shop_images/Star_12_1.png",
         "gap": 1
@@ -674,6 +700,7 @@
     "main",
     "icons_text_d6_QpchbD",
     "d5_image_grid_TT6fEf",
+    "index_featured_collection_4q4GeV",
     "image_blocks_wPTEyn",
     "d5_faqs_meCEw6",
     "d11_video_blocks_Vx4pTK",
