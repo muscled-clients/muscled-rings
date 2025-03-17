@@ -702,3 +702,12 @@
     </div>
   </div>
 </div>
+<script>
+  var $progressBarFill = $('.progress-bar-fill-t-d5');
+
+$carousel.on('scroll.flickity', function(event, progress) {
+  progress = Math.max(0, Math.min(1, progress));
+  $progressBarFill.width(progress * 100 + '%');
+});
+
+</script>
