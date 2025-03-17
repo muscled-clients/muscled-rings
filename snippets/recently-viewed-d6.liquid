@@ -227,8 +227,18 @@
       // Now we write all our function and it's time to execute it
       setRecentlyViewedPdp();
       // Set Variable for Local Storage Data
-      const localViewed = localStorage.recently_viewed;
-  console.log("Test data: ", localViewed);
+      // const localViewed = localStorage.recently_viewed;
+  const localViewed = localStorage.getItem('recently_viewed'); // Get the raw data from localStorage
+
+if (localViewed) {
+    const parsedData = JSON.parse(localViewed); // Parse the JSON string back into an object/array
+    console.log(parsedData); // Log all the product data to verify
+
+    // Example of logging the product ID from the parsed data
+    parsedData.forEach(product => {
+        console.log("Product ID:", product.productId); // Logs the product ID
+    });
+}
       // console.log to verify the data
 </script>
 <div class="recently-title">
