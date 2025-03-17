@@ -64,6 +64,12 @@
             "atc_color": "#ee5340"
           }
         },
+        "text_6cETL4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Free insured shipping by <strong>Monday, Mar 24</strong></p><p><br/>if you order in the next <strong>8 hours.</strong><a href=\"#\" title=\"#\"><strong> Need it sooner?</strong></a></p>"
+          }
+        },
         "trusts_fyXekW": {
           "type": "trusts",
           "settings": {
@@ -106,6 +112,7 @@
         "price",
         "description",
         "form",
+        "text_6cETL4",
         "trusts_fyXekW",
         "d5_faq_x8xJA6",
         "d5_faq_xDy8XD",
@@ -589,7 +596,10 @@
         "text_7mPPFx",
         "text_QjwUtb"
       ],
-      "settings": {}
+      "settings": {
+        "sec-heading": "Customer Reviews",
+        "sub-heading": "Your satisfaction, in their words."
+      }
     },
     "recently_viewed_pro_d6_HgeUky": {
       "type": "recently-viewed-pro-d6",
