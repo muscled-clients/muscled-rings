@@ -293,17 +293,7 @@
                     <div class="c-product">
                         <div class="c-product__img">
                         <div class="d5-collection-wishlist">
-                        
-                              <div data-wlh-id="{{product.id}}" 
- data-wlh-link="https://{{shop.domain}}{{product.url}}"
-data-wlh-variantid="{{product.selected_or_first_available_variant.id}}" 
- data-wlh-price="{{product.selected_or_first_available_variant.price | remove: '.' | remove: ',' | divided_by: 100.0 }}" 
- data-wlh-name="{{name | strip_html }}" 
- data-wlh-image="{{image | img_url: '1024x'}}" 
- class="wishlist-hero-custom-button {{buttonClass}}" 
- data-wlh-mode="{{buttonMode}}"
- data-wlh-view="{{buttonView}}"
- style="left: auto;"></div> 
+                        ${item.productVariant}
                         </div>
                         <a href="${item.productUrl}"><img src='${item.productImg}'/></a>
                         </div>
