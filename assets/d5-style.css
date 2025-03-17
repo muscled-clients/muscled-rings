@@ -489,7 +489,8 @@
   top: 20px;
   right: 20px;
   z-index: 44;
-  background: rgba(45, 27, 56, 0.25);
+  background: #2D1B3840;
+  border-radius: 50%;
 }
 .content-height.d5-main-gallery{
   position: relative;
