@@ -1,6 +1,17 @@
 {{ 'review-star.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'review-star.js' | asset_url }}" defer="defer"></script>
 <style>
+.reviewer-image-d6 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  height: 100%;
+}
+
+.reviewer-image-d6{
+  height: 256px;  
+}
+  
 .container-d11-sr-main-0 {
   padding: 120px 0 0 0;
   background: #fff;
@@ -245,17 +256,6 @@ p.verified-text-d6 svg {
     flex-shrink: 0;
   }
 
-  .reviewer-image-d6 img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    height: 100%;
-  }
-
-  .reviewer-image-d6{
-    height: 256px;  
-  }
-  
   .container-d11-sr {
     position: relative;
     width: 100%;
