@@ -68,6 +68,7 @@
   <div class="product-wrap">
 
       <div class="product-image__wrapper">
+        {% render 'wishlisthero-collection-product' %}
         <div class="image__container product__imageContainer">
           <a href="{{ product.url | within: collection }}">
             {% if settings.stickers_enabled %}
