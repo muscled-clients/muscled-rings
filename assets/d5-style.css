@@ -762,6 +762,9 @@
   .d5-atc-label {
     padding: 4px;
   }
+  .price-label-d5{
+    rgba(27, 27, 27, 0.75);
+  }
 }
 
 /*  */
