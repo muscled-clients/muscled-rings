@@ -551,10 +551,10 @@
     font-size: 12px;
   }
   .d5-main-product .swatch-element.color {
-    min-width: 53px;
-    min-height: 53px;
-    max-width: 53px;
-    max-height: 53px;
+    min-width: 51px;
+    min-height: 51px;
+    max-width: 51px;
+    max-height: 51px;
     padding: 14px;
   }
   .d5-main-product .swatch__options {
