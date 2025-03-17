@@ -650,6 +650,9 @@
   .product-gallery__thumbnails .flickity-viewport {
     overflow-x: scroll;
   }
+  .product-gallery__thumbnails .flickity-viewport::-webkit-scrollbar{
+    display: block !important;
+  }
   .d5-atc-label p {
     font-size: 12px;
   }
