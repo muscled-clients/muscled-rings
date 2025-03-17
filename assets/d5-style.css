@@ -498,6 +498,15 @@
 .wishlist-hero-custom-button:hover{
   all: unset !important;
 }
+.d5-collection-wishlist{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .content-height.d5-main-gallery{
   position: relative;
 }
