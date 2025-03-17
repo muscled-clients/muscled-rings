@@ -506,6 +506,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 19px;
+  height: 19px;
 }
 .content-height.d5-main-gallery{
   position: relative;
