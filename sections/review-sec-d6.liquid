@@ -587,7 +587,7 @@
   .reviews-heading-d6 p.ss-av-rating {
     display: none;
   }
-  .read-more-btn-d6{
+  .show-more-btn-d6{
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 16px;
@@ -683,11 +683,11 @@
       </div>
       <div class="dots-d11-1"></div>
       <button
-        id="readMoreBtn"
-        class="read-more-btn-d6"
+        id="showMoreBtn"
+        class="show-more-btn-d6"
         style="display: block;"
       >
-        Read More
+        Show More
       </button>
     </div>
   </div>
@@ -695,7 +695,7 @@
 <script>
   function handleCardDisplay() {
     const cards = document.querySelectorAll(".card-item-s");
-    const readMoreBtn = document.getElementById("readMoreBtn");
+    const readMoreBtn = document.getElementById("showMoreBtn");
     let visibleCount = 3; // Initially show 3 cards
 
     if (window.innerWidth <= 768) {
