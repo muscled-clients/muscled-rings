@@ -542,6 +542,7 @@
 .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails{
   min-width: 80px;
   max-width: 80px;
+  margin: 0 !important;
 }
 .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails *{
   position: unset !important;
