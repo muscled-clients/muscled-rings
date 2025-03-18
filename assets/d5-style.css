@@ -582,7 +582,8 @@
 }
 @media (max-width: 798px) {
   .steps-row-d5{
-    max-width: 375px;
+    max-width: 335px;
+    margin: 0 auto;
   }
   .d5-icons svg.wlh-svg-Icon{
     width: 16px !important;
