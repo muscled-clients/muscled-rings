@@ -530,6 +530,9 @@
 .play-pause-btn-d6{
   cursor: pointer;
 }
+#wishlisthero-product-page-button-container{
+ display: none !important 
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
