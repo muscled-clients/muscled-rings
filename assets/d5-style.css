@@ -544,6 +544,9 @@
   max-width: 80px;
   margin: 0 !important;
 }
+.flickity-button.flickity-prev-next-button{
+  display: none;
+}
 .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails *{
   position: unset !important;
   left: unset !important;
