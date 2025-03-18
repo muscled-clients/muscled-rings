@@ -98,27 +98,34 @@ function stepsUpdate() {
       }
     });
 
-    // Handling the selected-plus-price dynamic span creation
-    const plusPrice = d5_meta.vairant_plus_price;
+    // Get data from the selected-plus-price element
+    const plusPriceElement = targetContainer.querySelector(
+      ".selected-plus-price[d5-variant='" + selectedVariantId + "']"
+    );
 
-    if (plusPrice != "" && plusPrice != undefined) {
-      let existingSpan = targetContainer.querySelector(".selected-plus-price");
+    if (plusPriceElement) {
+      const plusPrice = plusPriceElement.textContent.trim();
+      
+      // Handle the selected-plus-price span creation or update as needed
+      if (plusPrice != "" && plusPrice != undefined) {
+        let existingSpan = targetContainer.querySelector(".selected-plus-price");
 
-      if (!existingSpan) {
-        // Create the span if it doesn't exist
-        const span = document.createElement("span");
-        span.className = "selected-plus-price";
-        span.textContent = plusPrice;
-        targetContainer.appendChild(span);
+        if (!existingSpan) {
+          // Create the span if it doesn't exist
+          const span = document.createElement("span");
+          span.className = "selected-plus-price";
+          span.textContent = plusPrice;
+          targetContainer.appendChild(span);
+        } else {
+          // Update existing span if it already exists
+          existingSpan.textContent = plusPrice;
+        }
       } else {
-        // Update existing span if it already exists
-        existingSpan.textContent = plusPrice;
-      }
-    } else {
-      // If price is blank, remove the span if it exists
-      const existingSpan = targetContainer.querySelector(".selected-plus-price");
-      if (existingSpan) {
-        existingSpan.remove();
+        // If price is blank, remove the span if it exists
+        const existingSpan = targetContainer.querySelector(".selected-plus-price");
+        if (existingSpan) {
+          existingSpan.remove();
+        }
       }
     }
   }
@@ -139,13 +146,4 @@ function stepsUpdate() {
         const selectedVariantName = this.value;
         const selectedVariant = [...variantSelector.options].find((option) =>
           option.textContent.includes(selectedVariantName)
-        );
-
-        if (selectedVariant) {
-          updateVariantInfo(selectedVariant.value);
-        }
-      });
-    });
-  }
-}
 
