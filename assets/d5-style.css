@@ -543,6 +543,10 @@
   min-width: 80px;
   max-width: 80px;
 }
+.product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails .flickity-slider{
+  flex-direction: column;
+  
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
