@@ -35,7 +35,8 @@ function searchD5() {
     const openSearch = document.querySelector('.header__link[data-show-search-trigger]');
 
     if (openSearch) {
-        openSearch.addEventListener('click', () => {
+        openSearch.addEventListener('click', (e) => {
+            e.preventDefault();
             overlay.classList.remove('site-overlay--hidden');
             search.classList.add('is-opened');
         });
