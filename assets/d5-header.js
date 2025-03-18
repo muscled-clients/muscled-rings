@@ -1,20 +1,21 @@
-function stickyD5() { 
+function stickyD5() {
     const header = document.querySelector(".d5-header-main");
-    let isSticky = false;
-
+    
     // Function to handle the scroll event and apply sticky classes
     const handleScroll = () => {
         if (window.scrollY >= 100) {
-            if (!isSticky) {
+            // Always add sticky class when scroll position exceeds 100px
+            if (!header.classList.contains("sticky-d5")) {
                 header.classList.add("sticky-d5");
+            }
+            if (!header.classList.contains("active")) {
                 setTimeout(() => header.classList.add("active"), 10); // Delayed activation
-                isSticky = true;
             }
         } else {
-            if (isSticky) {
+            // Remove sticky class if scroll is less than 100px
+            if (header.classList.contains("sticky-d5")) {
                 header.classList.remove("active");
                 setTimeout(() => header.classList.remove("sticky-d5"), 400); // Delay removal for smooth transition
-                isSticky = false;
             }
         }
     };
@@ -22,16 +23,8 @@ function stickyD5() {
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Check if the page is already scrolled past 100px on load
-    if (window.scrollY >= 100) {
-        header.classList.add("sticky-d5");
-        setTimeout(() => header.classList.add("active"), 10);
-        isSticky = true;
-    } else {
-        header.classList.remove("sticky-d5");
-        header.classList.remove("active");
-        isSticky = false;
-    }
+    // Check scroll position on page load and apply sticky class if necessary
+    handleScroll();
 }
 
 stickyD5();
