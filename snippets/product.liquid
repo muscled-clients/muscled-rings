@@ -49,6 +49,9 @@
     {% if d5_meta.supported_diamond_shape.value != blank %}
       <p class="selected-shape-d5" d5-variant="{{ variant.id }}">{{ d5_meta.supported_diamond_shape.value }}</p>
     {% endif %}
+    {% if d5_meta.vairant_plus_price != blank %}
+      <p class="selected-plus-price">{{ d5_meta.vairant_plus_price }}</p>
+    {% endif %}
   {% endfor %}
 </div>
 {% liquid
