@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   faqD5();
   readMoreLess();
-  stepsUpdate();
+  stepsUpdate();  
 });
 
 function faqD5() {
@@ -119,5 +119,32 @@ function stepsUpdate() {
         }
       });
     });
+  }
+}
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 798) {
+    // Get the height of the first element
+    var elem1 = document.querySelector('.product-gallery__main');
+    var elem2 = document.querySelector('.product-gallery__thumbnails .flickity-viewport');
+
+    if (elem1 && elem2) {
+      var height = elem1.offsetHeight;
+
+      // Set the max-height of the second element
+      elem2.style.maxHeight = height + 'px';
+    }
+  }
+});
+
+// Initial check on page load
+if (window.innerWidth > 798) {
+  var elem1 = document.querySelector('.product-gallery__main');
+  var elem2 = document.querySelector('.product-gallery__thumbnails .flickity-viewport');
+
+  if (elem1 && elem2) {
+    var height = elem1.offsetHeight;
+
+    // Set the max-height of the second element
+    elem2.style.maxHeight = height + 'px';
   }
 }
