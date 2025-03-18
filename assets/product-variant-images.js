@@ -12,6 +12,7 @@ function waitForFlickity(targetSelector, callback) {
     const checkFlickityInterval = setInterval(() => {
         const fliktyMain = document.querySelector(targetSelector);
         let flkty = Flickity.data(fliktyMain);
+      console.log('not found!');
 
         if (flkty) {
             clearInterval(checkFlickityInterval);
