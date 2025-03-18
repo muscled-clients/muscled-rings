@@ -554,6 +554,10 @@
   display: flex;
   
 }
+.product-gallery__thumbnails .product-gallery__thumbnail{
+  margin: 0;
+  width: 100%;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
