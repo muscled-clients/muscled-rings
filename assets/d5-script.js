@@ -97,6 +97,30 @@ function stepsUpdate() {
         targetElement.textContent = value;
       }
     });
+
+    // Handling the selected-plus-price dynamic span creation
+    const plusPrice = d5_meta.vairant_plus_price;
+
+    if (plusPrice != "" && plusPrice != undefined) {
+      let existingSpan = targetContainer.querySelector(".selected-plus-price");
+
+      if (!existingSpan) {
+        // Create the span if it doesn't exist
+        const span = document.createElement("span");
+        span.className = "selected-plus-price";
+        span.textContent = plusPrice;
+        targetContainer.appendChild(span);
+      } else {
+        // Update existing span if it already exists
+        existingSpan.textContent = plusPrice;
+      }
+    } else {
+      // If price is blank, remove the span if it exists
+      const existingSpan = targetContainer.querySelector(".selected-plus-price");
+      if (existingSpan) {
+        existingSpan.remove();
+      }
+    }
   }
 
   if (variantSelector) {
@@ -104,9 +128,11 @@ function stepsUpdate() {
       updateVariantInfo(this.value);
     });
   }
+
   setTimeout(() => {
     updateVariantInfo(variantSelector.value);
   }, 1000);
+
   if (variantSwatches.length) {
     variantSwatches.forEach((swatch) => {
       swatch.addEventListener("change", function () {
