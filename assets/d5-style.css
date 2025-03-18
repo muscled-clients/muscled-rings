@@ -590,6 +590,10 @@
 }
 }
 @media (max-width: 798px) {
+  .product_form.sticky-atc .d5-mobile{
+display: none
+} 
+  
   .steps-row-d5{
     max-width: 335px;
   }
