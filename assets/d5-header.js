@@ -58,17 +58,20 @@ function openDrawerD5() {
     const closeIcon = document.querySelector('.close-icon-d5');
     const drawer = document.querySelector('.navigation-d5');
 
-    openIcon?.addEventListener('click', () => {
+    openIcon?.addEventListener('click', (e) => {
+        e.preventDefault();
         drawer.classList.add('active');
         overlay.classList.add('active');
     });
 
-    closeIcon?.addEventListener('click', () => {
+    closeIcon?.addEventListener('click', (e) => {
+        e.preventDefault();
         drawer.classList.remove('active');
         overlay.classList.remove('active');
     });
   
-    overlay?.addEventListener('click', () => {
+    overlay?.addEventListener('click', (e) => {
+        e.preventDefault();
         drawer.classList.remove('active');
         overlay.classList.remove('active');
     });
