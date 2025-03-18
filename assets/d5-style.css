@@ -190,7 +190,7 @@
 .shopify-section.product-template.product-main {
   background: #fff;
 }
-.shopify-section{
+.shopify-section {
   overflow-x: hidden;
 }
 .step-3-d5 {
@@ -482,7 +482,7 @@
   color: #553365;
   text-decoration: underline;
 }
-.d5-wishlist-main{
+.d5-wishlist-main {
   width: 44px;
   height: 44px;
   position: absolute;
@@ -495,10 +495,10 @@
   align-items: center;
   justify-content: center;
 }
-.wishlist-hero-custom-button:hover{
+.wishlist-hero-custom-button:hover {
   all: unset !important;
 }
-.d5-collection-wishlist{
+.d5-collection-wishlist {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -509,8 +509,22 @@
   width: 19px;
   height: 19px;
 }
-.content-height.d5-main-gallery, .c-product__img{
+.content-height.d5-main-gallery,
+.c-product__img {
   position: relative;
+}
+.d5-icons .site-header__icon
+  span.wishlist-hero-items-count.wishlist-hero-items-count-exists {
+  top: 5px;
+  right: -10px;
+  background: yellow;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  color: black;
+  font-size: 12px;
 }
 @media (min-width: 798px) {
   .d5-mobile {
@@ -519,15 +533,15 @@
 }
 @media (max-width: 798px) {
   .progress-bar {
-  width: 100%;
-  height: 5px;
-  background: #ccc;
-}
-.progress-bar-fill-t-d5 {
-  width: 0%;
-  height: 100%;
-  background: #76c7c0;
-}
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+  }
+  .progress-bar-fill-t-d5 {
+    width: 0%;
+    height: 100%;
+    background: #76c7c0;
+  }
 
   .progressbar-con-d5 {
     height: 2px;
@@ -682,7 +696,7 @@
   .product-gallery__thumbnails .flickity-viewport {
     overflow-x: scroll;
   }
-  .product-gallery__thumbnails .flickity-viewport::-webkit-scrollbar{
+  .product-gallery__thumbnails .flickity-viewport::-webkit-scrollbar {
     display: block !important;
   }
   .d5-atc-label p {
@@ -809,10 +823,9 @@
   .d5-atc-label {
     padding: 4px;
   }
-  .price-label-d5{
-    rgba(27, 27, 27, 0.75);
+  .price-label-d5 {
+    color: rgba(27, 27, 27, 0.75);
   }
 }
 
 /*  */
-
