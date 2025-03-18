@@ -552,7 +552,7 @@
 .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails .flickity-slider{
   flex-direction: column;
   display: flex;
-  
+  gap: 8px;
 }
 .product-gallery__thumbnails .product-gallery__thumbnail{
   margin: 0;
