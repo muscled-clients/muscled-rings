@@ -40,11 +40,10 @@
       data-show-search-trigger
       tabindex="0"
     >
-      {%
-        render 'icon',
-        name: 'search',
-        icon_class: 'header__icon',
-      %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+  <circle cx="8.61916" cy="8.37209" r="7.63953" stroke="black" stroke-width="1.46512"/>
+  <path d="M14.2002 13.9535L19.7816 20" stroke="black" stroke-width="1.46512"/>
+</svg>
 
       <span class="icon-caption">
         {{- 'general.search.title' | t | escape -}}
@@ -57,19 +56,19 @@
     {% if customer %}
       {% comment %} Logout {% endcomment %}
       <a href="{{ routes.account_url }}" class="header__link action-area__link" >
-          {% render 'icon',
-                  name: 'avatar',
-                  icon_class: 'header__icon'
-          %}
+         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+  <circle cx="10.3061" cy="5.71429" r="5" stroke="black" stroke-width="1.42857"/>
+  <path d="M0.782227 20C0.782227 17.4286 2.63815 12.1143 10.0618 11.4286C12.9922 11.5714 19.0484 13.4857 19.8298 20" stroke="black" stroke-width="1.42857"/>
+</svg>
           <span class="icon-caption">{{ 'layout.customer.my_account' | t | escape }}</span>
       </a>
     {% else %}
       {% comment %} Login {% endcomment %}
       <a href="{{ routes.account_login_url }}" class="header__link action-area__link" >
-          {% render 'icon',
-                  name: 'avatar',
-                  icon_class: 'header__icon'
-          %}
+         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+  <circle cx="10.3061" cy="5.71429" r="5" stroke="black" stroke-width="1.42857"/>
+  <path d="M0.782227 20C0.782227 17.4286 2.63815 12.1143 10.0618 11.4286C12.9922 11.5714 19.0484 13.4857 19.8298 20" stroke="black" stroke-width="1.42857"/>
+</svg>
           <span class="icon-caption">{{ 'layout.customer.log_in' | t | escape }}</span>
       </a>
     {% endif %}
@@ -79,10 +78,10 @@
   <div class="header-cart action-area__link {% if cart.item_count != 0 %}has-cart-count{% endif %}" data-ajax-cart-trigger>
     <a class="header__link" href="{{ routes.cart_url }}" >
       <span class="header-cart__icon">
-        {% render 'icon',
-                name: settings.cart_icon,
-                icon_class: 'header__icon'
-        %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="21" viewBox="0 0 17 21" fill="none">
+  <path d="M12.7438 7.38298V4.61702C12.7438 2.61939 11.1244 1 9.12679 1V1C7.12916 1 5.50977 2.6194 5.50977 4.61702V6.95745" stroke="black" stroke-width="1.42857"/>
+  <rect x="1.54339" y="7.24621" width="14.7416" height="13.0395" stroke="black" stroke-width="1.42857"/>
+</svg>
         <span class="header-cart__count header-cart__count--badge badge" data-bind="itemCount">
           {{ cart.item_count }}
         </span>

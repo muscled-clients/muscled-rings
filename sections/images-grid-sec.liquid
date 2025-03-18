@@ -1,0 +1,154 @@
+<style>
+
+      .main-images-grid-d6{
+        padding: 60px 40px;
+        background: #FBFBFB;
+      }
+        .images-grid-d6 {
+          display: flex;
+          gap: 20px;
+          padding: 40px 0 0;
+      }
+      .image-block-d6 img{
+        height: 100%;
+        width: 100%;
+      }
+      .grid-headings-d6 h2{
+        color: #1B1B1B;
+    text-align: center;
+    font-family: "Tenor Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+      }
+    .grid-headings-d6 p{
+      color: #1B1B1B;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 12px 0 0;
+}
+@media (max-width: 750px) {
+  .main-slider-d5 {
+    position: relative;
+    padding: 0 20px;
+  }
+  .main-images-grid-d6 {
+    width: 100%;
+    overflow: hidden;
+  }
+  .images-grid-d6 {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .image-block-d6 {
+    width: 75%;
+    flex: 0 0 75%;
+    line-height: 0;
+    scroll-snap-align: center;
+  }
+  .image-block-d6 img {
+    margin: -1px 0 0 0;
+  }
+  .grid-headings-d6{
+    padding: 0 16px;
+  }
+  .main-images-grid-d6 .progressbar-d5{
+    padding: 16px;
+  }
+  .main-images-grid-d6,.main-images-grid-d6 .main-slider-d5{
+    padding: 0 !important;
+  }
+  .main-images-grid-d6 .images-grid-d6{
+    gap: 4px;
+  }
+  .image-block-d6:first-child{
+    margin-left: 16px;
+  }
+  .image-block-d6:last-child{
+    margin-right: 16px;
+  }
+  .images-grid-d6{
+    padding-top: 16px;
+  }
+}
+</style>
+<section>
+  <div class="main-images-grid-d6" data-slider-container>
+    <div class="grid-headings-d6">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+    <div class="main-slider-d5">
+      <div class="d5-arrows">
+        <div class="prev-arrow-d5" data-prev-d5>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+            <circle cx="20" cy="20.0386" r="20" fill="white"/>
+            <path d="M16.4906 13.2497C16.7718 12.9682 17.2282 12.9682 17.5094 13.2497L23.7889 19.5292C24.0704 19.8104 24.0704 20.2667 23.7889 20.548L17.5094 26.8275C17.3687 26.9682 17.1842 27.0386 16.9998 27.0386C16.8153 27.0386 16.6309 26.9682 16.4904 26.8275C16.2089 26.5462 16.2089 26.0899 16.4904 25.8087L22.2604 20.0386L16.4906 14.2685C16.2091 13.9872 16.2091 13.5309 16.4906 13.2497Z" fill="#1B1B1B"/>
+          </svg>
+        </div>
+        <div class="next-arrow-d5" data-next-d5>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+            <circle cx="20" cy="20.0386" r="20" fill="white"/>
+            <path d="M16.4906 13.2497C16.7718 12.9682 17.2282 12.9682 17.5094 13.2497L23.7889 19.5292C24.0704 19.8104 24.0704 20.2667 23.7889 20.548L17.5094 26.8275C17.3687 26.9682 17.1842 27.0386 16.9998 27.0386C16.8153 27.0386 16.6309 26.9682 16.4904 26.8275C16.2089 26.5462 16.2089 26.0899 16.4904 25.8087L22.2604 20.0386L16.4906 14.2685C16.2091 13.9872 16.2091 13.5309 16.4906 13.2497Z" fill="#1B1B1B"/>
+          </svg>
+        </div>
+      </div>
+    <div class="images-grid-d6" data-slider-d5>
+      {% for block in section.blocks %}
+        {% if block.settings['block-img'] %}
+          <div class="image-block-d6" data-slide-d5>
+            <img src="{{ block.settings.block-img | image_url: width: 800 }}" width="300%" height="300">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+      </div>
+      <div class="progressbar-d5">
+      <div class="progressbar-con-d5">
+      <div class="proscroll-video-bar__d5 d5-progress-bar-inner" data-progress-d5></div>
+      </div>
+      </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Images Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "As Seen On"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub Heading",
+      "default": "#Rings"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block-img",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+     "name": "Images Grid"
+    }
+  ]
+}
+{% endschema %}

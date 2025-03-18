@@ -140,7 +140,7 @@
     
     <variant-selection
       {% if variant_selection_id != blank %}id="{{ variant_selection_id }}"{% endif %}
-      class="variant-selection"
+      class="variant-selection d5-variant-selector"
       product-url="{{ product.url }}.js"
       variant="{% if selected_variant %}{{ selected_variant.id }}{% else %}not-selected{% endif %}"
       data-variant-selection
@@ -265,7 +265,31 @@
       {% endif %}
     </variant-selection>
     {% comment %}Inject @pixelunion/shopify-variants-ui/variant-selection end{% endcomment %}
+    <div class="product__description content d5-mobile">
+  <div
+    class="
+      has-padding-top
+      {% if block.settings.mobile_product_description != blank %}
+        is-hidden-mobile-only
+      {% endif %}
+    "
+  >
+  {% unless section.settings.top-t %} <div class="mobile_title_price"></div>{% endunless %}
+    <div class="description-text">
+      {{ product.description }}
+    </div>
+    <button class="toggle-btn">More</button>
+  </div>
 
+  {% if block.settings.mobile_product_description != blank %}
+    <div class="is-hidden-desktop-only has-padding-top">
+      <div class="description-text">
+        {{ block.settings.mobile_product_description }}
+      </div>
+      <button class="toggle-btn">More</button>
+    </div>
+  {% endif %}
+</div>
 
     {% if product.available %}
       {% if settings.display_inventory_left %}
@@ -913,6 +937,16 @@
                 <div class="atc_button_overlay"></div>
             {% endif %}
             {% if is_vdbrc_variant_tag_available == true %}
+              <div class="d5-atc-label">
+                {% capture 'atc_label' %}
+                  <p>Financing as low as $129/mo with Affirm. Prequalify Now</p>
+                {% endcapture %}
+                {% if section.settings.label_atc != blank %}
+                  <p>{{ section.settings.label_atc }}</p>
+                {% else %}
+              {{ atc_label}}
+                {% endif %}
+              </div>
             <button type="button" onclick="gofor_choose_stone()" class="button action_button action_button--secondary add_to_stone">
               <span>Explore more stone</span>
             </button>

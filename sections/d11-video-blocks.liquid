@@ -1,0 +1,447 @@
+{{ 'ss-media-v1.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ss-media-v1.js' | asset_url }}" defer="defer"></script>
+<div id="shopify-section-d11__video-block" class="shopify-section">
+  <style>
+                            .section-d11__video-block {
+                              padding: 60px 40px;
+                              background-color: {{ section.settings.sec_bg_color }};
+                            }
+                            .section-d11__video-block-settings {
+                              max-width: 1440px;
+                              margin: 0 auto;
+                            }
+                            .video-social-heading-d11__video-block h2 {
+                              color: #1B1B1B;
+                              font-family: "Tenor Sans";
+                              font-size: 32px;
+                              font-weight: 400;
+                              text-align: center;
+                              margin: 0;
+                            }
+                            .video-social-subheading-d11__video-block p {
+                              color: #1B1B1B;
+                              font-family: Roboto;
+                              font-size: 14px;
+                              font-weight: 300;
+                              line-height: 20px;
+                              text-align: center;
+                              margin: 12px 0 0;
+                            }
+
+
+    .video-social-slider-d11__video-block {
+      margin-top: 40px;
+    }
+
+    .remove-swiper-wrapper {
+      display: flex;
+      gap: 20px;
+      scroll-behavior: smooth;
+    }
+
+    .video-social-card-d11__video-block {
+      flex: 0 0 calc(25% - 15px);
+      background: transparent;
+      border-radius: 8px;
+      height: 550px;
+    }
+
+    .video-social-video-d11__video-block {
+      position: relative;
+      border-radius: 0;
+      border: none;
+      height: 100%;
+    }
+
+    .video-social-video-d11__video-block video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .d11__video-auth-wrap {
+      position: absolute;
+      bottom: 10%;
+      left: 33%;
+      z-index: 1;
+      text-align: center;
+    }
+                            .d11__video-auth-wrap {
+                              position: absolute;
+                              bottom: 10%;
+                              left: 50%;
+                              transform: translate(-50%, 0px);
+                              z-index: 1;
+                              text-align: center;
+                            }
+
+
+    .video_auth-desig {
+      color: #c7c7c7;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+    }
+    p.video_auth-name {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .proscroll-video-bar__d11 {
+      height: 3px;
+      width: 100%;
+      background-color: #ededed;
+      margin-top: 10px;
+    }
+
+    .proscroll-video-bar__d11::-webkit-progress-value {
+      background-color: #2d1b38;
+    }
+    .muted-btn-d6 {
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+    .muted-btn-d6 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    img.play-icon-d6,
+    img.pause-icon-d6 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .play-pause-btn-d6 {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hidden-d6 {
+      display: none;
+    }
+    .video-social-card-d11__video-block:hover .hidden-d6 + .pause-icon-d6 {
+      display: block !important;
+      cursor: pointer;
+    }
+
+    @media (max-width: 798px) {
+      .video-social-slider-d11__video-block {
+        position: relative;
+      }
+      .video-social-slider-d11__video-block .d5-arrows {
+        padding: 0 20px;
+        z-index: 333;
+      }
+      .remove-swiper-wrapper {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        gap: 4px;
+      }
+      .video-social-card-d11__video-block {
+        flex: 0 0 74%;
+        max-width: 320px;
+        scroll-snap-align: center;
+        height: 430px;
+      }
+                            @media (max-width: 798px) {
+                              .video-social-slider-d11__video-block{
+                                position: relative;
+                              }
+                              .video-social-slider-d11__video-block .d5-arrows{
+                                padding: 0 20px;
+                                z-index: 333;
+                              }
+                              .remove-swiper-wrapper{
+                                overflow-x: scroll;
+                                scroll-snap-type: x mandatory;
+                                gap: 4px;
+                              }
+                              .video-social-card-d11__video-block {
+                                flex: 0 0 74%;
+                                max-width: 320px;
+                                scroll-snap-align: center;
+                                height: 430px;
+                              }
+                              .section-d11__video-block{
+                                padding: 20px 0px;
+                                position: relative;
+                                width: 100%;
+                                overflow: hidden;
+                              }
+                              .proscroll-video-bar__d5{
+                                display: block;
+                                background: #2D1B38;
+                                height: 2px;
+                                margin-top: 16px;
+                              }
+                              .main-scroll-bar-d5 {
+                        padding: 0 20px;
+                    }
+                  .video-social-card-d11__video-block:first-child {
+                    margin: 0 0 0 20px;
+                }
+                  .video-social-card-d11__video-block:last-child {
+                    margin: 0 20px 0 0;
+                }
+                            }
+  </style>
+
+  <div class="section-d11__video-block" data-slider-container>
+    <div class="section-d11__video-block-settings">
+      <div class="video-social-heading-d11__video-block">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+
+      <div class="video-social-subheading-d11__video-block">
+        <p>{{ section.settings.sub_heading }}</p>
+      </div>
+
+      <div class="video-social-slider-d11__video-block">
+        <div class="d5-arrows">
+          <div class="prev-arrow-d5" data-prev-d5>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+              <circle cx="20" cy="20.0386" r="20" fill="white"/>
+              <path d="M16.4906 13.2497C16.7718 12.9682 17.2282 12.9682 17.5094 13.2497L23.7889 19.5292C24.0704 19.8104 24.0704 20.2667 23.7889 20.548L17.5094 26.8275C17.3687 26.9682 17.1842 27.0386 16.9998 27.0386C16.8153 27.0386 16.6309 26.9682 16.4904 26.8275C16.2089 26.5462 16.2089 26.0899 16.4904 25.8087L22.2604 20.0386L16.4906 14.2685C16.2091 13.9872 16.2091 13.5309 16.4906 13.2497Z" fill="#1B1B1B"/>
+            </svg>
+          </div>
+          <div class="next-arrow-d5" data-next-d5>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+              <circle cx="20" cy="20.0386" r="20" fill="white"/>
+              <path d="M16.4906 13.2497C16.7718 12.9682 17.2282 12.9682 17.5094 13.2497L23.7889 19.5292C24.0704 19.8104 24.0704 20.2667 23.7889 20.548L17.5094 26.8275C17.3687 26.9682 17.1842 27.0386 16.9998 27.0386C16.8153 27.0386 16.6309 26.9682 16.4904 26.8275C16.2089 26.5462 16.2089 26.0899 16.4904 25.8087L22.2604 20.0386L16.4906 14.2685C16.2091 13.9872 16.2091 13.5309 16.4906 13.2497Z" fill="#1B1B1B"/>
+            </svg>
+          </div>
+        </div>
+        <div class="remove-swiper-wrapper" data-slider-d5>
+          {% for block in section.blocks %}
+            <div class="video-social-card-d11__video-block" data-slide-d5>
+              <div class="video-social-video-d11__video-block">
+                {% render 'ss-media-v1',
+                  video: block.settings.video,
+                  controls: block.settings.controls,
+                  loop: block.settings.loop,
+                  autoplay: block.settings.autoplay,
+                  muted: block.settings.muted,
+                  poster_image: block.settings.image,
+                  object_fit: 'cover'
+                %}
+                <div class="d11__video-auth-wrap">
+                  <p class="video_auth-name">{{ block.settings.auth }}</p>
+                  <p class="video_auth-desig">{{ block.settings.desig }}</p>
+                </div>
+
+                <!-- Play/Pause and Mute/Unmute Buttons -->
+                <div class="video-controls-d6">
+                  <div class="play-pause-btn-d6">
+                    <img
+                      class="play-icon-d6"
+                      src="https://cdn.shopify.com/s/files/1/0900/0199/8097/files/Play_button.png?v=1741988553"
+                    >
+                    <img
+                      class="pause-icon-d6"
+                      src="https://cdn.shopify.com/s/files/1/0900/0199/8097/files/pause.svg?v=1741988976"
+                      style="display: none;"
+                    >
+                  </div>
+
+                  <div class="muted-btn-d6">
+                    <img
+                      class="unmuted-icon-d6"
+                      src="https://cdn.shopify.com/s/files/1/0900/0199/8097/files/Frame_1000003926.png?v=1741984932"
+                    >
+                    <img
+                      class="muted-icon-d6"
+                      src="https://cdn.shopify.com/s/files/1/0900/0199/8097/files/volume_9810522a-f72e-4645-9759-7447f62876c5.svg?v=1742042451"
+                      style="display: none;"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="main-scroll-bar-d5">
+        <div class="progressbar-con-d5">
+          <div class="proscroll-video-bar__d5 d5-progress-bar-inner" data-progress-d5></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+      document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".video-social-video-d11__video-block").forEach(videoContainer => {
+      let video = videoContainer.querySelector("video");
+
+      // Mute/Unmute buttons
+      let muteButton = videoContainer.querySelector(".muted-btn-d6");
+      let unmutedIcon = muteButton.querySelector(".unmuted-icon-d6");
+      let mutedIcon = muteButton.querySelector(".muted-icon-d6");
+
+      // Play/Pause buttons
+      let playButton = videoContainer.querySelector(".play-pause-btn-d6");
+      let playIcon = playButton.querySelector(".play-icon-d6");
+      let pauseIcon = playButton.querySelector(".pause-icon-d6");
+
+      // Set initial states for play/pause
+      if (video.paused) {
+        playIcon.classList.remove("hidden-d6");
+        pauseIcon.classList.add("hidden-d6");
+      } else {
+        playIcon.classList.add("hidden-d6");
+        pauseIcon.classList.remove("hidden-d6");
+      }
+
+      // Mute/Unmute toggle
+      muteButton.addEventListener("click", function () {
+        if (video.muted) {
+          video.muted = false;
+          unmutedIcon.style.display = "none";
+          mutedIcon.style.display = "block";
+        } else {
+          video.muted = true;
+          unmutedIcon.style.display = "block";
+          mutedIcon.style.display = "none";
+        }
+      });
+
+      // Play/Pause toggle
+      playButton.addEventListener("click", function () {
+        if (video.paused) {
+          video.play();
+          playIcon.classList.add("hidden-d6");
+          pauseIcon.classList.remove("hidden-d6");
+        } else {
+          video.pause();
+          playIcon.classList.remove("hidden-d6");
+          pauseIcon.classList.add("hidden-d6");
+        }
+      });
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Social Video Grid",
+  "settings": [
+    {
+      "type": "color",
+      "id": "sec_bg_color",
+      "label": "Section BG Color",
+      "default": "#F2F1EA"
+    },
+    {
+  "type": "header",
+  "content": "Title",
+  "info": "Title Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "Real Customers, Real Stories"
+    },
+     {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Subheading",
+      "default": "Thousand of Ring Enthusiasts' Preferred Ring.com"
+    },
+     {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "unit": "px",
+      "step": 1,
+      "min": 14,
+      "max": 50,
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "unit": "px",
+      "step": 1,
+      "min": 14,
+      "max": 50,
+      "default": 36
+    },
+  ],
+     "blocks" : [
+    {
+      "name":"Video",
+        "type":"text",
+        "settings":[
+          {
+        "type": "video",
+        "id": "video",
+        "label": "Video"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay video",
+        "default": true,
+        "info": "Autoplay will only work if the video is muted"
+      },
+      {
+        "type": "checkbox",
+        "id": "controls",
+        "label": "Show video controls",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "muted",
+        "label": "Mute video",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "video_loop",
+        "label": "Play in loop",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Video poster image",
+        "info": "Fallback video poster image will be visible until some frames of video get downloaded"
+      },
+          {
+            "type": "text",
+            "id": "auth",
+            "label": "Author Name",
+            "default": "Amelia Thompson"
+          },
+          {
+            "type": "text",
+            "id": "desig",
+            "label": "Designation",
+            "default": "Brand Consultant"
+          }
+        ]
+      }
+   ],
+  "presets": [
+    {
+      "name": "Social Video Grid"
+    }
+  ]
+}
+{% endschema %}

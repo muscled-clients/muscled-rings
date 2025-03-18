@@ -1,0 +1,63 @@
+<style>
+  .recently-main-d6{
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 120px 0;
+    background: #fff;
+  }
+  .slider-arrows-d6 span{
+    display: flex;
+    align-items: center;
+  }
+  .arrow-btn{
+    height: 20px;
+  }
+  .recently-main-d6 .main-scroll-bar-d5{
+    margin-top: 32px;
+  }
+  .recently-main-d6 .progressbar-con-d5{
+    display: flex;
+  }
+  @media (max-width: 768px){
+    .progressbar-con-d5{
+      display: block;
+      margin: 16px 0 0;
+    }
+    .recently-main-d6{
+  padding: 40px 0;
+  }
+    .slider-arrows-d6 .d5-disable{
+      opacity: 0 !important;
+    }
+    .recently-main-d6 .main-scroll-bar-d5{
+      margin-top: 24px;
+    }
+    .recently-main-d6 .proscroll-video-bar__d5{
+      margin: 0 !important;
+    }
+    .recently-main-d6 .main-scroll-bar-d5{
+      padding: 0;
+    }
+    .recently-main-d6 .slider-arrows-d6{
+      top: 42%;
+    }
+  }
+</style>
+<section>
+  <div class="recently-main-d6" data-slider-container>
+    {% render 'recently-viewed-d6' %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Recently Viewed",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Recently Viewed"
+    }
+  ]
+}
+{% endschema %}

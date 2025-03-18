@@ -71,18 +71,26 @@
     </li>
   {% endif %}
 
+   {% if settings.x_link != '' %}
+    <li>
+      <a href="{{ settings.x_link }}" title="{{ shop.name }} on X" rel="me" target="_blank"  rel="noopener" class="icon-x">
+        {% render 'icon', name: 'x-social' %}
+      </a>
+    </li>
+  {% endif %}
+  
+  {% if settings.twitch_link != '' %}
+    <li>
+      <a href="{{ settings.twitch_link }}" title="{{ shop.name }} on Twitch" rel="me" target="_blank"  rel="noopener" class="icon-twitch">
+        {% render 'icon', name: 'twitch' %}
+      </a>
+    </li>
+  {% endif %}
+  
   {% if settings.kickstarter_link != '' %}
     <li>
       <a href="{{ settings.kickstarter_link }}" title="{{ shop.name }} on Kickstarter" rel="me" target="_blank"  rel="noopener" class="icon-kickstarter">
         {% render 'icon', name: 'kickstarter' %}
-      </a>
-    </li>
-  {% endif %}
-
-  {% if settings.linkedin_link != '' %}
-    <li>
-      <a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank"  rel="noopener" class="icon-linkedin">
-        {% render 'icon', name: 'linkedin' %}
       </a>
     </li>
   {% endif %}
@@ -167,21 +175,6 @@
     </li>
   {% endif %}
 
-  {% if settings.twitch_link != '' %}
-    <li>
-      <a href="{{ settings.twitch_link }}" title="{{ shop.name }} on Twitch" rel="me" target="_blank"  rel="noopener" class="icon-twitch">
-        {% render 'icon', name: 'twitch' %}
-      </a>
-    </li>
-  {% endif %}
-
-  {% if settings.x_link != '' %}
-    <li>
-      <a href="{{ settings.x_link }}" title="{{ shop.name }} on X" rel="me" target="_blank"  rel="noopener" class="icon-x">
-        {% render 'icon', name: 'x-social' %}
-      </a>
-    </li>
-  {% endif %}
 
   {% if settings.vimeo_link != '' %}
     <li>
@@ -203,6 +196,14 @@
     <li>
       <a href="{{ settings.youtube_link }}" title="{{ shop.name }} on YouTube" rel="me" target="_blank"  rel="noopener" class="icon-youtube">
         {% render 'icon', name: 'youtube' %}
+      </a>
+    </li>
+  {% endif %}
+
+   {% if settings.linkedin_link != '' %}
+    <li>
+      <a href="{{ settings.linkedin_link }}" title="{{ shop.name }} on LinkedIn" rel="me" target="_blank"  rel="noopener" class="icon-linkedin">
+        {% render 'icon', name: 'linkedin' %}
       </a>
     </li>
   {% endif %}

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer",
@@ -44,6 +53,7 @@
         "text_3",
         "text_4"
       ],
+      "disabled": true,
       "settings": {
         "show_icon_bar": true,
         "icon_position": "row",
@@ -65,9 +75,10 @@
         "logo": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/RINGS.COM.svg",
             "size": "small",
-            "text": "<p>sales@rings.com<\/p><p><br\/>+1 604 248 5000<\/p><p><\/p>",
-            "social_icons_footer": true
+            "text": "<p>Crafting unique, ethically sourced engagement rings to celebrate your personal love story with expert concierge support and exclusive designs.</p>",
+            "social_icons_footer": false
           }
         },
         "link_list": {
@@ -77,29 +88,36 @@
             "social_icons_footer": false
           }
         },
+        "link_list_dWBMQa": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "menu": "footer",
+            "social_icons_footer": false
+          }
+        },
         "text": {
           "type": "text",
           "settings": {
             "title": "POLICIES",
-            "content": "<p><a href=\"\/policies\/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms of Service<\/a><\/p><p><a href=\"\/policies\/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Privacy Policy<\/a><\/p><p><a href=\"\/pages\/custom-order-policy\" target=\"_blank\" title=\"Custom Order Policy\">Custom Order Policy<\/a><\/p><p><a href=\"\/policies\/refund-policy\" target=\"_blank\" title=\"Refund Policy\">Return & Refund Policy<\/a><\/p><p><a href=\"\/pages\/faq\" title=\"FAQ\">FAQ<\/a><\/p>",
+            "content": "<p><a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms of Service</a></p><p><a href=\"/policies/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Privacy Policy</a></p><p><a href=\"/pages/custom-order-policy\" target=\"_blank\" title=\"Custom Order Policy\">Custom Order Policy</a></p><p><a href=\"/policies/refund-policy\" target=\"_blank\" title=\"Refund Policy\">Return & Refund Policy</a></p><p><a href=\"/pages/faq\" title=\"FAQ\">FAQ</a></p>",
             "social_icons_footer": false
           }
         },
-        "newsletter_FrngqD": {
-          "type": "newsletter",
+        "link_list_eRyaAn": {
+          "type": "link_list",
           "settings": {
-            "newsletter_title": "SUBSCRIBE",
-            "newsletter_richtext": "<p>✨ Unlock exclusive offers and get insider tips to make your ring dreams a reality. 💍<\/p>",
-            "display_first_name": false,
-            "display_last_name": false
+            "menu": "brand",
+            "social_icons_footer": false
           }
         }
       },
       "block_order": [
         "logo",
         "link_list",
+        "link_list_dWBMQa",
         "text",
-        "newsletter_FrngqD"
+        "link_list_eRyaAn"
       ],
       "settings": {
         "copyright_text": "",
@@ -107,8 +125,8 @@
         "display_shopify": false,
         "show_follow_on_shop": false,
         "show_locale_selector": false,
-        "show_currency_selector": false,
-        "display_payment_methods": true,
+        "show_currency_selector": true,
+        "display_payment_methods": false,
         "css_class": "",
         "custom_css": ""
       }

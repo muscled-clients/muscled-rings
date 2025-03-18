@@ -101,7 +101,7 @@ enable_product_lightbox: <boolean>
 
             {% else %}
               {% if enable_product_lightbox and product.media.size > 0 %}
-                <a href="{{ media | img_url: '2048x' }}" class="product-gallery__link" data-fancybox="{{ product.id }}" title="{{ media.alt | escape }}">
+                <a href="{{ media | img_url: '1440x' }}" class="product-gallery__link" data-fancybox="{{ product.id }}" title="{{ media.alt | escape }}">
               {% endif %}
 
               <div class="image__container" style="max-width: {{ media.width }}px">
@@ -184,7 +184,7 @@ enable_product_lightbox: <boolean>
 
           <div class="product-gallery__thumbnail one-fifth column is-relative{% if forloop.first %} pdt-active-slide{% endif %}"
                 data-title="{{ media.alt | escape }}" tabindex="0">
-            <img src="{{ media | img_url: 'master' }}" alt="">
+            <img src="{{ media | img_url: '300x' }}" alt="">
             {% if thumbnail_badge != blank %}
               {% render 'icon',
                       name: thumbnail_badge,

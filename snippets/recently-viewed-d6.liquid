@@ -1,0 +1,339 @@
+<style>
+
+    .js-recentPdpBlock {
+      display: flex;
+      gap: 20px;
+      overflow: scroll;
+      width: 100%;
+      scroll-snap-type: x;
+    }
+    #Recent {
+      min-width: 280px;
+      max-width: 280px;
+      scroll-snap-align: center;
+    }
+
+  .recently-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0;
+  }
+
+  .slider-arrows-d6 {
+    display: flex;
+    gap: 24px;
+  }
+
+  .arrow-btn {
+    transition: opacity 0.2s;
+    cursor: pointer;
+  }
+
+  .arrow-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .recently-title h2 {
+    color: #1B1B1B;
+    font-family: "Tenor Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 !important;
+  }
+
+  .c-product {
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c-product img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .c-product p.c-productPrice {
+    color: #1B1B1B;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 12px 10px;
+    letter-spacing: 0.08px;
+  }
+
+  h3.c-product__title, h3.c-product__title a.c-product__url {
+    color: rgba(27, 27, 27, 0.60);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.08px;
+  }
+
+  h3.c-product__title {
+    padding: 12px 10px 0;
+  }
+
+  a.c-product__url {
+    position: relative;
+  }
+
+  section#Recent:hover {
+    border: 1px solid rgba(45, 27, 56, 0.10);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  .c-product__img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+  }
+  .slider-arrows-d6 .d5-disable {
+    opacity: .4;
+  }
+  @media (min-width: 798px){
+    .mobile-arrow-d5{
+      display: none;
+    }
+  }
+  @media (max-width: 750px) {
+    .desktop-arrow-d5{
+      display: none;
+    }
+    .recently-main-d6 {
+      padding: 0 20px 40px;
+      position: relative;
+    }
+    .recently-title h2 {
+      font-size: 24px;
+    }
+    .slider-arrows-d6 {
+     position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 90%;
+      justify-content: space-between;
+    }
+    .c-product {
+      padding: 0;
+    }
+    .recently-main-d6{
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    #Recent{
+      min-width: 250px;
+    }
+    .js-recentPdpBlock {
+      column-gap: 4px;
+      display: flex;
+    }
+    .recently-title {
+      padding: 0 0 24px;
+    }
+    .c-product__img {
+      aspect-ratio: 1 / 0.93;
+    }
+    h3.c-product__title, h3.c-product__title a.c-product__url {
+      font-size: 13px;
+    }
+    h3.c-product__title {
+      padding: 8px 4px 0;
+    }
+    .c-product p.c-productPrice {
+      padding: 8px 4px;
+      font-size: 13px;
+    }
+  }
+</style>
+
+
+<script>
+  // First Block
+      function setRecentlyViewedPdp() {
+          const pdpData = {
+              productTitle : "{{ product.title }}",
+              productId: "{{ product.id }}",
+              productVariant: "{{ product.first_available_variant.id }}",
+              productImg : "{{ product.featured_image | img_url: '' }}",
+              productPrice : "{{ product.price | money | remove_first: '' }}",
+              productUrl : "{{ product.url }}"
+          };
+
+          // Init Empty Array to push data
+          const productArr = [];
+          // Create a couple of variables
+          let jsonResp,
+              jsonRespArr,
+              jsonRespArrStr;
+          // Set the number how many products you want to capture
+          const numberOfProduct = 8;
+          // Now push the pdpData into Array so that we can use it
+          productArr.push(pdpData);
+        console.log(productArr);
+          // Get the product title from pdpData
+        const currPdpId = pdpData.productId;
+        console.log(currPdpId);
+          const currPdpTitle = pdpData.productTitle;
+          // Now Convert current page data into Strings which we already pushed in Array
+          const pdpDataString = JSON.stringify(productArr);
+          // Set the variable for localStorage
+          const localData = localStorage.getItem('recently_viewed');
+
+          // Second Block
+          // first we need to check data if data is not there then store right // away
+          if (localData == null) {
+              localStorage.setItem('recently_viewed', pdpDataString);
+
+          }
+          // If data is there then we need to check couple of other conditions
+          else if ( localData != null ) {
+
+              // Create Variable for oldData or Previous page
+              const oldPdpData = localStorage.getItem('recently_viewed');
+            console.log(typeof oldPdpData);
+              // Count the amount of data stored in strings so that we can remove // old products from the stack
+              const countPdpData = (oldPdpData.match(/productTitle/g) || []).length;
+              // we also need to check if user is not visiting page again
+              const reVisitPdp =  oldPdpData.includes(currPdpTitle);
+              // Get old data, merged it with new data and store merged data
+              if (countPdpData < numberOfProduct && reVisitPdp == false) {
+                  jsonResp = JSON.parse(oldPdpData);
+                  jsonRespArr = jsonResp.concat(productArr);
+                  jsonRespArrStr = JSON.stringify(jsonRespArr);
+                  localStorage.setItem('recently_viewed', jsonRespArrStr);
+              }
+              // If User visited more the 4 pages delete first page data
+              else if (countPdpData >= numberOfProduct && reVisitPdp == false) {
+                  jsonResp = JSON.parse(oldPdpData);
+                  jsonResp.shift();
+                  jsonRespArr = jsonResp.concat(productArr);
+                  jsonRespArr =  JSON.stringify(jsonRespArr);
+                  localStorage.setItem('recently_viewed', jsonRespArr);
+              }
+          }
+      }
+
+      // Now we write all our function and it's time to execute it
+      setRecentlyViewedPdp();
+      // Set Variable for Local Storage Data
+      const localViewed = localStorage.recently_viewed;
+      // console.log to verify the data
+</script>
+<div class="recently-title">
+  <h2 class="title inline-richtext h2 scroll-trigger animate--slide-in">Recently Viewed</h2>
+  <div class="slider-arrows-d6">
+    <span data-prev-d5 style="rotate: 180deg;">
+       <svg class="mobile-arrow-d5" xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+  <circle cx="20" cy="20.2173" r="20" fill="white"/>
+  <path d="M16.4906 13.4284C16.7718 13.1469 17.2282 13.1469 17.5094 13.4284L23.7889 19.7079C24.0704 19.9891 24.0704 20.4454 23.7889 20.7267L17.5094 27.0062C17.3687 27.1469 17.1842 27.2173 16.9998 27.2173C16.8153 27.2173 16.6309 27.1469 16.4904 27.0062C16.2089 26.7249 16.2089 26.2686 16.4904 25.9874L22.2604 20.2173L16.4906 14.4472C16.2091 14.166 16.2091 13.7096 16.4906 13.4284Z" fill="#1B1B1B"/>
+</svg>
+    <svg
+      class="arrow-btn arrow-left desktop-arrow-d5"
+      xmlns="http://www.w3.org/2000/svg"
+      width="33"
+      height="18"
+      viewBox="0 0 33 18"
+      fill="none"
+    >
+      <path d="M3.09793e-05 9.88476L32 9.88477" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
+      <path d="M23.5103 17.4229L32 8.93311" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
+      <path d="M23.5103 1.42285L32 9.9126" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
+    </svg>
+      </span>
+    <span data-next-d5>
+      <svg class="mobile-arrow-d5" xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+  <circle cx="20" cy="20.2173" r="20" fill="white"/>
+  <path d="M16.4906 13.4284C16.7718 13.1469 17.2282 13.1469 17.5094 13.4284L23.7889 19.7079C24.0704 19.9891 24.0704 20.4454 23.7889 20.7267L17.5094 27.0062C17.3687 27.1469 17.1842 27.2173 16.9998 27.2173C16.8153 27.2173 16.6309 27.1469 16.4904 27.0062C16.2089 26.7249 16.2089 26.2686 16.4904 25.9874L22.2604 20.2173L16.4906 14.4472C16.2091 14.166 16.2091 13.7096 16.4906 13.4284Z" fill="#1B1B1B"/>
+</svg>
+    <svg
+      class="arrow-btn arrow-right desktop-arrow-d5"
+      xmlns="http://www.w3.org/2000/svg"
+      width="33"
+      height="18"
+      viewBox="0 0 33 18"
+      fill="none"
+    >
+      <path d="M3.09793e-05 9.88476L32 9.88477" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
+      <path d="M23.5103 17.4229L32 8.93311" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
+      <path d="M23.5103 1.42285L32 9.9126" stroke="black" stroke-width="1.36054" stroke-miterlimit="10"/>
+    </svg>
+      </span>
+  </div>
+</div>
+<div class="js-recentPdpBlock" data-slider-d5></div>
+ <div class="main-scroll-bar-d5">
+       <div class="progressbar-con-d5">
+        <div class="proscroll-video-bar__d5 d5-progress-bar-inner" data-progress-d5></div>
+       </div>
+      </div>
+<script>
+        // Third Block
+        function getRecentPdp (){
+    
+            // First let's convert localStorage data into object again
+            const pdpData = JSON.parse(localStorage.getItem('recently_viewed'));
+            console.log(pdpData)
+            // Create a empty Array
+            const recentViewHtml = []
+            // Loop through all the data and inject into HTML using ES6
+            pdpData.forEach(function(item){ 
+                recentViewHtml.push(`
+                    <section id="Recent" data-slide-d5>
+                    <div class="c-product">
+                        <div class="c-product__img">
+                        <div class="d5-collection-wishlist">
+                        <div data-wlh-id="${item.productId}" 
+                         data-wlh-link="${item.productUrl}"
+                        data-wlh-variantid="${item.productVariant}" 
+                         data-wlh-price="33" 
+                         data-wlh-name="${item.productTitle}" 
+                         data-wlh-image="${item.productImg}" 
+                         class="wishlist-hero-custom-button wishlisthero-floating" 
+                         data-wlh-mode="icon_only"
+                         data-wlh-view="Collection"
+                         style="left: auto;"></div> 
+                        </div>
+                        <a href="${item.productUrl}"><img src='${item.productImg}'/></a>
+                        </div>
+                        <h3 class="c-product__title">
+                            <a class="c-product__url" href="${item.productUrl}">
+                            ${item.productTitle}
+                            </a>
+                        </h3>
+                        <p class="c-productPrice">${item.productPrice}</p>
+                    </div>
+                    
+                    
+                    </section>
+                `)
+            })
+            // Now consolidate the data 
+            const recentBlock = `${recentViewHtml.join('')}`
+            // console.log() to check data is correct 
+            console.log(recentBlock);
+            // Inject into PDP page
+            const contentBlock = document.querySelectorAll('.js-recentPdpBlock');
+            // Push the data
+            contentBlock.forEach(element =>{
+                element.innerHTML = recentBlock;
+            })
+           
+        }
+        // Execute this function on DOM content load 
+    
+        getRecentPdp();
+</script>
