@@ -533,6 +533,16 @@
 #wishlisthero-product-page-button-container{
  display: none !important 
 }
+.product-gallery--bottom-thumbnails.product-gallery{
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  flex-direction: row-reverse;
+}
+.product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails{
+  min-width: 80px;
+  max-width: 80px;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
