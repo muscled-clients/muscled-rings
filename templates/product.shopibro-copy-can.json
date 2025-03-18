@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "breadcrumbs": {
@@ -50,6 +59,12 @@
             "atc_color": "#553365"
           }
         },
+        "text_4FFygU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Free insured shipping by <strong>Monday, Mar 24</strong><br/>if you order in the next <strong>8 hours.</strong><a href=\"#\" title=\"#\"><strong> Need it sooner?</strong></a></p>"
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -57,24 +72,62 @@
         },
         "description_mobile_bXVYnM": {
           "type": "description_mobile",
+          "disabled": true,
           "settings": {}
         },
         "logos_with_text_VYEMwi": {
           "type": "logos_with_text",
+          "disabled": true,
           "settings": {
             "icon_label_1": "truck",
-            "text_1": "<p>Free Shipping<\/p>",
+            "text_1": "<p>Free Shipping</p>",
             "icon_label_2": "calendar",
-            "text_2": "<p>30 Day Return<\/p>",
+            "text_2": "<p>30 Day Return</p>",
             "icon_label_3": "lock",
-            "text_3": "<p>Secure Payment<\/p>",
+            "text_3": "<p>Secure Payment</p>",
             "icon_label_4": "gem",
-            "text_4": "<p>Ethically Created<\/p>"
+            "text_4": "<p>Ethically Created</p>"
           }
         },
         "product_accordions_qc9zNf": {
           "type": "product_accordions",
+          "disabled": true,
           "settings": {}
+        },
+        "trusts_fTFtjb": {
+          "type": "trusts",
+          "settings": {
+            "img_1": "shopify://shop_images/Group_2.svg",
+            "text_1": "Free 30 day returns  & 90 day resizing",
+            "img_2": "shopify://shop_images/Group_1000006059.svg",
+            "text_2": "Guaranteed for life",
+            "img_3": "shopify://shop_images/Vector_7.svg",
+            "text_3": "Authenticity inspection"
+          }
+        },
+        "d5_faq_94Abxz": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "Ring information",
+            "ans": "",
+            "info": true
+          }
+        },
+        "d5_faq_qMM74j": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "100% money back guarantee",
+            "ans": "<p>We thoroughly vet our vendors, from credit checks, financial reviews, industry reference checks, and <a href=\"#\" title=\"#\">much more</a>.<br/><br/>But beyond that, you can simply rely on our 100%, no questions asked, money-back guarantee to know you are safe when you purchase through us.<br/><br/>If you do not get exactly what you ordered, you get your money back – no fine print.<br/><br/>After all – a customer trusted us with $2.5 million dollars, a record <a href=\"#\" title=\"#\">online sale</a>.</p>",
+            "info": false
+          }
+        },
+        "d5_faq_ELx9Mi": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "Free 30-days returns and resizing",
+            "ans": "<p>Free 30-days returns and resizing</p>",
+            "info": false
+          }
         }
       },
       "block_order": [
@@ -83,10 +136,15 @@
         "price",
         "text_JBiWwN",
         "form",
+        "text_4FFygU",
         "description",
         "description_mobile_bXVYnM",
         "logos_with_text_VYEMwi",
-        "product_accordions_qc9zNf"
+        "product_accordions_qc9zNf",
+        "trusts_fTFtjb",
+        "d5_faq_94Abxz",
+        "d5_faq_qMM74j",
+        "d5_faq_ELx9Mi"
       ],
       "settings": {
         "product_images_position": "left",
@@ -105,6 +163,8 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
+        "atc_label": "",
+        "top-t": false,
         "css_class": "",
         "custom_css": ""
       }
@@ -194,13 +254,13 @@
       "settings": {
         "heading": "What You’ll Receive:",
         "subheading": "",
-        "image_1": "shopify:\/\/shop_images\/BONUS_Jewelry_Cleaner_Keep_Your_Ring_Sparkling_3.jpg",
+        "image_1": "shopify://shop_images/BONUS_Jewelry_Cleaner_Keep_Your_Ring_Sparkling_3.jpg",
         "text_1": "",
-        "image_2": "shopify:\/\/shop_images\/BONUS_Jewelry_Cleaner_Keep_Your_Ring_Sparkling_2.jpg",
+        "image_2": "shopify://shop_images/BONUS_Jewelry_Cleaner_Keep_Your_Ring_Sparkling_2.jpg",
         "text_2": "",
-        "image_3": "shopify:\/\/shop_images\/BONUS_Jewelry_Cleaner_Keep_Your_Ring_Sparkling_1.jpg",
+        "image_3": "shopify://shop_images/BONUS_Jewelry_Cleaner_Keep_Your_Ring_Sparkling_1.jpg",
         "text_3": "",
-        "image_4": "shopify:\/\/shop_images\/BONUS_Jewelry_Cleaner_Keep_Your_Ring_Sparkling_4.jpg",
+        "image_4": "shopify://shop_images/BONUS_Jewelry_Cleaner_Keep_Your_Ring_Sparkling_4.jpg",
         "text_4": "",
         "top_spacing_desktop": 50,
         "bottom_spacing_desktop": 50,
@@ -240,7 +300,7 @@
       "type": "apps",
       "blocks": {
         "easyvideo_shoppable_videos_easyvideo_section_product_hzQkWV": {
-          "type": "shopify:\/\/apps\/easyvideo-shoppable-videos\/blocks\/easyvideo-section-product\/b3d32790-c8f7-4d70-aeda-acf9291f91ae",
+          "type": "shopify://apps/easyvideo-shoppable-videos/blocks/easyvideo-section-product/b3d32790-c8f7-4d70-aeda-acf9291f91ae",
           "settings": {}
         }
       },
@@ -261,9 +321,9 @@
         "image_kBWci4": {
           "type": "image",
           "settings": {
-            "quote": "<p><em>\"The ring is absolutely beautiful and just what I had wanted.\" <\/em><\/p>",
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-b6a3b776-c4b4-4f79-a4b8-43ff2f738285.jpg",
-            "text": "<h2>Cynthia P.<\/h2><p><\/p>",
+            "quote": "<p><em>\"The ring is absolutely beautiful and just what I had wanted.\" </em></p>",
+            "image": "shopify://shop_images/gempages_542333615069987699-b6a3b776-c4b4-4f79-a4b8-43ff2f738285.jpg",
+            "text": "<h2>Cynthia P.</h2><p></p>",
             "info_text": "rgba(0,0,0,0)",
             "info_background": "rgba(0,0,0,0)"
           }
@@ -271,9 +331,9 @@
         "image_kq87hj": {
           "type": "image",
           "settings": {
-            "quote": "<p><em>\"The ring is very beautiful and the diamond is so shiny and sparkly.  I’m really happy with my purchase.\"<\/em><\/p>",
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-0c0038c3-8dfb-47bc-9252-e768276879cf.jpg",
-            "text": "<h2>Wendy N.<\/h2>",
+            "quote": "<p><em>\"The ring is very beautiful and the diamond is so shiny and sparkly.  I’m really happy with my purchase.\"</em></p>",
+            "image": "shopify://shop_images/gempages_542333615069987699-0c0038c3-8dfb-47bc-9252-e768276879cf.jpg",
+            "text": "<h2>Wendy N.</h2>",
             "info_text": "rgba(0,0,0,0)",
             "info_background": "rgba(0,0,0,0)"
           }
@@ -281,9 +341,9 @@
         "image_myrUqN": {
           "type": "image",
           "settings": {
-            "quote": "<p>\"The white gold is stunning beautiful all on its own but not gaudy!!\"<\/p>",
-            "image": "shopify:\/\/shop_images\/14AC9808-D3AE-4079-BB01-D5239E7C403D.heic",
-            "text": "<h2>Mary E.<\/h2>",
+            "quote": "<p>\"The white gold is stunning beautiful all on its own but not gaudy!!\"</p>",
+            "image": "shopify://shop_images/14AC9808-D3AE-4079-BB01-D5239E7C403D.heic",
+            "text": "<h2>Mary E.</h2>",
             "info_text": "rgba(0,0,0,0)",
             "info_background": "rgba(0,0,0,0)"
           }
@@ -291,9 +351,9 @@
         "image_UGT3gb": {
           "type": "image",
           "settings": {
-            "quote": "<p>\"This ring is so beautiful.\"<\/p>",
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-bae6236e-94a9-488a-8052-c4218438b8f8.png",
-            "text": "<h2>Jennifer M.<\/h2>",
+            "quote": "<p>\"This ring is so beautiful.\"</p>",
+            "image": "shopify://shop_images/gempages_542333615069987699-bae6236e-94a9-488a-8052-c4218438b8f8.png",
+            "text": "<h2>Jennifer M.</h2>",
             "info_text": "rgba(0,0,0,0)",
             "info_background": "rgba(0,0,0,0)"
           }
@@ -330,21 +390,21 @@
         "logo_text_MjqW36": {
           "type": "logo_text",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "logo": "shopify://shop_images/svgviewer-png-output_1.png",
             "text": "Some logo text"
           }
         },
         "logo_text_V9XkFC": {
           "type": "logo_text",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "logo": "shopify://shop_images/svgviewer-png-output_1.png",
             "text": "Some logo text"
           }
         },
         "logo_text_jFkmA4": {
           "type": "logo_text",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "logo": "shopify://shop_images/svgviewer-png-output_1.png",
             "text": "Some logo text"
           }
         }
@@ -359,7 +419,7 @@
         "heading": "Lorem Ipsum is",
         "subheading": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
         "text_color": "#ffffff",
-        "background_image": "shopify:\/\/shop_images\/gempages_542333615069987699-fc48444d-b5eb-4c98-8c28-34df261aff3a.jpg",
+        "background_image": "shopify://shop_images/gempages_542333615069987699-fc48444d-b5eb-4c98-8c28-34df261aff3a.jpg",
         "use_overlay": true,
         "top_spacing_desktop": 50,
         "bottom_spacing_desktop": 50,
@@ -380,21 +440,21 @@
           "type": "content",
           "settings": {
             "title": "How does Rings.com ensure trust and quality for new customers?",
-            "answer": "<p>Rings.com is a newly launched brand, and we’re excited to introduce our exclusive collection of diamond rings to early customers like you. As we grow, we’ll proudly share authentic customer reviews to showcase their experiences. We'd love for you to authentically share a positive review about your experience with us to further grow our brand.<br\/> <\/p><p>We stand behind every ring we sell. To make it easy for customers to trust us, we offer a <strong>30-Day Money-Back Guarantee<\/strong>, <strong>Free Shipping<\/strong>, and <strong>Amazing Pricing<\/strong>.<br\/> <\/p><p>Your satisfaction is our top priority, and we’re here to help with any questions about our rings, certifications, or process. Feel free to contact us at <strong>604-248-5000<\/strong> or email us at <strong>sales@rings.com<\/strong><\/p>"
+            "answer": "<p>Rings.com is a newly launched brand, and we’re excited to introduce our exclusive collection of diamond rings to early customers like you. As we grow, we’ll proudly share authentic customer reviews to showcase their experiences. We'd love for you to authentically share a positive review about your experience with us to further grow our brand.<br/> </p><p>We stand behind every ring we sell. To make it easy for customers to trust us, we offer a <strong>30-Day Money-Back Guarantee</strong>, <strong>Free Shipping</strong>, and <strong>Amazing Pricing</strong>.<br/> </p><p>Your satisfaction is our top priority, and we’re here to help with any questions about our rings, certifications, or process. Feel free to contact us at <strong>604-248-5000</strong> or email us at <strong>sales@rings.com</strong></p>"
           }
         },
         "content_BAH9bw": {
           "type": "content",
           "settings": {
             "title": "Where is Rings.com based?",
-            "answer": "<p>Rings.com is proudly based in Canada, but we serve customers across the United States and Canada. Our rings are crafted with high-quality materials and shipped directly to your doorstep, wherever you are<\/p>"
+            "answer": "<p>Rings.com is proudly based in Canada, but we serve customers across the United States and Canada. Our rings are crafted with high-quality materials and shipped directly to your doorstep, wherever you are</p>"
           }
         },
         "content_64MJw9": {
           "type": "content",
           "settings": {
             "title": "Do you have a physical store or showroom?",
-            "answer": "<p>We operate primarily online to offer the best prices and convenience. However, we do have a private showroom available by appointment for consultations and viewing select ring samples.<\/p>"
+            "answer": "<p>We operate primarily online to offer the best prices and convenience. However, we do have a private showroom available by appointment for consultations and viewing select ring samples.</p>"
           }
         },
         "heading_ktHj6q": {
@@ -407,55 +467,55 @@
           "type": "content",
           "settings": {
             "title": "How do I know this diamond is real?",
-            "answer": "<p>Your 1CT Diamond Solitaire ring features a genuine 1 Carat lab diamond, independently certified by IGI (International Gemological Institute). Each diamond comes with a certificate of authenticity, and your unique certification number is permanently laser-inscribed on the stone.<\/p><p><br\/>Lab diamonds are chemically and physically identical to mined diamonds—even experts need special equipment to tell them apart. You'll get the same beauty and brilliance, with one key difference: your diamond is created by science, making it both environmentally conscious and free from ethical mining concerns.<\/p>"
+            "answer": "<p>Your 1CT Diamond Solitaire ring features a genuine 1 Carat lab diamond, independently certified by IGI (International Gemological Institute). Each diamond comes with a certificate of authenticity, and your unique certification number is permanently laser-inscribed on the stone.</p><p><br/>Lab diamonds are chemically and physically identical to mined diamonds—even experts need special equipment to tell them apart. You'll get the same beauty and brilliance, with one key difference: your diamond is created by science, making it both environmentally conscious and free from ethical mining concerns.</p>"
           }
         },
         "content_cpnTw9": {
           "type": "content",
           "settings": {
             "title": "Are your materials sourced responsibly?",
-            "answer": "<p>Yes, we prioritize ethical sourcing for all our gems and materials. We carefully vet our suppliers to ensure they adhere to strict standards of integrity, social responsibility, and conflict-free sourcing. Our commitment to transparency means that we continually work to maintain a trustworthy supply chain, so you can feel confident in the origins, quality, and craftsmanship of every ring we create.<\/p>"
+            "answer": "<p>Yes, we prioritize ethical sourcing for all our gems and materials. We carefully vet our suppliers to ensure they adhere to strict standards of integrity, social responsibility, and conflict-free sourcing. Our commitment to transparency means that we continually work to maintain a trustworthy supply chain, so you can feel confident in the origins, quality, and craftsmanship of every ring we create.</p>"
           }
         },
         "content_Q6AfdN": {
           "type": "content",
           "settings": {
             "title": "Will I receive an appraisal report with my purchase?",
-            "answer": "<p>The appraisal report referenced in our advertisement reflects the specifications of a comparable  diamond ring with similar characteristics, such as D color, VVS2 clarity, and ideal cut—aligning with the premium quality we offer in our inventory. Due to the volume of rings we manufacture, we are unable to provide a custom appraisal report for every individual ring.<\/p><p>However, every diamond we offer is IGI-certified and comes with a unique IGI report number, which is laser-inscribed on the girdle for authenticity. Your purchase includes an IGI certificate and report number, which you can verify on the <a href=\"https:\/\/www.igi.org\/Verify-Your-Report\">IGI website<\/a> for full transparency.<\/p><p>If you’d like an independent appraisal, we recommend consulting a trusted jeweler for a personalized evaluation.<\/p>"
+            "answer": "<p>The appraisal report referenced in our advertisement reflects the specifications of a comparable  diamond ring with similar characteristics, such as D color, VVS2 clarity, and ideal cut—aligning with the premium quality we offer in our inventory. Due to the volume of rings we manufacture, we are unable to provide a custom appraisal report for every individual ring.</p><p>However, every diamond we offer is IGI-certified and comes with a unique IGI report number, which is laser-inscribed on the girdle for authenticity. Your purchase includes an IGI certificate and report number, which you can verify on the <a href=\"https://www.igi.org/Verify-Your-Report\">IGI website</a> for full transparency.</p><p>If you’d like an independent appraisal, we recommend consulting a trusted jeweler for a personalized evaluation.</p>"
           }
         },
         "content_JctHzX": {
           "type": "content",
           "settings": {
             "title": "Where are your products made?",
-            "answer": "<p>We manufacture our rings in Canada. Our rings are custom-designed and crafted using high-quality precious metals, diamonds, and gemstones, with a focus on ethical sourcing and exceptional craftsmanship. Our production process is managed through a carefully selected network of trusted suppliers, ensuring that each piece meets our high standards for quality and integrity. We collaborate with both local and international artisans to bring you rings that are made with care and precision. <\/p>"
+            "answer": "<p>We manufacture our rings in Canada. Our rings are custom-designed and crafted using high-quality precious metals, diamonds, and gemstones, with a focus on ethical sourcing and exceptional craftsmanship. Our production process is managed through a carefully selected network of trusted suppliers, ensuring that each piece meets our high standards for quality and integrity. We collaborate with both local and international artisans to bring you rings that are made with care and precision. </p>"
           }
         },
         "heading_Fyifgf": {
           "type": "heading",
           "settings": {
-            "title": "Shipping\/Returns"
+            "title": "Shipping/Returns"
           }
         },
         "content_ebXz79": {
           "type": "content",
           "settings": {
             "title": "What is your shipping policy?",
-            "answer": "<p>We offer FREE SHIPPING within USA and Canada. You'll receive a tracking number as soon as your ring ships to keep track of your package every step of the way.  <\/p>"
+            "answer": "<p>We offer FREE SHIPPING within USA and Canada. You'll receive a tracking number as soon as your ring ships to keep track of your package every step of the way.  </p>"
           }
         },
         "content_apYcKk": {
           "type": "content",
           "settings": {
             "title": "What is your return policy?",
-            "answer": "<p>Your satisfaction is 100% guaranteed. Take 30 days to examine your ring, try it on, or even have it independently appraised. If you're not completely satisfied, simply return your diamond ring in its original condition using our secure shipping kit, and we'll refund your entire purchase – including your membership fee. No restocking fees, no questions asked.<\/p>"
+            "answer": "<p>Your satisfaction is 100% guaranteed. Take 30 days to examine your ring, try it on, or even have it independently appraised. If you're not completely satisfied, simply return your diamond ring in its original condition using our secure shipping kit, and we'll refund your entire purchase – including your membership fee. No restocking fees, no questions asked.</p>"
           }
         },
         "content_Ubhtwx": {
           "type": "content",
           "settings": {
             "title": "How do I track my order?",
-            "answer": "<p>Once your order has shipped, you will receive an email with tracking information. You can use this link to monitor your order's progress. If you have any issues with tracking, please contact our customer service team.<\/p>"
+            "answer": "<p>Once your order has shipped, you will receive an email with tracking information. You can use this link to monitor your order's progress. If you have any issues with tracking, please contact our customer service team.</p>"
           }
         }
       },
@@ -492,29 +552,29 @@
         "slide_dTaTW9": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-a8faf9c0-6d7e-4170-a174-fc472fab73be.jpg",
-            "text": "<h2>Cynthia P<\/h2><p><br\/><em>\"The ring is absolutely beautiful and just what I had wanted. The setting is simple and elegant and the diamond is the perfect size at one carat, so it's not too big or ostentatious on my finger. <br\/><br\/>The customer service you provided has been very impressive! You called me to confirm the validity of my order, then followed up several times by email to let me know the status.<br\/><br\/>As a consumer, that goes a long way to assure confidence that the seller is legitimate, given the amount of scams that are out there.\" <\/em><\/p>"
+            "image": "shopify://shop_images/gempages_542333615069987699-a8faf9c0-6d7e-4170-a174-fc472fab73be.jpg",
+            "text": "<h2>Cynthia P</h2><p><br/><em>\"The ring is absolutely beautiful and just what I had wanted. The setting is simple and elegant and the diamond is the perfect size at one carat, so it's not too big or ostentatious on my finger. <br/><br/>The customer service you provided has been very impressive! You called me to confirm the validity of my order, then followed up several times by email to let me know the status.<br/><br/>As a consumer, that goes a long way to assure confidence that the seller is legitimate, given the amount of scams that are out there.\" </em></p>"
           }
         },
         "slide_w9e4Aa": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-8a146a25-e827-48d9-b154-4380cc2e73cc.png",
-            "text": "<h2>Wendy N<\/h2><p><br\/><em>\"The ring is very beautiful and the diamond is so shiny and sparkly.  The band is a little bit thinner than I had expected but I love it.  I’m really happy with my purchase.\"<\/em><\/p>"
+            "image": "shopify://shop_images/gempages_542333615069987699-8a146a25-e827-48d9-b154-4380cc2e73cc.png",
+            "text": "<h2>Wendy N</h2><p><br/><em>\"The ring is very beautiful and the diamond is so shiny and sparkly.  The band is a little bit thinner than I had expected but I love it.  I’m really happy with my purchase.\"</em></p>"
           }
         },
         "slide_XpJ9Kx": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-0c0038c3-8dfb-47bc-9252-e768276879cf.jpg",
-            "text": "<h2>Mary E.<\/h2><p><br\/>\"The white gold is stunning beautiful all on its own but not gaudy!!\"<\/p>"
+            "image": "shopify://shop_images/gempages_542333615069987699-0c0038c3-8dfb-47bc-9252-e768276879cf.jpg",
+            "text": "<h2>Mary E.</h2><p><br/>\"The white gold is stunning beautiful all on its own but not gaudy!!\"</p>"
           }
         },
         "slide_KPepjX": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-729c581b-7c04-4db9-8d91-64548b8c7dd0.png",
-            "text": "<h2>Jennifer M.<\/h2><p><br\/>\"This ring is so beautiful.\"<\/p>"
+            "image": "shopify://shop_images/gempages_542333615069987699-729c581b-7c04-4db9-8d91-64548b8c7dd0.png",
+            "text": "<h2>Jennifer M.</h2><p><br/>\"This ring is so beautiful.\"</p>"
           }
         },
         "slide_BqiAkd": {
@@ -553,9 +613,9 @@
         "heading": "Heading",
         "subheading": "Lorem Ipsumis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         "button_text": "Button",
-        "popup_content": "<p>Lorem Ipsumis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<\/p>",
+        "popup_content": "<p>Lorem Ipsumis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
         "text_color": "#ffffff",
-        "background_image": "shopify:\/\/shop_images\/gempages_542333615069987699-aed7c7ee-ab00-4a70-96b1-45ec5f05215e.jpg",
+        "background_image": "shopify://shop_images/gempages_542333615069987699-aed7c7ee-ab00-4a70-96b1-45ec5f05215e.jpg",
         "use_overlay": true,
         "section_min_height": 600,
         "section_min_height_mobile": 300,
@@ -615,11 +675,11 @@
       "type": "index__image-with-text-overlay",
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/gempages_542333615069987699-4fb4044d-7188-4655-860b-fb254ac0dd3e.jpg",
+        "image": "shopify://shop_images/gempages_542333615069987699-4fb4044d-7188-4655-860b-fb254ac0dd3e.jpg",
         "link": "",
         "pretext": "",
         "title": "Heading",
-        "subtitle": "<p><strong>Lorem Ipsum  <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<\/p>",
+        "subtitle": "<p><strong>Lorem Ipsum  </strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
         "pretext_color": "#000000",
         "heading_color": "#000000",
         "subheading_color": "#000000",
@@ -663,22 +723,22 @@
         "slide_6xr3bb": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-b55a8d06-a3eb-4aa9-ada6-c5769a165869.jpg",
-            "text": "<h2>Lorem Ipsum<\/h2><p><br\/>Lorem Ipsum is simply dummy text of the printing<\/p>"
+            "image": "shopify://shop_images/gempages_542333615069987699-b55a8d06-a3eb-4aa9-ada6-c5769a165869.jpg",
+            "text": "<h2>Lorem Ipsum</h2><p><br/>Lorem Ipsum is simply dummy text of the printing</p>"
           }
         },
         "slide_Q36wGM": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-22fc29b0-826e-44c0-b470-5c988374d4a1.jpg",
-            "text": "<h2>Lorem Ipsum<\/h2><p><br\/>Lorem Ipsum is simply dummy text of the printing<\/p>"
+            "image": "shopify://shop_images/gempages_542333615069987699-22fc29b0-826e-44c0-b470-5c988374d4a1.jpg",
+            "text": "<h2>Lorem Ipsum</h2><p><br/>Lorem Ipsum is simply dummy text of the printing</p>"
           }
         },
         "slide_U9nUmi": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/gempages_542333615069987699-33e2bd19-e9f8-4e73-8cf8-31f5d0bc93bd.jpg",
-            "text": "<h2>Lorem Ipsum<\/h2><p><br\/>Lorem Ipsum is simply dummy text of the printing<\/p>"
+            "image": "shopify://shop_images/gempages_542333615069987699-33e2bd19-e9f8-4e73-8cf8-31f5d0bc93bd.jpg",
+            "text": "<h2>Lorem Ipsum</h2><p><br/>Lorem Ipsum is simply dummy text of the printing</p>"
           }
         }
       },
@@ -701,21 +761,21 @@
         "logo_text_ABqqFF": {
           "type": "logo_text",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "logo": "shopify://shop_images/svgviewer-png-output_1.png",
             "text": "Some logo text"
           }
         },
         "logo_text_EPKkKy": {
           "type": "logo_text",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "logo": "shopify://shop_images/svgviewer-png-output_1.png",
             "text": "Some logo text"
           }
         },
         "logo_text_PNbDty": {
           "type": "logo_text",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/svgviewer-png-output_1.png",
+            "logo": "shopify://shop_images/svgviewer-png-output_1.png",
             "text": "Some logo text"
           }
         }
@@ -730,7 +790,7 @@
         "heading": "Lorem Ipsum",
         "subheading": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,",
         "text_color": "#ffffff",
-        "background_image": "shopify:\/\/shop_images\/gempages_542333615069987699-fc48444d-b5eb-4c98-8c28-34df261aff3a.jpg",
+        "background_image": "shopify://shop_images/gempages_542333615069987699-fc48444d-b5eb-4c98-8c28-34df261aff3a.jpg",
         "use_overlay": true,
         "top_spacing_desktop": 50,
         "bottom_spacing_desktop": 50,
@@ -744,32 +804,32 @@
         "image_UM8Qdk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/output-2_14.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/output-2_14.jpg",
+            "image": "shopify://shop_images/output-2_14.jpg",
+            "mobile_image": "shopify://shop_images/output-2_14.jpg",
             "link": ""
           }
         },
         "image_X8xChV": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/output-0.png",
-            "mobile_image": "shopify:\/\/shop_images\/output-0.png",
+            "image": "shopify://shop_images/output-0.png",
+            "mobile_image": "shopify://shop_images/output-0.png",
             "link": ""
           }
         },
         "image_kaQDAT": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/output-1_10_1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/output-1_10_1.jpg",
+            "image": "shopify://shop_images/output-1_10_1.jpg",
+            "mobile_image": "shopify://shop_images/output-1_10_1.jpg",
             "link": ""
           }
         },
         "image_z3pDKb": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/output-0_38.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/output-0_38.jpg",
+            "image": "shopify://shop_images/output-0_38.jpg",
+            "mobile_image": "shopify://shop_images/output-0_38.jpg",
             "link": ""
           }
         }
