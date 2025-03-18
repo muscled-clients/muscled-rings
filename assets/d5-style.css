@@ -538,6 +538,9 @@
   font-weight: 700;
   margin-left: 3px;
 }
+.price-ui--loading, .price-ui-badge--loading{
+  opacity: 1;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
