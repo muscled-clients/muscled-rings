@@ -533,7 +533,12 @@
 #wishlisthero-product-page-button-container{
  display: none !important 
 }
-.product-gallery--bottom-thumbnails.product-gallery{
+
+@media (min-width: 798px) {
+  .d5-mobile {
+    display: none;
+  }
+  .product-gallery--bottom-thumbnails.product-gallery{
   display: flex;
   align-items: start;
   gap: 16px;
@@ -567,11 +572,9 @@
 }
 .flickity-viewport{
   min-width: 100%;
+  max-height: 470px;
+  overflow-y: scroll;
 }
-@media (min-width: 798px) {
-  .d5-mobile {
-    display: none;
-  }
 }
 @media (max-width: 798px) {
   .d5-icons svg.wlh-svg-Icon{
