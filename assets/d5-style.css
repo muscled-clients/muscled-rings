@@ -553,6 +553,9 @@
   transform: unset !important;
   height: unset !important;
 }
+.product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails .product-gallery__thumbnail.one-fifth.column{
+  position: relative !important;
+}
 .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails .flickity-slider{
   flex-direction: column;
   display: flex;
