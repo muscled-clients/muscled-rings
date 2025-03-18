@@ -82,7 +82,7 @@ function stepsUpdate() {
       }
 
       // Handle the plus price update
-      const plusPriceElement = plusPrice.querySelector(".selected-plus-price");
+      const plusPriceElement = plusPrice;
       if (plusPriceElement) {
         const variantPlusPrice = selectedVariant.d5_meta && selectedVariant.d5_meta.variant_plus_price;
 
