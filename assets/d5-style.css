@@ -527,6 +527,9 @@
   width: 16px;
   height: 16px;
 }
+.play-pause-btn-d6{
+  cursor: pointer;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
