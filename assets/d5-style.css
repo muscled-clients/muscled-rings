@@ -536,7 +536,7 @@
   .d5-icons svg.wlh-svg-Icon{
     width: 16px !important;
     height: 16px;
-    padding: 0;
+    padding: 0 !important;
     display: flex;
   }
   .progress-bar {
