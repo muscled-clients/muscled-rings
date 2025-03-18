@@ -95,7 +95,10 @@ function stepsUpdate() {
       if (className === "selected-plus-price") {
         const targetElement = document.querySelector(".d5-option-value");
         if (targetElement) {
-          targetElement.textContent = value;
+          const span = document.createElement("span");
+          span.className = "plus-price-d5";
+          targetElement.appendChild(span);
+          span.textContent = value;
         }
       } else {
         const targetElement = targetContainer.querySelector(`.${className}`);
