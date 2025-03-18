@@ -570,7 +570,7 @@
   margin: 0;
   width: 100%;
 }
-.flickity-viewport{
+.product-gallery__thumbnails .flickity-viewport{
   min-width: 100%;
   max-height: 470px;
   overflow-y: scroll;
