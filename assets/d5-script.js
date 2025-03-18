@@ -2,25 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   faqD5();
   readMoreLess();
   stepsUpdate();
-  function adjustMaxHeight() {
-    if (window.innerWidth > 798) {
-      var elem1 = document.querySelector('.product-gallery__main');
-      var elem2 = document.querySelector('.flickity-viewport');
 
-      if (elem1 && elem2) {
-        var height = elem1.offsetHeight;
-
-        // Set the max-height of the second element
-        elem2.style.maxHeight = height + 'px';
-      }
-    }
-  }
-
-  // Initial check on page load
-  adjustMaxHeight();
-
-  // Listen for resize event
-  window.addEventListener('resize', adjustMaxHeight);
 });
 
 function faqD5() {
