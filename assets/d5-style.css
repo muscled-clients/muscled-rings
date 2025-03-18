@@ -722,7 +722,7 @@ display: none
     line-height: normal;
     margin: 0 0 8px;
   }
-  .price-ui .price .money {
+ .d5-pdp-general .price-ui .price .money {
     color: #1b1b1b;
     font-family: Inter;
     font-size: 20px;
