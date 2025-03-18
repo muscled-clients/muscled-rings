@@ -93,10 +93,24 @@ function stepsUpdate() {
 
       // Special handling for the selected-plus-price element
       if (className === "selected-plus-price") {
-        const targetElement = document.querySelector(".d5-option-value");
-        if (targetElement) {
-          targetElement.textContent = value;
-        }
+       const targetElement = document.querySelector(".d5-option-value");
+
+if (targetElement) {
+  targetElement.textContent = value;
+  
+  // Create a span element
+  const spanElement = document.createElement("span");
+  
+  // Set the class for the span
+  spanElement.className = "plus-price-d5";
+  
+  // Set any content or text inside the span (you can customize this as needed)
+  spanElement.textContent = "Your text or value here"; // Replace this with your desired text or value
+  
+  // Append the span to the target element
+  targetElement.appendChild(spanElement);
+}
+
       } else {
         const targetElement = targetContainer.querySelector(`.${className}`);
         if (targetElement) {
