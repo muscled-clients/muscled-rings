@@ -1,7 +1,7 @@
 * {
   letter-spacing: normal;
 }
-.d5-main-product .product-block--first .product-title {
+.d5-pdp-general .product-block--first .product-title {
   color: #1b1b1b;
   font-family: "Tenor Sans";
   font-size: 32px;
@@ -10,7 +10,7 @@
   line-height: normal;
   margin-bottom: 16px;
 }
-.d5-main-product .price-ui .price .money {
+.d5-pdp-general .price-ui .price .money {
   color: #1b1b1b;
   font-family: Inter;
   font-size: 32px;
@@ -18,7 +18,7 @@
   font-weight: 400;
   line-height: normal;
 }
-.d5-main-product .description-text {
+.d5-pdp-general .description-text {
   color: #626161;
   font-family: Roboto;
   font-size: 14px;
@@ -26,7 +26,7 @@
   font-weight: 400;
   line-height: 142.857%;
 }
-.d5-main-product .description-text {
+.d5-pdp-general .description-text {
   display: -webkit-box;
   -webkit-line-clamp: 2; /* Show only 2 lines */
   -webkit-box-orient: vertical;
@@ -35,13 +35,13 @@
   transition: all 0.3s ease;
 }
 
-.d5-main-product .expanded {
+.d5-pdp-general .expanded {
   display: block;
   -webkit-line-clamp: unset;
   overflow: visible;
 }
 
-.d5-main-product .toggle-btn {
+.d5-pdp-general .toggle-btn {
   display: block;
   background: none;
   border: none;
@@ -58,7 +58,7 @@
   text-decoration-line: underline;
   padding: 0;
 }
-.d5-main-product .option-title.label {
+.d5-pdp-general .option-title.label {
   z-index: 10;
 }
 .d5-main-product .swatch-element.color {
@@ -66,21 +66,21 @@
   min-height: 60px;
   padding: 16px;
 }
-.d5-main-product .swatch-element.color label {
+.d5-pdp-general .swatch-element.color label {
   border: none;
 }
-.d5-main-product .swatch input:checked + .swatch-element {
+.d5-pdp-general .swatch input:checked + .swatch-element {
   border: 1.602px solid #2d1b38;
 }
-.d5-main-product .purchase-details .purchase-details__spb--true {
+.d5-pdp-general .purchase-details .purchase-details__spb--true {
   flex-direction: column;
   gap: 12px;
 }
-.d5-main-product
+.d5-pdp-general
   .purchase-details
   .purchase-details__spb--true
   .action_button.action_button--secondary,
-.d5-main-product
+.d5-pdp-general
   .purchase-details
   .purchase-details__spb--true
   .shopify-payment-button {
@@ -92,7 +92,7 @@
   border-radius: 0;
   min-height: 52px;
 }
-.d5-main-product
+.d5-pdp-general
   .purchase-details
   .purchase-details__spb--true
   .action_button.action_button--secondary {
@@ -106,7 +106,7 @@
   line-height: normal;
   text-transform: uppercase;
 }
-.section.d5-main-product,
+.section.d5-pdp-general,
 .d5-main-steps {
   max-width: 1180px;
   width: calc(100% - 60px);
@@ -723,7 +723,7 @@
   .d5-main-product .swatch .swatch__option {
     margin-right: 4px;
   }
-  .d5-main-product .description-text {
+  .d5-pdp-general .description-text {
     -webkit-line-clamp: 2;
   }
   .product__description .has-padding-top {
