@@ -69,8 +69,8 @@ enable_product_lightbox: <boolean>
 
       {% comment %} Check alt text for video iframe {% endcomment %}
       <div class="product-gallery__image "
-            d4-img-alt="{{ media.alt }}{% if media.alt == blank %}{{ product.title }}{% endif %}"
             data-product-id="{{ product.id }}"
+            d4-img-alt="{{ media.alt }}{% if media.alt == blank %}{{ product.title }}{% endif %}"
             data-title="{% if image_alt contains 'youtube' or image_alt contains 'vimeo' %}{{ product.title }}{% else %}{{ image_alt | escape }}{% endif %}"
             data-media-type="{% if media.alt contains 'youtube' or media.alt contains 'vimeo' %}external_video{% else %}{{ media.media_type }}{% endif %}">
 
