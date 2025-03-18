@@ -70,9 +70,7 @@ function stepsUpdate() {
       }
 
       if (typeof selectedVariant.price === "number" && priceElement) {
-        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(
-          2
-        )}`;
+        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
       }
 
       const skuElement = targetContainer.querySelector(".selected-sku-d5");
@@ -92,9 +90,18 @@ function stepsUpdate() {
     variantDataElements.forEach((dataElement) => {
       const className = dataElement.className;
       const value = dataElement.textContent.trim();
-      const targetElement = targetContainer.querySelector(`.${className}`);
-      if (targetElement) {
-        targetElement.textContent = value;
+
+      // Special handling for the selected-plus-price element
+      if (className === "selected-plus-price") {
+        const targetElement = document.querySelector(".d5-option-value");
+        if (targetElement) {
+          targetElement.textContent = value;
+        }
+      } else {
+        const targetElement = targetContainer.querySelector(`.${className}`);
+        if (targetElement) {
+          targetElement.textContent = value;
+        }
       }
     });
   }
@@ -122,4 +129,5 @@ function stepsUpdate() {
     });
   }
 }
+
 
