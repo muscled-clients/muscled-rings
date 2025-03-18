@@ -22,8 +22,12 @@ function stickyD5() {
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Check initial scroll position on page load in case it's already scrolled down
-    handleScroll();
+    // Check initial scroll position on page load to set sticky state correctly
+    if (window.scrollY >= 100) {
+        header.classList.add("sticky-d5");
+        setTimeout(() => header.classList.add("active"), 10); // Delayed activation if already scrolled down
+        isSticky = true;
+    }
 }
 
 stickyD5();
