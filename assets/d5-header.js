@@ -2,23 +2,32 @@ function stickyD5() {
     const header = document.querySelector(".d5-header-main");
     let isSticky = false;
 
-    window.addEventListener("scroll", () => {
+    // Function to handle the scroll event and apply sticky classes
+    const handleScroll = () => {
         if (window.scrollY >= 100) {
             if (!isSticky) {
                 header.classList.add("sticky-d5");
-                setTimeout(() => header.classList.add("active"), 10);
+                setTimeout(() => header.classList.add("active"), 10); // Delayed activation
                 isSticky = true;
             }
         } else {
             if (isSticky) {
                 header.classList.remove("active");
-                setTimeout(() => header.classList.remove("sticky-d5"), 400);
+                setTimeout(() => header.classList.remove("sticky-d5"), 400); // Delay removal for smooth transition
                 isSticky = false;
             }
         }
-    });
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Check initial scroll position on page load in case it's already scrolled down
+    handleScroll();
 }
-stickyD5(); 
+
+stickyD5();
+
 
 function searchD5() {
     const overlay = document.querySelector('.site-overlay');
