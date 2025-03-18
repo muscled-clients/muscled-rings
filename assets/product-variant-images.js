@@ -95,43 +95,56 @@ function ShowProductImages() {
 
     // **Check Main Images & Apply Conditions**
     productImages.forEach(image => {
-        let imageAttr = image.getAttribute('d4-img-alt');
+    let imageAttr = image.getAttribute('d4-img-alt');
 
-        if (!imageAttr) {
-            console.log(`Skipping image (No d4-img-alt found): ${image.src}`);
-            return;
-        }
+    if (!imageAttr) {
+        console.log(`Skipping image (No d4-img-alt found): ${image.src}`);
+        return;
+    }
 
-        let finalValue;
-        const match = imageAttr.match(/\$(.*?)\$/);
-        finalValue = match ? match[1] : imageAttr;
+    let finalValue;
+    const match = imageAttr.match(/\$(.*?)\$/);
+    finalValue = match ? match[1] : imageAttr;
 
-        if (finalValue.includes(selectedValue)) {
-            image.classList.remove('d4-remove-slide');
-            hasMatchingImage = true;
-        } else {
-            image.classList.add('d4-remove-slide');
-        }
-    });
+    // Check if selectedValue is purely numeric
+    const isNumeric = /^\d+$/.test(selectedValue);
 
-    // **Check Thumbnails & Apply Conditions**
+     let validVariants = finalValue.split(',').map(v => v.trim()); 
+
+    if (isNumeric ? validVariants.includes(selectedValue) : finalValue.includes(selectedValue)) {
+        image.classList.remove('d4-remove-slide');
+        hasMatchingImage = true;
+    } else {
+        image.classList.add('d4-remove-slide');
+    }
+});
+
+     // **Check Thumbnails & Apply Conditions**
     productThumbnails.forEach(thumb => {
-        let thumbAttr = thumb.getAttribute('data-title');
+    let thumbAttr = thumb.getAttribute('data-title');
 
-        if (!thumbAttr) {
-            console.log(`Skipping thumbnail (No data-title found):`, thumb);
-            return;
-        }
+    if (!thumbAttr) {
+        console.log(`Skipping thumbnail (No data-title found):`, thumb);
+        return;
+    }
 
-        if (thumbAttr.includes(selectedValue)) {
-            thumb.classList.remove('d4-remove-slide');
-            hasMatchingThumbnail = true;
-            thumb.style.display = 'block';
-        } else {
-            thumb.classList.add('d4-remove-slide');
-          thumb.style.display = 'none';
-        }
-    });
+      let finalValue;
+    const match = thumbAttr.match(/\$(.*?)\$/);
+    finalValue = match ? match[1] : thumbAttr;
+    // Check if selectedValue is purely numeric (still a string like "5")
+    const isNumeric = /^[0-9]+$/.test(selectedValue);
+
+      let validVariants = finalValue.split(',').map(v => v.trim()); 
+
+    if (isNumeric ? validVariants.includes(selectedValue) : thumbAttr.includes(selectedValue)) {
+        thumb.classList.remove('d4-remove-slide');
+        hasMatchingThumbnail = true;
+      thumb.style.display = 'block';
+    } else {
+        thumb.classList.add('d4-remove-slide');
+      thumb.style.display = 'none';
+    }
+});
 
     if (!hasMatchingImage) {
         console.log("No matching images found. Hiding all images.");
