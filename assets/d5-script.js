@@ -125,7 +125,7 @@ window.addEventListener('resize', function() {
   if (window.innerWidth > 798) {
     // Get the height of the first element
     var elem1 = document.querySelector('.product-gallery__main');
-    var elem2 = document.querySelector('.product-gallery__thumbnails .flickity-viewport');
+    var elem2 = document.querySelector('.flickity-viewport');
 
     if (elem1 && elem2) {
       var height = elem1.offsetHeight;
@@ -139,7 +139,7 @@ window.addEventListener('resize', function() {
 // Initial check on page load
 if (window.innerWidth > 798) {
   var elem1 = document.querySelector('.product-gallery__main');
-  var elem2 = document.querySelector('.product-gallery__thumbnails .flickity-viewport');
+  var elem2 = document.querySelector('.flickity-viewport');
 
   if (elem1 && elem2) {
     var height = elem1.offsetHeight;
