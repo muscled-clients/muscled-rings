@@ -69,6 +69,7 @@
   window.productData = {{ product | json }};
 </script>
 <script src="{{ 'd5-script.js' | asset_url }}" defer="defer"></script>
+{% unless template contains 'shopibro' %}
 {% for block in section.blocks %}
   {% if block.type == 'steps' %}
     <div class="d5-main-steps">
@@ -166,6 +167,7 @@
     </div>
   {% endif %}
 {% endfor %}
+                  {% endunless %}
 <section
   class="
     {% unless template contains 'shopibro' %}d5-main-product {% endunless %}section
