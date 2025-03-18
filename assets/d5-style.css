@@ -542,6 +542,10 @@
   .d5-icons .site-header__icon span.wishlist-hero-items-count.wishlist-hero-items-count-exists{
     top: -4px;
   }
+  .d5-wishlist-main{
+    top: 15px;
+    right: 15px;
+  }
   .progress-bar {
     width: 100%;
     height: 5px;
