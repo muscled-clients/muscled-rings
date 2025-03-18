@@ -1,4 +1,4 @@
-function stickyD5() { 
+function stickyD5() {
     const header = document.querySelector(".d5-header-main");
     let isSticky = false;
 
@@ -6,7 +6,7 @@ function stickyD5() {
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
 
-        // Apply the sticky class only if scroll position is greater than or equal to 100px
+        // Apply the sticky class if the scroll position is greater than or equal to 100px
         if (scrollPosition >= 100) {
             if (!isSticky) {
                 header.classList.add("sticky-d5");
@@ -25,8 +25,8 @@ function stickyD5() {
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Check the scroll position immediately after the page load to apply sticky class if necessary
-    handleScroll();
+    // Check scroll position immediately after page load to apply sticky class if necessary
+    handleScroll(); // This will check the initial scroll position and apply the sticky class if needed
 }
 
 stickyD5();
