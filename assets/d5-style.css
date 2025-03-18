@@ -547,7 +547,7 @@
 .flickity-button.flickity-prev-next-button{
   display: none;
 }
-.product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails *{
+.product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails *:not(.icon){
   position: unset !important;
   left: unset !important;
   transform: unset !important;
