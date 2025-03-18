@@ -581,8 +581,8 @@
 }
 }
 @media (max-width: 798px) {
-  .item-d5{
-    max-width: 110px;
+  .steps-row-d5{
+    max-width: 375px;
   }
   .d5-icons svg.wlh-svg-Icon{
     width: 16px !important;
