@@ -170,7 +170,7 @@
                   {% endunless %}
 <section
   class="
-    {% unless template contains 'shopibro' %}d5-main-product {% endunless %} d5-pdp-general section
+    {% unless template contains 'shopibro' %}d5-main-product {% else %}d5-shopibro {% endunless %} d5-pdp-general section
     product-template-shopibro
     {{ css_class }}
     is-width-{{ width }}
