@@ -544,6 +544,9 @@
 .compare-at-price .price-label-d5{
   display: none;
 }
+.compare-at-price .money{
+  margin-top: 6px;
+}
 @media (min-width: 798px) {
   .d5-shopibro .product-title.title{
     margin-top: 66px;
