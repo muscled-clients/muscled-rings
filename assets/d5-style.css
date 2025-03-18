@@ -533,7 +533,10 @@
 #wishlisthero-product-page-button-container{
  display: none !important 
 }
-
+.plus-price-d5{
+  font-weight: 700;
+  margin-left: 3px;
+}
 @media (min-width: 798px) {
   .d5-mobile {
     display: none;
