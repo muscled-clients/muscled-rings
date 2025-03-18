@@ -543,8 +543,14 @@
   min-width: 80px;
   max-width: 80px;
 }
+.product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails *{
+  position: unset !important;
+  left: unset !important;
+  transform: unset !important;
+}
 .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails .flickity-slider{
   flex-direction: column;
+  display: flex;
   
 }
 @media (min-width: 798px) {
