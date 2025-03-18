@@ -97,39 +97,6 @@ function stepsUpdate() {
         targetElement.textContent = value;
       }
     });
-
-    // Handle selected-plus-price dynamic span creation inside d5-option-value
-    const plusPriceElement = targetContainer.querySelector(
-      ".selected-plus-price[d5-variant='" + selectedVariantId + "']"
-    );
-
-    const plusPrice = plusPriceElement ? plusPriceElement.textContent.trim() : "";
-
-    // Get the .d5-option-value container
-    const optionValueContainer = targetContainer.querySelector(".d5-option-value");
-
-    if (plusPrice != "" && plusPrice != undefined && optionValueContainer) {
-      let existingSpan = optionValueContainer.querySelector(".selected-plus-price");
-
-      if (!existingSpan) {
-        // Create the span if it doesn't exist
-        const span = document.createElement("span");
-        span.className = "selected-plus-price";
-        span.textContent = plusPrice;
-
-        // Append the span as the last child of d5-option-value
-        optionValueContainer.appendChild(span);
-      } else {
-        // Update existing span if it already exists
-        existingSpan.textContent = plusPrice;
-      }
-    } else {
-      // If price is blank, remove the span if it exists
-      const existingSpan = optionValueContainer.querySelector(".selected-plus-price");
-      if (existingSpan) {
-        existingSpan.remove();
-      }
-    }
   }
 
   if (variantSelector) {
@@ -137,11 +104,9 @@ function stepsUpdate() {
       updateVariantInfo(this.value);
     });
   }
-
   setTimeout(() => {
     updateVariantInfo(variantSelector.value);
   }, 1000);
-
   if (variantSwatches.length) {
     variantSwatches.forEach((swatch) => {
       swatch.addEventListener("change", function () {
