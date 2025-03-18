@@ -54,6 +54,7 @@ function stepsUpdate() {
   const priceElement = document.querySelector(".selected-price-d5 p");
   const dataContainer = document.querySelector(".update-variant-info-d5");
   const targetContainer = document.querySelector(".answer-d5");
+  const plusPrice = document.querySelector(".d5-option-value");
 
   if (!dataContainer || !targetContainer) return;
 
@@ -81,7 +82,7 @@ function stepsUpdate() {
       }
 
       // Handle the plus price update
-      const plusPriceElement = targetContainer.querySelector(".selected-plus-price");
+      const plusPriceElement = plusPrice.querySelector(".selected-plus-price");
       if (plusPriceElement) {
         const variantPlusPrice = selectedVariant.d5_meta && selectedVariant.d5_meta.variant_plus_price;
 
