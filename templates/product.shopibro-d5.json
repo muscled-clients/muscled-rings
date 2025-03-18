@@ -1,0 +1,714 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product__breadcrumb",
+      "disabled": true,
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "product__sidebar",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "product__main",
+      "blocks": {
+        "steps_qj8fG3": {
+          "type": "steps",
+          "settings": {
+            "lb_1": "CHOOSE<br>SETTING",
+            "lb_2": "CHOOSE<br>STONE",
+            "svg_2": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"55\" height=\"23\" viewBox=\"0 0 55 23\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M29.9854 4.00663L27.6454 0.078064H32.3253L29.9854 4.00663ZM17.5058 4.00663L20.2357 0.0780718L22.1857 4.00663H17.5058ZM22.1856 4.79237H17.5058L24.9156 13.0424L22.1856 4.79237ZM30.7654 4.79237H35.4453L28.0355 13.0424L30.7654 4.79237ZM29.5955 4.79237H22.9656L26.8655 13.0424L29.5955 4.79237ZM26.9305 0.0780718L23.7456 4.00663H29.2054L26.9305 0.0780718ZM30.7654 4.00663L33.4953 0.0780718L35.4452 4.00663H30.7654ZM21.0155 0.078064L22.9654 4.00663L25.6954 0.078064H21.0155ZM17.1159 22.078L21.0158 11.4709L26.8657 16.578L32.7155 11.4709L36.2254 22.078H29.9856V18.1495H22.9658V22.078H17.1159ZM38.5654 22.078V1.6495H48.9693C56.676 4.5912 53.7217 9.68472 51.2813 11.8638C57.4466 17.7472 52.3089 21.1247 48.9693 22.078H38.5654ZM42.4652 9.8995V4.39951H46.0108C49.4777 6.59951 47.4553 8.98284 46.0108 9.8995H42.4652ZM42.4652 13.0424V18.5424H46.0108C47.4553 17.6257 49.4777 15.2424 46.0108 13.0424H42.4652ZM6.35218 1.64955H0.736328V22.0781H14.7759V18.0725H6.35218V1.64955Z\" fill=\"#2D1B38\"/>\n</svg>",
+            "lb_3": "REVIEW<br>COMPLETE RING",
+            "svg_3": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.3265 7.6524L6.40975 4.1273C6.32905 4.05467 6.32104 3.93092 6.3917 3.84848L9.20478 0.566546C9.24278 0.522217 9.29825 0.496704 9.35664 0.496704H15.1818C15.2348 0.496704 15.2857 0.517775 15.3232 0.555283L18.6156 3.84764C18.6966 3.92867 18.6931 4.06107 18.608 4.13772L14.6192 7.72761C20.1192 8.82183 24.2646 13.6752 24.2646 19.4967C24.2646 26.1241 18.8921 31.4967 12.2646 31.4967C5.63723 31.4967 0.264648 26.1241 0.264648 19.4967C0.264648 13.5291 4.62069 8.57894 10.3265 7.6524ZM22.2646 19.4967C22.2646 25.0196 17.7875 29.4967 12.2646 29.4967C6.7418 29.4967 2.26465 25.0196 2.26465 19.4967C2.26465 13.9739 6.7418 9.4967 12.2646 9.4967C17.7875 9.4967 22.2646 13.9739 22.2646 19.4967Z\" fill=\"#2D1B38\"/>\n</svg>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient_form": false,
+            "atc_color": "#ee5340"
+          }
+        },
+        "text_6cETL4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Free insured shipping by <strong>Monday, Mar 24</strong><br/>if you order in the next <strong>8 hours.</strong><a href=\"#\" title=\"#\"><strong> Need it sooner?</strong></a></p>"
+          }
+        },
+        "trusts_fyXekW": {
+          "type": "trusts",
+          "settings": {
+            "img_1": "shopify://shop_images/Group_2.svg",
+            "text_1": "Free 30 day returns  & 90 day resizing",
+            "img_2": "shopify://shop_images/Group_1000006059.svg",
+            "text_2": "Guaranteed for life",
+            "img_3": "shopify://shop_images/Vector_7.svg",
+            "text_3": "Authenticity inspection"
+          }
+        },
+        "d5_faq_x8xJA6": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "Ring information",
+            "ans": "",
+            "info": true
+          }
+        },
+        "d5_faq_xDy8XD": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "100% money back guarantee",
+            "ans": "<p>We thoroughly vet our vendors, from credit checks, financial reviews, industry reference checks, and <a href=\"#\" title=\"#\">much more</a>.<br/><br/>But beyond that, you can simply rely on our 100%, no questions asked, money-back guarantee to know you are safe when you purchase through us.<br/><br/>If you do not get exactly what you ordered, you get your money back – no fine print.<br/><br/>After all – a customer trusted us with $2.5 million dollars, a record <a href=\"#\" title=\"#\">online sale</a>.</p>",
+            "info": false
+          }
+        },
+        "d5_faq_Kb6B7L": {
+          "type": "d5_faq",
+          "settings": {
+            "quest": "Free 30-days returns and resizing",
+            "ans": "<p>Some Text Here....</p>",
+            "info": false
+          }
+        }
+      },
+      "block_order": [
+        "steps_qj8fG3",
+        "title",
+        "price",
+        "description",
+        "form",
+        "text_6cETL4",
+        "trusts_fyXekW",
+        "d5_faq_x8xJA6",
+        "d5_faq_xDy8XD",
+        "d5_faq_Kb6B7L"
+      ],
+      "settings": {
+        "product_images_position": "left",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "gallery_arrows": true,
+        "enable_zoom": true,
+        "enable_product_lightbox": true,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "display_thumbnails": true,
+        "thumbnail_position": "bottom-thumbnails",
+        "enable_thumbnail_slider": true,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "atc_label": "",
+        "top-t": true,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "icons_text_d6_QpchbD": {
+      "type": "icons-text-d6",
+      "blocks": {
+        "text_LTyhYR": {
+          "type": "text",
+          "settings": {
+            "block-icon": "shopify://shop_images/Group_1000006056_1.png",
+            "text-align": "center",
+            "block-title": "Craftsmanship",
+            "block-title-color": "#000000",
+            "block-title-font": 24,
+            "block-title-font-mobl": 20,
+            "block-content": "Every ring is meticulously handcrafted by skilled artisans, ensuring precision, elegance, and lasting beauty.",
+            "content-color": "#000000",
+            "content-font": 14,
+            "content-font-mobl": 14,
+            "icon-color": "#f3f1f0",
+            "icon-center": true,
+            "icon-border": 0,
+            "border-color": "#000000",
+            "icon-radius": 50
+          }
+        },
+        "text_PPaCeL": {
+          "type": "text",
+          "settings": {
+            "block-icon": "shopify://shop_images/Group_39554_1.png",
+            "text-align": "center",
+            "block-title": "Ethical Sourcing",
+            "block-title-color": "#000000",
+            "block-title-font": 24,
+            "block-title-font-mobl": 20,
+            "block-content": "Our diamonds and gemstones are ethically sourced, conflict-free, and meet the highest industry standards.",
+            "content-color": "#000000",
+            "content-font": 14,
+            "content-font-mobl": 14,
+            "icon-color": "#f3f1f0",
+            "icon-center": true,
+            "icon-border": 0,
+            "border-color": "#000000",
+            "icon-radius": 50
+          }
+        },
+        "text_rqL43R": {
+          "type": "text",
+          "settings": {
+            "block-icon": "shopify://shop_images/Group_39555_1.png",
+            "text-align": "center",
+            "block-title": "Customization",
+            "block-title-color": "#000000",
+            "block-title-font": 24,
+            "block-title-font-mobl": 20,
+            "block-content": "Create a ring as unique as your love. Personalize every detail to reflect your story and style.",
+            "content-color": "#000000",
+            "content-font": 14,
+            "content-font-mobl": 14,
+            "icon-color": "#f3f1f0",
+            "icon-center": true,
+            "icon-border": 0,
+            "border-color": "#000000",
+            "icon-radius": 50
+          }
+        },
+        "text_wAAweC": {
+          "type": "text",
+          "settings": {
+            "block-icon": "shopify://shop_images/Group_1000006058_1.png",
+            "text-align": "center",
+            "block-title": "Lifetime Guarantee",
+            "block-title-color": "#000000",
+            "block-title-font": 24,
+            "block-title-font-mobl": 20,
+            "block-content": "Our commitment goes beyond the purchase. Enjoy lifetime warranty and free maintenance on all rings.",
+            "content-color": "#000000",
+            "content-font": 14,
+            "content-font-mobl": 14,
+            "icon-color": "#f3f1f0",
+            "icon-center": true,
+            "icon-border": 0,
+            "border-color": "#000000",
+            "icon-radius": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_LTyhYR",
+        "text_PPaCeL",
+        "text_rqL43R",
+        "text_wAAweC"
+      ],
+      "settings": {
+        "sec-title": "",
+        "title-color": "#000000",
+        "title-font": 56,
+        "heading-align": "left",
+        "show-image": false,
+        "title-font-mobl": 32,
+        "sec-color": "#ffffff",
+        "features-id": "",
+        "icon_size": 72
+      }
+    },
+    "d5_image_grid_TT6fEf": {
+      "type": "d5-image-grid",
+      "settings": {
+        "title": "Beautifully Handcrafted Rings That Celebrate Love, Commitment, and Timeless Elegance",
+        "description": "This contemporary rope style solitaire engagement ring features a woven design that is",
+        "image_1": "shopify://shop_images/image_1.png",
+        "image_2": "shopify://shop_images/image_2.png",
+        "bottom_description": "Enjoy quality packaging and free shipping with every order. We also offer hassle-free, 30-day returns - no questions asked! Don't forget we'll be here forever with our lifetime warranty."
+      }
+    },
+    "index_featured_collection_4q4GeV": {
+      "type": "index__featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured collection",
+        "collection": "frontpage",
+        "products_per": 5,
+        "products_limit": 10,
+        "align_height": false,
+        "collection_height": 200,
+        "button_label": "",
+        "button_style": "button--primary",
+        "collection_style": "grid",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "collection_layout_mobile": "grid",
+        "mobile_products_per_row": "1",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "image_blocks_wPTEyn": {
+      "type": "image-blocks",
+      "blocks": {
+        "image_x8AyXj": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_44467981-4c13-4777-ba82-e63a2a5eb1e9.png",
+            "description": "“Absolutely in love with my ring! The quality and elegance are unmatched. Highly recommend!”",
+            "author-img": "shopify://shop_images/image_4.png",
+            "author_text": "Emma Richardson"
+          }
+        },
+        "image_yxDVJB": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_1_5b0bd5a0-e0fd-4b81-917d-c78bfce96fac.png",
+            "description": "“Stunning ring! The quality is amazing, and the customer service was outstanding. Worth every penny!”",
+            "author-img": "shopify://shop_images/image_5.png",
+            "author_text": "Grace Taylor"
+          }
+        },
+        "image_VT3Wcp": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_2_53568c70-a333-483e-9c1f-9f78cabcc4b0.png",
+            "description": "“Gorgeous design and incredible shine! My fiancé loves it, and the fit is perfect. Thank you!”",
+            "author-img": "shopify://shop_images/image_6.png",
+            "author_text": "Sophia Williams"
+          }
+        },
+        "image_kpgGip": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/image_3.png",
+            "description": "“Elegant, timeless, and beautifully crafted. This ring made my special moment even more memorable!”",
+            "author-img": "shopify://shop_images/image_7.png",
+            "author_text": "Amelia Thompson"
+          }
+        }
+      },
+      "block_order": [
+        "image_x8AyXj",
+        "image_yxDVJB",
+        "image_VT3Wcp",
+        "image_kpgGip"
+      ],
+      "settings": {
+        "accent": "Testimonials",
+        "heading": "Thousands of reviews <br>from extraordinary people like you"
+      }
+    },
+    "d5_faqs_meCEw6": {
+      "type": "d5-faqs",
+      "blocks": {
+        "faqs_Kq7N7C": {
+          "type": "faqs",
+          "settings": {
+            "quest": "Discreet Packaging",
+            "ans": "<p>Demure and sparkling, this diamond engagement ring features round diamonds pavé-set in 18k yellow gold to complement your choice of diamond.</p>"
+          }
+        },
+        "faqs_mzb6rx": {
+          "type": "faqs",
+          "settings": {
+            "quest": "Secure and Convenient Pickup Option",
+            "ans": "<p>Some Text Here ......</p>"
+          }
+        },
+        "faqs_XJJ7hT": {
+          "type": "faqs",
+          "settings": {
+            "quest": "Free Shipping",
+            "ans": "<p>SOME Texts Here .....</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faqs_Kq7N7C",
+        "faqs_mzb6rx",
+        "faqs_XJJ7hT"
+      ],
+      "settings": {
+        "title": "We're committed to making your entire experience a pleasant one,",
+        "rt": "<p>Every item we send comes in our signature Blue Nile packaging. Engagement rings arrive in a deluxe ring box within an elegant presentation box ready for your proposal. </p>",
+        "img": "shopify://shop_images/image.png"
+      }
+    },
+    "d11_video_blocks_Vx4pTK": {
+      "type": "d11-video-blocks",
+      "blocks": {
+        "text_wTkJaq": {
+          "type": "text",
+          "settings": {
+            "video": "shopify://files/videos/Rings.com UGC (1).mov",
+            "autoplay": false,
+            "controls": false,
+            "muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977.png",
+            "auth": "Sophia Mitchell",
+            "desig": "Fashion Blogger"
+          }
+        },
+        "text_HbqhYC": {
+          "type": "text",
+          "settings": {
+            "video": "shopify://files/videos/Rings UGC - 4K (2).mov",
+            "autoplay": false,
+            "controls": false,
+            "muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977_045ac376-a2a3-4b0e-9304-3ca435a8cf04.png",
+            "auth": "Isabella Carter",
+            "desig": "Wedding Planner"
+          }
+        },
+        "text_6mjTPP": {
+          "type": "text",
+          "settings": {
+            "video": "shopify://files/videos/ASMR unboxing - 4K (1).mov",
+            "autoplay": false,
+            "controls": false,
+            "muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977_c01c347f-4bb2-42a8-ac1c-4ca5bafb5ef3.png",
+            "auth": "Olivia Bennett",
+            "desig": "Designer"
+          }
+        },
+        "text_GhaXJ6": {
+          "type": "text",
+          "settings": {
+            "video": "shopify://files/videos/3.MP4",
+            "autoplay": false,
+            "controls": false,
+            "muted": true,
+            "video_loop": true,
+            "image": "shopify://shop_images/image_977_584c309b-9b7d-47b3-b74f-48136bfb8f3b.png",
+            "auth": "Amelia Thompson",
+            "desig": "Brand Consultant"
+          }
+        }
+      },
+      "block_order": [
+        "text_wTkJaq",
+        "text_HbqhYC",
+        "text_6mjTPP",
+        "text_GhaXJ6"
+      ],
+      "settings": {
+        "sec_bg_color": "#fbfbfb",
+        "title": "Real Customers, Real Stories",
+        "sub_heading": "Thousand of Ring Enthusiasts' Preferred Ring.com",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "review_sec_d6_WfiV4w": {
+      "type": "review-sec-d6",
+      "blocks": {
+        "text_ffCtka": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_e423844b-9e39-4c75-b6bb-5dfb06d59fe3.png",
+            "reviewer-name": "Kaylyn",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "1-carat-diamond-solitaire",
+            "p-title": ""
+          }
+        },
+        "text_GTE9q6": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_4_94b9b19b-05d4-4ae1-9021-58fcdc7e81d7.png",
+            "reviewer-name": "Amelia",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>I am beyond impressed with my purchase from Rings.com. The ring dazzles with elegance and superior craftsmanship.</p>",
+            "products": "14k-white-ring-mounting-5",
+            "p-title": ""
+          }
+        },
+        "text_xiQtkf": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_1_dc60a1af-4130-472e-8acf-522b9f67ba45.png",
+            "reviewer-name": "Emma",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>Buying a ring online was daunting, but Rings.com made the process a delight. The detailed descriptions and clear images helped me make an informed choice. The ring arrived promptly and surpassed my expectations in both quality and design. It's become my favorite piece of jewelry!</p>",
+            "products": "18k-white-engagement-ring-mounting",
+            "p-title": ""
+          }
+        },
+        "text_TVDbtq": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_5_797c38cb-5ac0-4fe4-ae86-3518550c0665.png",
+            "reviewer-name": "Michael",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>From the moment I saw it, I knew this ring was special. Rings.com delivers on both quality and style, making it a perfect gift.</p>",
+            "products": "2-carat-lab-grown-diamond-solitaire-ring",
+            "p-title": ""
+          }
+        },
+        "text_86HdAa": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_2_75f316b4-e381-46a5-87ba-3be407f409d2.png",
+            "reviewer-name": "Grace",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "14k-yellow-engagement-ring-mounting",
+            "p-title": ""
+          }
+        },
+        "text_nPREei": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_6_ea5ca4d2-537b-4e57-88f9-914050c0b2bf.png",
+            "reviewer-name": "David",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>Beautifully crafted, truly a masterpiece in my jewelry collection.</p>",
+            "products": "emerald-1-07ct-h-vs1",
+            "p-title": ""
+          }
+        },
+        "text_PmhUAx": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_3_f31e1729-b68e-4d6c-aad6-490b3e5d4d28.png",
+            "reviewer-name": "Sophia",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>After searching for the perfect anniversary gift, I decided on a ring from Rings.com and couldn't be happier with my choice. The ring is beautifully crafted with a timeless elegance that my wife adores. The customer service was outstanding, making sure I was satisfied every step of the way.</p>",
+            "products": "platinum-ring-mounting",
+            "p-title": ""
+          }
+        },
+        "text_fHzD66": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_7_e215d398-6615-4f5f-bb80-174350c85993.png",
+            "reviewer-name": "James",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>This ring from Rings.com is a work of art. Its intricate design and flawless finish make it a standout piece.</p>",
+            "products": "2-carat-lab-grown-diamond-solitaire-ring-canada",
+            "p-title": ""
+          }
+        },
+        "text_mTmn86": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_8.png",
+            "reviewer-name": "Sarah",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>Buying a ring online was daunting, but Rings.com made the process a delight. The detailed descriptions and clear images helped me make an informed choice.</p>",
+            "products": "2-carat-lab-grown-diamond-solitaire-ring-canada",
+            "p-title": ""
+          }
+        },
+        "text_HjdwPF": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_9.png",
+            "reviewer-name": "Emily",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>Stunning craftsmanship! A must-have for any jewelry lover.</p>",
+            "products": "heaven-engagement-ring",
+            "p-title": ""
+          }
+        },
+        "text_7mPPFx": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_10.png",
+            "reviewer-name": "Alex",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>I can't express enough how pleased I am with my purchase from Rings.com. The ring I chose is simply stunning, with intricate details that catch the light beautifully. It arrived in a lovely package, adding to the whole experience. Exceptional quality and service!</p>",
+            "products": "2-carat-lab-grown-diamond-solitaire-ring-canada",
+            "p-title": ""
+          }
+        },
+        "text_QjwUtb": {
+          "type": "text",
+          "settings": {
+            "reviewer-img": "shopify://shop_images/image_11.png",
+            "reviewer-name": "Jessica",
+            "rating": 5,
+            "star_size": 17,
+            "full_star": "shopify://shop_images/Star_12_1.png",
+            "gap": 1,
+            "review-text": "<p>Gorgeous ring, shines beautifully. Very pleased!</p>",
+            "products": "14k-yellow-engagement-ring-mounting-1",
+            "p-title": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_ffCtka",
+        "text_GTE9q6",
+        "text_xiQtkf",
+        "text_TVDbtq",
+        "text_86HdAa",
+        "text_nPREei",
+        "text_PmhUAx",
+        "text_fHzD66",
+        "text_mTmn86",
+        "text_HjdwPF",
+        "text_7mPPFx",
+        "text_QjwUtb"
+      ],
+      "settings": {
+        "sec-heading": "Customer Reviews",
+        "sub-heading": "Your satisfaction, in their words.",
+        "rating": 5,
+        "rating_text": "1,686 Reviews",
+        "star_size": 24,
+        "full_star": "shopify://shop_images/Star_12_1.png",
+        "gap": 1
+      }
+    },
+    "recently_viewed_pro_d6_HgeUky": {
+      "type": "recently-viewed-pro-d6",
+      "settings": {}
+    },
+    "images_grid_sec_NX3CBg": {
+      "type": "images-grid-sec",
+      "blocks": {
+        "text_6VhqEJ": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2476.png"
+          }
+        },
+        "text_NqWVBM": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2478.png"
+          }
+        },
+        "text_nXYKiM": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2479.png"
+          }
+        },
+        "text_DHFWx6": {
+          "type": "text",
+          "settings": {
+            "block-img": "shopify://shop_images/Rectangle_2480.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_6VhqEJ",
+        "text_NqWVBM",
+        "text_nXYKiM",
+        "text_DHFWx6"
+      ],
+      "settings": {
+        "heading": "As Seen On",
+        "subheading": "#Rings"
+      }
+    },
+    "newsletter_sec_d6_3NtTwh": {
+      "type": "newsletter-sec-d6",
+      "settings": {
+        "heading": "Want First Dibs?",
+        "content": "Join our email list and be the first to know about new limited edition products, material innovations, and lots of other fun updates.",
+        "note-text": "Note: You can opt-out at any time"
+      }
+    },
+    "17362140264e61d429": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "sidebar",
+    "main",
+    "icons_text_d6_QpchbD",
+    "d5_image_grid_TT6fEf",
+    "index_featured_collection_4q4GeV",
+    "image_blocks_wPTEyn",
+    "d5_faqs_meCEw6",
+    "d11_video_blocks_Vx4pTK",
+    "review_sec_d6_WfiV4w",
+    "recently_viewed_pro_d6_HgeUky",
+    "images_grid_sec_NX3CBg",
+    "newsletter_sec_d6_3NtTwh",
+    "17362140264e61d429"
+  ]
+}
