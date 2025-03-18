@@ -533,6 +533,12 @@
   }
 }
 @media (max-width: 798px) {
+  .d5-icons svg.wlh-svg-Icon{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    display: flex;
+  }
   .progress-bar {
     width: 100%;
     height: 5px;
