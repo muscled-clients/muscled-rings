@@ -12,7 +12,6 @@ function waitForFlickity(targetSelector, callback) {
     const checkFlickityInterval = setInterval(() => {
         const fliktyMain = document.querySelector(targetSelector);
         let flkty = Flickity.data(fliktyMain);
-      console.log('not found!');
 
         if (flkty) {
             clearInterval(checkFlickityInterval);
@@ -127,10 +126,8 @@ function ShowProductImages() {
         if (thumbAttr.includes(selectedValue)) {
             thumb.classList.remove('d4-remove-slide');
             hasMatchingThumbnail = true;
-          thumb.style.display = "block";
         } else {
             thumb.classList.add('d4-remove-slide');
-          thumb.style.display = "none";
         }
     });
 
@@ -150,10 +147,10 @@ function ShowProductImages() {
         removeMarkedSlides(flktyMain, removedSlidesMain);
     });
 
-    // waitForFlickity('.product-gallery__thumbnails', (flktyThumbs) => {
-    //     restoreSlides(flktyThumbs, removedSlidesThumbs);
-    //     removeMarkedSlides(flktyThumbs, removedSlidesThumbs);
-    // });
+    waitForFlickity('.product-gallery__thumbnails', (flktyThumbs) => {
+        restoreSlides(flktyThumbs, removedSlidesThumbs);
+        removeMarkedSlides(flktyThumbs, removedSlidesThumbs);
+    });
 }
 
 // **Initialize on Page Load**
