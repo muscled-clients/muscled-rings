@@ -547,6 +547,7 @@
   position: unset !important;
   left: unset !important;
   transform: unset !important;
+  height: unset !important;
 }
 .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails .flickity-slider{
   flex-direction: column;
