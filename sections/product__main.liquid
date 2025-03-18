@@ -168,7 +168,7 @@
 {% endfor %}
 <section
   class="
-    d5-main-product section
+    {% unless template contains 'shopibro' %}d5-main-product {% endunless %}section
     product-template-shopibro
     {{ css_class }}
     is-width-{{ width }}
