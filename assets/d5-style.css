@@ -542,6 +542,9 @@
   opacity: 1;
 }
 @media (min-width: 798px) {
+  .d5-shopibro .product-title.title{
+    margin-top: 66px;
+  }
   .d5-mobile {
     display: none;
   }
