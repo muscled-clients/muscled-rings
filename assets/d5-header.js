@@ -1,24 +1,32 @@
 function stickyD5() { 
     const header = document.querySelector(".d5-header-main");
     let isSticky = false;
+    let isTransitioning = false; // This flag will help to avoid adding/removing classes during the transition
 
     window.addEventListener("scroll", () => {
-        if (window.scrollY >= 100) {
-            if (!isSticky) {
-                header.classList.add("sticky-d5");
-                setTimeout(() => header.classList.add("active"), 10);
+        if (window.scrollY >= 100 && !isSticky && !isTransitioning) {
+            isTransitioning = true;
+            header.classList.add("sticky-d5");
+            // Set a small timeout for adding the "active" class
+            setTimeout(() => {
+                header.classList.add("active");
                 isSticky = true;
-            }
-        } else {
-            if (isSticky) {
-                header.classList.remove("active");
-                setTimeout(() => header.classList.remove("sticky-d5"), 400);
+                isTransitioning = false; // Allow the class to be added again after the transition is done
+            }, 10);
+        } else if (window.scrollY < 100 && isSticky && !isTransitioning) {
+            isTransitioning = true;
+            header.classList.remove("active");
+            // Set a timeout to remove the "sticky-d5" class after the transition
+            setTimeout(() => {
+                header.classList.remove("sticky-d5");
                 isSticky = false;
-            }
+                isTransitioning = false;
+            }, 400);
         }
     });
 }
-stickyD5(); 
+stickyD5();
+
 
 function searchD5() {
     const overlay = document.querySelector('.site-overlay');
