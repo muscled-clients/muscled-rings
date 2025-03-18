@@ -65,19 +65,36 @@ function stepsUpdate() {
     );
 
     if (selectedVariant) {
+      // Update image and price
       if (selectedVariant.featured_image && imageElement) {
         imageElement.src = selectedVariant.featured_image.src;
       }
 
       if (typeof selectedVariant.price === "number" && priceElement) {
-        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(
-          2
-        )}`;
+        priceElement.textContent = `$${(selectedVariant.price / 100).toFixed(2)}`;
       }
 
+      // Update SKU
       const skuElement = targetContainer.querySelector(".selected-sku-d5");
       if (skuElement) {
         skuElement.textContent = selectedVariant.sku || "N/A";
+      }
+
+      // Handle the plus price update
+      const plusPriceElement = targetContainer.querySelector(".selected-plus-price");
+      if (plusPriceElement) {
+        const variantPlusPrice = selectedVariant.d5_meta && selectedVariant.d5_meta.variant_plus_price;
+
+        if (variantPlusPrice) {
+          // Create span and append it
+          const priceSpan = document.createElement("span");
+          priceSpan.textContent = `$${(variantPlusPrice / 100).toFixed(2)}`;
+          plusPriceElement.innerHTML = '';  // Clear the previous content
+          plusPriceElement.appendChild(priceSpan);
+        } else {
+          // Clear the span if no plus price exists
+          plusPriceElement.innerHTML = '';
+        }
       }
     } else {
       return;
@@ -104,9 +121,11 @@ function stepsUpdate() {
       updateVariantInfo(this.value);
     });
   }
+
   setTimeout(() => {
     updateVariantInfo(variantSelector.value);
   }, 1000);
+
   if (variantSwatches.length) {
     variantSwatches.forEach((swatch) => {
       swatch.addEventListener("change", function () {
@@ -122,4 +141,5 @@ function stepsUpdate() {
     });
   }
 }
+
 
