@@ -93,25 +93,10 @@ function stepsUpdate() {
 
       // Special handling for the selected-plus-price element
       if (className === "selected-plus-price") {
-       // Special handling for the selected-plus-price element
-if (className === "selected-plus-price") {
-  const targetElement = targetContainer.querySelector(".d5-option-value");
-  const spanElement = targetElement ? targetElement.querySelector("span") : null;
-  
-  if (spanElement) {
-    if (value !== "") {
-      spanElement.textContent = value;
-    } else {
-      spanElement.textContent = ''; // Clear the span if the price is blank
-    }
-  }
-} else {
-  const targetElement = targetContainer.querySelector(`.${className}`);
-  if (targetElement) {
-    targetElement.textContent = value;
-  }
-}
-
+        const targetElement = document.querySelector(".d5-option-value");
+        if (targetElement) {
+          targetElement.textContent = value;
+        }
       } else {
         const targetElement = targetContainer.querySelector(`.${className}`);
         if (targetElement) {
