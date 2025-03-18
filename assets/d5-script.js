@@ -146,4 +146,13 @@ function stepsUpdate() {
         const selectedVariantName = this.value;
         const selectedVariant = [...variantSelector.options].find((option) =>
           option.textContent.includes(selectedVariantName)
+        );
+
+        if (selectedVariant) {
+          updateVariantInfo(selectedVariant.value);
+        }
+      });
+    });
+  }
+}
 
