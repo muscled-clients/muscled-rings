@@ -234,6 +234,10 @@
 {% if template.suffix == default %}
 <script src="{{ 'product-variant-images.js' | asset_url }}"></script>
   {% endif %}
+
+                  {% if template contains 'shopibro' %}
+  <script src="{{ 'shopibro-variant-images.js' | asset_url }}"></script>
+  {% endif %}
                   
 {% if template contains 'shopibro' %}
   <script>
