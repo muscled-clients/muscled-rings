@@ -21,7 +21,7 @@ function stickyD5() {
                 header.classList.remove("sticky-d5");
                 isSticky = false;
                 isTransitioning = false;
-            }, 400);
+            }, 200);
         }
     });
 }
