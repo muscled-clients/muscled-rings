@@ -12,12 +12,12 @@
 
 <fieldset class="swatch is-flex is-flex-wrap" data-option-index="{{ option_index }}">
   <legend class="option-title label">
+    {{ option.name }}
     <span
       class="options-selection__option-name d5-option-value"
       data-variant-option-name="{{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value | escape }}"
       data-variant-option-choose-name="{{ 'product.variants.choose_option' | t: option: option.name }}"
     >
-      {{ option.name }}
       {% if selected_variant %}
         {{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value }}
       {% else %}
