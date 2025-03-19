@@ -837,6 +837,7 @@
   }
   .d5-pdp-general .description-text {
     -webkit-line-clamp: 2;
+    margin-top: 23px;
   }
   .product__description .has-padding-top {
     padding-top: 15px;
