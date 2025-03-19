@@ -2,8 +2,29 @@ document.addEventListener("DOMContentLoaded", function () {
   faqD5();
   readMoreLess();
   stepsUpdate();
-
+removeBadge()
 });
+
+function removeBadge() {
+  // Set up the MutationObserver to detect when new elements are added to the DOM
+const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+            if (node.nodeType === 1 && node.matches('.sale.savings')) {
+                // Remove quotes and parentheses
+                node.innerHTML = node.innerHTML.replace(/["()]/g, '');
+            }
+        });
+    });
+});
+
+// Start observing the document body for any added nodes
+observer.observe(document.body, {
+    childList: true, // Observe direct children (additions)
+    subtree: true    // Observe all descendants, not just direct children
+});
+
+}
 
 function faqD5() {
   const faqMain = document.querySelectorAll(".d5-faq-main");
