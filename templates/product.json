@@ -146,7 +146,7 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
-        "atc_label": "",
+        "atc_label": "select this setting",
         "top-t": false,
         "css_class": "",
         "custom_css": "",
