@@ -611,6 +611,7 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+  border-radius: 0;
 }
 @media (min-width: 798px) {
   .d5-wishlist-main svg{
