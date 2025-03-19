@@ -42,6 +42,16 @@
             "svg_3": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.3265 7.6524L6.40975 4.1273C6.32905 4.05467 6.32104 3.93092 6.3917 3.84848L9.20478 0.566546C9.24278 0.522217 9.29825 0.496704 9.35664 0.496704H15.1818C15.2348 0.496704 15.2857 0.517775 15.3232 0.555283L18.6156 3.84764C18.6966 3.92867 18.6931 4.06107 18.608 4.13772L14.6192 7.72761C20.1192 8.82183 24.2646 13.6752 24.2646 19.4967C24.2646 26.1241 18.8921 31.4967 12.2646 31.4967C5.63723 31.4967 0.264648 26.1241 0.264648 19.4967C0.264648 13.5291 4.62069 8.57894 10.3265 7.6524ZM22.2646 19.4967C22.2646 25.0196 17.7875 29.4967 12.2646 29.4967C6.7418 29.4967 2.26465 25.0196 2.26465 19.4967C2.26465 13.9739 6.7418 9.4967 12.2646 9.4967C17.7875 9.4967 22.2646 13.9739 22.2646 19.4967Z\" fill=\"#2D1B38\"/>\n</svg>"
           }
         },
+        "review_star_d6_eAaAUF": {
+          "type": "review-star-d6",
+          "settings": {
+            "rating": 5,
+            "review_text": "based on <a href=\"#review-sec-d6\"> 17 reviews</a>",
+            "star_size": 14,
+            "full_star": "shopify://shop_images/Star_12_1_d3bf146f-22a3-4e5e-ac66-78ae9b9c15cd.png",
+            "gap": 2
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -108,6 +118,7 @@
       },
       "block_order": [
         "steps_qj8fG3",
+        "review_star_d6_eAaAUF",
         "title",
         "price",
         "description",
@@ -138,7 +149,8 @@
         "atc_label": "",
         "top-t": false,
         "css_class": "",
-        "custom_css": ""
+        "custom_css": "",
+        "atc_text_d5": ""
       }
     },
     "icons_text_d6_QpchbD": {
