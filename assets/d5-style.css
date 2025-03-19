@@ -574,7 +574,7 @@
   height: 24px;
 }
 .price-ui {
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
 }
 .sale.savings .money {
