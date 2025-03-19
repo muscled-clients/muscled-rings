@@ -136,7 +136,7 @@
         "padding_bottom": 20,
         "animation": "none",
         "atc_label": "",
-        "top-t": true,
+        "top-t": false,
         "css_class": "",
         "custom_css": ""
       }
