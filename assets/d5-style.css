@@ -437,7 +437,7 @@
   align-items: center;
   gap: 4px;
   top: -32px;
-  position: absolute;
+  /* position: absolute; */
 }
 .backtog-d5 span {
   color: #1b1b1b;
