@@ -5440,7 +5440,7 @@ function createBadgeRangeFragment(savings, percent, style, formatter) {
 
     case 'money':
       badgeRangeFragment = badgeSavingsRangeTemplate.cloneNode(true);
-      badgeRangeFragment.querySelector('[data-price]').innerHTML = "";
+      badgeRangeFragment.querySelector('[data-price]').innerHTML = formatter(savings);
       break;
 
     default:
@@ -5462,7 +5462,7 @@ function createBadgeSingleFragment(savings, percent, style, formatter) {
 
     case 'money':
       badgeSingleFragment = badgeSavingsTemplate.cloneNode(true);
-      badgeSingleFragment.querySelector('[data-price]').innerHTML = "";
+      badgeSingleFragment.querySelector('[data-price]').innerHTML = formatter(savings);
       break;
 
     default:
