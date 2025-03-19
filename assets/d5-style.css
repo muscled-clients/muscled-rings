@@ -417,7 +417,7 @@
 .d5-footer .footer__block.block__text p {
   margin-bottom: 12px;
 }
-.atc_button_overlay {
+.d5-main-product .atc_button_overlay {
   display: none !important;
 }
 .info-item-d5:nth-child(odd) {
