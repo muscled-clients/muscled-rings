@@ -682,6 +682,7 @@
     font-weight: 400;
     line-height: normal;
     text-decoration: underline;
+    margin-left: 3px;
   }
   .desktop-d5.wlhtext {
     display: none;
