@@ -11,18 +11,13 @@ shopiThumbnail.forEach(image=> {
 function showSelectedImagesShopi(swatchValue) {
   // Check if device width is greater than 768px
   if (window.innerWidth <= 768) {
-    console.log("Skipping script execution on devices ≤ 768px.");
     return;
   }
-
-  console.log("Running script for screen width:", window.innerWidth);
-  console.log("Selected Variant:", swatchValue);
 
   shopiThumbnail.forEach(image => {
     let imageAttr = image.getAttribute('data-title');
 
     if (!imageAttr) {
-        console.log(`Skipping image (No data-title found): ${image.src}`);
         return;
     }
 
@@ -32,8 +27,6 @@ function showSelectedImagesShopi(swatchValue) {
 
     // **Check if finalValue contains multiple variants (comma-separated)**
     let validVariants = finalValue.split(',').map(v => v.trim()); // Convert to array
-
-    console.log("Image should be visible for variants:", validVariants);
 
     if (validVariants.includes(swatchValue)) {
       image.style.display = 'block';
@@ -45,7 +38,6 @@ function showSelectedImagesShopi(swatchValue) {
 
 // Run script only if window width is greater than 768px
 if (window.innerWidth > 768) {
-  console.log("Initial execution - Running on devices > 768px");
   showSelectedImagesShopi(shopiSwatch[0].value);
 }
 
