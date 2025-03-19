@@ -583,6 +583,9 @@
 .sale.savings .money {
   display: none;
 }
+.price+.compare-at-price{
+  margin: 0;
+}
 @media (min-width: 798px) {
   .d5-wishlist-main{
     background: none;
