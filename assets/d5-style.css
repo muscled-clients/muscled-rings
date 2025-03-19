@@ -681,7 +681,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-decoration: none;
+    text-decoration: underline;
   }
   .desktop-d5.wlhtext {
     display: none;
