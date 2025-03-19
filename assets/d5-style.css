@@ -551,6 +551,9 @@
   line-height: normal;
   text-decoration-line: strikethrough;
 }
+.compare-at-price{
+  opacity: 1;
+}
 @media (min-width: 798px) {
   .d5-product-top-bar{
     display: flex;
