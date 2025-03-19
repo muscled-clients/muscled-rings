@@ -339,6 +339,20 @@
           {%- elsif block.type == 'title' -%}
             {% comment %} Name {% endcomment %}
             <h1 class="product-title title">
+              {% for block in section.blocks %}
+                {% if block.type == 'review-star-d6' %}
+               <div class="d5-mobile">
+            {% render 'review-star-d6',
+              rating: block.settings.rating,
+              text: block.settings.review_text,
+              star_size: block.settings.star_size,
+              full_star: block.settings.full_star,
+              empty_star: block.settings.empty_star,
+              gap: block.settings.gap
+            %}
+            </div>
+                  {% endif %}
+              {% endfor %}
               {% if is_product_modal %}
                 <a href="{{ product.url }}">{{ product.title }}</a>
               {% elsif section_onboarding %}
