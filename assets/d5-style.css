@@ -525,24 +525,25 @@
   width: 16px;
   height: 16px;
 }
-.play-pause-btn-d6{
+.play-pause-btn-d6 {
   cursor: pointer;
 }
-#wishlisthero-product-page-button-container{
- display: none !important 
+#wishlisthero-product-page-button-container {
+  display: none !important;
 }
-.plus-price-d5{
+.plus-price-d5 {
   font-weight: 700;
   margin-left: 3px;
 }
-.d5-shopibro .price-ui--loading,.d5-shopibro .price-ui-badge--loading{
+.d5-shopibro .price-ui--loading,
+.d5-shopibro .price-ui-badge--loading {
   opacity: 1;
 }
-.compare-at-price .price-label-d5{
+.compare-at-price .price-label-d5 {
   display: none;
 }
-.compare-at-price .money{
-  color: #1B1B1B;
+.compare-at-price .money {
+  color: #1b1b1b;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -550,10 +551,10 @@
   line-height: normal;
   text-decoration-line: strikethrough;
 }
-.compare-at-price{
+.compare-at-price {
   opacity: 1;
 }
-.sale.savings{
+.sale.savings {
   width: 77px;
   display: flex;
   padding: 4px 8px;
@@ -561,9 +562,9 @@
   align-items: center;
   gap: 10px;
   border-radius: 4px;
-  border: 0.5px solid #1B1B1B;
-  background: #1B1B1B;
-  color: #FFF;
+  border: 0.5px solid #1b1b1b;
+  background: #1b1b1b;
+  color: #fff;
   font-family: Roboto;
   font-size: 14px;
   font-style: normal;
@@ -572,99 +573,108 @@
   white-space: nowrap;
   height: 24px;
 }
-.price-ui{
+.price-ui {
   align-items: baseline;
   gap: 12px;
 }
-.sale.savings .money{
+.sale.savings .money {
   display: none;
 }
 @media (min-width: 798px) {
-  .d5-product-top-bar{
+  .d5-product-top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .d5-shopibro .product-title.title{
+  .d5-shopibro .product-title.title {
     margin-top: 66px;
   }
   .d5-mobile {
     display: none;
   }
-.d5-main-product .product-gallery--bottom-thumbnails.product-gallery{
-  display: flex;
-  align-items: start;
-  gap: 16px;
-  flex-direction: row-reverse;
-}
-.d5-main-product .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails{
-  min-width: 80px;
-  max-width: 80px;
-  margin: 0 !important;
-}
-.d5-main-product .flickity-button.flickity-prev-next-button{
-  display: none;
-}
-.d5-main-product .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails *:not(.icon){
-  position: unset !important;
-  left: unset !important;
-  transform: unset !important;
-  height: unset !important;
-}
-.d5-main-product .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails .product-gallery__thumbnail.one-fifth.column{
-  position: relative !important;
-}
-.d5-main-product .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails .flickity-slider{
-  flex-direction: column;
-  display: flex;
-  gap: 8px;
-}
-.d5-main-product .product-gallery__thumbnails .product-gallery__thumbnail{
-  margin: 0;
-  width: 100%;
-}
-.d5-main-product .product-gallery__thumbnails .flickity-viewport{
-  min-width: 100%;
-  max-height: 470px;
-  overflow-y: scroll;
-}
-.d5-product-top-bar{
-  padding-bottom: 16px;
-}
-.d5-wishlist-main{
-  height: 20px;
-  width: unset;
-}
-.desktop-d5.wlhtext{
-  color: #1B1B1B;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-}
-@media (max-width: 798px) {
-  .desktop-d5.wlhtext{
+  .d5-main-product .product-gallery--bottom-thumbnails.product-gallery {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    flex-direction: row-reverse;
+  }
+  .d5-main-product
+    .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails {
+    min-width: 80px;
+    max-width: 80px;
+    margin: 0 !important;
+  }
+  .d5-main-product .flickity-button.flickity-prev-next-button {
     display: none;
   }
-  .product_form.sticky-atc .d5-mobile{
-display: none
-} 
-  
-  .steps-row-d5{
+  .d5-main-product
+    .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails
+    *:not(.icon) {
+    position: unset !important;
+    left: unset !important;
+    transform: unset !important;
+    height: unset !important;
+  }
+  .d5-main-product
+    .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails
+    .product-gallery__thumbnail.one-fifth.column {
+    position: relative !important;
+  }
+  .d5-main-product
+    .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails
+    .flickity-slider {
+    flex-direction: column;
+    display: flex;
+    gap: 8px;
+  }
+  .d5-main-product .product-gallery__thumbnails .product-gallery__thumbnail {
+    margin: 0;
+    width: 100%;
+  }
+  .d5-main-product .product-gallery__thumbnails .flickity-viewport {
+    min-width: 100%;
+    max-height: 470px;
+    overflow-y: scroll;
+  }
+  .d5-product-top-bar {
+    padding-bottom: 16px;
+  }
+  .d5-wishlist-main {
+    height: 20px;
+    width: unset;
+  }
+  .desktop-d5.wlhtext {
+    color: #1b1b1b;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media (max-width: 798px) {
+  .desktop-d5.wlhtext {
+    display: none;
+  }
+  .product_form.sticky-atc .d5-mobile {
+    display: none;
+  }
+
+  .steps-row-d5 {
     max-width: 335px;
   }
-  .d5-icons svg.wlh-svg-Icon{
+  .d5-icons svg.wlh-svg-Icon {
     width: 16px !important;
     height: 16px;
     padding: 0 !important;
     display: flex;
   }
-  .d5-icons .site-header__icon span.wishlist-hero-items-count.wishlist-hero-items-count-exists{
+  .d5-icons
+    .site-header__icon
+    span.wishlist-hero-items-count.wishlist-hero-items-count-exists {
     top: -4px;
   }
-  .d5-wishlist-main{
+  .d5-wishlist-main {
     top: 15px;
     right: 15px;
     position: absolute;
@@ -781,13 +791,14 @@ display: none
     line-height: normal;
     margin: 0 0 8px;
   }
- .d5-pdp-general .price-ui .price .money {
+  .d5-pdp-general .price-ui .price .money {
     color: #1b1b1b;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    max-height: 40px;
   }
   .d5-main-product .product-block--price {
     margin-bottom: 10px;
