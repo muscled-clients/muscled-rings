@@ -69,7 +69,7 @@
         "form": {
           "type": "form",
           "settings": {
-            "show_payment_button": true,
+            "show_payment_button": false,
             "show_gift_card_recipient_form": false,
             "atc_color": "#ee5340"
           }
