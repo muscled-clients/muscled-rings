@@ -5440,7 +5440,7 @@ function createBadgeRangeFragment(savings, percent, style, formatter) {
 
     case 'money':
       badgeRangeFragment = badgeSavingsRangeTemplate.cloneNode(true);
-      badgeRangeFragment.querySelector('[data-price]').innerHTML = formatter(savings);
+      badgeRangeFragment.querySelector('[data-price]').innerHTML = "";
       break;
 
     default:
