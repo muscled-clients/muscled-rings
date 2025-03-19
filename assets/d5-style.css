@@ -586,6 +586,9 @@
 .price+.compare-at-price{
   margin: 0;
 }
+.ss-total-rating{
+  gap: 3px;
+}
 @media (min-width: 798px) {
   .d5-wishlist-main{
     background: none;
@@ -682,7 +685,6 @@
     font-weight: 400;
     line-height: normal;
     text-decoration: underline;
-    margin-left: 3px;
   }
   .desktop-d5.wlhtext {
     display: none;
