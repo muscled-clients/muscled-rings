@@ -90,6 +90,7 @@
     "
   >
     <div class="content-height d5-main-gallery">
+      <div class="d5-product-top-bar">
       <a class="backtog-d5" href="/apps/ring-creator/rb-setting-list">
         <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
   <path d="M6.43663 0.180951C6.19557 -0.060317 5.80443 -0.060317 5.56337 0.180951L0.180951 5.56337C-0.060317 5.80443 -0.060317 6.19557 0.180951 6.43663L5.56337 11.819C5.68401 11.9397 5.84211 12 6.00021 12C6.15831 12 6.31641 11.9397 6.43684 11.819C6.6781 11.578 6.6781 11.1869 6.43684 10.9458L1.49105 6L6.43663 1.05421C6.6779 0.813148 6.6779 0.422013 6.43663 0.180951Z" fill="#1B1B1B"/>
@@ -99,6 +100,7 @@
     <div class="d5-wishlist-main">
          {% render 'wishlisthero-collection-product' with product: product %}
     </div>
+  </div>
       {% if section_onboarding %}
         <div class="featured-product__images">
           {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--product' }}
