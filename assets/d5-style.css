@@ -535,13 +535,13 @@
   font-weight: 700;
   margin-left: 3px;
 }
-.price-ui--loading, .price-ui-badge--loading{
+.d5-shopibro .price-ui--loading,.d5-shopibro .price-ui-badge--loading{
   opacity: 1;
 }
 .compare-at-price .price-label-d5{
   display: none;
 }
-/* .compare-at-price .money{
+.compare-at-price .money{
   margin-top: 6px;
   color: #1B1B1B;
   font-family: Inter;
@@ -550,7 +550,7 @@
   font-weight: 400;
   line-height: normal;
   text-decoration-line: strikethrough;
-} */
+}
 @media (min-width: 798px) {
   .d5-product-top-bar{
     display: flex;
