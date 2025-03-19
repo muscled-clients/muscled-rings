@@ -175,7 +175,7 @@
 
 {%- capture money_format_output -%}
   {%- if settings.currency_format == 'money_with_currency_format' -%}
-    {{- shop.money_with_currency_format | strip_html -}}
+    {{- shop.money_format | strip_html -}}
   {%- else -%}
     {{- shop.money_format | strip_html -}}
   {%- endif -%}
