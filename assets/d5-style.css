@@ -596,6 +596,9 @@
 .d5-product-top-bar{
   padding-bottom: 16px;
 }
+.d5-wishlist-main{
+  height: 20px;
+}
 }
 @media (max-width: 798px) {
   .product_form.sticky-atc .d5-mobile{
