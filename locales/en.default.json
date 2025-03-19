@@ -300,7 +300,7 @@
       "collections": "Collections",
       "product_types": "Type",
       "tags": "Category",
-      "savings": "save:",
+      "savings": "Save",
       "products_tagged": "Products tagged {{ tag }}",
       "items_left_count": {
         "one": "item left",
