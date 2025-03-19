@@ -315,8 +315,10 @@
                             ${item.productTitle}
                             </a>
                         </h3>
-                          <p class="c-productComparePrice ${item.productComparePrice <= item.productPrice ? 'hide-comparePrice' : 'show-comparePrice'}">${item.productComparePrice}</p>
-                          <p className="c-productPrice">${item.productPrice}</p>
+                          
+                          <p className="c-productPrice">
+                          <span class="c-productComparePrice ${item.productComparePrice <= item.productPrice ? 'hide-comparePrice' : 'show-comparePrice'}">${item.productComparePrice}</span>
+                          ${item.productPrice}</p>
 
                     </div>
                     
