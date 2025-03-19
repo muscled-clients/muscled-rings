@@ -542,7 +542,6 @@
   display: none;
 }
 .compare-at-price .money{
-  margin-top: 10px;
   color: #1B1B1B;
   font-family: Inter;
   font-size: 16px;
@@ -572,6 +571,10 @@
   line-height: normal;
   white-space: nowrap;
   height: 24px;
+}
+.price-ui{
+  align-items: center;
+  gap: 12px;
 }
 .sale.savings .money{
   display: none;
