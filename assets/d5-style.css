@@ -486,9 +486,6 @@
 .d5-wishlist-main {
   width: 44px;
   height: 44px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
   z-index: 44;
   background: #fafafa;
   border-radius: 50%;
@@ -612,6 +609,7 @@ display: none
   .d5-wishlist-main{
     top: 15px;
     right: 15px;
+    position: absolute;
   }
   .progress-bar {
     width: 100%;
