@@ -671,6 +671,14 @@
   .ss-av-rating{
     margin: 0 !important;
   }
+  .ss-av-rating a{
+    color: #1B1B1B;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
   .desktop-d5.wlhtext {
     display: none;
   }
