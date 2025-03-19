@@ -808,6 +808,60 @@
       "limit": 1
     },
     {
+     "type": "review-star-d6",
+      "name": "Reviews Star",
+      "settings": [
+         {
+      "type": "range",
+      "id": "rating",
+      "label": "Rating",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 5,
+      "info": "Set the rating value between 0 and 5."
+    },
+    {
+      "type": "liquid",
+      "id": "review_text",
+      "label": "Review Value",
+      "default":"1,686 Reviews"
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "label": "Star Size",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 25,
+      "info": "Choose the size of the stars (in pixels)."
+    },
+    {
+      "type": "image_picker",
+      "id": "full_star",
+      "label": "Full Star Image",
+      "info": "Upload an image to represent a full star."
+    },
+    {
+      "type": "image_picker",
+      "id": "empty_star",
+      "label": "Empty Star Image",
+      "info": "Upload an image to represent an empty star."
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Star Gap",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 2,
+      "info": "Set the gap between the stars (in pixels)."
+    }
+      ]
+    },
+    {
       "type": "vendor",
       "name": "Vendor",
       "limit": 1
