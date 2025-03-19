@@ -17,6 +17,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  max-height: 40px;
 }
 .d5-pdp-general .description-text {
   color: #626161;
@@ -798,7 +799,6 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    max-height: 40px;
   }
   .d5-main-product .product-block--price {
     margin-bottom: 10px;
