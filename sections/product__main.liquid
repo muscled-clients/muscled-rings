@@ -812,10 +812,13 @@
       "name": "Reviews Star",
       "settings": [
          {
-      "type": "text",
+      "type": "range",
       "id": "rating",
       "label": "Rating",
-      "default": "5.0",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 5,
       "info": "Set the rating value between 0 and 5."
     },
     {
