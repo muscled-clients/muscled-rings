@@ -215,6 +215,7 @@
               </div>
             </div>
           {%- elsif block.type == 'review-star-d6' -%}
+            <div class="d5-desktop">
             {% render 'review-star-d6',
               rating: block.settings.rating,
               text: block.settings.review_text,
@@ -223,6 +224,7 @@
               empty_star: block.settings.empty_star,
               gap: block.settings.gap
             %}
+            </div>
           {%- elsif block.type == 'vendor' -%}
             {% comment %} Vendor {% endcomment %}
             <p class="vendor">
