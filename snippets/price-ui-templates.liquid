@@ -81,7 +81,7 @@
     <span class="money" data-price>
       {%- if value != blank -%}
         {%- if settings.currency_format == 'money_with_currency_format' -%}
-          {{- value | money_with_currency -}}
+          {{- value | money -}}
         {%- else -%}
           {{- value | money -}}
         {%- endif -%}
