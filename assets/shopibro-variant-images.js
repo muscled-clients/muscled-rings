@@ -1,7 +1,11 @@
 const shopiThumbnail = document.querySelectorAll('.shopibro-product-thumbnails');
 const shopiSwatch = document.querySelectorAll('.swatch__option input');
 const shopiForm = document.querySelector('.d4-product .shopify-product-form');
-shopiSwatch[0].checked = true;
+// shopiSwatch[0].checked = true;
+
+shopiThumbnail.forEach(image=> {
+  image.style.display = "block";
+})
 
 // Function to show selected images based on swatch selection
 function showSelectedImagesShopi(swatchValue) {
