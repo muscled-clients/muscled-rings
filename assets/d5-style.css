@@ -598,6 +598,7 @@
 }
 .d5-wishlist-main{
   height: 20px;
+  width: unset;
 }
 .desktop-d5.wlhtext{
   color: #1B1B1B;
