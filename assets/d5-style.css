@@ -17,6 +17,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.price.price--sale{
   max-height: 40px;
 }
 .d5-pdp-general .description-text {
