@@ -543,6 +543,12 @@
 }
 .compare-at-price .money{
   margin-top: 6px;
+  color: #1B1B1B;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 @media (min-width: 798px) {
   .d5-product-top-bar{
