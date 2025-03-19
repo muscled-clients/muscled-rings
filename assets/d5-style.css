@@ -570,6 +570,9 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  white-space: nowrap;
+  height: 24px;
+  margin-left: 12px;
 }
 .sale.savings .money{
   display: none;
