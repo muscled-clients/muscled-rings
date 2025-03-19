@@ -37,7 +37,6 @@ function removeMarkedSlides(flkty, removedSlidesArray) {
         }
     });
 
-    console.log(`Found ${slidesToRemove.length} slides to remove.`);
 
     // **Ensure all slides are removed**
     while (slidesToRemove.length > 0) {
@@ -48,11 +47,8 @@ function removeMarkedSlides(flkty, removedSlidesArray) {
     }
 
     if (totalRemoved > 0) {
-        console.log(`Successfully removed ${totalRemoved} slides.`);
         flkty.reloadCells(); // Ensure Flickity updates
-        console.log(`Flickity reloaded. Remaining slides: ${flkty.cells.length}`);
         let newCells = flkty.cells;
-      console.log(newCells);
       for(i = 0; i < newCells.length; i++) {
         if(newCells[i].element.classList.contains('d4-main-image')){
           newCells[i].element.click();
@@ -66,24 +62,20 @@ function removeMarkedSlides(flkty, removedSlidesArray) {
 // **Function to Restore All Previously Removed Slides**
 function restoreSlides(flkty, removedSlidesArray) {
     if (removedSlidesArray.length > 0) {
-        console.log("Restoring All Removed Slides...");
         while (removedSlidesArray.length > 0) {
             let slide = removedSlidesArray.pop(); // Restore last removed slide
             flkty.append(slide);
         }
         flkty.reloadCells();
-        console.log(`Flickity reloaded after restoring slides. Total slides: ${flkty.cells.length}`);
     }
 }
 
 // **Function to Show or Hide Product Images & Thumbnails Based on Variant**
 function ShowProductImages() {
-    console.log("Checking Images for Selected Variant...");
 
     // **Get Selected Swatch**
     const selectedSwatch = Array.from(swatchOptions).find(option => option.checked);
     if (!selectedSwatch) {
-        console.log("No swatch selected. Resetting images...");
         productImages.forEach(image => image.classList.remove('d4-remove-slide'));
         productThumbnails.forEach(thumb => thumb.classList.remove('d4-remove-slide'));
         return;
@@ -98,7 +90,6 @@ function ShowProductImages() {
     let imageAttr = image.getAttribute('d4-img-alt');
 
     if (!imageAttr) {
-        console.log(`Skipping image (No d4-img-alt found): ${image.src}`);
         return;
     }
 
@@ -124,7 +115,6 @@ function ShowProductImages() {
     let thumbAttr = thumb.getAttribute('data-title');
 
     if (!thumbAttr) {
-        console.log(`Skipping thumbnail (No data-title found):`, thumb);
         return;
     }
 
@@ -147,12 +137,10 @@ function ShowProductImages() {
 });
 
     if (!hasMatchingImage) {
-        console.log("No matching images found. Hiding all images.");
         productImages.forEach(image => image.classList.add('d4-remove-slide'));
     }
 
     if (!hasMatchingThumbnail) {
-        console.log("No matching thumbnails found. Hiding all thumbnails.");
         productThumbnails.forEach(thumb => thumb.classList.add('d4-remove-slide'));
     }
 
