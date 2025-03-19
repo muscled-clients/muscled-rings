@@ -48,15 +48,18 @@
   width: 100%;
 }
 
-.custom-ring-section img {
+.custom-ring-section .d5-grid-image {
   width: 100%;
   height: auto;
   max-width: 380px;
   max-height: 280px;
-  object-fit: cover;
   border: 0.5px solid rgba(45, 27, 56, 0.25);
 }
-
+.custom-ring-section .d5-grid-image img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .custom-ring-section .bottom-description {
   color: #1B1B1B;
   text-align: center;
@@ -115,10 +118,14 @@
     
     <div class="images-container">
       {% if section.settings.image_1 %}
+        <div class="d5-grid-image">
         <img src="{{ section.settings.image_1 | img_url: 'large' }}" alt="Left Image" class="image-left">
+        </div>
       {% endif %}
       {% if section.settings.image_2 %}
+        <div class="d5-grid-image">
         <img src="{{ section.settings.image_2 | img_url: 'large' }}" alt="Right Image" class="image-right">
+        </div>
       {% endif %}
     </div>
 
