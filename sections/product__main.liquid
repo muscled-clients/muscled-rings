@@ -176,6 +176,7 @@
                   <p class="rt-d5 d5-mobile">SETTINGS</p>
                 </div>
                 <div class="dynamic-content-d5">
+                  {% if product.selected_or_first_available_variant.featured_image != blank %}
                   <div class="selected-image-d5">
                     <img
                       src="{{ product.selected_or_first_available_variant.featured_image | image_url: width: '400px' }}"
@@ -183,6 +184,7 @@
                       height="48"
                     >
                   </div>
+                    {% endif %}
                   <div class="selected-price-d5">
                     <p>{{ product.selected_or_first_available_variant.price | money }}</p>
                     <p>Change | View</p>
