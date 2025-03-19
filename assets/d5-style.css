@@ -665,6 +665,9 @@
   }
 }
 @media (max-width: 798px) {
+  .price.price--sale{
+    max-height: 28px;
+  }
   h1.product-title.title{
     margin: 0 0 8px; !important;
   }
