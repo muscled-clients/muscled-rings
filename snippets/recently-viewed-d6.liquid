@@ -170,6 +170,7 @@
               productVariant: "{{ product.first_available_variant.id }}",
               productImg : "{{ product.featured_image | img_url: '' }}",
               productPrice : "{{ product.price | money | remove_first: '' }}",
+              productComparePrice : "{{ product.compare_at_price | money | remove_first: '' }}",
               productUrl : "{{ product.url }}"
           };
 
@@ -314,6 +315,9 @@
                             ${item.productTitle}
                             </a>
                         </h3>
+                        if(${item.productComparePrice} > ${item.productComparePrice}){
+                        <p class="c-productComparePrice">${item.productComparePrice}</p>
+                        }
                         <p class="c-productPrice">${item.productPrice}</p>
                     </div>
                     
