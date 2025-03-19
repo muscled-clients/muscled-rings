@@ -599,8 +599,19 @@
 .d5-wishlist-main{
   height: 20px;
 }
+.desktop-d5.wlhtext{
+  color: #1B1B1B;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 }
 @media (max-width: 798px) {
+  .desktop-d5.wlhtext{
+    display: none;
+  }
   .product_form.sticky-atc .d5-mobile{
 display: none
 } 
