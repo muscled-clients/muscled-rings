@@ -78,7 +78,9 @@
             "logo": "shopify://shop_images/RINGS.COM.svg",
             "size": "small",
             "text": "<p>Crafting unique, ethically sourced engagement rings to celebrate your personal love story with expert concierge support and exclusive designs.</p>",
-            "social_icons_footer": false
+            "social_icons_footer": false,
+            "ct_1": "",
+            "ct_2": ""
           }
         },
         "link_list": {
@@ -125,7 +127,7 @@
         "display_shopify": false,
         "show_follow_on_shop": false,
         "show_locale_selector": false,
-        "show_currency_selector": true,
+        "show_currency_selector": false,
         "display_payment_methods": false,
         "css_class": "",
         "custom_css": ""
