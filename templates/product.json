@@ -45,7 +45,7 @@
         "review_star_d6_eAaAUF": {
           "type": "review-star-d6",
           "settings": {
-            "rating": 5,
+            "rating": "5.0",
             "review_text": "based on <a href=\"#review-sec-d6\"> 17 reviews</a>",
             "star_size": 14,
             "full_star": "shopify://shop_images/Star_12_1_d3bf146f-22a3-4e5e-ac66-78ae9b9c15cd.png",
