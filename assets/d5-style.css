@@ -665,7 +665,7 @@
   }
 }
 @media (max-width: 798px) {
-  .product-title.title{
+  h1.product-title.title{
     margin: 0 0 8px; !important;
   }
   .ss-av-rating{
