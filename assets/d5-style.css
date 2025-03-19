@@ -602,7 +602,7 @@
   align-items: center;
   gap: 10px;
   align-self: stretch;
-  margin-top: 12px;
+  margin: 12px 0;
   color: #FFF;
   text-align: center;
   font-family: Inter;
@@ -700,6 +700,11 @@
   }
 }
 @media (max-width: 798px) {
+  .d5-main-product .purchase-details__buttons .action_button.action_button--secondary{
+    font-size: 14px;
+    height: 48px;
+    margin: 8px 0;
+  }
   .price.price--sale{
     max-height: 28px;
   }
