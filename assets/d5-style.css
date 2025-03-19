@@ -593,6 +593,7 @@
   .d5-wishlist-main svg{
     width: 15px;
     height: 15px;
+    margin-bottom: 5px;
   }
   .d5-wishlist-main{
     background: none;
