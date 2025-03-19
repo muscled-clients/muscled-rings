@@ -628,8 +628,12 @@
     position: unset !important;
     left: unset !important;
     transform: unset !important;
-    height: unset !important;
   }
+  .d5-main-product
+    .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails
+    *:not(.icon):not(.product-gallery__thumbnail){
+    height: unset !important;
+    }
   .d5-main-product
     .product-gallery__thumbnails.product-gallery__thumbnails--bottom-thumbnails
     .product-gallery__thumbnail.one-fifth.column {
