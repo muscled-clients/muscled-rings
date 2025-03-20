@@ -349,10 +349,10 @@
   const button = document.querySelector('.product-text.pdp-text-d5 a');
   if (button) {
     console.log("Button is now loaded!");
-    const gorgiasButton = document.querySelector('.messenger-button-iframe-13howqv');
-    console.log(gorgiasButton);
+    
     button.addEventListener('click', (event) => {
       event.preventDefault();
+      const gorgiasButton = document.querySelector('.messenger-button-iframe-13howqv');
       alert("Button clicked!");
       gorgiasButton.click();
     });
