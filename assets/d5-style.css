@@ -701,6 +701,9 @@
   }
 }
 @media (max-width: 798px) {
+  .swatch__option .tooltip{
+    display: none !important;
+  }
   .d5-main-product .purchase-details__buttons .action_button.action_button--secondary{
     font-size: 14px;
     height: 48px;
