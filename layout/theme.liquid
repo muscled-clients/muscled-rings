@@ -171,6 +171,18 @@
       width: 100% !important;
     }
   </style>
+  <script>
+    document.querySelectorAll('.openGorgiasChatD5').forEach(button => {
+    button.addEventListener('click', function() {
+        if (window.Gorgias) {
+            window.Gorgias.open(); // This opens the Gorgias chat window
+        } else {
+            console.error('Gorgias is not loaded!');
+        }
+    });
+});
+
+  </script>
 </head>
 
 {%- capture money_format_output -%}
