@@ -345,8 +345,10 @@
 {% endif %}
 
             <script>
-              const chatButton = document.querySelector('#gorgias-chat-messenger-button');
-              console.log('Gorgias chat button', chatButton);
+              document.addEventListener("DOMContentLoaded", function() {
+                  const chatButton = document.querySelector('#gorgias-chat-messenger-button');
+                  console.log('Gorgias chat button', chatButton);
+              });
             </script>
 
   <script>
