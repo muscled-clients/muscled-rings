@@ -345,31 +345,29 @@
 {% endif %}
 
             <script>
-      function checkButton() {
-  const button = document.querySelector('.product-text.pdp-text-d5 a');
-  if (button) {
-    console.log("Button is now loaded!");
+//       function checkButton() {
+//   const button = document.querySelector('.product-text.pdp-text-d5 a');
+//   if (button) {
+//     console.log("Button is now loaded!");
     
-    button.addEventListener('click', (event) => {
-      event.preventDefault();
-      const gorgiasButton = document.querySelector('.messenger-button-iframe-13howqv');
-      alert("Button clicked!");
-      gorgiasButton.click();
-    });
-    clearInterval(intervalId); // Stop checking once the button is found
-  } else {
-    console.log("Button not found, checking again...");
-  }
-}
+//     button.addEventListener('click', (event) => {
+//       event.preventDefault();
+//       alert("Button clicked!");
+//     });
+//     clearInterval(intervalId); // Stop checking once the button is found
+//   } else {
+//     console.log("Button not found, checking again...");
+//   }
+// }
 
-// Check every 3 seconds
-const intervalId = setInterval(checkButton, 3000);
+// // Check every 3 seconds
+// const intervalId = setInterval(checkButton, 3000);
 
-// Stop checking after 20 seconds
-setTimeout(() => {
-  clearInterval(intervalId);
-  console.log("Stopped checking for the button after 20 seconds");
-}, 20000);
+// // Stop checking after 20 seconds
+// setTimeout(() => {
+//   clearInterval(intervalId);
+//   console.log("Stopped checking for the button after 20 seconds");
+// }, 20000);
 
 
             </script>
