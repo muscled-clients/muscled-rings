@@ -172,16 +172,19 @@
     }
   </style>
   <script>
+document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.openGorgiasChatD5').forEach(button => {
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
-        if (window.Gorgias) {
-            window.Gorgias.open(); // This opens the Gorgias chat window
-        } else {
-            console.error('Gorgias is not loaded!');
-        }
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (window.Gorgias) {
+                window.Gorgias.open();
+            } else {
+                console.error('Gorgias is not loaded!');
+            }
+        });
     });
 });
+
 
   </script>
 </head>
