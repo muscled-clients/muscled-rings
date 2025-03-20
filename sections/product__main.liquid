@@ -346,8 +346,10 @@
 
             <script>
               document.addEventListener("DOMContentLoaded", function() {
-                  const chatButton = document.querySelector('#gorgias-chat-messenger-button');
+                setTimeout(function() {
+          const chatButton = document.querySelector('#gorgias-chat-messenger-button');
                   console.log('Gorgias chat button', chatButton);
+  }, 5000);
               });
             </script>
 
