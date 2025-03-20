@@ -345,29 +345,28 @@
 {% endif %}
 
             <script>
-      //               async function waitForButton() {
-      //   // Check if the button exists
-      //   const checkButton = () => document.querySelector('.product-text pdp-text-d5');
-      
-      //   // Create a delay function for async/await
-      //   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-      
-      //   // Polling for the button
-      //   while (!checkButton()) {
-      //     console.log("Button not found, waiting...");
-      //     await delay(1000); // Wait for 1 second before checking again
-      //   }
-      
-      //   // Once the button is found, execute your code
-      //   console.log("Button is now loaded!");
-      //   const button = checkButton();
-      //   button.addEventListener('click', () => {
-      //     alert("Button clicked!");
-      //   });
-      // }
-      
-      // // Call the function
-      //   waitForButton();
+      function checkButton() {
+  const button = document.querySelector('#gorgias-chat-messenger-button');
+  if (button) {
+    console.log("Button is now loaded!");
+    button.addEventListener('click', () => {
+      alert("Button clicked!");
+    });
+    clearInterval(intervalId); // Stop checking once the button is found
+  } else {
+    console.log("Button not found, checking again...");
+  }
+}
+
+// Check every 3 seconds
+const intervalId = setInterval(checkButton, 3000);
+
+// Stop checking after 20 seconds
+setTimeout(() => {
+  clearInterval(intervalId);
+  console.log("Stopped checking for the button after 20 seconds");
+}, 20000);
+
 
             </script>
 
