@@ -173,7 +173,8 @@
   </style>
   <script>
     document.querySelectorAll('.openGorgiasChatD5').forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
         if (window.Gorgias) {
             window.Gorgias.open(); // This opens the Gorgias chat window
         } else {
