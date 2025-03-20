@@ -345,10 +345,30 @@
 {% endif %}
 
             <script>
-              document.addEventListener("DOMContentLoaded", function() {
-                const clickButton = document.querySelector('.product-text pdp-text-d5');
-                console.log("Click button: ", clickButton);
-              });
+                    async function waitForButton() {
+        // Check if the button exists
+        const checkButton = () => document.querySelector('.product-text pdp-text-d5');
+      
+        // Create a delay function for async/await
+        const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+      
+        // Polling for the button
+        while (!checkButton()) {
+          console.log("Button not found, waiting...");
+          await delay(1000); // Wait for 1 second before checking again
+        }
+      
+        // Once the button is found, execute your code
+        console.log("Button is now loaded!");
+        const button = checkButton();
+        button.addEventListener('click', () => {
+          alert("Button clicked!");
+        });
+      }
+      
+      // Call the function
+        waitForButton();
+
             </script>
 
   <script>
